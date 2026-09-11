@@ -2,6 +2,15 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Catálogo reconstruido por destinos y rutas reales
+
+- Sustituido el catálogo inicial por 40 fichas de 24 países y territorios con 67 referencias.
+- Investigación desde La Plataforma del Buceo, Blue Planet y Te Moana hacia centros y operadores locales; procedencia comercial y documental diferenciada.
+- Separadas las rutas Norte, BDE y St. John's del mar Rojo; rutas de Maldivas y zonas estacionales de Komodo.
+- Ventanas de operación, recomendación de viaje y fauna independientes, con coincidencia estricta de todos los intereses en los mismos meses.
+- Fichas con puntos de inmersión, formato de viaje, fauna estacional, limitaciones y fuentes; no se prometen avistamientos ni disponibilidad.
+- Retirada la base v1 (recuperable en Git), actualizada la documentación y ampliadas las pruebas de procedencia, meses y 140 combinaciones.
+
 ## 2026-09-11 — Selector interactivo de destinos
 
 - Investigadas y preparadas 21 fichas de 14 países con 33 referencias, fecha de revisión y limitaciones explícitas.

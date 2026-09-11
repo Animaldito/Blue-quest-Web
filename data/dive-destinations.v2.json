@@ -1,0 +1,6262 @@
+{
+  "schemaVersion": 2,
+  "version": "2026-09-11.2",
+  "locale": "es",
+  "coverage": "Selección de viajes de buceo presentes en agencias especializadas, documentados por zona o itinerario con centros y operadores. No es un inventario mundial ni confirma plazas disponibles.",
+  "seasonConvention": "Estaciones meteorológicas del hemisferio norte (España); los meses no cambian según el destino.",
+  "seasons": {
+    "invierno": {
+      "label": "Invierno",
+      "months": [
+        12,
+        1,
+        2
+      ]
+    },
+    "primavera": {
+      "label": "Primavera",
+      "months": [
+        3,
+        4,
+        5
+      ]
+    },
+    "verano": {
+      "label": "Verano",
+      "months": [
+        6,
+        7,
+        8
+      ]
+    },
+    "otono": {
+      "label": "Otoño",
+      "months": [
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "categories": {
+    "pelagica": "Vida pelágica",
+    "macro": "Vida macro",
+    "corales": "Corales",
+    "pecios": "Pecios"
+  },
+  "targets": {
+    "tiburones": "Tiburones",
+    "ballenas": "Ballenas",
+    "mantas": "Mantas"
+  },
+  "maxCategories": 3,
+  "disclaimers": [
+    "Fauna salvaje: los encuentros no están garantizados.",
+    "Las estaciones corresponden al hemisferio norte; se muestran los meses exactos.",
+    "Las ventanas son de viaje o de encuentro según lo indicado, no probabilidades científicas.",
+    "Confirmar itinerario, nivel, permisos, condiciones y salidas con el operador."
+  ],
+  "sources": [
+    {
+      "id": "ag-temoana",
+      "publisher": "Te Moana Expeditions",
+      "title": "Catálogo de destinos",
+      "url": "https://temoanaexpeditions.com/destinos/",
+      "type": "agency",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ag-blueplanet",
+      "publisher": "Blue Planet",
+      "title": "Destinos de buceo",
+      "url": "https://blueplanet.es/",
+      "type": "agency",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ag-plataforma",
+      "publisher": "La Plataforma del Buceo",
+      "title": "Zonas y viajes de buceo",
+      "url": "https://laplataformadelbuceo.com/",
+      "type": "agency",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ag-bde",
+      "publisher": "La Plataforma del Buceo",
+      "title": "Brothers, Daedalus y Elphinstone",
+      "url": "https://laplataformadelbuceo.com/zonas-de-buceo/buceo-mar-rojo/mar-rojo-brothers-daedalus-y-elphinstone/",
+      "type": "agency",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ag-maldivas",
+      "publisher": "Te Moana Expeditions",
+      "title": "Atolones centrales e integral",
+      "url": "https://temoanaexpeditions.com/destinos/maldivas-la-joya-del-indico/",
+      "type": "agency",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-routes",
+      "publisher": "Emperor Divers",
+      "title": "Calendario de rutas de Egipto",
+      "url": "https://www.emperordivers.com/itinerary-country/egypt/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-north",
+      "publisher": "Emperor Divers",
+      "title": "Reefs & Wrecks: ruta Norte",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/reefs-and-wrecks/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-bde",
+      "publisher": "Emperor Divers",
+      "title": "Simply the Best: BDE",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/simply-the-best/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-sharks",
+      "publisher": "Master Liveaboards",
+      "title": "Brothers–Daedalus–Elphinstone: itinerario",
+      "url": "https://cloudfront.masterliveaboards.com/website-docs/Egypt/Itineraries/Brothers-Daedalus-Elphinstone-Itinerary.pdf",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-south",
+      "publisher": "Emperor Divers",
+      "title": "South & St Johns",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/south-st-johns/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "eg-season",
+      "publisher": "Emperor Divers",
+      "title": "Estaciones y condiciones en Egipto",
+      "url": "https://www.emperordivers.com/faq-egypt/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-central",
+      "publisher": "Emperor Divers",
+      "title": "Best of Maldives",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/best-of-maldives/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-routes",
+      "publisher": "Emperor Divers",
+      "title": "Calendario de rutas de Maldivas",
+      "url": "https://www.emperordivers.com/itinerary-country/maldives/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-mantas",
+      "publisher": "Emperor Divers",
+      "title": "Mantas y monzón: mayo–octubre",
+      "url": "https://www.emperordivers.com/maldives-during-low-season/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-south",
+      "publisher": "Emperor Divers",
+      "title": "Deep South: Huvadhu, Fuvahmulah y Addu",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/deep-south/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-fuvah",
+      "publisher": "Fuvahmulah Dive School",
+      "title": "Fauna y épocas de Fuvahmulah",
+      "url": "https://www.fuvahmulahdive.com/fuvahmulah-diving",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-tiger",
+      "publisher": "Fuvahmulah Dive School",
+      "title": "Tiger Zoo: método de la actividad",
+      "url": "https://www.fuvahmulahdive.com/tiger-zoo",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mv-hanifaru",
+      "publisher": "Emperor Divers",
+      "title": "Hanifaru & North: julio–octubre",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/hanifaru/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-raja",
+      "publisher": "Emperor Divers",
+      "title": "Puntos de Raja Ampat",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/raja-ampat/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-raja-season",
+      "publisher": "Papua Diving",
+      "title": "Condiciones del estrecho de Dampier",
+      "url": "https://papua-diving.com/frequently-asked-questions/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-raja-manta",
+      "publisher": "Papua Diving",
+      "title": "Mantas: octubre–abril",
+      "url": "https://papua-diving.com/how-to-photograph-manta-rays-in-raja-ampat/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-komodo",
+      "publisher": "Scuba Junkie Komodo",
+      "title": "Zonas de buceo y monzones",
+      "url": "https://www.scubajunkiekomodo.com/diving-komodo/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-komodo-life",
+      "publisher": "Scuba Junkie Komodo",
+      "title": "Mantas, megafauna y macro",
+      "url": "https://www.scubajunkiekomodo.com/mantas-megafauna-macro/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-lembeh",
+      "publisher": "Lembeh Resort",
+      "title": "Temporadas de macro en Lembeh",
+      "url": "https://www.lembehresort.com/blogs/the-best-time-for-diving-in-lembeh",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-tulamben",
+      "publisher": "Paradise Dive Tulamben",
+      "title": "USAT Liberty y puntos de Tulamben",
+      "url": "https://paradisetulamben.com/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-penida",
+      "publisher": "Emperor Divers",
+      "title": "Buceo desde Nusa Lembongan",
+      "url": "https://www.emperordivers.com/day-diving-location/lembongan/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-penida-manta",
+      "publisher": "Emperor Divers",
+      "title": "Mantas de Nusa Penida todo el año",
+      "url": "https://www.emperordivers.com/the-wonder-of-mantas/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-banda",
+      "publisher": "Emperor Divers",
+      "title": "Alor & Banda Sea: travesía",
+      "url": "https://www.emperordivers.com/liveaboard-itinerary/alor-banda-sea/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "id-routes",
+      "publisher": "Emperor Divers",
+      "title": "Calendario de rutas de Indonesia",
+      "url": "https://www.emperordivers.com/itinerary-country/indonesia/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-anilao",
+      "publisher": "Buceo Anilao",
+      "title": "Macro, arrecifes y puntos locales",
+      "url": "https://buceoanilao.com/diving/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-dauin",
+      "publisher": "Atmosphere Resorts",
+      "title": "Dauin y Apo: vida y temporadas",
+      "url": "https://atmosphereresorts.com/scuba-diving/meet-our-critters/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-dauin-season",
+      "publisher": "Atmosphere Resorts",
+      "title": "Guía estacional de Dauin",
+      "url": "https://atmosphereresorts.com/dauin-diving-seasons-a-marine-life-guide/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-malapascua",
+      "publisher": "Thresher Shark Divers",
+      "title": "Kimud Shoal y tiburón zorro",
+      "url": "https://thresherdivers.com/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-tubbataha",
+      "publisher": "Master Liveaboards",
+      "title": "Tubbataha National Park: ruta y salidas",
+      "url": "https://masterliveaboards.com/philippines/tubbataha-national-park/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "my-sipadan",
+      "publisher": "Scuba Junkie",
+      "title": "Sipadan: fauna, temporadas y cierre",
+      "url": "https://www.scuba-junkie.com/the-underwater-world-of-sipadan/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "my-mabul",
+      "publisher": "Scuba Junkie",
+      "title": "Puntos de Mabul",
+      "url": "https://www.scuba-junkie.com/diving-mabul/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "th-similans",
+      "publisher": "Sea Bees Diving",
+      "title": "Similan, Koh Bon y Richelieu Rock",
+      "url": "https://sea-bees.com/scuba-diving-similans/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "th-schedule",
+      "publisher": "Sea Bees Diving",
+      "title": "Salidas noviembre 2026–abril 2027",
+      "url": "https://sea-bees.com/khao-lak-scuba-diving-schedule/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mx-socorro",
+      "publisher": "Nautilus Adventures",
+      "title": "Socorro: fauna y temporadas",
+      "url": "https://nautilusliveaboards.com/2026/02/12/best-time-for-diving-socorro-islands/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mx-socorro-route",
+      "publisher": "Nautilus Adventures",
+      "title": "Ruta de Socorro",
+      "url": "https://nautilusliveaboards.com/2026/02/19/socorro-liveaboard-giant-mantas-sharks/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ec-galapagos",
+      "publisher": "Galapagos Sky",
+      "title": "Darwin y Wolf: especies y épocas",
+      "url": "https://galapagossky.com/darwin-wolf-the-dive-destination-every-diver-must-experience/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "cr-cocos",
+      "publisher": "Undersea Hunter",
+      "title": "Isla del Coco: sitios y fauna",
+      "url": "https://underseahunter.com/cocos-island/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "cr-cocos-faq",
+      "publisher": "Undersea Hunter",
+      "title": "Condiciones de buceo en Cocos",
+      "url": "https://underseahunter.com/faq/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "co-malpelo",
+      "publisher": "Colombia Dive Adventures",
+      "title": "Malpelo: época seca y lluviosa",
+      "url": "https://www.colombiadiveadventures.com/malpelo/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "bs-tiger",
+      "publisher": "Scuba Adventures",
+      "title": "Tiger Beach",
+      "url": "https://scuba-adventures.com/tiger-sharkdive-expeditions/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "bs-bimini",
+      "publisher": "Scuba Adventures",
+      "title": "Bimini y Tiger Beach: grandes martillos",
+      "url": "https://scuba-adventures.com/dive-with-hammerhead-dive-expeditions/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "cu-jardines",
+      "publisher": "All Star Liveaboards / Avalon",
+      "title": "Jardines de la Reina",
+      "url": "https://allstarliveaboards.com/cuba-liveaboard-diving-avalon/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "bz-belize",
+      "publisher": "Aggressor Adventures",
+      "title": "Belize: Turneffe y Lighthouse Reef",
+      "url": "https://www.aggressor.com/kbyg_document/Belize",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pw-sites",
+      "publisher": "Sam’s Tours",
+      "title": "Blue Corner y German Channel",
+      "url": "https://www.samstours.com/reef-diving",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pw-season",
+      "publisher": "Fish ’n Fins",
+      "title": "German Channel: temporadas de mantas",
+      "url": "https://fishnfins.com/index.php/dive-palau/dive-sites-palau/ngemelis-dives/150-german-channel",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "fm-chuuk",
+      "publisher": "Master Liveaboards",
+      "title": "Truk Lagoon: condiciones anuales",
+      "url": "https://masterliveaboards.com/weather-seasons-best-time-to-go-to-truk-lagoon/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "fm-wreck",
+      "publisher": "Master Liveaboards",
+      "title": "Rio de Janeiro Maru: ficha del pecio",
+      "url": "https://masterliveaboards.com/rio-de-janeiro-maru-wreck-truk/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pf-fakarava",
+      "publisher": "Enata Fakarava Diving",
+      "title": "Paso sur de Fakarava",
+      "url": "https://www.enatafakaravadiving.com/en/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "fj-sites",
+      "publisher": "Volivoli / Ra Divers",
+      "title": "Bligh Water: puntos de buceo",
+      "url": "https://volivoli.com/scuba-diving-fiji/bligh-water-dive-sites/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "fj-season",
+      "publisher": "Volivoli / Ra Divers",
+      "title": "Tiempo y temperatura del agua",
+      "url": "https://volivoli.com/news/weather-water-temperature/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pg-kimbe",
+      "publisher": "Walindi Resort",
+      "title": "Buceo en Kimbe Bay",
+      "url": "https://walindiresort.com/scuba-diving",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pg-season",
+      "publisher": "Walindi Resort",
+      "title": "Clima local y preguntas frecuentes",
+      "url": "https://walindiresort.com/faqs",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pt-azores",
+      "publisher": "CW Azores",
+      "title": "Programa de tiburones de Pico",
+      "url": "https://www.cwazores.com/shark-diving-azores-2020",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "pt-princess",
+      "publisher": "CW Azores",
+      "title": "Princess Alice: julio–mediados de octubre",
+      "url": "https://www.cwazores.com/video",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "za-aliwal",
+      "publisher": "Blue Ocean Dive Resort",
+      "title": "Aliwal Shoal: puntos y calendario de fauna",
+      "url": "https://blueoceandive.co.za/dive-sites-of-aliwal-shoal/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "mz-tofo",
+      "publisher": "Tofo Scuba",
+      "title": "Modalidades y temporadas de fauna",
+      "url": "https://www.tofoscuba.com/faqs",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "to-tonga",
+      "publisher": "WhaleSwim Adventures",
+      "title": "Vava’u: temporada de yubartas",
+      "url": "https://www.whaleswim.com/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "au-minke",
+      "publisher": "Mike Ball Dive Expeditions",
+      "title": "Ribbon Reefs: expedición minke",
+      "url": "https://www.mikeball.com/great-barrier-reef-liveaboard/minke-whale-cairns/4-night-minke-whale-dive-expedition/",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "cr-conditions",
+      "publisher": "Aggressor Adventures",
+      "title": "Cocos: condiciones y programa del operador",
+      "url": "https://www.aggressor.com/kbyg_document/Cocos-Island",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "no-orca",
+      "publisher": "Orca Norway",
+      "title": "Expediciones en Troms y Finnmark",
+      "url": "https://www.orcanorway.info/expeditions",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-coron",
+      "publisher": "Rocksteady Dive Center",
+      "title": "Pecios y arrecifes de Coron",
+      "url": "https://www.rocksteadydivecenter.com/divesites.html",
+      "type": "operator",
+      "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ph-coron-season",
+      "publisher": "PADI Dive Guides · colaboradores locales de Coron",
+      "title": "Busuanga y Coron: época de buceo",
+      "url": "https://www.padi.com/diving-in/philippines/busuanga-coron/",
+      "type": "local-guide",
+      "checkedOn": "2026-09-11"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "rojo-norte",
+      "name": "Mar Rojo · Norte, pecios y arrecifes",
+      "country": "Egipto",
+      "region": "Hurghada, Gubal y Ras Mohamed",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "eg-north",
+        "eg-routes"
+      ],
+      "travelSourceIds": [
+        "eg-season",
+        "eg-routes"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "seasonLabel": "Marzo–noviembre para esta selección; la ruta también opera en invierno",
+      "seasonBasis": "Selección editorial fuera del invierno por agua más fría y viento. Marzo y noviembre son meses de transición; no es un cierre ni una ausencia de fauna.",
+      "sites": [
+        "SS Thistlegorm",
+        "Abu Nuhas",
+        "Ulysses",
+        "Ras Mohamed",
+        "Tiran, según itinerario"
+      ],
+      "summary": "Un viaje centrado en naufragios históricos y jardines de coral, combinando varias inmersiones en la ruta Norte.",
+      "highlights": "Cargueros de Abu Nuhas y Thistlegorm, con arrecifes entre jornadas de pecios.",
+      "caution": "No se recomienda como viaje específico de tiburones. Puede haber encuentros ocasionales, especialmente en Tiran. Los puntos dependen de la ruta y el mar; los interiores de pecios requieren formación.",
+      "wildlife": [],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pecios",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pecios": {
+          "sourceIds": [
+            "eg-north",
+            "eg-routes"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "eg-north",
+            "eg-routes"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "eg-north",
+        "eg-routes",
+        "eg-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "rojo-bde",
+      "name": "Mar Rojo · Brothers, Daedalus y Elphinstone",
+      "country": "Egipto",
+      "region": "Arrecifes oceánicos del mar Rojo",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers / Master Liveaboards",
+      "agencySourceIds": [
+        "ag-bde"
+      ],
+      "operatorSourceIds": [
+        "eg-bde",
+        "eg-sharks"
+      ],
+      "travelSourceIds": [
+        "eg-routes"
+      ],
+      "operatingMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "seasonLabel": "Marzo–noviembre; cada especie tiene su propia época",
+      "seasonBasis": "Ventana del itinerario de Emperor. Master distingue martillos en verano y longimanus a finales de otoño.",
+      "sites": [
+        "Big Brother: Numidia y Aida",
+        "Little Brother",
+        "Daedalus",
+        "Elphinstone"
+      ],
+      "summary": "Paredes de coral, tiburones y los pecios de Brothers. Una ruta oceánica distinta de la Norte y de los jardines del extremo sur.",
+      "highlights": "Los pecios están en Brothers; no en todos los arrecifes del itinerario.",
+      "caution": "Ruta exigente por corrientes y exposición. Algunas partes de los pecios exceden el buceo recreativo. El verano también es una época de tiburones: no se limita a primavera y otoño.",
+      "wildlife": [
+        {
+          "name": "Tiburones grises de arrecife",
+          "target": "tiburones",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sourceIds": [
+            "eg-bde"
+          ]
+        },
+        {
+          "name": "Bancos de martillos en Daedalus",
+          "target": "tiburones",
+          "months": [
+            6,
+            7,
+            8
+          ],
+          "sourceIds": [
+            "eg-sharks"
+          ],
+          "note": "Ventana destacada por el operador; no implica ausencia fuera del verano."
+        },
+        {
+          "name": "Longimanus en Elphinstone",
+          "target": "tiburones",
+          "months": [
+            10,
+            11
+          ],
+          "sourceIds": [
+            "eg-sharks"
+          ],
+          "note": "Final del otoño en el itinerario consultado."
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales",
+        "pecios"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "corales": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "pecios": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "eg-bde",
+            "eg-sharks"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "eg-bde",
+            "eg-sharks"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pecios": {
+          "sourceIds": [
+            "eg-bde",
+            "eg-sharks"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "sourceIds": [
+        "ag-bde",
+        "eg-bde",
+        "eg-sharks",
+        "eg-routes"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "rojo-st-johns",
+      "name": "Mar Rojo · St Johns y Fury Shoals",
+      "country": "Egipto",
+      "region": "Arrecifes del extremo sur",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "eg-south"
+      ],
+      "travelSourceIds": [
+        "eg-routes",
+        "eg-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "seasonLabel": "Marzo–noviembre en esta selección; operativa anual",
+      "seasonBasis": "Ventana editorial de confort fuera del invierno. No es la misma ruta de búsqueda de tiburones que BDE.",
+      "sites": [
+        "St Johns",
+        "Sha’ab Claude",
+        "Abu Galawa Soraya"
+      ],
+      "summary": "Jardines de coral, pasillos de arrecife y pequeños pecios, con un enfoque más paisajístico que la ruta oceánica BDE.",
+      "highlights": "Abu Galawa Soraya combina coral duro con un velero hundido; los pequeños habitantes completan la observación del arrecife.",
+      "caution": "Los tiburones no se utilizan como atractivo principal de esta ficha. Las extensiones a Elphinstone, Rocky o Zabargad no se dan por incluidas.",
+      "wildlife": [],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "corales",
+        "macro",
+        "pecios"
+      ],
+      "categoryMonths": {
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "corales": {
+          "sourceIds": [
+            "eg-south"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "macro": {
+          "sourceIds": [
+            "eg-south"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pecios": {
+          "sourceIds": [
+            "eg-south"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "eg-south",
+        "eg-routes",
+        "eg-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "maldivas-central",
+      "name": "Maldivas · Malé, Ari y Vaavu",
+      "country": "Maldivas",
+      "region": "Atolones centrales",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-maldivas",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "mv-central"
+      ],
+      "travelSourceIds": [
+        "mv-routes"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seasonLabel": "Todo el año, cambiando puntos con el monzón",
+      "seasonBasis": "Itinerario anual y flexible. La actividad de mantas cambia de lado del atolón; Malé oriental destaca entre mayo y octubre.",
+      "sites": [
+        "Malé Norte y Sur",
+        "Ari",
+        "Vaavu",
+        "Estaciones de limpieza y thilas"
+      ],
+      "summary": "La ruta clásica de Maldivas: canales con tiburones, estaciones de mantas y arrecifes con vida pequeña.",
+      "highlights": "El recorrido se adapta a corrientes y monzones; no promete una lista fija de puntos.",
+      "caution": "Corrientes variables y algunas inmersiones profundas. Los encuentros con tiburón ballena pueden ser de superficie; no son encuentros con ballenas.",
+      "wildlife": [
+        {
+          "name": "Tiburones de arrecife y nodrizas",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mv-central"
+          ]
+        },
+        {
+          "name": "Mantas de arrecife",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mv-central"
+          ],
+          "note": "Puntos distintos según monzón; estaciones de Malé oriental activas de mayo a octubre.",
+          "seasonSourceIds": [
+            "mv-mantas"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mv-central"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "mv-central"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "mv-central"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones",
+        "mantas"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mantas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-maldivas",
+        "ag-blueplanet",
+        "mv-central",
+        "mv-routes",
+        "mv-mantas"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "maldivas-sur",
+      "name": "Maldivas · Deep South",
+      "country": "Maldivas",
+      "region": "Huvadhu, Fuvahmulah y Addu",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-maldivas",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "mv-south"
+      ],
+      "travelSourceIds": [
+        "mv-routes",
+        "mv-south"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "seasonLabel": "Diciembre–marzo para la ruta consultada",
+      "seasonBasis": "Fechas indicadas por Emperor para Deep South; no se extrapolan a todo el sur ni a la estancia en Fuvahmulah.",
+      "sites": [
+        "Canales de Huvadhu",
+        "Fuvahmulah",
+        "Maa Kandu",
+        "British Loyalty, Addu"
+      ],
+      "summary": "Canales del sur con tiburones, mantas en Addu y el pecio British Loyalty, reunidos en una travesía concreta.",
+      "highlights": "Una combinación de grandes animales y pecio que no depende de añadir inmersiones de otro viaje.",
+      "caution": "Corrientes y profundidad: requiere experiencia adecuada. Este operador excluye Tiger Zoo y el uso de cebo; no confundir con un paquete local de Fuvahmulah.",
+      "wildlife": [
+        {
+          "name": "Grises, puntas plateadas y tiburones tigre",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            12
+          ],
+          "sourceIds": [
+            "mv-south"
+          ]
+        },
+        {
+          "name": "Mantas en las estaciones de Addu",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            12
+          ],
+          "sourceIds": [
+            "mv-south"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales",
+        "pecios"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "corales": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "pecios": [
+          12,
+          1,
+          2,
+          3
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mv-south"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "mv-south"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pecios": {
+          "sourceIds": [
+            "mv-south"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones",
+        "mantas"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          12
+        ],
+        "mantas": [
+          1,
+          2,
+          3,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-maldivas",
+        "ag-blueplanet",
+        "mv-south",
+        "mv-routes"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "fuvahmulah",
+      "name": "Maldivas · Fuvahmulah desde tierra",
+      "country": "Maldivas",
+      "region": "Isla oceánica de Fuvahmulah",
+      "scope": "destination",
+      "tripStyle": "Centro de buceo desde tierra",
+      "operator": "Fuvahmulah Dive School",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "mv-fuvah",
+        "mv-tiger"
+      ],
+      "travelSourceIds": [
+        "mv-fuvah"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seasonLabel": "Tiburones todo el año; mantas oceánicas entre marzo y mayo",
+      "seasonBasis": "El centro describe actividad anual de tiburones y una agregación variable de mantas en marzo, abril o mayo.",
+      "sites": [
+        "Arrecife de Fuvahmulah",
+        "Estaciones de limpieza",
+        "Tiger Zoo, si se contrata"
+      ],
+      "summary": "Una base en tierra para explorar un arrecife oceánico con tiburones, sin depender del calendario de los cruceros del sur.",
+      "highlights": "Los tiburones tigre son el objetivo principal; las mantas oceánicas tienen una ventana diferente.",
+      "caution": "Tiger Zoo utiliza restos de pescado para atraer tiburones. La ficha no respalda promesas de encuentro garantizado; confirmar método, nivel y puntos antes de contratar.",
+      "wildlife": [
+        {
+          "name": "Tiburones tigre y zorros",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mv-fuvah"
+          ]
+        },
+        {
+          "name": "Mantas oceánicas",
+          "target": "mantas",
+          "months": [
+            3,
+            4,
+            5
+          ],
+          "sourceIds": [
+            "mv-fuvah"
+          ],
+          "note": "Concentración variable dentro de estos meses; avistamientos aislados fuera no activan la recomendación."
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mv-fuvah",
+            "mv-tiger"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "mv-fuvah",
+            "mv-tiger"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones",
+        "mantas"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mantas": [
+          3,
+          4,
+          5
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "mv-fuvah",
+        "mv-tiger"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "hanifaru",
+      "name": "Maldivas · Hanifaru Bay",
+      "country": "Maldivas",
+      "region": "Atolón Baa",
+      "scope": "site",
+      "mode": "snorkel",
+      "tripStyle": "Excursión de snorkel / escala de crucero",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "mv-hanifaru"
+      ],
+      "travelSourceIds": [
+        "mv-hanifaru"
+      ],
+      "operatingMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "recommendedMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonLabel": "Julio–octubre; coordinación con mareas y fase lunar",
+      "seasonBasis": "Ventana de la experiencia Hanifaru & North del operador consultado.",
+      "sites": [
+        "Bahía de Hanifaru"
+      ],
+      "summary": "Una experiencia de superficie para observar agregaciones de mantas alimentándose de plancton.",
+      "highlights": "Es la parte de snorkel del viaje, separada de las inmersiones con botella de otros puntos de Baa.",
+      "caution": "No se permite buceo con botella dentro de la bahía. Las concentraciones dependen de mareas, plancton y autorizaciones de acceso.",
+      "wildlife": [
+        {
+          "name": "Agregaciones de mantas de arrecife",
+          "target": "mantas",
+          "months": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "mv-hanifaru"
+          ]
+        }
+      ],
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mv-hanifaru"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "mantas"
+      ],
+      "targetMonths": {
+        "mantas": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "mv-hanifaru"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "raja-dampier",
+      "name": "Raja Ampat · Estrecho de Dampier",
+      "country": "Indonesia",
+      "region": "Papúa Occidental",
+      "operator": "Papua Diving / Emperor Divers",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "id-raja"
+      ],
+      "travelSourceIds": [
+        "id-raja-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Cape Kri",
+        "Arborek",
+        "Manta Sandy"
+      ],
+      "summary": "Arrecifes densos, vida macro y bancos de peces en torno a Kri y Arborek, con estaciones de limpieza de mantas.",
+      "highlights": "La ficha se centra en Dampier; no extiende sus condiciones a todo Misool ni a cualquier crucero de Raja Ampat.",
+      "seasonLabel": "Buceo anual; octubre–abril para priorizar mantas",
+      "seasonBasis": "Papua Diving describe buceo anual en Dampier y una ventana más favorable para mantas entre octubre y abril.",
+      "caution": "Las corrientes condicionan cada punto. En verano puede haber mar más movido aunque el buceo siga siendo viable.",
+      "wildlife": [
+        {
+          "name": "Mantas en estaciones de limpieza",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "id-raja-manta"
+          ]
+        },
+        {
+          "name": "Tiburones de arrecife y wobbegongs",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "id-raja"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "id-raja"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "id-raja"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-raja"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "mantas",
+        "tiburones"
+      ],
+      "targetMonths": {
+        "mantas": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11,
+          12
+        ],
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "id-raja",
+        "id-raja-season",
+        "id-raja-manta"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "komodo-norte",
+      "name": "Komodo · Centro y Norte",
+      "country": "Indonesia",
+      "region": "Parque Nacional de Komodo",
+      "operator": "Scuba Junkie Komodo",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "id-komodo",
+        "id-komodo-life"
+      ],
+      "travelSourceIds": [
+        "id-komodo"
+      ],
+      "operatingMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "sites": [
+        "Arrecifes del centro",
+        "Mawan",
+        "Karang Makassar",
+        "Arrecifes del norte"
+      ],
+      "summary": "Arrecifes, fotografía macro y mantas, con recorridos hacia el centro y norte cuando favorecen las condiciones.",
+      "highlights": "Mawan y Karang Makassar aportan las estaciones de mantas del centro del parque.",
+      "seasonLabel": "Marzo–octubre; marzo enlaza con la concentración de mantas",
+      "seasonBasis": "Ventana regional del operador. Las mantas son anuales, con más ejemplares entre enero y marzo.",
+      "caution": "Corrientes fuertes en algunos puntos. Esta ficha no asegura visitar el sur durante la misma estancia.",
+      "wildlife": [
+        {
+          "name": "Mantas de arrecife",
+          "target": "mantas",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "id-komodo"
+          ],
+          "note": "Mayor concentración descrita en enero–marzo; marzo coincide con esta ventana de zona."
+        },
+        {
+          "name": "Tiburones de arrecife",
+          "target": "tiburones",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "id-komodo"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "macro": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "corales": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "mantas",
+        "tiburones"
+      ],
+      "targetMonths": {
+        "mantas": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "tiburones": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "id-komodo",
+        "id-komodo-life"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "komodo-sur",
+      "name": "Komodo · Centro y Sur",
+      "country": "Indonesia",
+      "region": "Parque Nacional de Komodo",
+      "operator": "Scuba Junkie Komodo",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "id-komodo",
+        "id-komodo-life"
+      ],
+      "travelSourceIds": [
+        "id-komodo"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Arrecifes del centro y sur",
+        "Mawan",
+        "Karang Makassar"
+      ],
+      "summary": "La alternativa de Komodo para el cambio de monzón: mantas, pequeños animales y arrecifes en las zonas más favorables.",
+      "highlights": "La búsqueda se desplaza por el parque; no desaparece todo el buen buceo cuando cambia la estación.",
+      "seasonLabel": "Octubre–febrero; enero y febrero destacan para mantas",
+      "seasonBasis": "El centro recomienda esta zona en octubre–febrero; la fauna no tiene un calendario idéntico al de los monzones.",
+      "caution": "Puede haber agua más fría y menor visibilidad. Confirmar que la salida llega realmente a las zonas del sur.",
+      "wildlife": [
+        {
+          "name": "Mantas de arrecife",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "id-komodo"
+          ],
+          "note": "Enero y febrero coinciden con los meses de mayor concentración descritos."
+        },
+        {
+          "name": "Tiburones de arrecife",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "id-komodo"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          10,
+          11,
+          12,
+          1,
+          2
+        ],
+        "macro": [
+          10,
+          11,
+          12,
+          1,
+          2
+        ],
+        "corales": [
+          10,
+          11,
+          12,
+          1,
+          2
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-komodo",
+            "id-komodo-life"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "mantas",
+        "tiburones"
+      ],
+      "targetMonths": {
+        "mantas": [
+          1,
+          2,
+          10,
+          11,
+          12
+        ],
+        "tiburones": [
+          1,
+          2,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "id-komodo",
+        "id-komodo-life"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "lembeh",
+      "name": "Sulawesi · Estrecho de Lembeh",
+      "country": "Indonesia",
+      "region": "Sulawesi Norte",
+      "operator": "Lembeh Resort / Critters at Lembeh",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "id-lembeh"
+      ],
+      "travelSourceIds": [
+        "id-lembeh"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Arenas volcánicas de Lembeh",
+        "Puntos de macro elegidos por los guías"
+      ],
+      "summary": "Una estancia de fotografía macro dedicada a peces rana, cefalópodos, nudibranquios y otros habitantes de la arena.",
+      "highlights": "Los guías cambian de punto siguiendo los desplazamientos de los animales.",
+      "seasonLabel": "Todo el año",
+      "seasonBasis": "Lembeh Resort describe sus principales animales macro como no estacionales; su distribución entre puntos sí cambia.",
+      "caution": "No se garantiza una especie concreta ni el mismo punto en cada salida. No se vende aquí como destino de grandes pelágicos.",
+      "wildlife": [],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "macro"
+      ],
+      "categoryMonths": {
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "macro": {
+          "sourceIds": [
+            "id-lembeh"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "id-lembeh"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "tulamben",
+      "name": "Bali · Tulamben y USAT Liberty",
+      "country": "Indonesia",
+      "region": "Costa noreste de Bali",
+      "operator": "Paradise Dive Tulamben",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "id-tulamben"
+      ],
+      "travelSourceIds": [
+        "id-tulamben"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "sites": [
+        "USAT Liberty",
+        "Coral Garden",
+        "Tulamben Drop Off"
+      ],
+      "summary": "Un pecio accesible desde costa, arrecifes y vida macro en una misma base de buceo.",
+      "highlights": "Combina el exterior del Liberty con Coral Garden y las paredes cercanas; no exige reunir puntos de islas distintas.",
+      "seasonLabel": "Abril–noviembre como ventana preferente; buceo anual",
+      "seasonBasis": "Ventana de visibilidad y condiciones costeras recomendada por el centro; no es una temporada de aparición del pecio o el coral.",
+      "caution": "Oleaje y entrada por piedras pueden complicar el acceso. El interior del pecio no forma parte de esta recomendación general.",
+      "wildlife": [],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "macro",
+        "corales",
+        "pecios"
+      ],
+      "categoryMonths": {
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "macro": {
+          "sourceIds": [
+            "id-tulamben"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-tulamben"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pecios": {
+          "sourceIds": [
+            "id-tulamben"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "id-tulamben"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "nusa-penida",
+      "name": "Bali · Nusa Penida y Manta Point",
+      "country": "Indonesia",
+      "region": "Salidas desde Nusa Lembongan",
+      "operator": "Emperor Divers Lembongan",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "id-penida",
+        "id-penida-manta"
+      ],
+      "travelSourceIds": [
+        "id-penida-manta"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Manta Point",
+        "Arrecifes de Nusa Penida"
+      ],
+      "summary": "Inmersiones de arrecife combinadas con la búsqueda de mantas en Manta Point.",
+      "highlights": "Las mantas se observan durante todo el año; no dependen de la temporada del pez luna.",
+      "seasonLabel": "Mantas todo el año; acceso según mar y corrientes",
+      "seasonBasis": "El operador describe encuentros anuales en Manta Point.",
+      "caution": "Agua fría, oleaje y corrientes pueden modificar o cancelar la visita. Los peces luna no se usan como criterio de esta ficha.",
+      "wildlife": [
+        {
+          "name": "Mantas de arrecife",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "id-penida-manta"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "id-penida",
+            "id-penida-manta"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-penida",
+            "id-penida-manta"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "mantas"
+      ],
+      "targetMonths": {
+        "mantas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "id-penida",
+        "id-penida-manta"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "alor-banda",
+      "name": "Indonesia · Alor y mar de Banda",
+      "country": "Indonesia",
+      "region": "Travesía entre Alor y Banda",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Emperor Divers",
+      "agencySourceIds": [
+        "ag-plataforma",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "id-banda"
+      ],
+      "travelSourceIds": [
+        "id-routes",
+        "id-banda"
+      ],
+      "operatingMonths": [
+        9,
+        10
+      ],
+      "recommendedMonths": [
+        9,
+        10
+      ],
+      "sites": [
+        "Kalabahi Bay",
+        "Wetar",
+        "Nil Desperandum",
+        "Banda Neira"
+      ],
+      "summary": "Una travesía que combina macro en Alor, jardines de coral y búsqueda de martillos en arrecifes oceánicos.",
+      "highlights": "El recorrido reúne ambientes distintos a lo largo de varios días, no en una sola inmersión.",
+      "seasonLabel": "Septiembre–octubre en el calendario consultado",
+      "seasonBasis": "La descripción también contempla cruces en marzo–abril, pero el calendario de esta ruta publica septiembre–octubre. Solo estos meses activan resultados.",
+      "caution": "Ruta remota y exigente. Los martillos dependen de corrientes y termoclinas; no se incorporan ballenas vistas ocasionalmente durante la navegación.",
+      "wildlife": [
+        {
+          "name": "Martillos y tiburones de arrecife",
+          "target": "tiburones",
+          "months": [
+            9,
+            10
+          ],
+          "sourceIds": [
+            "id-banda"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          9,
+          10
+        ],
+        "macro": [
+          9,
+          10
+        ],
+        "corales": [
+          9,
+          10
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "id-banda"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "id-banda"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "id-banda"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          9,
+          10
+        ]
+      },
+      "sourceIds": [
+        "ag-plataforma",
+        "ag-blueplanet",
+        "id-banda",
+        "id-routes"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "anilao",
+      "name": "Filipinas · Anilao",
+      "country": "Filipinas",
+      "region": "Mabini, Batangas",
+      "operator": "Buceo Anilao",
+      "agencySourceIds": [
+        "ag-temoana"
+      ],
+      "operatorSourceIds": [
+        "ph-anilao"
+      ],
+      "travelSourceIds": [
+        "ph-anilao"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Buceo Point",
+        "Arrecifes y arenas de Anilao"
+      ],
+      "summary": "Fotografía de detalle y arrecifes desde una base especializada en macro, con puntos cercanos a la costa.",
+      "highlights": "Nudibranquios, peces rana y cefalópodos; el arrecife amplía las opciones entre inmersiones macro.",
+      "seasonLabel": "Actividad anual; selección de puntos según condiciones",
+      "seasonBasis": "El centro publica actividad y temperaturas para ambas mitades del año. No se asigna un pico mensual de una especie sin fuente.",
+      "caution": "La lluvia y el viento pueden cambiar los puntos accesibles. El pecio mencionado por el resort no se convierte automáticamente en un viaje de pecios.",
+      "wildlife": [],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "macro": {
+          "sourceIds": [
+            "ph-anilao"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "ph-anilao"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ph-anilao"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "dauin-apo",
+      "name": "Filipinas · Dauin y Apo Island",
+      "country": "Filipinas",
+      "region": "Negros Oriental",
+      "operator": "Atmosphere Resorts",
+      "agencySourceIds": [
+        "ag-temoana"
+      ],
+      "operatorSourceIds": [
+        "ph-dauin"
+      ],
+      "travelSourceIds": [
+        "ph-dauin-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Costa de Dauin",
+        "Apo Island"
+      ],
+      "summary": "Macro en arenas volcánicas y una excursión de arrecife en Apo: dos ambientes complementarios desde la misma estancia.",
+      "highlights": "El centro destaca peces rana entre febrero y junio y una temporada de pulpos que comienza en octubre.",
+      "seasonLabel": "Todo el año; fauna macro con ciclos propios",
+      "seasonBasis": "Actividad anual documentada. Los picos de especies pequeñas se muestran como orientación, no como ausencia del resto de macro.",
+      "caution": "La visita a Apo depende del mar. No se incluyen como recomendación recreativa las especies citadas para inmersiones técnicas profundas.",
+      "wildlife": [
+        {
+          "name": "Peces rana",
+          "months": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourceIds": [
+            "ph-dauin"
+          ],
+          "note": "Meses destacados por el centro."
+        },
+        {
+          "name": "Pulpos",
+          "months": [
+            10,
+            11
+          ],
+          "sourceIds": [
+            "ph-dauin"
+          ],
+          "note": "La temporada comienza en octubre y suele durar un par de meses."
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "macro": {
+          "sourceIds": [
+            "ph-dauin"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "ph-dauin"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ph-dauin",
+        "ph-dauin-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "malapascua",
+      "name": "Filipinas · Malapascua y Kimud Shoal",
+      "country": "Filipinas",
+      "region": "Cebú Norte",
+      "operator": "Thresher Shark Divers",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "ph-malapascua"
+      ],
+      "travelSourceIds": [
+        "ph-malapascua"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Kimud Shoal"
+      ],
+      "summary": "Un viaje enfocado en el tiburón zorro pelágico y sus estaciones de limpieza en Kimud Shoal.",
+      "highlights": "La recurrencia del tiburón zorro es el motivo de viaje; no se añaden intereses de otros puntos sin documentarlos.",
+      "seasonLabel": "Tiburones zorro todo el año",
+      "seasonBasis": "El centro describe visitas anuales al punto, a profundidades de buceo recreativo.",
+      "caution": "Los encuentros no están garantizados. El acceso sigue sujeto al estado del mar y a las reglas locales de observación.",
+      "wildlife": [
+        {
+          "name": "Tiburón zorro pelágico",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "ph-malapascua"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "ph-malapascua"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "ph-malapascua"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "tubbataha",
+      "name": "Filipinas · Tubbataha",
+      "country": "Filipinas",
+      "region": "Mar de Sulu, salida de Puerto Princesa",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Master Liveaboards",
+      "agencySourceIds": [
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "ph-tubbataha"
+      ],
+      "travelSourceIds": [
+        "ph-tubbataha"
+      ],
+      "operatingMonths": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "partialMonths": [
+        3,
+        6
+      ],
+      "sites": [
+        "Atolón Norte",
+        "Atolón Sur",
+        "Jessie Beazley"
+      ],
+      "summary": "Paredes de arrecife y encuentros con tiburones en una ruta remota accesible únicamente en vida a bordo.",
+      "highlights": "El calendario consultado concentra las salidas entre marzo y mediados de junio.",
+      "seasonLabel": "Marzo–mediados de junio; fechas exactas según salida",
+      "seasonBasis": "Calendario publicado por el operador. Marzo y junio son parciales; no se consideran meses completos de acceso.",
+      "caution": "No aparece en otoño o invierno. Requiere experiencia adecuada, permisos y condiciones de navegación favorables.",
+      "wildlife": [
+        {
+          "name": "Tiburones de arrecife y posibles martillos",
+          "target": "tiburones",
+          "months": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "sourceIds": [
+            "ph-tubbataha"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "corales": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "ph-tubbataha"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "ph-tubbataha"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "sourceIds": [
+        "ag-blueplanet",
+        "ph-tubbataha"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "sipadan-mabul",
+      "name": "Malasia · Sipadan y Mabul",
+      "country": "Malasia",
+      "region": "Sabah, mar de Célebes",
+      "operator": "Scuba Junkie",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "my-sipadan",
+        "my-mabul"
+      ],
+      "travelSourceIds": [
+        "my-sipadan"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "sites": [
+        "Barracuda Point, Sipadan",
+        "Paredes de Sipadan",
+        "Froggies y arrecifes de Mabul"
+      ],
+      "summary": "Bancos de barracudas y tiburones en Sipadan, más fotografía macro en Mabul, dentro de un viaje combinado.",
+      "highlights": "El macro pertenece principalmente a Mabul; los grandes bancos, a Sipadan.",
+      "seasonLabel": "Enero–octubre y diciembre; Sipadan cierra en noviembre",
+      "seasonBasis": "Cierre anual de Sipadan publicado por Scuba Junkie. No significa que Mabul cierre ni que la fauna desaparezca.",
+      "caution": "La visita a Sipadan requiere cupo y permiso. Confirmar su inclusión real en el paquete; una estancia en Mabul no lo garantiza.",
+      "wildlife": [
+        {
+          "name": "Tiburones grises y puntas blancas de arrecife",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12
+          ],
+          "sourceIds": [
+            "my-sipadan"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales",
+        "macro"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "my-sipadan",
+            "my-mabul"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "my-sipadan",
+            "my-mabul"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "macro": {
+          "sourceIds": [
+            "my-sipadan",
+            "my-mabul"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "my-sipadan",
+        "my-mabul"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "similan-richelieu",
+      "name": "Tailandia · Similan, Koh Bon y Richelieu",
+      "country": "Tailandia",
+      "region": "Mar de Andamán, salidas de Khao Lak",
+      "operator": "Sea Bees Diving",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "th-similans"
+      ],
+      "travelSourceIds": [
+        "th-schedule"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "sites": [
+        "Similan",
+        "Koh Bon",
+        "Koh Tachai",
+        "Richelieu Rock"
+      ],
+      "summary": "Un viaje de arrecifes y macro que puede sumar mantas y tiburón ballena, recorriendo diferentes puntos de Andamán.",
+      "highlights": "Richelieu aporta cefalópodos, caballitos y pequeños crustáceos; el tiburón ballena tiene una ventana más concreta.",
+      "seasonLabel": "Noviembre–abril; febrero–abril para priorizar mantas o tiburón ballena",
+      "seasonBasis": "Calendario de excursiones del operador para 2026–2027. Se evitan las fechas limítrofes de apertura del parque.",
+      "caution": "Es una combinación de salidas, no una excursión a todos los puntos en el mismo día. Los encuentros con grandes animales son variables.",
+      "wildlife": [
+        {
+          "name": "Tiburón ballena en Richelieu",
+          "target": "tiburones",
+          "months": [
+            2,
+            3,
+            4
+          ],
+          "sourceIds": [
+            "th-similans"
+          ]
+        },
+        {
+          "name": "Mantas en Koh Bon",
+          "target": "mantas",
+          "months": [
+            2,
+            3,
+            4
+          ],
+          "sourceIds": [
+            "th-similans"
+          ],
+          "note": "Ventana destacada por Sea Bees desde febrero, dentro de su programa noviembre–abril."
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "macro": [
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ],
+        "corales": [
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "th-similans"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "th-similans"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "th-similans"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones",
+        "mantas"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          2,
+          3,
+          4
+        ],
+        "mantas": [
+          2,
+          3,
+          4
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "th-similans",
+        "th-schedule"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "socorro",
+      "name": "México · Revillagigedo / Socorro",
+      "country": "México",
+      "region": "Pacífico mexicano",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Nautilus Adventures",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "mx-socorro-route"
+      ],
+      "travelSourceIds": [
+        "mx-socorro-route",
+        "mx-socorro"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12
+      ],
+      "seasonLabel": "Noviembre–mayo como ventana común; algunas salidas se prolongan",
+      "seasonBasis": "Nautilus publica distintos finales de temporada según producto. Se usa noviembre–mayo como intersección conservadora, sin afirmar cierre legal fuera.",
+      "sites": [
+        "San Benedicto",
+        "Socorro",
+        "Roca Partida"
+      ],
+      "summary": "Una travesía oceánica centrada en mantas gigantes y distintas especies de tiburones.",
+      "highlights": "El atractivo principal son los grandes animales, no los jardines de coral ni los pecios.",
+      "caution": "Destino expuesto para submarinistas con experiencia. Las yubartas estacionales no convierten esta ficha en una actividad garantizada de buceo con ballenas.",
+      "wildlife": [
+        {
+          "name": "Mantas oceánicas",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mx-socorro-route"
+          ]
+        },
+        {
+          "name": "Martillos, galápagos y puntas plateadas",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mx-socorro-route"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          11,
+          12,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mx-socorro-route"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "mantas",
+        "tiburones"
+      ],
+      "targetMonths": {
+        "mantas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          11,
+          12
+        ],
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "mx-socorro-route",
+        "mx-socorro"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "darwin-wolf",
+      "name": "Galápagos · Darwin y Wolf",
+      "country": "Ecuador",
+      "region": "Islas del norte de Galápagos",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Galapagos Sky",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "ec-galapagos"
+      ],
+      "travelSourceIds": [
+        "ec-galapagos"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Darwin",
+        "Wolf"
+      ],
+      "summary": "Ruta de tiburones y grandes bancos en las islas del norte, diferenciada de las excursiones de las islas centrales.",
+      "highlights": "Martillos durante todo el año; junio–noviembre añade la ventana destacada del tiburón ballena.",
+      "seasonLabel": "Tiburones todo el año; tiburón ballena en junio–noviembre",
+      "seasonBasis": "La fuente separa la presencia anual de tiburones de la concentración estacional del tiburón ballena.",
+      "caution": "Corrientes, agua fría y mar abierto requieren experiencia. El tiburón ballena es un pez y no activa el filtro de ballenas.",
+      "wildlife": [
+        {
+          "name": "Martillos y tiburones de Galápagos",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "ec-galapagos"
+          ]
+        },
+        {
+          "name": "Tiburón ballena",
+          "target": "tiburones",
+          "months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sourceIds": [
+            "ec-galapagos"
+          ],
+          "note": "Ventana destacada; no todos los tiburones dependen de ella."
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "ec-galapagos"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "ag-plataforma",
+        "ec-galapagos"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "cocos",
+      "name": "Costa Rica · Isla del Coco",
+      "country": "Costa Rica",
+      "region": "Pacífico oriental",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Undersea Hunter / Aggressor Adventures",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "cr-cocos",
+        "cr-conditions"
+      ],
+      "travelSourceIds": [
+        "cr-cocos-faq",
+        "cr-conditions"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Dirty Rock",
+        "Manuelita",
+        "Dos Amigos"
+      ],
+      "summary": "Una expedición remota centrada en estaciones de limpieza, bancos de martillos y otros tiburones.",
+      "highlights": "Los puntos cambian con las corrientes; una ruta de grandes animales, no una selección genérica de toda Costa Rica.",
+      "seasonLabel": "Viajes a lo largo del año; confirmar calendario de la embarcación",
+      "seasonBasis": "La orientación anual no equivale a igual probabilidad mensual. No se fija un pico de martillos sin una serie o ventana explícita del operador.",
+      "caution": "Travesía larga, corrientes y termoclinas. Las mantas o ballenas ocasionales no activan filtros específicos en esta ficha.",
+      "wildlife": [
+        {
+          "name": "Martillos, galápagos y otros tiburones",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "cr-cocos"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "cr-cocos",
+            "cr-conditions"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "cr-cocos",
+        "cr-conditions",
+        "cr-cocos-faq"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "malpelo",
+      "name": "Colombia · Malpelo",
+      "country": "Colombia",
+      "region": "Pacífico colombiano",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Colombia Dive Adventures",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "co-malpelo"
+      ],
+      "travelSourceIds": [
+        "co-malpelo"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Paredes y pináculos de Malpelo"
+      ],
+      "summary": "Una expedición de grandes bancos de peces y tiburones, con diferencias marcadas entre época seca y lluviosa.",
+      "highlights": "Enero–abril favorece martillos más someros; en la época húmeda el operador destaca bancos de sedosos.",
+      "seasonLabel": "Todo el año; martillos en enero–abril y sedosos al inicio de las lluvias",
+      "seasonBasis": "Colombia Dive Adventures distingue enero–abril de mayo–diciembre; ambas estaciones permiten bucear.",
+      "caution": "Corrientes muy fuertes y condiciones remotas. La aparición posible de mantas no se utiliza como motivo principal del viaje.",
+      "wildlife": [
+        {
+          "name": "Martillos y tiburones sedosos",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "co-malpelo"
+          ]
+        },
+        {
+          "name": "Bancos de martillos más someros",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceIds": [
+            "co-malpelo"
+          ],
+          "note": "Cambian profundidad, visibilidad y temperatura."
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "co-malpelo"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "co-malpelo"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "tiger-beach",
+      "name": "Bahamas · Tiger Beach",
+      "country": "Bahamas",
+      "region": "Gran Bahama",
+      "scope": "route",
+      "tripStyle": "Vida a bordo especializado",
+      "operator": "Scuba Adventures",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "bs-tiger",
+        "bs-bimini"
+      ],
+      "travelSourceIds": [
+        "bs-tiger"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Tiger Beach"
+      ],
+      "summary": "Un viaje especializado en tiburones tigre, limón y de arrecife en fondos someros.",
+      "highlights": "Tiger Beach tiene interés anual; la extensión a Bimini se trata como otra ruta.",
+      "seasonLabel": "Todo el año; salidas condicionadas por el mar",
+      "seasonBasis": "El operador diferencia sus viajes anuales a Tiger Beach de los programas estacionales de grandes martillos.",
+      "caution": "Buceo organizado con atracción de tiburones. Confirmar protocolo y uso de cebo; no se recomienda tocar ni alimentar fauna.",
+      "wildlife": [
+        {
+          "name": "Tiburones tigre, limón y de arrecife",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "bs-bimini"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "bs-tiger",
+            "bs-bimini"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "ag-plataforma",
+        "bs-tiger",
+        "bs-bimini"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "bimini-tiger",
+      "name": "Bahamas · Bimini y Tiger Beach",
+      "country": "Bahamas",
+      "region": "Ruta de grandes martillos",
+      "scope": "route",
+      "tripStyle": "Vida a bordo especializado",
+      "operator": "Scuba Adventures",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "bs-bimini"
+      ],
+      "travelSourceIds": [
+        "bs-bimini",
+        "bs-tiger"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12
+      ],
+      "partialMonths": [
+        10
+      ],
+      "sites": [
+        "Bimini",
+        "Tiger Beach"
+      ],
+      "summary": "La extensión estacional para buscar grandes tiburones martillo y combinarla con Tiger Beach.",
+      "highlights": "El gran martillo de Bimini es distinto de los bancos de martillos de Galápagos o Malpelo.",
+      "seasonLabel": "Finales de octubre–mayo, según salida",
+      "seasonBasis": "La página de expedición indica octubre–mayo; el programa de Tiger Beach precisa finales de octubre.",
+      "caution": "No es la misma ruta que una estancia solo en Tiger Beach. Confirmar recorrido, método de atracción y condiciones meteorológicas.",
+      "wildlife": [
+        {
+          "name": "Gran tiburón martillo",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "bs-bimini"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "bs-bimini"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "bs-bimini",
+        "bs-tiger"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "jardines-reina",
+      "name": "Cuba · Jardines de la Reina",
+      "country": "Cuba",
+      "region": "Caribe cubano",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "All Star Liveaboards / Avalon",
+      "agencySourceIds": [
+        "ag-temoana"
+      ],
+      "operatorSourceIds": [
+        "cu-jardines"
+      ],
+      "travelSourceIds": [
+        "cu-jardines"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Arrecifes de Jardines de la Reina"
+      ],
+      "summary": "Arrecifes caribeños y encuentros con tiburones dentro de una zona protegida, explorada desde vida a bordo.",
+      "highlights": "Tiburones sedosos y de arrecife son parte del atractivo del programa.",
+      "seasonLabel": "Actividad anual; confirmar salida y situación del viaje",
+      "seasonBasis": "El operador publica tiburones durante todo el año. No se interpreta como disponibilidad garantizada ni ausencia de riesgo meteorológico.",
+      "caution": "Confirmar permisos, logística y método de interacción con tiburones. El estado actual de los arrecifes puede variar respecto a las descripciones publicadas.",
+      "wildlife": [
+        {
+          "name": "Tiburones de arrecife del Caribe y sedosos",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "cu-jardines"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "cu-jardines"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "cu-jardines"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "cu-jardines"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "belize-atolls",
+      "name": "Belice · Turneffe y Lighthouse Reef",
+      "country": "Belice",
+      "region": "Atolones exteriores",
+      "scope": "route",
+      "tripStyle": "Vida a bordo",
+      "operator": "Aggressor Adventures",
+      "agencySourceIds": [
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "bz-belize"
+      ],
+      "travelSourceIds": [
+        "bz-belize"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12
+      ],
+      "sites": [
+        "Turneffe: The Elbow",
+        "Lighthouse Reef",
+        "Great Blue Hole, según condiciones"
+      ],
+      "summary": "Paredes coralinas y bancos de peces en los atolones exteriores de Belice.",
+      "highlights": "El Blue Hole es una formación geológica, no un pecio. El arrecife exterior aporta la mayor parte de la vida de esta ruta.",
+      "seasonLabel": "Diciembre–mayo como ventana preferente; operativa anual",
+      "seasonBasis": "Selección editorial de la época de mejor claridad y mar más favorable descrita por Aggressor.",
+      "caution": "La ruta y la entrada al Blue Hole dependen del mar y la experiencia. El exterior del atolón no comparte siempre las condiciones de la costa continental.",
+      "wildlife": [
+        {
+          "name": "Tiburones en The Elbow",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "bz-belize"
+          ]
+        }
+      ],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "bz-belize"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "bz-belize"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-blueplanet",
+        "bz-belize"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "palau",
+      "name": "Palau · Blue Corner y German Channel",
+      "country": "Palau",
+      "region": "Arrecifes del suroeste",
+      "operator": "Sam’s Tours / Fish ’n Fins",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "pw-sites",
+        "pw-season"
+      ],
+      "travelSourceIds": [
+        "pw-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "sites": [
+        "Blue Corner",
+        "German Channel",
+        "Ngedbus Coral Garden"
+      ],
+      "summary": "Canales y paredes con tiburones, coral y una estación de limpieza de mantas, combinados desde Koror.",
+      "highlights": "German Channel concentra el interés por mantas; no se atribuye esa experiencia a todos los puntos de Palau.",
+      "seasonLabel": "Noviembre–abril; diciembre–marzo para priorizar mantas",
+      "seasonBasis": "Fish ’n Fins diferencia la ventana general de buceo del pico de mantas en German Channel.",
+      "caution": "Corrientes intensas en algunos puntos. La ficha no incluye automáticamente los pecios históricos de otras salidas.",
+      "wildlife": [
+        {
+          "name": "Tiburones de arrecife",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "pw-sites"
+          ]
+        },
+        {
+          "name": "Mantas en German Channel",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            12
+          ],
+          "sourceIds": [
+            "pw-season"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "pw-sites",
+            "pw-season"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "pw-sites",
+            "pw-season"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones",
+        "mantas"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mantas": [
+          1,
+          2,
+          3,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "pw-sites",
+        "pw-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "chuuk",
+      "name": "Micronesia · Laguna de Chuuk",
+      "country": "Estados Federados de Micronesia",
+      "region": "Truk Lagoon",
+      "scope": "route",
+      "tripStyle": "Vida a bordo / centro especializado",
+      "operator": "Master Liveaboards",
+      "agencySourceIds": [
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "fm-chuuk",
+        "fm-wreck"
+      ],
+      "travelSourceIds": [
+        "fm-chuuk"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Laguna de Chuuk",
+        "Rio de Janeiro Maru",
+        "Otros pecios según nivel y programa"
+      ],
+      "summary": "Un viaje de historia submarina a una laguna de pecios cubiertos de coral.",
+      "highlights": "El Rio de Janeiro Maru permite observar estructuras externas a distintas profundidades.",
+      "seasonLabel": "Todo el año",
+      "seasonBasis": "Master describe condiciones aptas para visitar la laguna durante todo el año, con variaciones de lluvia y viento.",
+      "caution": "No todos los pecios ni sus zonas son recreativos. La recomendación no autoriza penetración, buceo profundo ni descompresión.",
+      "wildlife": [],
+      "mode": "scuba",
+      "partialMonths": [],
+      "categories": [
+        "pecios",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pecios": {
+          "sourceIds": [
+            "fm-chuuk",
+            "fm-wreck"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "fm-chuuk",
+            "fm-wreck"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-blueplanet",
+        "fm-chuuk",
+        "fm-wreck"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "fakarava-sur",
+      "name": "Polinesia Francesa · Fakarava Sur",
+      "country": "Polinesia Francesa",
+      "region": "Paso de Tumakohua / Tetamanu",
+      "operator": "Enata Fakarava Diving",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "pf-fakarava"
+      ],
+      "travelSourceIds": [
+        "pf-fakarava"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Paso sur de Tumakohua",
+        "Jardines de coral del paso"
+      ],
+      "summary": "Un paso de atolón con grandes grupos de tiburones grises y jardines de coral.",
+      "highlights": "La ficha se refiere al paso sur, no al norte de Fakarava ni a todas las islas de Polinesia.",
+      "seasonLabel": "Todo el año, ajustando la inmersión a la marea",
+      "seasonBasis": "El centro publica actividad anual y una población habitual de tiburones en el paso. No se fija un evento de desove sin verificar su calendario.",
+      "caution": "Mareas, corriente y nivel determinan el recorrido. La estancia y los traslados al sur deben estar incluidos en el viaje.",
+      "wildlife": [
+        {
+          "name": "Tiburones grises de arrecife",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "pf-fakarava"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "corales"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "pf-fakarava"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "corales": {
+          "sourceIds": [
+            "pf-fakarava"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "pf-fakarava"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "fiji-bligh",
+      "name": "Fiyi · Bligh Water y Vatu-i-Ra",
+      "country": "Fiyi",
+      "region": "Rakiraki, Viti Levu",
+      "operator": "Volivoli / Ra Divers",
+      "agencySourceIds": [
+        "ag-temoana"
+      ],
+      "operatorSourceIds": [
+        "fj-sites"
+      ],
+      "travelSourceIds": [
+        "fj-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "sites": [
+        "Bligh Water",
+        "Vatu-i-Ra"
+      ],
+      "summary": "Arrecifes y pináculos donde el coral blando es el protagonista del viaje.",
+      "highlights": "Una base en Rakiraki para explorar la región de Bligh Water, no una ficha de todas las islas de Fiyi.",
+      "seasonLabel": "Mayo–octubre como ventana preferente",
+      "seasonBasis": "Selección editorial dentro de la estación seca publicada por Volivoli. No es un calendario biológico del coral.",
+      "caution": "Los puntos expuestos dependen de viento y corrientes. En la época húmeda también puede haber buceo, pero no se prioriza en esta selección.",
+      "wildlife": [],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "corales"
+      ],
+      "categoryMonths": {
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "corales": {
+          "sourceIds": [
+            "fj-sites"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "fj-sites",
+        "fj-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "kimbe-bay",
+      "name": "Papúa Nueva Guinea · Kimbe Bay",
+      "country": "Papúa Nueva Guinea",
+      "region": "Nueva Bretaña",
+      "operator": "Walindi Resort",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "pg-kimbe"
+      ],
+      "travelSourceIds": [
+        "pg-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Jardines y montes submarinos de Kimbe Bay"
+      ],
+      "summary": "Una estancia de arrecifes coralinos, invertebrados y bancos de peces alrededor de los montes submarinos de la bahía.",
+      "highlights": "Los ambientes de arena y coral permiten combinar detalle y gran angular desde Walindi.",
+      "seasonLabel": "Abril–diciembre en esta selección",
+      "seasonBasis": "Ventana editorial que evita enero–marzo, los meses más lluviosos descritos en la información local. No supone ausencia de buceo en esos meses.",
+      "caution": "Las ballenas y orcas ocasionales no se ofrecen como motivo de recomendación. Confirmar acceso y requisitos del viaje remoto.",
+      "wildlife": [],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "corales",
+        "macro",
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "corales": {
+          "sourceIds": [
+            "pg-kimbe"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "macro": {
+          "sourceIds": [
+            "pg-kimbe"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pelagica": {
+          "sourceIds": [
+            "pg-kimbe"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "pg-kimbe",
+        "pg-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "azores-pico",
+      "name": "Azores · Pico y Princess Alice",
+      "country": "Portugal",
+      "region": "Atlántico central",
+      "operator": "CW Azores",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "pt-azores",
+        "pt-princess"
+      ],
+      "travelSourceIds": [
+        "pt-azores",
+        "pt-princess"
+      ],
+      "operatingMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "recommendedMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "partialMonths": [
+        10
+      ],
+      "sites": [
+        "Pico: salidas de tiburones",
+        "Monte submarino Princess Alice"
+      ],
+      "summary": "Un programa atlántico de tiburones azules y bancos pelágicos, con salidas a Princess Alice según el mar.",
+      "highlights": "Princess Alice destaca por sus mobulas; no se etiquetan como mantas oceánicas o de arrecife.",
+      "seasonLabel": "Julio–mediados de octubre para combinar las dos experiencias",
+      "seasonBasis": "El programa de tiburones llega a octubre, pero Princess Alice se describe hasta mediados de ese mes. Se utiliza la intersección.",
+      "caution": "Salidas oceánicas exigentes y condicionadas por viento y oleaje. Los makos son variables, no el encuentro principal garantizado.",
+      "wildlife": [
+        {
+          "name": "Tiburón azul",
+          "target": "tiburones",
+          "months": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "pt-azores"
+          ]
+        },
+        {
+          "name": "Mobulas en Princess Alice",
+          "months": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "pt-princess"
+          ],
+          "note": "Rayas diablo; no se incluyen en el filtro de mantas."
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "pt-azores",
+            "pt-princess"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "pt-azores",
+        "pt-princess"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "aliwal-shoal",
+      "name": "Sudáfrica · Aliwal Shoal",
+      "country": "Sudáfrica",
+      "region": "Umkomaas, KwaZulu-Natal",
+      "operator": "Blue Ocean Dive Resort",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "za-aliwal"
+      ],
+      "travelSourceIds": [
+        "za-aliwal"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Arrecifes de Aliwal Shoal",
+        "Pecios locales según programa"
+      ],
+      "summary": "Tiburones, vida pequeña y pecios desde Umkomaas, con especies de tiburón diferentes según la época.",
+      "highlights": "Los tiburones de puntas negras oceánicos se describen todo el año; los tiburones toro de arena tienen una ventana distinta.",
+      "seasonLabel": "Todo el año; toro de arena en junio–noviembre",
+      "seasonBasis": "Calendario local del operador, sin transferir la temporada de Protea Banks a Aliwal Shoal.",
+      "caution": "Salida por rompiente y corrientes variables. Confirmar que los pecios estén incluidos y si la actividad de tiburones emplea cebo.",
+      "wildlife": [
+        {
+          "name": "Puntas negras oceánicos",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "za-aliwal"
+          ]
+        },
+        {
+          "name": "Tiburón toro de arena (ragged-tooth)",
+          "target": "tiburones",
+          "months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sourceIds": [
+            "za-aliwal"
+          ]
+        },
+        {
+          "name": "Martillos",
+          "target": "tiburones",
+          "months": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "za-aliwal"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica",
+        "macro",
+        "pecios"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "za-aliwal"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        },
+        "macro": {
+          "sourceIds": [
+            "za-aliwal"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "pecios": {
+          "sourceIds": [
+            "za-aliwal"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [
+        "tiburones"
+      ],
+      "targetMonths": {
+        "tiburones": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-blueplanet",
+        "za-aliwal"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "tofo-mantas",
+      "name": "Mozambique · Tofo, inmersiones con mantas",
+      "country": "Mozambique",
+      "region": "Inhambane",
+      "operator": "Tofo Scuba",
+      "agencySourceIds": [
+        "ag-temoana",
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "mz-tofo"
+      ],
+      "travelSourceIds": [
+        "mz-tofo"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sites": [
+        "Arrecifes de Tofo"
+      ],
+      "summary": "Inmersiones dedicadas a los grandes animales del arrecife, especialmente mantas.",
+      "highlights": "El centro diferencia las mantas durante el buceo del tiburón ballena, que suele encontrarse en superficie.",
+      "seasonLabel": "Todo el año; corrientes y visibilidad muy variables",
+      "seasonBasis": "Tofo Scuba no atribuye una estación fija a las mantas y describe condiciones que pueden cambiar en horas.",
+      "caution": "No incluye buceo con ballenas: el centro las observa desde el barco. El tiburón ballena de sus safaris de snorkel no se mezcla con esta ficha de botella.",
+      "wildlife": [
+        {
+          "name": "Mantas de arrecife y oceánicas",
+          "target": "mantas",
+          "months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "mz-tofo"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "partialMonths": [],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "mz-tofo"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "mantas"
+      ],
+      "targetMonths": {
+        "mantas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "ag-plataforma",
+        "mz-tofo"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "tonga-vavau",
+      "name": "Tonga · Vava’u y las yubartas",
+      "country": "Tonga",
+      "region": "Archipiélago de Vava’u",
+      "mode": "snorkel",
+      "tripStyle": "Expedición de snorkel con ballenas",
+      "operator": "WhaleSwim Adventures",
+      "agencySourceIds": [
+        "ag-plataforma"
+      ],
+      "operatorSourceIds": [
+        "to-tonga"
+      ],
+      "travelSourceIds": [
+        "to-tonga"
+      ],
+      "operatingMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "recommendedMonths": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "partialMonths": [
+        7,
+        10
+      ],
+      "sites": [
+        "Aguas de Vava’u"
+      ],
+      "summary": "Una experiencia de superficie para observar yubartas durante su estancia estacional en Tonga.",
+      "highlights": "No es una inmersión con botella ni una actividad de contacto con animales.",
+      "seasonLabel": "Julio–octubre; confirmar comienzo y final del programa",
+      "seasonBasis": "Temporada publicada por WhaleSwim para Vava’u. Los extremos dependen del calendario de salidas.",
+      "caution": "Actividad sujeta a licencia, meteorología y comportamiento de las ballenas. No se garantizan encuentros ni entrada al agua en cada avistamiento.",
+      "wildlife": [
+        {
+          "name": "Yubartas",
+          "target": "ballenas",
+          "months": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "sourceIds": [
+            "to-tonga"
+          ]
+        }
+      ],
+      "scope": "destination",
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "to-tonga"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "ballenas"
+      ],
+      "targetMonths": {
+        "ballenas": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "sourceIds": [
+        "ag-plataforma",
+        "to-tonga"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "ribbon-minke",
+      "name": "Australia · Ribbon Reefs y rorcuales minke",
+      "country": "Australia",
+      "region": "Gran Barrera de Coral, Cairns",
+      "scope": "route",
+      "mode": "snorkel",
+      "tripStyle": "Vida a bordo con encuentros de superficie",
+      "operator": "Mike Ball Dive Expeditions",
+      "agencySourceIds": [
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "au-minke"
+      ],
+      "travelSourceIds": [
+        "au-minke"
+      ],
+      "operatingMonths": [
+        6,
+        7
+      ],
+      "recommendedMonths": [
+        6,
+        7
+      ],
+      "partialMonths": [
+        7
+      ],
+      "sites": [
+        "Ribbon Reefs",
+        "Lighthouse Bommie y zonas de encuentro"
+      ],
+      "summary": "Una expedición estacional para observar rorcuales minke en el agua, junto a un programa de buceo en arrecifes.",
+      "highlights": "Esta ficha corresponde al encuentro con ballenas. Las inmersiones de coral del crucero son una actividad separada.",
+      "seasonLabel": "Junio–julio; calendario de salidas de cada año",
+      "seasonBasis": "El operador publica expediciones minke en junio y parte de julio. No se extrapola al resto del año.",
+      "caution": "La interacción con minke es de superficie siguiendo el protocolo del operador. No se promete ver ballenas durante las inmersiones con botella.",
+      "wildlife": [
+        {
+          "name": "Rorcual minke enano",
+          "target": "ballenas",
+          "months": [
+            6,
+            7
+          ],
+          "sourceIds": [
+            "au-minke"
+          ]
+        }
+      ],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          6,
+          7
+        ]
+      },
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "au-minke"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "ballenas"
+      ],
+      "targetMonths": {
+        "ballenas": [
+          6,
+          7
+        ]
+      },
+      "sourceIds": [
+        "ag-blueplanet",
+        "au-minke"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "noruega-fiordos",
+      "name": "Noruega · Fiordos de Troms y Finnmark",
+      "country": "Noruega",
+      "region": "Norte de Noruega",
+      "scope": "route",
+      "mode": "snorkel",
+      "tripStyle": "Expedición en barco y encuentros de superficie",
+      "operator": "Orca Norway",
+      "agencySourceIds": [
+        "ag-temoana"
+      ],
+      "operatorSourceIds": [
+        "no-orca"
+      ],
+      "travelSourceIds": [
+        "no-orca"
+      ],
+      "operatingMonths": [
+        1,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        10,
+        11,
+        12
+      ],
+      "partialMonths": [
+        1,
+        10
+      ],
+      "categories": [
+        "pelagica"
+      ],
+      "categoryMonths": {
+        "pelagica": [
+          1,
+          10,
+          11,
+          12
+        ]
+      },
+      "sites": [
+        "Fiordos de Troms y Finnmark",
+        "Zonas de concentración de arenque, variables"
+      ],
+      "summary": "Una expedición ártica tras las concentraciones de arenque que atraen orcas y yubartas a los fiordos.",
+      "highlights": "Observación desde barco y entradas al agua cuando el comportamiento de los animales, la luz y el estado del mar lo permiten.",
+      "seasonLabel": "Finales de octubre–mediados de enero; confirmar fechas de la campaña",
+      "seasonBasis": "Ventana descrita por el operador para sus expediciones. La página conserva referencias de campañas anteriores: no representa disponibilidad actual de plazas.",
+      "caution": "Experiencia de snorkel y apnea, no buceo con botella. Requiere preparación para agua fría y seguir las indicaciones del equipo. Las orcas son delfínidos; el filtro de ballenas se apoya en las yubartas.",
+      "wildlife": [
+        {
+          "name": "Yubartas",
+          "target": "ballenas",
+          "months": [
+            1,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "no-orca"
+          ]
+        },
+        {
+          "name": "Orcas",
+          "months": [
+            1,
+            10,
+            11,
+            12
+          ],
+          "sourceIds": [
+            "no-orca"
+          ],
+          "note": "Otra especie de la expedición, no el fundamento del filtro de ballenas."
+        }
+      ],
+      "featureEvidence": {
+        "pelagica": {
+          "sourceIds": [
+            "no-orca"
+          ],
+          "basis": "Experiencia de grandes animales descrita para esta ruta o zona; consultar ventanas específicas de fauna."
+        }
+      },
+      "pelagicTargets": [
+        "ballenas"
+      ],
+      "targetMonths": {
+        "ballenas": [
+          1,
+          10,
+          11,
+          12
+        ]
+      },
+      "sourceIds": [
+        "ag-temoana",
+        "no-orca"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    },
+    {
+      "id": "coron",
+      "name": "Filipinas · Pecios de Coron",
+      "country": "Filipinas",
+      "region": "Busuanga y bahía de Coron, Palawan",
+      "scope": "destination",
+      "mode": "scuba",
+      "tripStyle": "Estancia en tierra y salidas en barco",
+      "operator": "Rocksteady Dive Center; guía PADI con aportaciones de centros locales",
+      "agencySourceIds": [
+        "ag-blueplanet"
+      ],
+      "operatorSourceIds": [
+        "ph-coron"
+      ],
+      "travelSourceIds": [
+        "ph-coron-season"
+      ],
+      "operatingMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12
+      ],
+      "partialMonths": [],
+      "categories": [
+        "pecios",
+        "corales",
+        "macro"
+      ],
+      "categoryMonths": {
+        "pecios": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "corales": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "macro": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "sites": [
+        "Morazán Maru",
+        "Olympia Maru",
+        "Okikawa Maru",
+        "Lusong Reef"
+      ],
+      "summary": "Pecios históricos colonizados por corales y arrecifes cercanos, con vida pequeña para fotografía submarina.",
+      "highlights": "Rocksteady describe corales sobre los cascos, nudibranquios y otros sujetos macro. La combinación se construye con diferentes inmersiones, no con un único pecio.",
+      "seasonLabel": "Noviembre–mayo como ventana preferente de viaje",
+      "seasonBasis": "La guía PADI, con aportaciones de centros locales, recomienda estos meses por condiciones de mar y lluvia. No es una temporada biológica del coral ni un cierre del resto del año.",
+      "caution": "La visibilidad puede ser reducida y hay pecios profundos o con corriente. La ficha no autoriza penetraciones: el plan debe ajustarse a la formación, experiencia y condiciones reales.",
+      "wildlife": [],
+      "featureEvidence": {
+        "pecios": {
+          "sourceIds": [
+            "ph-coron"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "corales": {
+          "sourceIds": [
+            "ph-coron"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        },
+        "macro": {
+          "sourceIds": [
+            "ph-coron"
+          ],
+          "basis": "Hábitat o tipo de inmersión descrito por el operador; los meses no son observaciones biológicas mensuales."
+        }
+      },
+      "pelagicTargets": [],
+      "targetMonths": {},
+      "sourceIds": [
+        "ag-blueplanet",
+        "ph-coron",
+        "ph-coron-season"
+      ],
+      "checkedOn": "2026-09-11",
+      "reviewStatus": "agency-discovered-operator-documented",
+      "image": null
+    }
+  ]
+}

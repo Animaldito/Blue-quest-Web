@@ -2,10 +2,11 @@
 
 ## Próximo
 
-- [x] Investigar y crear una base inicial de destinos con fuentes y ventanas por mes.
+- [x] Sustituir la base inicial por 40 fichas basadas en agencias especializadas y documentación de centros y operadores.
+- [x] Separar rutas del mar Rojo, Maldivas y Komodo, temporadas de viaje y ventanas específicas de fauna.
 - [x] Integrar un selector por fases con un máximo de tres intereses y fichas compatibles.
 - [ ] Revisión humana de las fichas: fauna/temporada, condiciones de inmersión y modalidades; propuesta de reparto en docs/DESTINATION-RESEARCH.md.
-- [ ] Ampliar de forma documentada las regiones menos representadas y añadir fotografías pertinentes con licencia.
+- [ ] Ampliar de forma documentada Cozumel/Roatán, Rangiroa, Derawan/Maratua, Índico africano y Mediterráneo; añadir fotografías pertinentes con licencia.
 - [ ] Reconfirmar temporadas parciales, permisos y acceso antes de convertir una sugerencia en propuesta de viaje.
 
 - [x] Aprovechar el ancho de la cabecera con una frase mayor y letras con coral fijo y peces animados.

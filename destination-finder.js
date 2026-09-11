@@ -10,7 +10,7 @@
   return data.destinations.flatMap(destination=>{
    if(!query.categories.every(c=>destination.categories.includes(c)))return [];
    if(query.target&&!destination.pelagicTargets.includes(query.target))return [];
-   const matches=months.filter(month=>destination.recommendedMonths.includes(month)&&query.categories.every(c=>destination.categoryMonths[c]?.includes(month))&&(!query.target||destination.targetMonths[query.target]?.includes(month)));
+   const matches=months.filter(month=>destination.operatingMonths.includes(month)&&destination.recommendedMonths.includes(month)&&query.categories.every(c=>destination.categoryMonths[c]?.includes(month))&&(!query.target||destination.targetMonths[query.target]?.includes(month)));
    if(!matches.length)return [];
    return [{destination,months:matches,categories:[...query.categories],target:query.target||null,partialMonths:matches.filter(m=>destination.partialMonths.includes(m))}];
   }).sort((a,b)=>b.months.length-a.months.length||a.destination.name.localeCompare(b.destination.name,'es'));
@@ -32,7 +32,7 @@
   if(!loadPromise){
    const controller=new AbortController();
    const timeout=setTimeout(()=>controller.abort(),12000);
-   loadPromise=fetch('data/dive-destinations.v1.json',{signal:controller.signal}).then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las fichas.');return response.json();}).then(data=>{if(data.schemaVersion!==1||!Array.isArray(data.destinations)||!Array.isArray(data.sources))throw new Error('La base de destinos no es válida.');return data;}).catch(error=>{loadPromise=null;throw error;}).finally(()=>clearTimeout(timeout));
+   loadPromise=fetch('data/dive-destinations.v2.json',{signal:controller.signal}).then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las fichas.');return response.json();}).then(data=>{if(data.schemaVersion!==2||!Array.isArray(data.destinations)||!Array.isArray(data.sources))throw new Error('La base de destinos no es válida.');section.querySelector('[data-catalog-coverage]').textContent=data.destinations.length+' fichas de zonas y rutas en '+new Set(data.destinations.map(d=>d.country)).size+' países y territorios, con '+data.sources.length+' referencias. ';return data;}).catch(error=>{loadPromise=null;throw error;}).finally(()=>clearTimeout(timeout));
   }
   return loadPromise;
  }
@@ -63,10 +63,18 @@
  section.querySelector('#finder-edit').addEventListener('click',()=>showStep('interests'));
  function card(match,data){
   const d=match.destination;
+  const listMonths=values=>values.length===12?'Todo el año':values.map(m=>monthNames[m-1]).join(' · ');
   const months=match.months.map(m=>monthNames[m-1]+(match.partialMonths.includes(m)?' (parcial)':'')).join(' · ');
   const selected=match.categories.map(c=>data.categories[c]).concat(match.target?[data.targets[match.target]]:[]);
-  const sources=d.sourceIds.map(id=>data.sources.find(source=>source.id===id)).filter(Boolean);
-  return `<article class="finder-result-card" data-destination="${esc(d.id)}"><p class="finder-location">${esc(d.country)} / ${esc(d.region)}</p><h4>${esc(d.name)}</h4><div class="finder-tags">${selected.map(label=>`<span class="finder-tag">${esc(label)}</span>`).join('')}<span class="finder-tag">${d.mode==='scuba'?'Buceo con botella':'Snorkel / superficie'}</span></div><p>${esc(d.summary)}</p><p class="finder-months">En tu época: ${esc(months)}</p><details><summary>Ver ficha y fuentes</summary><p>${esc(d.highlights)}</p><p><strong>Ventana recomendada:</strong> ${esc(d.seasonLabel)}.</p><p class="finder-caution">${esc(d.caution)}</p><p>${d.scope==='destination'?'La combinación puede requerir varios puntos e inmersiones en este destino.':'Ficha de un punto concreto.'} La fauna es salvaje: no se garantiza el encuentro.</p><ul class="finder-sources">${sources.map(source=>`<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.publisher)} — ${esc(source.title)}</a></li>`).join('')}</ul><p>Revisión de fuentes: 11/09/2026.</p></details></article>`;
+  const sourceList=ids=>[...new Set(ids)].map(id=>data.sources.find(source=>source.id===id)).filter(Boolean).map(source=>'<li><a href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.publisher)+' — '+esc(source.title)+'</a></li>').join('');
+  const primaryIds=d.sourceIds.filter(id=>!d.agencySourceIds.includes(id));
+  const fauna=d.wildlife.filter(w=>!match.target||!w.target||w.target===match.target);
+  const wildlife=fauna.length?'<div class="finder-wildlife"><h5>Fauna y épocas de interés</h5><ul>'+fauna.map(w=>{
+   const current=w.months.some(m=>match.months.includes(m));
+   return '<li><strong>'+esc(w.name)+'</strong><span>'+esc(listMonths(w.months))+'</span><small>'+(current?'Coincide con alguno de tus meses.':'Su ventana destacada queda fuera de tus meses.')+(w.note?' '+esc(w.note):'')+'</small></li>';
+  }).join('')+'</ul></div>':'';
+  const scope=d.scope==='route'?'La combinación corresponde a varias inmersiones de esta ruta.':d.scope==='site'?'Ficha de un punto concreto.':'La combinación puede requerir varios puntos y salidas desde esta base.';
+  return '<article class="finder-result-card" data-destination="'+esc(d.id)+'"><p class="finder-location">'+esc(d.country)+' / '+esc(d.region)+'</p><h4>'+esc(d.name)+'</h4><p class="finder-trip-style">'+esc(d.tripStyle)+'</p><div class="finder-tags">'+selected.map(label=>'<span class="finder-tag">'+esc(label)+'</span>').join('')+'<span class="finder-tag">'+(d.mode==='scuba'?'Buceo con botella':'Snorkel / superficie')+'</span></div><p>'+esc(d.summary)+'</p><p class="finder-months">Meses que encajan: '+esc(months)+'</p><details><summary>Ver ruta, temporada y fuentes</summary><h5>Qué reúne este viaje</h5><p>'+esc(d.highlights)+'</p><ul class="finder-sites">'+d.sites.map(site=>'<li>'+esc(site)+'</li>').join('')+'</ul><h5>Cuándo ir</h5><p>'+esc(d.seasonLabel)+'.</p><p>'+esc(d.seasonBasis)+'</p>'+wildlife+'<p class="finder-caution">'+esc(d.caution)+'</p><p>'+scope+' La fauna es salvaje: no se garantiza el encuentro.</p><h5>Centros y operadores consultados</h5><p>'+esc(d.operator)+'. Referencias para documentar el viaje, sin vínculo comercial con Blue Quest.</p><ul class="finder-sources">'+sourceList(primaryIds)+'</ul><h5>Destino localizado en agencias especializadas</h5><ul class="finder-sources">'+sourceList(d.agencySourceIds)+'</ul><p>Revisión documental: '+esc(d.checkedOn.split('-').reverse().join('/'))+'. Las fuentes comerciales no sustituyen la confirmación de condiciones, permisos o disponibilidad.</p></details></article>';
  }
  function appendGroup(container,matches,data,title,note){
   if(!matches.length)return;
@@ -82,12 +90,12 @@
  function displayResults(data,query){
   const matches=matchDestinations(data,query),container=section.querySelector('#finder-matches');container.replaceChildren();
   const scuba=matches.filter(match=>match.destination.mode==='scuba'),surface=matches.filter(match=>match.destination.mode==='snorkel');
-  if(!matches.length){const p=document.createElement('p');p.className='finder-empty';p.textContent='Todavía no tenemos una ficha que reúna todos esos intereses en los mismos meses. Prueba otra época o quita un interés. No significa que ese destino no exista: esta es una selección inicial.';container.append(p);}
+  if(!matches.length){const p=document.createElement('p');p.className='finder-empty';p.textContent='Todavía no tenemos una ficha que reúna todos esos intereses en los mismos meses. Prueba otra época o quita un interés. No significa que ese viaje no exista: solo mostramos combinaciones documentadas en nuestro catálogo.';container.append(p);}
   if(!scuba.length&&surface.length){const p=document.createElement('p');p.className='finder-empty';p.textContent='Para esta búsqueda, las fichas disponibles son encuentros de superficie, no inmersiones con botella.';container.append(p);}
   appendGroup(container,scuba,data,'Buceo con botella');
   appendGroup(container,surface,data,'Snorkel y encuentros de superficie','Son experiencias diferentes al buceo con botella. Confirma la modalidad y el operador autorizado antes de reservar.');
   const labels=query.categories.map(c=>data.categories[c]);if(query.target)labels.push(data.targets[query.target]);
-  section.querySelector('#finder-query').textContent=labels.join(' + ')+' · '+data.seasons[query.season].label+' · '+matches.length+(matches.length===1?' ficha compatible.':' fichas compatibles.')+' Ordenadas por meses coincidentes, no por probabilidad de avistamiento.';
+  section.querySelector('#finder-query').textContent=labels.join(' + ')+' · '+data.seasons[query.season].label+' · '+matches.length+(matches.length===1?' ficha compatible.':' fichas compatibles.')+' Todas reúnen tus intereses en los meses indicados. El orden no representa una probabilidad de avistamiento.';
   form.hidden=true;results.hidden=false;step='results';progress();results.querySelector('h3').focus();
  }
  form.addEventListener('submit',async event=>{
