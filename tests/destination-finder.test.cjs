@@ -2,34 +2,24 @@ const assert=require('node:assert/strict');
 const data=require('../data/dive-destinations.v2.json');
 const {matchDestinations}=require('../destination-finder.js');
 const validMonths=months=>Array.isArray(months)&&months.length>0&&new Set(months).size===months.length&&months.every(m=>Number.isInteger(m)&&m>=1&&m<=12);
-const sources=new Map(data.sources.map(s=>[s.id,s]));
 const sort=values=>[...new Set(values)].sort((a,b)=>a-b);
 assert.equal(data.schemaVersion,2);
-assert.equal(sources.size,data.sources.length);
+assert(!/https?:|\"(?:sources|operator|sourceIds|agencySourceIds|operatorSourceIds|travelSourceIds|featureEvidence|seasonSourceIds)\"/.test(JSON.stringify(data)),'Public catalog must not contain internal references');
 assert.equal(new Set(data.destinations.map(d=>d.id)).size,data.destinations.length);
 assert.equal(data.destinations.length,40);
 assert.equal(new Set(data.destinations.map(d=>d.country)).size,24);
-assert.equal(data.sources.length,67);
-for(const source of data.sources){assert.equal(new URL(source.url).protocol,'https:');assert(source.publisher&&source.title&&source.checkedOn);}
 for(const d of data.destinations){
  assert(validMonths(d.recommendedMonths),d.id);assert(validMonths(d.operatingMonths),d.id);
  assert(d.recommendedMonths.every(m=>d.operatingMonths.includes(m)),d.id);
- assert(d.sourceIds.length&&d.sourceIds.every(id=>sources.has(id)),d.id);
- assert(d.agencySourceIds.length&&d.agencySourceIds.every(id=>sources.get(id)?.type==='agency'),d.id);
- assert(d.operatorSourceIds.length&&d.operatorSourceIds.every(id=>sources.get(id)?.type==='operator'),d.id);
- assert(d.travelSourceIds.length&&d.travelSourceIds.every(id=>d.sourceIds.includes(id)),d.id);
  assert(['site','destination','route'].includes(d.scope));assert(['scuba','snorkel'].includes(d.mode));
- assert(d.sites.length&&d.summary&&d.highlights&&d.caution&&d.seasonBasis&&d.tripStyle,d.id);
+ assert(d.sites.length&&d.summary&&d.highlights&&d.caution&&d.tripStyle,d.id);
  assert(Array.isArray(d.partialMonths)&&d.partialMonths.every(m=>d.operatingMonths.includes(m)),d.id);
  assert(d.categories.length&&new Set(d.categories).size===d.categories.length,d.id);
  for(const c of d.categories){
   assert(Object.hasOwn(data.categories,c));assert(validMonths(d.categoryMonths[c]));
-  assert(d.featureEvidence[c].basis&&d.featureEvidence[c].sourceIds.length);
-  assert(d.featureEvidence[c].sourceIds.every(id=>d.sourceIds.includes(id)));
  }
  for(const w of d.wildlife){
-  assert(w.name&&validMonths(w.months));assert(w.sourceIds.length&&w.sourceIds.every(id=>d.sourceIds.includes(id)));
-  if(w.seasonSourceIds)assert(w.seasonSourceIds.every(id=>d.sourceIds.includes(id)));
+  assert(w.name&&validMonths(w.months));
   if(w.target)assert(Object.hasOwn(data.targets,w.target));
  }
  assert.deepEqual([...d.pelagicTargets].sort(),[...new Set(d.wildlife.map(w=>w.target).filter(Boolean))].sort());
@@ -96,4 +86,4 @@ for(let mask=1;mask<16;mask++){
  }
 }
 assert.equal(JSON.stringify(data),before,'Search must not mutate the catalog');
-console.log(data.destinations.length+' fichas, '+data.sources.length+' fuentes, procedencia, temporadas y '+queries+' combinaciones: OK');
+console.log(data.destinations.length+' fichas públicas y '+queries+' combinaciones: OK');

@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Fichas públicas sin referencias internas
+
+- Retirados enlaces, centros, operadores y agencias consultadas de las fichas y del catálogo descargable.
+- Investigación conservada fuera del repositorio público; documentación pública sustituida por una descripción funcional.
+- Conservados destinos, fauna, temporadas y criterios de búsqueda; añadido control de ausencia de metadatos internos.
+- El historial anterior no se reescribe: puede conservar versiones publicadas previamente.
+
 ## 2026-09-11 — Cabecera integrada y puntos de recuperación
 
 - Punto de recuperación del estado publicado anterior a los cambios; script portable para crear y listar etiquetas anotadas sin duplicar archivos.
@@ -14,7 +21,7 @@ Este archivo resume los cambios permanentes realizados en la web.
 ## 2026-09-11 — Catálogo reconstruido por destinos y rutas reales
 
 - Sustituido el catálogo inicial por 40 fichas de 24 países y territorios con 67 referencias.
-- Investigación desde La Plataforma del Buceo, Blue Planet y Te Moana hacia centros y operadores locales; procedencia comercial y documental diferenciada.
+- Investigación documental por zonas y rutas concretas; procedencia conservada en documentación interna.
 - Separadas las rutas Norte, BDE y St. John's del mar Rojo; rutas de Maldivas y zonas estacionales de Komodo.
 - Ventanas de operación, recomendación de viaje y fauna independientes, con coincidencia estricta de todos los intereses en los mismos meses.
 - Fichas con puntos de inmersión, formato de viaje, fauna estacional, limitaciones y fuentes; no se prometen avistamientos ni disponibilidad.

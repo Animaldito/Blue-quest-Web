@@ -22,6 +22,12 @@
 - Comprobar que la web carga y que no hay caracteres mal codificados como `Ã` o `â`.
 - Actualizar `CHANGELOG.md` para cambios permanentes y `TODO.md` para tareas pendientes o completadas.
 
+## Investigación de destinos
+
+- Las fuentes, centros, operadores consultados y agencias son información interna: no incluirlos en HTML, JavaScript, JSON, documentación pública ni comentarios enviados al repositorio.
+- La investigación se conserva fuera del checkout público; consultar la copia local interna antes de actualizar contenidos. No publicar copias de respaldo de esa documentación.
+- Ocultar en pantalla no basta: comprobar también los datos enviados al navegador. Mantener las temporadas y criterios de búsqueda al limpiar metadatos.
+
 ## Publicación
 
 - La rama `main` se despliega automáticamente en Vercel.

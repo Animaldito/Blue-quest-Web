@@ -2,6 +2,9 @@
 
 ## Próximo
 
+- [x] Retirar referencias internas de las fichas y de los archivos públicos del catálogo.
+- [ ] Si se requiere confidencialidad retrospectiva, acordar el tratamiento del historial público y los despliegues antiguos; no borrar copias sin autorización.
+
 - [x] Añadir puntos de recuperación ligeros antes de las mejoras y documentar cómo deshacerlas sin borrar el historial.
 - [x] Integrar la cabecera en la fotografía, hacer protagonista el propósito de Blue Quest, refinar la animación y estrechar la barra lateral.
 
