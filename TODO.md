@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Retirar la sección Asesoramiento y actualizar sus enlaces.
+
 - [x] Usar nombres de sección y aumentar la tipografía general.
 
 - [x] Reducir textos y notas; ocultar temporalmente «Tu destino» sin cargar su herramienta.

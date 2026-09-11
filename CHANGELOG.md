@@ -2,6 +2,11 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Retirada de la sección Asesoramiento
+
+- Eliminada la sección y su entrada del menú; los accesos de proyecto llevan ahora a Contacto.
+- Contenido anterior recuperable mediante el punto de recuperación.
+
 ## 2026-09-11 — Nombres de sección y mayor legibilidad
 
 - Sustituidos los eslóganes de secciones y servicios por nombres directos; conservado el propósito principal en portada.
