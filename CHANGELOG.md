@@ -2,6 +2,11 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Retratos de equipo secundarios
+
+- Reducidos los retratos a 128 × 96 px en escritorio y 104 × 78 px en móvil, con margen dentro de cada perfil.
+- Conservados los archivos originales, encuadres proporcionales y biografías; mayor protagonismo del texto.
+
 ## 2026-09-11 — Fichas públicas sin referencias internas
 
 - Retirados enlaces, centros, operadores y agencias consultadas de las fichas y del catálogo descargable.

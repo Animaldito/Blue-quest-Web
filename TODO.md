@@ -2,6 +2,8 @@
 
 ## Próximo
 
+- [x] Reducir las fotos de The Team para priorizar roles y biografías.
+
 - [x] Retirar referencias internas de las fichas y de los archivos públicos del catálogo.
 - [ ] Si se requiere confidencialidad retrospectiva, acordar el tratamiento del historial público y los despliegues antiguos; no borrar copias sin autorización.
 
