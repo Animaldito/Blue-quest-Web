@@ -1,8 +1,8 @@
 const canvas=document.querySelector('#globe'),ctx=canvas.getContext('2d');
-const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'ExploraciÃ³n realizada en este destino.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'ExploraciÃ³n realizada en este destino.'},{name:'Leyte',lat:10.9,lon:124.8,status:'ProspecciÃ³n programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'ProspecciÃ³n programada para noviembre de 2026.'}];
+const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'Exploración realizada en este destino.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'Exploración realizada en este destino.'},{name:'Leyte',lat:10.9,lon:124.8,status:'Prospección programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'Prospección programada para noviembre de 2026.'}];
 let rotation=55,tilt=12,selected=0,drag=null,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,w=0,h=0,last=0,visible=true;
 const rotate=document.querySelector('#rotate');
-function setAuto(value){auto=value;rotate.textContent=auto?'â…¡ Pausar rotaciÃ³n':'â–· Activar rotaciÃ³n';rotate.setAttribute('aria-pressed',String(auto));}setAuto(auto);
+function setAuto(value){auto=value;rotate.textContent=auto?'Ⅱ Pausar rotación':'▷ Activar rotación';rotate.setAttribute('aria-pressed',String(auto));}setAuto(auto);
 function resize(){const b=canvas.getBoundingClientRect();w=b.width;h=b.height;const d=Math.min(devicePixelRatio||1,2);canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);}new ResizeObserver(resize).observe(canvas);
 const rad=Math.PI/180;
 function project(lon,lat){const l=(lon-rotation)*rad,p=lat*rad,t=tilt*rad,r=Math.min(w*.43,h*.43);const x=Math.cos(p)*Math.sin(l),y=Math.sin(p)*Math.cos(t)-Math.cos(p)*Math.cos(l)*Math.sin(t),z=Math.sin(p)*Math.sin(t)+Math.cos(p)*Math.cos(l)*Math.cos(t);return [w/2+r*x,h/2-r*y,z];}
