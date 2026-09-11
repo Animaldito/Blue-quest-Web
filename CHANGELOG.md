@@ -2,6 +2,15 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Cabecera translúcida y servicios fotográficos
+
+- Franja superior blanca translúcida, destello de entrada y acceso destacado a «Tu próximo proyecto» en verde oscuro.
+- BLUE QUEST sustituye el lema superior; el bloque de marca conserva únicamente el anagrama animado.
+- Retirada la numeración decorativa en menú, secciones, fichas, equipo y pasos; conservadas las fechas y los datos.
+- Encabezados ampliados con tamaños adaptables a móvil.
+- Fotografías estrechas de resort, barca con buceadores y pecio sustituyen los iconos de servicios, con transparencia suave.
+- Comprobadas navegación, carga de imágenes, formulario y preferencia de movimiento reducido.
+
 ## 2026-09-11 — Fotografías reales del equipo
 
 - Sustituidos los retratos de muestra por las cuatro fotografías aportadas, editadas con IA para luz, nitidez y encuadre.

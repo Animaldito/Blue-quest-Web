@@ -19,6 +19,8 @@
 
 ## Completado
 
+- [x] Rediseñar la franja superior translúcida, ampliar encabezados, eliminar numeración y añadir fotografías a los servicios.
+
 - [x] Mostrar la máscara integral utilizada por un submarinista, en consonancia con las otras fotografías de equipos.
 
 - [x] Profesionalizar los perfiles de The Team e integrar las responsabilidades operativas en las cuatro biografías.

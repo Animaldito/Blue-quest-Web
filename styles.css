@@ -120,3 +120,42 @@ h2{font-weight:600;text-transform:uppercase;font-size:clamp(40px,4.4vw,65px)}
 @media(max-width:760px){.sidebar .brand-animated{min-height:106px;padding:8px 4px}.sidebar .brand-animated .quest-mark{width:57px;height:53px}.sidebar .brand-animated .quest-name{font-size:10px;letter-spacing:1.2px;margin-top:6px}.sidebar .brand-animated .quest-tagline{font-size:5px;letter-spacing:1px;margin-top:3px}}
 @media(prefers-reduced-motion:reduce){.sidebar .brand-animated .quest-mark{transition:none;transform:none}.brand-animated:after{display:none}}
 
+/* Light translucent masthead, expressive headings and photographic service strips. */
+.hero-top{left:0;right:0;height:118px;padding:20px 6%;background:rgba(250,253,252,.88);border-bottom:1px solid #fff9;color:#082f3a;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);isolation:isolate;overflow:hidden;z-index:3}
+.hero-top::before{content:"";position:absolute;inset:-80%;pointer-events:none;z-index:-1;background:linear-gradient(115deg,transparent 35%,#fff9 48%,#b5eee544 56%,transparent 68%);transform:translateX(-65%);animation:masthead-light 3.8s ease-out both}
+.hero-top>span{font:600 clamp(20px,2vw,30px)/1.1 'DM Sans',sans-serif;letter-spacing:4px;white-space:nowrap}
+.hero-top>a{display:flex;align-items:center;gap:22px;color:#07594f;font:600 clamp(28px,3.1vw,48px)/1.05 'Barlow Condensed',sans-serif;letter-spacing:.4px}
+.hero-top>a span{transition:transform .3s;font-size:1.1em}
+.hero-top>a:hover,.hero-top>a:focus-visible{color:#033833}.hero-top>a:hover span{transform:translate(3px,-3px)}
+@keyframes masthead-light{to{transform:translateX(65%)}}
+.sidebar .brand-animated .quest-mark{width:122px;height:112px}
+.sidebar nav a{font-size:14px;min-height:56px;justify-content:center}
+h1{font-size:clamp(64px,7.1vw,116px)}
+.section h2{font-size:clamp(52px,5.2vw,82px);line-height:1.02}
+.section-heading>div,.section-heading>h2{min-width:0}.section-heading>p{flex-shrink:0}
+.section .section-heading .eyebrow,.consulting>.eyebrow{font-size:14px;letter-spacing:2.2px}
+.service-photo{height:155px;margin:24px 0 26px;overflow:hidden;background:#092529;border:1px solid #ffffff12}
+.service-photo img{width:100%;height:100%;display:block;object-fit:cover;opacity:.78;transition:opacity .35s,transform .7s}
+.service:hover .service-photo img{opacity:.92;transform:scale(1.035)}
+.service-number{font-size:14px;color:var(--cyan)}
+.service h3{font-size:36px;line-height:1.12}
+.equipment summary{font-size:23px}.equipment details p{margin-left:0}
+.steps h3{font-size:31px;margin-top:0}
+.hero-bottom nav a{font-size:13px}
+@media(min-width:761px) and (max-width:1250px){.section-heading{flex-direction:column;align-items:flex-start;gap:25px}.section-heading>p{max-width:650px}.hero-top>a{font-size:34px}.hero-top>span{font-size:21px;letter-spacing:2px}}
+@media(max-width:760px){
+ .sidebar nav a,.sidebar nav a:first-child,.sidebar nav a:last-child{font-size:11px;min-height:46px}
+ .sidebar .brand-animated .quest-mark{width:72px;height:66px}
+ .hero-top{height:102px;padding:15px 6%;gap:15px}
+ .hero-top>span{font-size:17px;letter-spacing:1.6px}
+ .hero-top>a{font-size:27px;max-width:170px;gap:10px}
+ .hero{padding-top:270px!important}
+ h1{font-size:clamp(46px,10.6vw,78px)}
+ .section h2{font-size:clamp(47px,9vw,65px)}
+ .section .section-heading .eyebrow,.consulting>.eyebrow{font-size:12px}
+ .service h3{font-size:34px}.service-photo{height:145px}
+ .hero-bottom nav a,.hero-bottom nav a:first-child,.hero-bottom nav a:last-child{font-size:11px;justify-content:center}
+}
+@media(max-width:360px){.hero-top>span{font-size:15px;letter-spacing:1px}.hero-top>a{font-size:24px;max-width:140px}.section h2{font-size:43px}.service h3{font-size:31px}}
+@media(prefers-reduced-motion:reduce){.hero-top::before{display:none}.service:hover .service-photo img{transform:none}}
+
