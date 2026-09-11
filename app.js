@@ -62,6 +62,23 @@ showEquipment('map');
 // Local draft only: no network request, storage, or direct email delivery.
 const contactForm=document.querySelector('#contact-form');
 const brandMotion=document.querySelector('.photo-wordmark');
+// A stationary reef and independent schools, all confined to the letterforms.
+brandMotion.innerHTML=`<svg class="brand-aquarium" viewBox="0 0 700 150" aria-hidden="true" focusable="false">
+<defs>
+ <text id="brand-letterforms" x="4" y="126" textLength="690" lengthAdjust="spacingAndGlyphs" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="145">BLUE QUEST</text>
+ <clipPath id="brand-letter-clip"><use href="#brand-letterforms"/></clipPath>
+ <linearGradient id="brand-sea" x2="0" y2="1"><stop stop-color="#1487a0"/><stop offset="1" stop-color="#032638"/></linearGradient>
+ <linearGradient id="brand-coral-fade" x2="0" y2="1"><stop stop-color="white" stop-opacity="0"/><stop offset=".45" stop-color="white"/></linearGradient>
+ <mask id="brand-reef-mask"><rect x="0" y="76" width="700" height="74" fill="url(#brand-coral-fade)"/></mask>
+ <g id="brand-fish"><path d="M-12 0L-21-7V7Z" fill="currentColor"/><path d="M-14 0Q-3-11 12 0Q-3 11-14 0Z" fill="currentColor"/><path d="M-5-5L0-10 3-5" fill="currentColor"/><circle cx="7" cy="-1" r="1.1" fill="#032638"/></g>
+</defs>
+<g clip-path="url(#brand-letter-clip)">
+ <rect width="700" height="150" fill="url(#brand-sea)"/>
+ <image href="assets/brand/reef.jpg" x="0" y="30" width="700" height="140" preserveAspectRatio="xMidYMax slice" mask="url(#brand-reef-mask)"/>
+ ${Array.from({length:14},(_,i)=>`<g class="brand-swimmer" style="--swim-time:${14+i%5*2}s;--swim-delay:-${i*2.7}s;--swim-y:${29+i%4*16}px;color:${['#c4e5e7','#e7c584','#8fd1da'][i%3]}"><g transform="scale(${.42+i%3*.12})"><use href="#brand-fish"/></g></g>`).join('')}
+</g>
+<use href="#brand-letterforms" fill="none" stroke="#073c4c" stroke-width=".85" stroke-linejoin="round"/>
+</svg>`;
 brandMotion.addEventListener('click',()=>{
  const paused=document.querySelector('.hero-top').classList.toggle('effects-paused');
  brandMotion.setAttribute('aria-pressed',String(paused));

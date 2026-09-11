@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Cabecera con arrecife vivo
+
+- Coral fijo en la base de BLUE QUEST y pequeños peces animados de izquierda a derecha dentro de las letras, con contorno fino.
+- Frase de propósito ampliada y distribución más ancha para aprovechar el espacio de la cabecera.
+- Conservada la pausa al pulsar la marca y el respeto al movimiento reducido, sin iconos adicionales.
+
 ## 2026-09-11 — Arrecife y propósito en la marca
 
 - Ampliada la firma BLUE QUEST y sustituido su relleno por una fotografía de arrecife con peces.
