@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Arrecife y propósito en la marca
+
+- Ampliada la firma BLUE QUEST y sustituido su relleno por una fotografía de arrecife con peces.
+- Añadida la frase «Exploramos nuevos puntos de buceo recreativo».
+- Eliminado el icono de reproducción/pausa; la marca permite pausar el efecto mediante clic o teclado, sin iconos adicionales.
+- Conservados el fondo blanco, la alineación del anagrama y el turquesa del acceso a proyectos.
+
 ## 2026-09-11 — Marca fotográfica y cabecera alineada
 
 - Igualada la altura del bloque del anagrama y la cabecera; alineación lateral también en móvil.

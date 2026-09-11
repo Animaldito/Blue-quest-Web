@@ -19,6 +19,8 @@
 
 ## Completado
 
+- [x] Ampliar la marca, integrar vida marina en su relleno y añadir una frase sobre exploración de puntos recreativos.
+
 - [x] Alinear anagrama y cabecera, aclarar el fondo y destacar la marca fotográfica con efectos periódicos.
 
 - [x] Rediseñar la franja superior translúcida, ampliar encabezados, eliminar numeración y añadir fotografías a los servicios.

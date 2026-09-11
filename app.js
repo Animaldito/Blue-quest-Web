@@ -23,7 +23,7 @@ const sectionLinks=[...document.querySelectorAll('.sidebar nav a')];
 const sectionTargets=sectionLinks.map(link=>document.querySelector(link.getAttribute('href')));
 let navigationQueued=false;
 function updateNavigation(){
-  const threshold=matchMedia('(max-width:760px)').matches?238:110;
+  const threshold=matchMedia('(max-width:760px)').matches?278:110;
   let active=null;
   sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold)active=section.id;});
   sectionLinks.forEach(link=>{if(link.hash==='#'+active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
@@ -61,13 +61,12 @@ showEquipment('map');
 
 // Local draft only: no network request, storage, or direct email delivery.
 const contactForm=document.querySelector('#contact-form');
-const brandMotion=document.querySelector('.motion-toggle');
+const brandMotion=document.querySelector('.photo-wordmark');
 brandMotion.addEventListener('click',()=>{
  const paused=document.querySelector('.hero-top').classList.toggle('effects-paused');
  brandMotion.setAttribute('aria-pressed',String(paused));
- brandMotion.textContent=paused?'▷':'Ⅱ';
  const label=paused?'Activar efectos de la marca':'Pausar efectos de la marca';
- brandMotion.setAttribute('aria-label',label);brandMotion.title=label;
+ brandMotion.setAttribute('aria-label','Blue Quest: '+label.toLowerCase());brandMotion.title=label;
 });
 contactForm.addEventListener('submit',event=>{
  event.preventDefault();
