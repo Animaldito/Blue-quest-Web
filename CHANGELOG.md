@@ -2,6 +2,11 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Limpieza de minitítulos
+
+- Eliminados los antetítulos de las secciones, el enlace secundario «Conoce nuestro enfoque», la nota de ubicaciones del globo y la categoría redundante de las imágenes de tecnología.
+- Conservados encabezados principales, navegación, roles del equipo e instrucciones funcionales.
+
 ## 2026-09-11 — Equipo con retratos panorámicos
 
 - Fotografías alineadas con el ancho del texto de cada biografía, en formato horizontal 3:1 y con poca altura.

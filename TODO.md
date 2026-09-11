@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Quitar minitítulos y etiquetas introductorias redundantes de las secciones.
+
 - [x] Adaptar los cuatro retratos a franjas panorámicas del ancho de sus biografías, ampliando los escenarios.
 
 ## Próximo

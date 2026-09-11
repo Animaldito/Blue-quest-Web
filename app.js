@@ -45,7 +45,6 @@ function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
  gallery.dataset.equipment=key;equipmentImage.src='assets/technology/'+item.image;equipmentImage.alt=item.alt;
  document.querySelector('#equipment-title').textContent=item.title;
- document.querySelector('#equipment-category').textContent=item.category;
  document.querySelector('#equipment-caption').textContent=item.caption;
  document.querySelector('#map-views').hidden=key!=='map';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
