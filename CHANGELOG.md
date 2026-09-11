@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Fotografías de tecnología
+
+- Galería de imágenes oficiales seleccionables: DJI Osmo 360 II, Garmin LiveScope XR, Subnado Plus doble, Neptune II y GSM G.Divers.
+- Navionics con vistas alternativas de relieve, satélite e imagen sonar.
+- Imágenes locales, textos alternativos y créditos enlazados. Verificadas todas las selecciones en móvil y escritorio.
+
 ## 2026-09-11 — Identidad animada
 
 - Emblema vectorial original basado en la referencia de Q con aleta, con firma BLUE QUEST / EXPLORE FURTHER.
