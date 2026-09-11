@@ -2,6 +2,15 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Selector interactivo de destinos
+
+- Investigadas y preparadas 21 fichas de 14 países con 33 referencias, fecha de revisión y limitaciones explícitas.
+- Añadida «Tu destino» a la navegación y un flujo por intereses, fauna, época y resultados.
+- Límite de tres intereses, coincidencia conjunta por mes, ballenas separadas del tiburón ballena y snorkel separado de botella.
+- Carga anticipada y reutilizada del catálogo, fichas desplegables, más resultados bajo demanda y recuperación ante fallo de red.
+- Documentados los usos de OBIS/WoRMS, la metodología editorial y el procedimiento de ampliación; sin prometer un inventario mundial ni probabilidades de avistamiento.
+- Comprobadas 140 combinaciones y el comportamiento de escritorio y móvil, incluidas validación, ramificación y reintento.
+
 ## 2026-09-11 — Cabecera con arrecife vivo
 
 - Coral fijo en la base de BLUE QUEST y pequeños peces animados de izquierda a derecha dentro de las letras, con contorno fino.

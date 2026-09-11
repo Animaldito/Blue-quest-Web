@@ -2,6 +2,12 @@
 
 ## Próximo
 
+- [x] Investigar y crear una base inicial de destinos con fuentes y ventanas por mes.
+- [x] Integrar un selector por fases con un máximo de tres intereses y fichas compatibles.
+- [ ] Revisión humana de las fichas: fauna/temporada, condiciones de inmersión y modalidades; propuesta de reparto en docs/DESTINATION-RESEARCH.md.
+- [ ] Ampliar de forma documentada las regiones menos representadas y añadir fotografías pertinentes con licencia.
+- [ ] Reconfirmar temporadas parciales, permisos y acceso antes de convertir una sugerencia en propuesta de viaje.
+
 - [x] Aprovechar el ancho de la cabecera con una frase mayor y letras con coral fijo y peces animados.
 
 - [x] Sustituir los cuatro retratos de muestra por las fotografías facilitadas por el usuario.

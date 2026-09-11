@@ -25,7 +25,7 @@ let navigationQueued=false;
 function updateNavigation(){
   const threshold=matchMedia('(max-width:760px)').matches?278:110;
   let active=null;
-  sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold)active=section.id;});
+  sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold+2)active=section.id;});
   sectionLinks.forEach(link=>{if(link.hash==='#'+active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
   navigationQueued=false;
 }

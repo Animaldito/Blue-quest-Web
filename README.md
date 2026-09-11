@@ -2,6 +2,16 @@
 
 Sitio web estático de Blue Quest, dedicado a la exploración subacuática, expediciones y asesoramiento para resorts y centros de buceo.
 
+## Selector «Tu destino»
+
+Nueva sección `#tu-destino`: hasta tres intereses combinables, detalle opcional de fauna y estación del hemisferio norte. Devuelve fichas con meses coincidentes y fuentes. Las experiencias de snorkel se presentan aparte del buceo con botella.
+
+Base inicial: 21 fichas de 14 países, documentadas con 33 fuentes. Consulta [la investigación](docs/DESTINATION-RESEARCH.md) y [el contrato de datos](data/README.md). No es un inventario mundial exhaustivo ni una garantía de avistamiento.
+
+La búsqueda se ejecuta en el navegador con una única carga del catálogo. No envía respuestas ni necesita claves de API. Para probarla localmente, servir la carpeta por HTTP; abrir `index.html` directamente como archivo no permite cargar el JSON en todos los navegadores.
+
+Prueba de datos y filtros: `node tests/destination-finder.test.cjs`.
+
 ## Publicación
 
 El sitio se publica automáticamente desde la rama `main` de GitHub mediante Vercel:
