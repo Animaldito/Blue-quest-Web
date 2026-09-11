@@ -18,6 +18,8 @@
 
 ## Completado
 
+- [x] Mostrar la máscara integral utilizada por un submarinista, en consonancia con las otras fotografías de equipos.
+
 - [x] Profesionalizar los perfiles de The Team e integrar las responsabilidades operativas en las cuatro biografías.
 
 - [x] Presentar la tecnología por aplicaciones, sin marcas ni modelos y conservando las imágenes.

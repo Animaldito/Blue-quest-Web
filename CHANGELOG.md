@@ -2,6 +2,11 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Máscara en inmersión
+
+- Sustituida la fotografía de catálogo por un submarinista utilizando una Neptune durante una inmersión.
+- Retirada la superposición del comunicador para mostrar una única escena, coherente con cámara y scooter.
+
 ## 2026-09-11 — Perfiles profesionales del equipo
 
 - Eliminado el bloque «Preparar también lo que no se ve».

@@ -1,5 +1,7 @@
 # Fuentes de imágenes de tecnología
 
+- mask-underwater.jpg: Neptune III en uso durante una inmersión, fotografía publicada en https://www.scuba.com/p-oedn3i/ocean-reef-neptune-iii-full-face-mask-system — https://www.scuba.com/Image/Product/Large/OEDN3IBKML_16.JPG. Sustituye la imagen de catálogo de Neptune II; los textos públicos permanecen genéricos, sin modelos. Imagen de referencia, no una operación de Blue Quest.
+
 ## Fotografías en inmersión — 11 septiembre 2026
 
 - scooter-sidemount.jpg: buceador en sidemount con scooter Suex, imagen publicada por Black Fins Diving: https://blackfinsdiving.com/sidemount — https://files.123inventatuweb.com/75/99/7599c29f-20d0-4111-95bb-05c41b80ad26.jpg

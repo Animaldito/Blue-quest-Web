@@ -37,7 +37,7 @@ const equipmentPhotos={
  camera:{image:'camera-underwater.jpg',alt:'Buceador utilizando un sistema de cámara 360° con carcasa subacuática',title:'Cámaras 360°',category:'CAPTURA INMERSIVA',caption:'Captura inmersiva durante una inmersión. Imagen de referencia: Mantis Sub.'},
  sonar:{image:'sonar.jpg',alt:'Pantalla de sonar en funcionamiento en una embarcación',title:'Sonar de exploración',category:'EXPLORACIÓN ACÚSTICA',caption:'Observación acústica del fondo y de posibles objetivos.'},
  scooter:{image:'scooter-sidemount.jpg',alt:'Buceador con botellas laterales en sidemount y scooter subacuático',title:'Scooters subacuáticos',category:'MOVILIDAD SUBACUÁTICA',caption:'Propulsión subacuática con configuración sidemount. Imagen de referencia.'},
- mask:{image:'mask.jpg',alt:'Máscara integral de buceo',title:'Comunicación subacuática',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral y unidad de comunicación, mostradas por separado.'},
+ mask:{image:'mask-underwater.jpg',alt:'Submarinista utilizando una máscara integral durante una inmersión',title:'Comunicación subacuática',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral en uso durante una exploración subacuática. Imagen de referencia.'},
  map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',title:'Mapas batimétricos',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Imagen ilustrativa, no una carta para navegar.'}
 };
 const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image');
@@ -47,7 +47,6 @@ function showEquipment(key){
  document.querySelector('#equipment-title').textContent=item.title;
  document.querySelector('#equipment-category').textContent=item.category;
  document.querySelector('#equipment-caption').textContent=item.caption;
- document.querySelector('#equipment-accessory').hidden=key!=='mask';
  document.querySelector('#map-views').hidden=key!=='map';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
 }
