@@ -93,8 +93,6 @@ h2{font-weight:600;text-transform:uppercase;font-size:clamp(40px,4.4vw,65px)}
 .equipment-photo>img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:contain}
 .equipment-photo>img[hidden],#map-views[hidden]{display:none}
 .tech-gallery[data-equipment="scooter"] .equipment-photo{background:#fff}
-.tech-gallery[data-equipment="mask"] .equipment-photo{background:#135c96}
-.equipment-photo>#equipment-accessory{inset:auto 12px 12px auto;width:32%;height:32%;object-fit:contain;background:white;border:3px solid white;box-shadow:0 6px 25px #0005}
 .tech-gallery figcaption{padding:23px 25px}
 .tech-gallery .eyebrow{font-size:10px;margin-bottom:9px}
 .tech-gallery h3{font:600 29px/1.1 'Barlow Condensed',sans-serif;margin-bottom:12px}
