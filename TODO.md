@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Usar nombres de sección y aumentar la tipografía general.
+
 - [x] Reducir textos y notas; ocultar temporalmente «Tu destino» sin cargar su herramienta.
 - [ ] Reactivar «Tu destino» cuando se aprueben las fichas: retirar hidden, inert y display:none de la sección, restaurar enlace del menú y carga de destination-finder.js.
 

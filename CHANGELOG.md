@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Nombres de sección y mayor legibilidad
+
+- Sustituidos los eslóganes de secciones y servicios por nombres directos; conservado el propósito principal en portada.
+- Aumentados textos, botones, navegación y encabezados, con ajustes para móvil.
+- «Tu destino» permanece oculto.
+
 ## 2026-09-11 — Textos breves y selector en pausa
 
 - Simplificados servicios, tecnología, asesoramiento, equipo y contacto; retiradas notas y repeticiones.

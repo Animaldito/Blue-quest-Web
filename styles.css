@@ -226,4 +226,36 @@ h1{font-size:clamp(64px,7.1vw,116px)}
 }
 @media(max-width:360px){.photo-wordmark{font-size:37px}.hero-top{padding-left:14px}.hero .brand-purpose{font-size:39px}}
 @media(prefers-reduced-motion:reduce){.photo-wordmark{animation:none!important}.hero-photo{animation:none}}
+/* Clear section names and a more readable, spacious type scale. */
+body{font-size:18px}
+.section-heading>p,.service p,.equipment details p,.steps p,.team-info p,.team-info li,.contact-intro p{font-size:18px;line-height:1.65}
+.hero .intro{font-size:20px}
+.section h2{font-size:clamp(58px,5.8vw,88px);overflow-wrap:anywhere}
+.service h3{font-size:40px}
+.team-info h3{font-size:42px}
+.team-info .eyebrow{font-size:13px;letter-spacing:1.4px}
+.team-info .team-credentials{font-size:15px;min-height:0;margin-bottom:24px}
+.sidebar nav a{font-size:15px}
+.sidebar .nav-cta,.hero-top>a.project-link,.button,.service a{font-size:16px}
+.hero-bottom nav a{font-size:15px}
+.equipment summary{font-size:26px}
+.tech-gallery h3,.steps h3{font-size:34px}
+#map-views button,.globe-tools button,.globe-tools span,.map-top,.legend,.destination-meta,.destination small,#place-detail{font-size:14px}
+.contact-form label,.form-grid label{font-size:16px}
+input,select,textarea{font-size:17px}
+.contact-intro .contact-notice{font-size:15px}
+footer p,footer>a{font-size:15px}
+@media(max-width:760px){
+ .sidebar nav a,.sidebar nav a:first-child,.sidebar nav a:last-child{font-size:13px;overflow-wrap:anywhere}
+ .hero-top>a.project-link{font-size:14px}
+ .section h2{font-size:clamp(46px,9vw,66px)}
+ .hero .intro{font-size:18px}
+ .section-heading>p,.service p,.equipment details p,.steps p,.team-info p,.contact-intro p{font-size:17px}
+ .team-info .eyebrow{font-size:13px}
+ .team-info .team-credentials{font-size:15px}
+ .hero-bottom nav a,.hero-bottom nav a:first-child,.hero-bottom nav a:last-child{font-size:13px}
+ .service h3{font-size:36px}
+ .contact-intro .contact-notice{font-size:15px}
+}
+
 
