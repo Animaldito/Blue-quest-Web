@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Perfiles profesionales del equipo
+
+- Eliminado el bloque «Preparar también lo que no se ve».
+- Integradas las responsabilidades de seguridad, superficie, logística, permisos, seguros y medios especializados en los perfiles correspondientes.
+- Revisadas biografías y áreas de responsabilidad; terminología uniforme con «submarinista» y sin «in situ».
+- Conservadas las titulaciones aportadas, las fotografías y el resto de la web.
+
 ## 2026-09-11 — Equipo, contacto e imágenes en inmersión
 
 - The Team: cuatro perfiles, responsabilidades por áreas y retratos de muestra identificados.

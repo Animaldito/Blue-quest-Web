@@ -12,9 +12,8 @@
 .team-info h3{font:600 37px/1.1 'Barlow Condensed',sans-serif;margin-bottom:15px}
 .team-info p,.team-info li{font-size:14px;color:var(--muted)}.team-info .team-credentials{color:var(--cyan);font-size:12px;min-height:40px}
 .team-info ul{padding-left:18px;margin-bottom:0}.team-info li+li{margin-top:8px}
-.team-operations{border-top:1px solid var(--line);margin-top:42px;padding-top:32px;max-width:860px}
-.team-operations .eyebrow{margin-bottom:16px}.team-operations h3,.contact-intro h3{font:600 34px/1.15 'Barlow Condensed',sans-serif}
-.team-operations>p:not(.eyebrow),.contact-intro>p{color:var(--muted);font-size:14px}
+.contact-intro h3{font:600 34px/1.15 'Barlow Condensed',sans-serif}
+.contact-intro>p{color:var(--muted);font-size:14px}
 .contact{background:linear-gradient(135deg,#12332e,#061213 65%)}.contact-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px}
 .contact-intro .contact-address{font-size:20px;color:var(--cyan);overflow-wrap:anywhere}
 .contact-notice{border:1px solid var(--line);padding:18px}.contact-notice strong{display:block;color:var(--text);margin-bottom:6px}

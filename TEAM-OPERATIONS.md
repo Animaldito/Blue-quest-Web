@@ -7,7 +7,7 @@ Las titulaciones publicadas son únicamente las facilitadas por el usuario. Las 
 | Alcance, cliente, presupuesto y contratos | Cristina con el equipo | Viabilidad, aceptación y control de cambios; apoyo contable/jurídico cuando proceda |
 | Campo, desplazamientos y logística | Miguel | Responsable operativo designado, recursos y competencias adecuadas |
 | Seguridad y emergencias | Miguel coordina la definición | Personal cualificado, apoyo de superficie, comunicaciones y plan de respuesta antes de salir |
-| Embarcación y navegación | A designar por proyecto | Patrón y tripulación habilitados; no se atribuye esta titulación a ningún miembro |
+| Embarcación y navegación | Miguel coordina; personal habilitado designado por proyecto | Patrón y tripulación habilitados; no se atribuye esta titulación a ningún miembro |
 | Material, gases y mantenimiento | Miguel coordina; Andreu apoya el material audiovisual | Técnicos y proveedores habilitados cuando corresponda; comprobaciones y registros |
 | Permisos, seguros y administración | Cristina coordina con Miguel | Revisión competente de requisitos locales y cobertura de la actividad |
 | Metodología y medio ambiente | Aida | Alcance científico, permisos ambientales y revisión de impacto |
@@ -16,6 +16,8 @@ Las titulaciones publicadas son únicamente las facilitadas por el usuario. Las 
 Los mapas publicados son orientativos; no se presentan como levantamientos hidrográficos certificados. El equipo base no sustituye perfiles especializados de rescate, medicina, navegación o trabajos subacuáticos profesionales. No iniciar una operación hasta cubrir sus necesidades reales.
 
 ## Contacto
+
+La distribución publicada integra estas responsabilidades en los cuatro perfiles. Los cargos de coordinación no acreditan por sí mismos la habilitación para ejecutar funciones reguladas.
 
 El formulario funciona solo en el navegador: valida los campos, prepara el texto, permite copiarlo y genera un enlace mailto. No hay backend, servicio de envío, almacenamiento local ni envío de datos del formulario por red. Abrir el correo no significa enviar ni recibir.
 

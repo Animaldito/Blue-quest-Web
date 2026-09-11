@@ -18,6 +18,8 @@
 
 ## Completado
 
+- [x] Profesionalizar los perfiles de The Team e integrar las responsabilidades operativas en las cuatro biografías.
+
 - [x] Presentar la tecnología por aplicaciones, sin marcas ni modelos y conservando las imágenes.
 
 - [x] Reordenar los equipos, retirar enlaces de las fichas y mostrar la cámara DJI en uso.
