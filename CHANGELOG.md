@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Textos breves y selector en pausa
+
+- Simplificados servicios, tecnología, asesoramiento, equipo y contacto; retiradas notas y repeticiones.
+- Biografías resumidas en un párrafo por persona, manteniendo sus responsabilidades esenciales.
+- «Tu destino» oculto y retirado del menú; su script no se carga. Se conservan sección, fichas y código para reactivación futura.
+- Conservado un aviso breve de que el formulario no envía y el buzón aún no está activo.
+
 ## 2026-09-11 — Limpieza de minitítulos
 
 - Eliminados los antetítulos de las secciones, el enlace secundario «Conoce nuestro enfoque», la nota de ubicaciones del globo y la categoría redundante de las imágenes de tecnología.

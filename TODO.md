@@ -1,5 +1,8 @@
 # Pendientes
 
+- [x] Reducir textos y notas; ocultar temporalmente «Tu destino» sin cargar su herramienta.
+- [ ] Reactivar «Tu destino» cuando se aprueben las fichas: retirar hidden, inert y display:none de la sección, restaurar enlace del menú y carga de destination-finder.js.
+
 - [x] Quitar minitítulos y etiquetas introductorias redundantes de las secciones.
 
 - [x] Adaptar los cuatro retratos a franjas panorámicas del ancho de sus biografías, ampliando los escenarios.

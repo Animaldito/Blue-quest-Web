@@ -45,7 +45,6 @@ function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
  gallery.dataset.equipment=key;equipmentImage.src='assets/technology/'+item.image;equipmentImage.alt=item.alt;
  document.querySelector('#equipment-title').textContent=item.title;
- document.querySelector('#equipment-caption').textContent=item.caption;
  document.querySelector('#map-views').hidden=key!=='map';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
 }
@@ -53,7 +52,6 @@ document.querySelectorAll('[data-equipment]').forEach(detail=>detail.addEventLis
 const mapCaptions={relief:'Relieve sombreado con información cartográfica.',satellite:'Imagen de satélite con información de la carta náutica.',perspective:'Vista cartográfica en sonar.'};
 document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener('click',()=>{
  equipmentImage.src='assets/technology/map-'+button.dataset.map+'.jpg';equipmentImage.alt='Ejemplo de cartografía: '+mapCaptions[button.dataset.map];
- document.querySelector('#equipment-caption').textContent=mapCaptions[button.dataset.map]+' Imagen ilustrativa, no una carta para navegar.';
  document.querySelectorAll('[data-map]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
 }));
 showEquipment('map');
@@ -77,7 +75,7 @@ contactForm.addEventListener('submit',event=>{
  document.querySelector('#email-draft').value='Para: info@bluequest.com\r\nAsunto: '+subject+'\r\n\r\n'+body;
  document.querySelector('#open-email').href='mailto:info@bluequest.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
  document.querySelector('#email-preview').hidden=false;
- document.querySelector('#contact-status').textContent='Borrador preparado. No se ha enviado ningún mensaje. El buzón sigue pendiente de activación.';
+ document.querySelector('#contact-status').textContent='Borrador preparado. No se ha enviado.';
  document.querySelector('#email-draft').focus();
 });
 contactForm.addEventListener('input',()=>{
