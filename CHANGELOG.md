@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Logo completo con intro de sonar
+
+- Reunidos el anagrama y BLUE QUEST en el bloque turquesa de la barra lateral, con adaptación móvil.
+- Intro original de unos tres segundos: barrido de sonar, trazado del símbolo, aparición del nombre y reflejo final; después queda estático.
+- Animación vectorial sin vídeo, sonido ni dependencias nuevas; versión estática con movimiento reducido.
+- La vista previa de Envato no pudo reproducirse; no se han utilizado recursos de esa plantilla.
+
 ## 2026-09-11 — Retirada de la sección Asesoramiento
 
 - Eliminada la sección y su entrada del menú; los accesos de proyecto llevan ahora a Contacto.

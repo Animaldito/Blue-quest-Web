@@ -258,4 +258,32 @@ footer p,footer>a{font-size:15px}
  .contact-intro .contact-notice{font-size:15px}
 }
 
+/* One-shot sonar ident: the existing mark resolves into a complete wordmark. */
+.sidebar .brand-sonar{padding:16px 9px;gap:10px;background:#2cddc3;color:#fff}
+.sidebar .brand-sonar .quest-mark{position:relative;z-index:1;width:78px;height:72px;flex-shrink:0}
+.sidebar .brand-sonar .quest-name{display:block;position:relative;z-index:1;max-width:100%;margin:0;white-space:nowrap;font:600 15px/1.2 'DM Sans',sans-serif;letter-spacing:1.6px;animation:sonar-wordmark .85s 1.55s both}
+.brand-sonar .quest-ring,.brand-sonar .quest-fin{stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;fill:currentColor;animation:sonar-trace 1.8s .35s both}
+.brand-sonar .quest-fin{animation-delay:.6s;animation-duration:1.55s}
+.sidebar .brand-sonar .quest-sonar{position:absolute;left:50%;top:8px;width:112px;height:112px;margin:0;fill:none;stroke:#fff;stroke-width:.65;transform:translateX(-50%);pointer-events:none;overflow:visible;opacity:0;animation:sonar-fade 2.3s both}
+.quest-sonar .sonar-grid{opacity:.45}
+.quest-sonar .sonar-pulse{transform-origin:60px 60px;animation:sonar-ping 1.8s ease-out both}
+.quest-sonar .sonar-sweep{transform-origin:60px 60px;stroke-width:1.5;animation:sonar-scan 1.65s ease-in-out both}
+.brand-sonar::after{inset:-35%;background:linear-gradient(115deg,transparent 42%,#ffffff35 50%,transparent 58%);animation:quest-glint .9s 2.15s both}
+.brand-sonar:hover::after,.brand-sonar:focus-visible::after{animation:quest-glint .9s 2.15s both}
+@keyframes sonar-fade{0%{opacity:0}12%,62%{opacity:.8}100%{opacity:0}}
+@keyframes sonar-ping{0%{transform:scale(.25);opacity:0}20%{opacity:.85}100%{transform:scale(2.1);opacity:0}}
+@keyframes sonar-scan{from{transform:rotate(-100deg)}to{transform:rotate(260deg)}}
+@keyframes sonar-trace{0%{stroke-dashoffset:1;fill-opacity:0;opacity:0}12%{opacity:1}58%{stroke-dashoffset:0;fill-opacity:0}100%{stroke-dashoffset:0;fill-opacity:1;opacity:1}}
+@keyframes sonar-wordmark{from{opacity:0;transform:translateY(7px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@media(max-width:760px){
+ .sidebar .brand-sonar{padding:10px 5px;gap:7px}
+ .sidebar .brand-sonar .quest-mark{width:49px;height:45px}
+ .sidebar .brand-sonar .quest-name{font-size:9px;letter-spacing:.45px;line-height:1.2}
+ .sidebar .brand-sonar .quest-sonar{width:72px;height:72px;top:4px}
+}
+@media(prefers-reduced-motion:reduce){
+ .brand-sonar .quest-ring,.brand-sonar .quest-fin,.sidebar .brand-sonar .quest-name{animation:none;opacity:1;fill-opacity:1;stroke-dashoffset:0;transform:none;filter:none}
+ .sidebar .brand-sonar .quest-sonar,.brand-sonar::after{display:none;animation:none}
+}
+
 

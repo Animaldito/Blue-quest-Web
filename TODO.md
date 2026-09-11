@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Reunir el nombre y el anagrama con una intro breve de exploración submarina.
+
 - [x] Retirar la sección Asesoramiento y actualizar sus enlaces.
 
 - [x] Usar nombres de sección y aumentar la tipografía general.
