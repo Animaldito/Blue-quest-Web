@@ -58,13 +58,40 @@ showEquipment('map');
 
 // Local draft only: no network request, storage, or direct email delivery.
 const contactForm=document.querySelector('#contact-form');
-const brandMotion=document.querySelector('.photo-wordmark');
-brandMotion.addEventListener('click',()=>{
- const paused=document.querySelector('.hero-top').classList.toggle('effects-paused');
- brandMotion.setAttribute('aria-pressed',String(paused));
- const label=paused?'Activar efectos de la marca':'Pausar efectos de la marca';
- brandMotion.setAttribute('aria-label','Blue Quest: '+label.toLowerCase());brandMotion.title=label;
+const brandLogo=document.querySelector('.brand-sonar');
+brandLogo.addEventListener('click',event=>{
+ if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ for(const animation of brandLogo.getAnimations({subtree:true})){
+  animation.currentTime=0;
+  animation.play();
+ }
 });
+
+// Newsletter collection stays disabled until the owner connects a real list.
+const newsletterDialog=document.querySelector('#newsletter-dialog');
+const newsletterOpen=document.querySelector('#newsletter-open');
+function closeNewsletter(){newsletterDialog.close();}
+newsletterOpen.addEventListener('click',()=>{
+ if(!newsletterDialog.open){newsletterDialog.showModal();document.body.classList.add('newsletter-open');}
+});
+document.querySelector('#newsletter-close').addEventListener('click',closeNewsletter);
+newsletterDialog.addEventListener('keydown',event=>{
+ if(event.key!=='Tab')return;
+ const focusable=[...newsletterDialog.querySelectorAll('button:not(:disabled),input:not(:disabled),a[href],select:not(:disabled),textarea:not(:disabled),[tabindex="0"]')].filter(el=>el.getClientRects().length);
+ const first=focusable[0],last=focusable[focusable.length-1];
+ if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+ else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+});
+newsletterDialog.addEventListener('click',event=>{
+ if(event.target!==newsletterDialog)return;
+ const bounds=newsletterDialog.getBoundingClientRect();
+ if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)closeNewsletter();
+});
+newsletterDialog.addEventListener('close',()=>{
+ document.body.classList.remove('newsletter-open');
+ newsletterOpen.focus({preventScroll:true});
+});
+document.querySelector('#newsletter-form').addEventListener('submit',event=>event.preventDefault());
 contactForm.addEventListener('submit',event=>{
  event.preventDefault();
  if(!contactForm.reportValidity())return;

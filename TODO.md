@@ -1,5 +1,10 @@
 # Pendientes
 
+- [x] Reproducir intro al pulsar el logo, limpiar cabecera y preparar popup de newsletter.
+- [ ] Crear/verificar la cuenta gratuita de newsletter (Brevo recomendado) y conectar una lista real antes de habilitar las altas.
+- [ ] Configurar formulario de Brevo con consentimiento y confirmación por correo; añadir información de privacidad, remitente verificado y enlace de baja antes de las campañas.
+- [ ] Probar un alta autorizada de principio a fin; nunca guardar suscriptores en el repositorio público ni en el navegador como sustituto de la lista.
+
 - [x] Reunir el nombre y el anagrama con una intro breve de exploración submarina.
 
 - [x] Retirar la sección Asesoramiento y actualizar sus enlaces.

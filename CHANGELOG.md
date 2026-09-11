@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Logo reproducible y popup de newsletter
+
+- Pulsar el logo vuelve al inicio y reinicia su intro, respetando movimiento reducido.
+- Retirados el nombre duplicado de la portada, «Tu próximo proyecto» y «Hablemos» del lateral.
+- Añadido «Apúntate a la newsletter» con diálogo accesible, cierre por botón, Escape y fondo, y retorno del foco.
+- Formulario de newsletter preparado pero desactivado: aún no hay una cuenta/lista conectada. No almacena ni transmite correos y no muestra confirmaciones ficticias.
+
 ## 2026-09-11 — Logo completo con intro de sonar
 
 - Reunidos el anagrama y BLUE QUEST en el bloque turquesa de la barra lateral, con adaptación móvil.
