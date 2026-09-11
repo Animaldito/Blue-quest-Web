@@ -19,6 +19,8 @@
 
 ## Completado
 
+- [x] Alinear anagrama y cabecera, aclarar el fondo y destacar la marca fotográfica con efectos periódicos.
+
 - [x] Rediseñar la franja superior translúcida, ampliar encabezados, eliminar numeración y añadir fotografías a los servicios.
 
 - [x] Mostrar la máscara integral utilizada por un submarinista, en consonancia con las otras fotografías de equipos.

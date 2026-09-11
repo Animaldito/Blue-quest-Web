@@ -2,6 +2,14 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Marca fotográfica y cabecera alineada
+
+- Igualada la altura del bloque del anagrama y la cabecera; alineación lateral también en móvil.
+- Fondo blanco limpio y BLUE QUEST como elemento principal, con fotografía submarina integrada en las letras.
+- Reflejo periódico cada ocho segundos, control de pausa y respeto a movimiento reducido.
+- Acceso a proyectos más discreto, en DM Sans y con el turquesa exacto del titular sobre fondo oscuro para mantener legibilidad.
+- Comprobadas alineación, colores, animación, formulario y navegación de 320 a 1440 px.
+
 ## 2026-09-11 — Cabecera translúcida y servicios fotográficos
 
 - Franja superior blanca translúcida, destello de entrada y acceso destacado a «Tu próximo proyecto» en verde oscuro.
