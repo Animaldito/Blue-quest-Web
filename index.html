@@ -76,19 +76,13 @@
 <noscript><p>Activa JavaScript para preparar el borrador. El buzón info@bluequest.com está pendiente de activación.</p></noscript>
 </form></div></section>
 </main>
-<dialog id="newsletter-dialog" class="newsletter-dialog" aria-labelledby="newsletter-title" aria-describedby="newsletter-description newsletter-availability">
+<dialog id="newsletter-dialog" class="newsletter-dialog" aria-labelledby="newsletter-title" aria-describedby="newsletter-description">
  <button type="button" class="newsletter-close" id="newsletter-close" aria-label="Cerrar newsletter">×</button>
  <h2 id="newsletter-title">Apúntate a la newsletter</h2>
  <p id="newsletter-description">Exploraciones, novedades y promociones de Blue Quest.</p>
- <p class="newsletter-availability" id="newsletter-availability">Estamos preparando la lista. Las suscripciones aún no están activas.</p>
- <form id="newsletter-form" method="dialog">
-  <fieldset disabled>
-   <label for="newsletter-email">Tu correo electrónico</label>
-   <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required maxlength="254">
-   <label class="newsletter-consent"><input type="checkbox" name="consent" required><span>Quiero recibir novedades y promociones de Blue Quest.</span></label>
-   <button class="button primary" type="submit">Suscribirme <span aria-hidden="true">↗</span></button>
-  </fieldset>
- </form>
+ <p id="newsletter-status" class="newsletter-status" role="status">Cargando formulario…</p>
+ <iframe id="newsletter-frame" class="newsletter-frame" title="Formulario de suscripción a Blue Quest" data-src="https://a2ca4a0f.sibforms.com/serve/MUIFAKdU2ASj3pvoXSJw3eF5ffqH6Btzaxua9IJbVJUhPOPzBgca2RgUk4or5PBBOWFLqbZi6bJ5WHsV63w_2O09PTHRJkb5qLnS4S5WBDU-S92yGroFyN6OBuoc9WXX5YHfDfGclps-aiyNlqm0VHA4SpxE50WrzXwEwPdBC8fw-Gh-1tFnBYUOU7g89wsb6Rwpzpu2pDD7Tc0M4A==" referrerpolicy="no-referrer" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+ <p class="newsletter-fallback"><a href="https://a2ca4a0f.sibforms.com/serve/MUIFAKdU2ASj3pvoXSJw3eF5ffqH6Btzaxua9IJbVJUhPOPzBgca2RgUk4or5PBBOWFLqbZi6bJ5WHsV63w_2O09PTHRJkb5qLnS4S5WBDU-S92yGroFyN6OBuoc9WXX5YHfDfGclps-aiyNlqm0VHA4SpxE50WrzXwEwPdBC8fw-Gh-1tFnBYUOU7g89wsb6Rwpzpu2pDD7Tc0M4A==" target="_blank" rel="noopener noreferrer">Abrir formulario en otra pestaña ↗</a></p>
 </dialog>
 
 <footer><a class="footer-brand" href="#inicio">BLUE QUEST<span>OCEAN EXPLORATION</span></a><p>Exploración subacuática · Consultoría de buceo</p><a href="#inicio">Volver a superficie ↑</a></footer><script src="world.js"></script><script src="app.js"></script></body></html>

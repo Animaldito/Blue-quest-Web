@@ -2,6 +2,14 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Formulario de Brevo integrado
+
+- Sustituido el formulario desactivado por el formulario público de Brevo facilitado por el propietario, dentro del popup existente.
+- Carga solo al abrir el popup, conserva su estado al reabrir y ofrece un enlace alternativo si no se muestra.
+- Los envíos y sus confirmaciones los gestiona Brevo; la web no contiene claves privadas ni guarda correos en su propio almacenamiento.
+- Pendiente revisar consentimiento, privacidad y confirmación doble en Brevo. No se han creado suscriptores de prueba ni enviado campañas.
+- Integración comprobada en vista previa; publicación pendiente de completar la información de privacidad. Borrador legal conservado fuera del repositorio público.
+
 ## 2026-09-11 — Logo reproducible y popup de newsletter
 
 - Pulsar el logo vuelve al inicio y reinicia su intro, respetando movimiento reducido.

@@ -1,8 +1,10 @@
 # Pendientes
 
 - [x] Reproducir intro al pulsar el logo, limpiar cabecera y preparar popup de newsletter.
-- [ ] Crear/verificar la cuenta gratuita de newsletter (Brevo recomendado) y conectar una lista real antes de habilitar las altas.
-- [ ] Configurar formulario de Brevo con consentimiento y confirmación por correo; añadir información de privacidad, remitente verificado y enlace de baja antes de las campañas.
+- [x] Cuenta de Brevo creada por el propietario y formulario público integrado en el popup.
+- [ ] Publicar la integración solo después de completar identidad, contacto y política de privacidad, y añadir la información al formulario de Brevo. Borrador preparado fuera del repositorio público.
+- [ ] Revisar en Brevo la lista receptora y la confirmación doble; estos ajustes privados no se pueden comprobar desde el enlace público.
+- [ ] Completar el formulario de Brevo con consentimiento e información de privacidad: el formulario compartido no incluye casilla ni enlace. Confirmar remitente verificado y baja antes de enviar campañas.
 - [ ] Probar un alta autorizada de principio a fin; nunca guardar suscriptores en el repositorio público ni en el navegador como sustituto de la lista.
 
 - [x] Reunir el nombre y el anagrama con una intro breve de exploración submarina.

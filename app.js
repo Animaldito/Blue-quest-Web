@@ -67,17 +67,31 @@ brandLogo.addEventListener('click',event=>{
  }
 });
 
-// Newsletter collection stays disabled until the owner connects a real list.
+// Brevo owns submissions and confirmation; load its public form only on demand.
 const newsletterDialog=document.querySelector('#newsletter-dialog');
 const newsletterOpen=document.querySelector('#newsletter-open');
+const newsletterFrame=document.querySelector('#newsletter-frame');
+const newsletterStatus=document.querySelector('#newsletter-status');
+let newsletterLoadTimer;
 function closeNewsletter(){newsletterDialog.close();}
 newsletterOpen.addEventListener('click',()=>{
  if(!newsletterDialog.open){newsletterDialog.showModal();document.body.classList.add('newsletter-open');}
+ if(!newsletterFrame.hasAttribute('src')){
+  newsletterLoadTimer=setTimeout(()=>{
+   newsletterStatus.textContent='Si el formulario no aparece, puedes abrirlo en otra pestaña.';
+  },12000);
+  newsletterFrame.src=newsletterFrame.dataset.src;
+ }
+});
+newsletterFrame.addEventListener('load',()=>{
+ if(!newsletterFrame.hasAttribute('src'))return;
+ clearTimeout(newsletterLoadTimer);
+ newsletterStatus.hidden=true;
 });
 document.querySelector('#newsletter-close').addEventListener('click',closeNewsletter);
 newsletterDialog.addEventListener('keydown',event=>{
  if(event.key!=='Tab')return;
- const focusable=[...newsletterDialog.querySelectorAll('button:not(:disabled),input:not(:disabled),a[href],select:not(:disabled),textarea:not(:disabled),[tabindex="0"]')].filter(el=>el.getClientRects().length);
+ const focusable=[...newsletterDialog.querySelectorAll('button:not(:disabled),iframe,a[href],[tabindex="0"]')].filter(el=>el.getClientRects().length);
  const first=focusable[0],last=focusable[focusable.length-1];
  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
@@ -91,7 +105,6 @@ newsletterDialog.addEventListener('close',()=>{
  document.body.classList.remove('newsletter-open');
  newsletterOpen.focus({preventScroll:true});
 });
-document.querySelector('#newsletter-form').addEventListener('submit',event=>event.preventDefault());
 contactForm.addEventListener('submit',event=>{
  event.preventDefault();
  if(!contactForm.reportValidity())return;
