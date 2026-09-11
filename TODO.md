@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Adaptar los cuatro retratos a franjas panorámicas del ancho de sus biografías, ampliando los escenarios.
+
 ## Próximo
 
 - [x] Reducir las fotos de The Team para priorizar roles y biografías.

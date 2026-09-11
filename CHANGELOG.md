@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Equipo con retratos panorámicos
+
+- Fotografías alineadas con el ancho del texto de cada biografía, en formato horizontal 3:1 y con poca altura.
+- Fondos ampliados mediante edición de imagen para adaptar los cuatro retratos al formato; conservadas las versiones anteriores.
+- Comprobados márgenes, carga de imágenes y ausencia de desbordamientos en escritorio y móvil.
+
 ## 2026-09-11 — Retratos de equipo secundarios
 
 - Reducidos los retratos a 128 × 96 px en escritorio y 104 × 78 px en móvil, con margen dentro de cada perfil.
