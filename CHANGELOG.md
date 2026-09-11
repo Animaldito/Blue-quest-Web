@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Tecnología centrada en aplicaciones
+
+- Eliminados los nombres de fabricantes y modelos de los textos y descripciones accesibles del apartado de tecnología.
+- Presentación por categorías y aplicaciones, como selección ilustrativa de herramientas, sin afirmar cantidades de equipos.
+- Conservadas todas las fotografías, su orden y los créditos fotográficos y fuentes documentales.
+
 ## 2026-09-11 — Orden y fotografía de equipos
 
 - Orden: mapa batimétrico, sonar, cámaras 360°, scooter y máscara de comunicación; mapa seleccionado al entrar.

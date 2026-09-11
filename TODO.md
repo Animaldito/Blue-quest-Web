@@ -12,6 +12,8 @@
 
 ## Completado
 
+- [x] Presentar la tecnología por aplicaciones, sin marcas ni modelos y conservando las imágenes.
+
 - [x] Reordenar los equipos, retirar enlaces de las fichas y mostrar la cámara DJI en uso.
 
 - [x] Sustituir el sonar conceptual por fotos reales de equipos y vistas Navionics seleccionables.

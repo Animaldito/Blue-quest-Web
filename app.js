@@ -34,11 +34,11 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- camera:{image:'camera-in-use.jpg',alt:'Persona utilizando una DJI Osmo 360 II con empuñadura extensible',title:'DJI Osmo 360 II',category:'CAPTURA INMERSIVA',caption:'Cámara en uso con empuñadura. Fotografía: Future / Digital Camera World.',brand:'DJI',url:'https://www.dji.com/media-center/announcements/dji-release-osmo-360-2'},
- sonar:{image:'sonar.jpg',alt:'Pantalla Garmin con imagen de sonar LiveScope XR en una embarcación',title:'Garmin LiveScope XR',category:'EXPLORACIÓN ACÚSTICA',caption:'Imagen real de un sistema de sonar en funcionamiento.',brand:'Garmin',url:'https://www.garmin.com.sg/products/onthewater/livescope-xr-system/'},
- scooter:{image:'scooter.png',alt:'Dos propulsores Waydoo Subnado Plus unidos por una empuñadura doble',title:'Subnado Plus Twin Engine',category:'PROPULSIÓN DOBLE',caption:'Dos unidades Subnado Plus con el soporte de doble empuñadura.',brand:'Waydoo',url:'https://au.waydoo.com/products/waydoo-subnado-plus-underwater-scooter'},
- mask:{image:'mask.jpg',alt:'Máscara integral Ocean Reef Neptune II',title:'Neptune II + GSM G.Divers',category:'COMUNICACIÓN SUBACUÁTICA',caption:'Máscara Neptune II y comunicador GSM G.Divers, mostrados por separado.',brand:'Ocean Reef',url:'https://diving.oceanreefgroup.com/product/neptune-ii/'},
- map:{image:'map-relief.jpg',alt:'Ejemplo oficial Navionics de relieve sombreado con sondas, referencias y detalles del fondo',title:'Garmin Navionics Vision+',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Ejemplo del fabricante, no una carta para navegar.',brand:'Garmin / Navionics',url:'https://www.garmin.com.sg/products/subscription-plans/marine-subscription/'}
+ camera:{image:'camera-in-use.jpg',alt:'Persona utilizando una cámara 360° con empuñadura extensible',title:'Cámaras 360°',category:'CAPTURA INMERSIVA',caption:'Captura panorámica para documentar y compartir la exploración. Fotografía: Future / Digital Camera World.'},
+ sonar:{image:'sonar.jpg',alt:'Pantalla de sonar en funcionamiento en una embarcación',title:'Sonar de exploración',category:'EXPLORACIÓN ACÚSTICA',caption:'Observación acústica del fondo y de posibles objetivos.'},
+ scooter:{image:'scooter.png',alt:'Dos propulsores subacuáticos unidos por una empuñadura doble',title:'Scooters subacuáticos',category:'MOVILIDAD SUBACUÁTICA',caption:'Ejemplo de propulsión doble para apoyar el desplazamiento.'},
+ mask:{image:'mask.jpg',alt:'Máscara integral de buceo',title:'Comunicación subacuática',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral y unidad de comunicación, mostradas por separado.'},
+ map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',title:'Mapas batimétricos',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Imagen ilustrativa, no una carta para navegar.'}
 };
 const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image');
 function showEquipment(key){
@@ -54,8 +54,8 @@ function showEquipment(key){
 document.querySelectorAll('[data-equipment]').forEach(detail=>detail.addEventListener('toggle',()=>{if(detail.open)showEquipment(detail.dataset.equipment);}));
 const mapCaptions={relief:'Relieve sombreado con información cartográfica.',satellite:'Imagen de satélite con información de la carta náutica.',perspective:'Vista cartográfica en sonar.'};
 document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener('click',()=>{
- equipmentImage.src='assets/technology/map-'+button.dataset.map+'.jpg';equipmentImage.alt='Ejemplo oficial Navionics: '+mapCaptions[button.dataset.map];
- document.querySelector('#equipment-caption').textContent=mapCaptions[button.dataset.map]+' Ejemplo del fabricante, no una carta para navegar.';
+ equipmentImage.src='assets/technology/map-'+button.dataset.map+'.jpg';equipmentImage.alt='Ejemplo de cartografía: '+mapCaptions[button.dataset.map];
+ document.querySelector('#equipment-caption').textContent=mapCaptions[button.dataset.map]+' Imagen ilustrativa, no una carta para navegar.';
  document.querySelectorAll('[data-map]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
 }));
 showEquipment('map');
