@@ -2,6 +2,14 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Aviso legal y acceso vertical
+
+- Publicación autorizada expresamente por el titular de sus datos identificativos en la web y el repositorio público.
+- Sustituida la frase del lateral por «Aviso legal», con tipografía discreta, disposición vertical y acceso también en móvil y pie de página.
+- Añadida página de aviso legal con titularidad, alcance de exploración/consultoría confirmado por el propietario, condiciones de uso, acceso a privacidad, cookies y atención.
+- Revisión de cookies y almacenamiento en la web pública y local: sin cookies, localStorage, sessionStorage ni peticiones a terceros en el recorrido comprobado. No se añade un panel de cookies opcionales mientras no se utilicen.
+- Se conserva la pausa de newsletter hasta completar consentimiento, aviso y comprobaciones en Brevo. Los requisitos operativos ajenos a la página se mantienen como pendientes, sin afirmar cumplimiento integral.
+
 ## 2026-09-11 — Privacidad y contacto de bqexplore.com
 
 - Añadida `privacidad.html` con los datos del responsable facilitados por el propietario, el correo activo y enlaces desde Contacto, newsletter y pie de página.

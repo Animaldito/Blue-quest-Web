@@ -17,7 +17,11 @@ h2{font-size:34px;font-weight:600;margin:0 0 20px}
 p{margin:0 0 18px;color:#c4d5d8}
 strong{font-weight:600;color:#fff}
 .legal-date{font-size:14px;color:#9bb3b7;margin-bottom:48px}
+.legal-nav{display:flex;flex-wrap:wrap;gap:10px 24px;border-block:1px solid #345055;padding:14px 0;margin-bottom:42px;font-size:16px}
+.legal-details{display:grid;grid-template-columns:170px minmax(0,1fr);gap:12px 24px;margin:0 0 28px}
+.legal-details dt{color:#9bb3b7}.legal-details dd{margin:0;overflow-wrap:anywhere}
+[id]{scroll-margin-top:24px}
 section+section{margin-top:44px}
 .legal-footer{border-bottom:0;border-top:1px solid #345055;font-size:16px;padding-bottom:40px}
-@media(max-width:480px){:root{font-size:17px}.legal-header,.legal-footer,main{width:calc(100% - 36px)}main{margin-top:40px}h2{font-size:30px}.legal-header{gap:12px}}
+@media(max-width:480px){:root{font-size:17px}.legal-header,.legal-footer,main{width:calc(100% - 36px)}main{margin-top:40px}h2{font-size:30px}.legal-header{gap:12px}.legal-details{grid-template-columns:1fr;gap:2px}.legal-details dd{margin-bottom:14px}}
 @media print{:root{color-scheme:light;background:white;color:black}p,h1,h2,strong,.legal-date,a{color:black}.legal-header,.legal-footer,.skip-link{display:none}main{width:auto;margin:0;font-size:12pt}h1{font-size:26pt}h2{font-size:20pt;break-after:avoid}section{break-inside:avoid}}

@@ -1,5 +1,11 @@
 # Pendientes
 
+- [x] Crear Aviso legal con acceso vertical y datos del titular cuya publicación ha autorizado expresamente.
+- [x] Confirmar alcance: solo exploración y consultoría, sin venta de viajes o inmersiones.
+- [x] Revisar cookies y almacenamiento antes de decidir si hace falta consentimiento: no detectados en la navegación auditada el 11/09/2026.
+- [ ] Mantener actualizado el aviso si cambian los servicios, proveedores o datos del titular. Antes de contratar a distancia, revisar información precontractual y consumo; antes de actividades sujetas a autorización o ejercicio profesional regulado, comprobar y publicar los datos exigibles.
+- [ ] Validar obligaciones operativas de protección de datos: registro de actividades cuando proceda, contratos con encargados, seguridad, conservación y atención de derechos. El aviso no sustituye estas medidas ni una revisión jurídica.
+
 - [x] Reproducir intro al pulsar el logo, limpiar cabecera y preparar popup de newsletter.
 - [x] Cuenta de Brevo creada por el propietario y formulario público integrado en el popup.
 - [x] Completar identidad y contacto del responsable y crear la política de privacidad enlazada desde la web.

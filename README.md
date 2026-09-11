@@ -26,6 +26,7 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `styles.css`: estilos, diseño adaptable y animaciones.
 - `app.js`: interacciones de la página y destinos.
 - `privacidad.html` y `legal.css`: información de privacidad y su presentación, sin scripts ni formularios propios.
+- `aviso-legal.html`: identificación del titular, uso del sitio, cookies y acceso a privacidad. Enlace vertical independiente del menú de anclas.
 - `destination-finder.js` y `destination-finder.css`: flujo por fases y fichas de rutas.
 - `data/dive-destinations.v2.json`: catálogo documentado, ventanas de viaje y temporadas de fauna independientes.
 - `world.js`: datos y renderizado del globo.
@@ -55,6 +56,8 @@ El formulario prepara un borrador local con destino a info@bqexplore.com, permit
 
 ## Newsletter y privacidad
 
-La política está en `/privacidad.html`. Brevo se integra con su formulario público, sin claves privadas y cargando solo al abrir el popup. Las altas están en pausa con `data-newsletter-ready="false"` en el diálogo: no se carga el iframe ni se ofrece el enlace al formulario.
+El aviso legal está en `/aviso-legal.html` y la política en `/privacidad.html`. El titular ha autorizado expresamente publicar su identificación, NIF, domicilio y correo en el sitio y GitHub. Brevo se integra con su formulario público, sin claves privadas y cargando solo al abrir el popup. Las altas están en pausa con `data-newsletter-ready="false"` en el diálogo: no se carga el iframe ni se ofrece el enlace al formulario.
+
+En la revisión del 11/09/2026 no se detectaron cookies, claves de almacenamiento local o de sesión, ni peticiones a otros orígenes en el recorrido habitual de la web pública y la vista previa. Repetir la revisión antes de incorporar integraciones, CAPTCHA o analítica; instalar bloqueo y gestión del consentimiento cuando proceda, no un aviso decorativo.
 
 Antes de activarlo, completar en Brevo consentimiento y aviso con enlace a la política, verificar lista, confirmación y baja, y revisar los pendientes de `TODO.md`. Al activar, actualizar también el apartado Newsletter de la política. La conexión del formulario no da acceso administrativo a Brevo ni autoriza campañas automáticas.
