@@ -18,3 +18,18 @@ canvas.addEventListener('pointerup',e=>{if(drag&&Math.hypot(e.clientX-drag.start
 canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();setAuto(false);if(e.key==='ArrowLeft')rotation-=10;if(e.key==='ArrowRight')rotation+=10;if(e.key==='ArrowUp')tilt=Math.min(65,tilt+10);if(e.key==='ArrowDown')tilt=Math.max(-65,tilt-10);});
 document.querySelectorAll('details').forEach(detail=>detail.addEventListener('toggle',()=>{if(detail.open)document.querySelectorAll('details').forEach(other=>{if(other!==detail)other.open=false;});}));
 
+// Highlight the section currently being explored in the persistent navigation.
+const sectionLinks=[...document.querySelectorAll('.sidebar nav a')];
+const sectionTargets=sectionLinks.map(link=>document.querySelector(link.getAttribute('href')));
+let navigationQueued=false;
+function updateNavigation(){
+  const threshold=matchMedia('(max-width:760px)').matches?160:110;
+  let active=null;
+  sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold)active=section.id;});
+  sectionLinks.forEach(link=>{if(link.hash==='#'+active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+  navigationQueued=false;
+}
+addEventListener('scroll',()=>{if(!navigationQueued){navigationQueued=true;requestAnimationFrame(updateNavigation);}},{passive:true});
+addEventListener('resize',updateNavigation);
+updateNavigation();
+

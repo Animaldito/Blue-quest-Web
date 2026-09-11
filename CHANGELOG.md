@@ -2,10 +2,17 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
-## Pendiente de publicar
+## 2026-09-11 — Navegación de exploración
+
+- Rediseño inspirado en la referencia facilitada: marca turquesa, barra lateral fija numerada y accesos inferiores en portada.
+- Conservados los cuatro apartados, los destinos y las interacciones del globo y los equipos.
+- Cabecera compacta en móvil, enlaces accesibles y apartado activo al desplazarse.
+- Tipografías alojadas localmente con sus licencias para eliminar la dependencia de Google Fonts en ejecución.
+- Verificado en escritorio (1440 px) y móvil (390 px): sin desbordamientos ni errores JavaScript; destinos y acordeones operativos.
+
+## 2026-09-11 — Corrección UTF-8 publicada
 
 ### Corregido
 
 - Reparada la codificación de los textos de `index.html` y `app.js`.
 - Los caracteres españoles y símbolos de interfaz se guardan en UTF-8 sin BOM.
-

@@ -16,6 +16,7 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `app.js`: interacciones de la página y destinos.
 - `world.js`: datos y renderizado del globo.
 - `ocean.png`: imagen principal.
+- `fonts/`: tipografías Barlow Condensed y DM Sans y sus licencias, servidas localmente.
 - `AGENTS.md`: reglas de trabajo para Codex.
 - `TODO.md`: lista priorizada de mejoras pendientes.
 - `CHANGELOG.md`: registro de cambios permanentes.
@@ -23,3 +24,5 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 ## Trabajo local
 
 Los archivos de texto usan UTF-8 sin BOM. Tras una modificación significativa, se revisa localmente y se sincroniza con GitHub. Vercel genera el despliegue automáticamente.
+
+La navegación lateral fija muestra los cuatro apartados; la portada ofrece tres accesos inferiores. En móvil, los cuatro apartados se presentan en una cabecera compacta. El menú resalta la sección actual durante el desplazamiento.
