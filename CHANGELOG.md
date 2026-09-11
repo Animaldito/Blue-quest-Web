@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Privacidad y contacto de bqexplore.com
+
+- Añadida `privacidad.html` con los datos del responsable facilitados por el propietario, el correo activo y enlaces desde Contacto, newsletter y pie de página.
+- Actualizados los destinos de correo a info@bqexplore.com. El formulario sigue preparando un borrador para enviar desde la aplicación de correo, sin envío automático.
+- La integración de Brevo queda conservada pero desactivada mediante `data-newsletter-ready="false"`: no carga el formulario ni sus recursos mientras falten su aviso y consentimiento.
+- Dominio verificado con www; la conexión HTTPS al dominio raíz presenta un error pendiente de revisión, sin modificar DNS ni correo.
+
 ## 2026-09-11 — Formulario de Brevo integrado
 
 - Sustituido el formulario desactivado por el formulario público de Brevo facilitado por el propietario, dentro del popup existente.

@@ -302,6 +302,10 @@ footer p,footer>a{font-size:15px}
 .newsletter-dialog .newsletter-fallback{font-size:14px;margin:16px 0 0}
 .newsletter-fallback a{color:var(--cyan);text-underline-offset:4px}
 body.newsletter-open{overflow:hidden}
+.newsletter-dialog .newsletter-privacy{font-size:14px;margin:16px 0 0}
+.newsletter-privacy a,.contact-privacy a{color:var(--cyan);text-underline-offset:4px}
+.contact-privacy{font-size:16px;line-height:1.6;color:var(--muted);margin:20px 0}
+#newsletter-content[hidden]{display:none}
 @media(max-width:760px){
  .hero-top{align-items:center;justify-content:center;flex-direction:row}
  .hero-top .newsletter-trigger{font-size:16px;gap:9px;max-width:100%;padding:8px 0;border-bottom:0}

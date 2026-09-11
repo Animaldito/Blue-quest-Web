@@ -16,7 +16,8 @@ Prueba de datos y filtros: `node tests/destination-finder.test.cjs`.
 
 El sitio se publica automáticamente desde la rama `main` de GitHub mediante Vercel:
 
-- Producción: https://blue-quest-web.vercel.app/
+- Dominio público: https://www.bqexplore.com/
+- Dirección de Vercel: https://blue-quest-web.vercel.app/
 - Repositorio: https://github.com/Animaldito/Blue-quest-Web
 
 ## Estructura
@@ -24,6 +25,7 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `index.html`: contenido y estructura de la página.
 - `styles.css`: estilos, diseño adaptable y animaciones.
 - `app.js`: interacciones de la página y destinos.
+- `privacidad.html` y `legal.css`: información de privacidad y su presentación, sin scripts ni formularios propios.
 - `destination-finder.js` y `destination-finder.css`: flujo por fases y fichas de rutas.
 - `data/dive-destinations.v2.json`: catálogo documentado, ventanas de viaje y temporadas de fauna independientes.
 - `world.js`: datos y renderizado del globo.
@@ -49,4 +51,10 @@ La navegación lateral fija incluye Tu destino, The Team y Contacto; la portada 
 
 Los cuatro retratos activos de assets/team son fotografías facilitadas por el usuario y retocadas con IA, optimizadas en WebP. Las funciones ampliadas y necesidades de personal adicional se documentan en TEAM-OPERATIONS.md para validación.
 
-El formulario prepara un borrador local con destino a info@bluequest.com, permite copiarlo y abre la aplicación de correo mediante mailto. No hay backend ni envío automático. El buzón todavía no existe: mantener el aviso visible hasta activarlo y verificar recepción. No se almacenan ni transmiten los datos del formulario desde la web.
+El formulario prepara un borrador local con destino a info@bqexplore.com, permite copiarlo y abre la aplicación de correo mediante mailto. El propietario confirma que el buzón está activo. No hay backend ni envío automático: el visitante confirma el envío en su aplicación de correo. La web no guarda estos campos en almacenamiento propio.
+
+## Newsletter y privacidad
+
+La política está en `/privacidad.html`. Brevo se integra con su formulario público, sin claves privadas y cargando solo al abrir el popup. Las altas están en pausa con `data-newsletter-ready="false"` en el diálogo: no se carga el iframe ni se ofrece el enlace al formulario.
+
+Antes de activarlo, completar en Brevo consentimiento y aviso con enlace a la política, verificar lista, confirmación y baja, y revisar los pendientes de `TODO.md`. Al activar, actualizar también el apartado Newsletter de la política. La conexión del formulario no da acceso administrativo a Brevo ni autoriza campañas automáticas.

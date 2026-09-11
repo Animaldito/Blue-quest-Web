@@ -76,7 +76,12 @@ let newsletterLoadTimer;
 function closeNewsletter(){newsletterDialog.close();}
 newsletterOpen.addEventListener('click',()=>{
  if(!newsletterDialog.open){newsletterDialog.showModal();document.body.classList.add('newsletter-open');}
+ // Enable only after the hosted Brevo form includes the approved privacy notice.
+ if(newsletterDialog.dataset.newsletterReady!=='true')return;
+ const content=document.querySelector('#newsletter-content');
+ content.hidden=false;content.inert=false;
  if(!newsletterFrame.hasAttribute('src')){
+  newsletterStatus.textContent='Cargando formulario…';
   newsletterLoadTimer=setTimeout(()=>{
    newsletterStatus.textContent='Si el formulario no aparece, puedes abrirlo en otra pestaña.';
   },12000);
@@ -112,8 +117,8 @@ contactForm.addEventListener('submit',event=>{
  const value=key=>String(fields.get(key)||'').trim();
  const subject='Blue Quest — '+value('project').replace(/[\r\n]/g,' ');
  const body=['Nombre: '+value('name'),'Email: '+value('email'),'Organización: '+(value('organization')||'No indicada'),'Proyecto: '+value('project'),'Destino: '+(value('destination')||'Por definir'),'','Consulta:',value('message')].join('\r\n');
- document.querySelector('#email-draft').value='Para: info@bluequest.com\r\nAsunto: '+subject+'\r\n\r\n'+body;
- document.querySelector('#open-email').href='mailto:info@bluequest.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ document.querySelector('#email-draft').value='Para: info@bqexplore.com\r\nAsunto: '+subject+'\r\n\r\n'+body;
+ document.querySelector('#open-email').href='mailto:info@bqexplore.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
  document.querySelector('#email-preview').hidden=false;
  document.querySelector('#contact-status').textContent='Borrador preparado. No se ha enviado.';
  document.querySelector('#email-draft').focus();

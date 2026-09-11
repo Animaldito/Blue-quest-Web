@@ -66,24 +66,28 @@
 </section>
 <section id="contacto" class="section contact">
 <div class="section-heading"><div><h2>Contacto</h2></div><p>Cuéntanos tu destino y qué quieres explorar.</p></div>
-<div class="contact-layout"><aside class="contact-intro"><h3>Tu consulta</h3><p class="contact-address">info@bluequest.com</p><p class="contact-notice" id="mailbox-notice">Buzón aún no activo. Puedes preparar y copiar tu consulta; no se enviará.</p></aside>
+<div class="contact-layout"><aside class="contact-intro"><h3>Tu consulta</h3><p class="contact-address"><a href="mailto:info@bqexplore.com">info@bqexplore.com</a></p><p class="contact-notice" id="mailbox-notice">Prepara tu consulta y envíala desde tu aplicación de correo.</p></aside>
 <form id="contact-form" aria-describedby="mailbox-notice">
 <div class="form-grid"><label>Nombre<input name="name" autocomplete="name" required maxlength="80"></label><label>Email<input name="email" type="email" autocomplete="email" required maxlength="120"></label><label>Empresa u organización<input name="organization" autocomplete="organization" maxlength="100"></label><label>Tipo de proyecto<select name="project" required><option value="">Selecciona una opción</option><option>Exploración de puntos de buceo</option><option>Asesoramiento para un centro</option><option>Documentación subacuática</option><option>Otra consulta</option></select></label><label class="full-field">Destino o zona de interés<input name="destination" maxlength="120" placeholder="País, isla o zona de exploración"></label><label class="full-field">Cuéntanos tu proyecto<textarea name="message" rows="5" required minlength="10" maxlength="1200" placeholder="Objetivo y fechas aproximadas"></textarea></label></div>
 
 <button type="submit" class="button primary">Preparar consulta <span aria-hidden="true">↗</span></button>
+<p class="contact-privacy">Si nos escribes, Miguel Ángel Pérez Blanco (Blue Quest) tratará tus datos para responder a tu solicitud, por medidas precontractuales o interés legítimo según la consulta. Puedes ejercer tus derechos en info@bqexplore.com. <a href="privacidad.html">Política de privacidad</a>.</p>
 <p id="contact-status" role="status" aria-live="polite"></p>
-<div id="email-preview" hidden><label for="email-draft">Tu borrador</label><textarea id="email-draft" rows="9" readonly></textarea><div class="draft-actions"><a id="open-email" class="button primary" href="mailto:info@bluequest.com">Abrir en mi correo <span aria-hidden="true">↗</span></a><button type="button" id="copy-email">Copiar consulta</button></div></div>
-<noscript><p>Activa JavaScript para preparar el borrador. El buzón info@bluequest.com está pendiente de activación.</p></noscript>
+<div id="email-preview" hidden><label for="email-draft">Tu borrador</label><textarea id="email-draft" rows="9" readonly></textarea><div class="draft-actions"><a id="open-email" class="button primary" href="mailto:info@bqexplore.com">Abrir en mi correo <span aria-hidden="true">↗</span></a><button type="button" id="copy-email">Copiar consulta</button></div></div>
+<noscript><p>Activa JavaScript para preparar el borrador o escribe a <a href="mailto:info@bqexplore.com">info@bqexplore.com</a>.</p></noscript>
 </form></div></section>
 </main>
-<dialog id="newsletter-dialog" class="newsletter-dialog" aria-labelledby="newsletter-title" aria-describedby="newsletter-description">
+<dialog id="newsletter-dialog" class="newsletter-dialog" data-newsletter-ready="false" aria-labelledby="newsletter-title" aria-describedby="newsletter-description">
  <button type="button" class="newsletter-close" id="newsletter-close" aria-label="Cerrar newsletter">×</button>
  <h2 id="newsletter-title">Apúntate a la newsletter</h2>
  <p id="newsletter-description">Exploraciones, novedades y promociones de Blue Quest.</p>
- <p id="newsletter-status" class="newsletter-status" role="status">Cargando formulario…</p>
+ <p id="newsletter-status" class="newsletter-status" role="status">Estamos preparando la newsletter. Las suscripciones todavía no están activas.</p>
+ <div id="newsletter-content" hidden inert>
  <iframe id="newsletter-frame" class="newsletter-frame" title="Formulario de suscripción a Blue Quest" data-src="https://a2ca4a0f.sibforms.com/serve/MUIFAKdU2ASj3pvoXSJw3eF5ffqH6Btzaxua9IJbVJUhPOPzBgca2RgUk4or5PBBOWFLqbZi6bJ5WHsV63w_2O09PTHRJkb5qLnS4S5WBDU-S92yGroFyN6OBuoc9WXX5YHfDfGclps-aiyNlqm0VHA4SpxE50WrzXwEwPdBC8fw-Gh-1tFnBYUOU7g89wsb6Rwpzpu2pDD7Tc0M4A==" referrerpolicy="no-referrer" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
  <p class="newsletter-fallback"><a href="https://a2ca4a0f.sibforms.com/serve/MUIFAKdU2ASj3pvoXSJw3eF5ffqH6Btzaxua9IJbVJUhPOPzBgca2RgUk4or5PBBOWFLqbZi6bJ5WHsV63w_2O09PTHRJkb5qLnS4S5WBDU-S92yGroFyN6OBuoc9WXX5YHfDfGclps-aiyNlqm0VHA4SpxE50WrzXwEwPdBC8fw-Gh-1tFnBYUOU7g89wsb6Rwpzpu2pDD7Tc0M4A==" target="_blank" rel="noopener noreferrer">Abrir formulario en otra pestaña ↗</a></p>
+ </div>
+ <p class="newsletter-privacy"><a href="privacidad.html">Política de privacidad</a></p>
 </dialog>
 
-<footer><a class="footer-brand" href="#inicio">BLUE QUEST<span>OCEAN EXPLORATION</span></a><p>Exploración subacuática · Consultoría de buceo</p><a href="#inicio">Volver a superficie ↑</a></footer><script src="world.js"></script><script src="app.js"></script></body></html>
+<footer><a class="footer-brand" href="#inicio">BLUE QUEST<span>OCEAN EXPLORATION</span></a><p>Exploración subacuática · Consultoría de buceo</p><a href="privacidad.html">Privacidad</a><a href="#inicio">Volver a superficie ↑</a></footer><script src="world.js"></script><script src="app.js"></script></body></html>
 
