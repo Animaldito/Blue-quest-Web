@@ -35,6 +35,10 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `TODO.md`: lista priorizada de mejoras pendientes.
 - `CHANGELOG.md`: registro de cambios permanentes.
 
+## Copias y recuperación
+
+Cada mejora guardada conserva su versión en Git. Antes de cambios importantes se añade un punto `checkpoint/*` con `node scripts/checkpoint.cjs nombre-breve`; se sincroniza al publicar con `git push --follow-tags origin main`. No duplica la web ni necesita llamadas a IA. Procedimiento y límites en [BACKUP.md](BACKUP.md). Los cambios aún sin guardar en Git no quedan incluidos.
+
 ## Trabajo local
 
 Los archivos de texto usan UTF-8 sin BOM. Tras una modificación significativa, se revisa localmente y se sincroniza con GitHub. Vercel genera el despliegue automáticamente.

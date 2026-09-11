@@ -2,6 +2,9 @@
 
 ## Próximo
 
+- [x] Añadir puntos de recuperación ligeros antes de las mejoras y documentar cómo deshacerlas sin borrar el historial.
+- [x] Integrar la cabecera en la fotografía, hacer protagonista el propósito de Blue Quest, refinar la animación y estrechar la barra lateral.
+
 - [x] Sustituir la base inicial por 40 fichas basadas en agencias especializadas y documentación de centros y operadores.
 - [x] Separar rutas del mar Rojo, Maldivas y Komodo, temporadas de viaje y ventanas específicas de fauna.
 - [x] Integrar un selector por fases con un máximo de tres intereses y fichas compatibles.

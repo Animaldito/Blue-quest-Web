@@ -2,6 +2,15 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Cabecera integrada y puntos de recuperación
+
+- Punto de recuperación del estado publicado anterior a los cambios; script portable para crear y listar etiquetas anotadas sin duplicar archivos.
+- Protocolo de guardado y sincronización de puntos incorporado a AGENTS.md; recuperación mediante nuevos commits, sin borrar el historial.
+- Eliminados los peces dibujados de la marca: tipografía con textura oceánica tenue y reflejo lento, pausable y compatible con movimiento reducido.
+- «Exploramos nuevos puntos de buceo recreativo» pasa a ser el titular principal, con énfasis turquesa en nuevos puntos.
+- Anagrama blanco, barra lateral de 148 px (144 px en escritorio estrecho) y cabecera transparente sin franja blanca. Navegación móvil más compacta.
+- Conservados destinos, tecnología, equipo y formulario.
+
 ## 2026-09-11 — Catálogo reconstruido por destinos y rutas reales
 
 - Sustituido el catálogo inicial por 40 fichas de 24 países y territorios con 67 referencias.

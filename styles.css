@@ -160,69 +160,69 @@ h1{font-size:clamp(64px,7.1vw,116px)}
 @media(max-width:360px){.hero-top>span{font-size:15px;letter-spacing:1px}.hero-top>a{font-size:24px;max-width:140px}.section h2{font-size:43px}.service h3{font-size:31px}}
 @media(prefers-reduced-motion:reduce){.hero-top::before{display:none}.service:hover .service-photo img{transform:none}}
 
-/* Photo-filled brand signature; shared alignment between monogram and masthead. */
-:root{--masthead-height:118px}
-.sidebar .brand-animated{height:var(--masthead-height);min-height:var(--masthead-height);padding:12px}
-.sidebar .brand-animated .quest-mark{width:86px;height:80px}
-.hero-top{height:var(--masthead-height);background:#fff;border-color:#f2f7f7;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:hidden}
+/* Integrated ocean masthead: purpose first, restrained motion, compact rail. */
+:root{--masthead-height:132px;--rail:148px}
+.sidebar .brand-animated{height:var(--masthead-height);min-height:var(--masthead-height);padding:20px;color:#fff}
+.sidebar .brand-animated .quest-mark{width:80px;height:74px;fill:currentColor}
+.sidebar nav{margin-top:22px}
+.sidebar nav a{font-size:13px;padding:14px 12px;min-height:54px}
+.sidebar .nav-cta{margin-left:14px;margin-right:14px;font-size:11px}
+.hero{height:auto;min-height:max(820px,100svh);padding:calc(var(--masthead-height) + 66px) 0 180px;align-items:flex-start}
+.hero-top{position:absolute;inset:0 0 auto;height:var(--masthead-height);padding:24px 6%;border:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:visible;gap:28px;color:#f2fafb}
 .hero-top::before{display:none}
-.masthead-identity{display:flex;align-items:center;gap:14px;min-width:0}
-.photo-wordmark{display:block;position:relative;white-space:nowrap;font:700 clamp(42px,4.7vw,72px)/1.1 'Barlow Condensed',sans-serif;letter-spacing:3px;color:#032638}
-@supports(background-clip:text){.photo-wordmark{background-image:linear-gradient(110deg,transparent 35%,#c7fff078 48%,transparent 60%),url('ocean.png');background-size:260% 100%,135% auto;background-position:110% 50%,50% 46%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:brand-water 8s ease-in-out infinite}}
-@keyframes brand-water{0%,65%{background-position:110% 50%,50% 46%}88%,100%{background-position:-30% 50%,54% 48%}}
-.motion-toggle{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:28px;height:28px;border:1px solid #d3dfdf;border-radius:50%;background:#fff;color:#032638;font-size:12px;cursor:pointer}
-.motion-toggle:hover{background:#eef9f7}.hero-top.effects-paused .photo-wordmark{animation-play-state:paused}
-.hero-top>a.project-link{font:600 15px/1.3 'DM Sans',sans-serif;text-transform:none;letter-spacing:.1px;gap:15px;flex-shrink:0;background:#032638;color:var(--cyan);padding:13px 18px;border-radius:2px;max-width:none}
-.hero-top>a.project-link:hover,.hero-top>a.project-link:focus-visible{color:var(--cyan);background:#061213}
-.hero-top>a.project-link span{font-size:21px}
-@media(min-width:761px) and (max-width:1000px){.photo-wordmark{font-size:43px;letter-spacing:2px}.hero-top{padding-left:4%;padding-right:4%}.hero-top>a.project-link{font-size:12px;padding:12px;gap:8px}.masthead-identity{gap:8px}}
-@media(max-width:760px){
- :root{--masthead-height:108px}
- header.sidebar{grid-template-columns:90px 1fr;grid-template-rows:108px auto;background:#fff}
- .sidebar .brand-animated{grid-row:1;grid-column:1;padding:10px;min-height:108px;height:108px}
- .sidebar .brand-animated .quest-mark{width:64px;height:60px}
- .sidebar nav{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(3,minmax(0,1fr));background:#071717;padding:4px 6px}
- .sidebar nav a,.sidebar nav a:first-child,.sidebar nav a:last-child{min-height:43px;font-size:10px}
- .hero-top{position:fixed;top:0!important;left:90px;right:0;height:108px;padding:10px 15px;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;z-index:21}
- .photo-wordmark{font-size:38px;letter-spacing:2px}.masthead-identity{gap:10px}
- .motion-toggle{width:24px;height:24px;font-size:10px}
- .hero-top>a.project-link{font-size:11px;padding:5px 10px;gap:10px}.hero-top>a.project-link span{font-size:15px}
- html{scroll-padding-top:226px!important}.hero{padding-top:238px!important}
+.masthead-identity{display:flex;align-items:center;min-width:0}
+.photo-wordmark{display:block;position:relative;width:auto;max-width:100%;margin:0;border:0;padding:0;background:transparent;color:#eef8f9;cursor:pointer;text-align:left;white-space:nowrap;font:600 clamp(48px,5.4vw,78px)/1.1 'Barlow Condensed',sans-serif;letter-spacing:3px}
+@supports(background-clip:text){
+ .photo-wordmark{color:transparent;background-image:linear-gradient(110deg,#eff9fac9 36%,#fff 48%,#eff9fac9 60%),url('ocean.png');background-size:280% 100%,115% auto;background-position:110% center,50% 48%;background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:.35px #e0f6f866;animation:brand-tide 14s ease-in-out infinite}
 }
-@media(max-width:360px){.hero-top{padding-left:12px;padding-right:8px}.photo-wordmark{font-size:32px;letter-spacing:1px}.masthead-identity{gap:8px}}
-@media(prefers-reduced-motion:reduce){.photo-wordmark{animation:none!important}.motion-toggle{display:none}}
-
-/* A larger reef-filled signature and a concise statement of purpose. */
-:root{--masthead-height:144px}
-.photo-wordmark{border:0;padding:0;background-color:transparent;cursor:pointer;text-align:left;font-size:clamp(78px,7vw,108px);letter-spacing:1px}
-.masthead-identity{gap:28px;flex:1}
-.brand-purpose{font:500 17px/1.5 'DM Sans',sans-serif;letter-spacing:0;color:#032638;max-width:230px;margin:0}
-@supports(background-clip:text){.photo-wordmark{background-image:linear-gradient(110deg,transparent 35%,#c7fff050 48%,transparent 60%),url('assets/brand/reef.jpg');background-size:260% 100%,100% auto;background-position:110% 50%,50% 54%;animation-name:brand-reef}}
-@keyframes brand-reef{0%,65%{background-position:110% 50%,50% 54%}88%,100%{background-position:-30% 50%,50% 57%}}
-@media(min-width:761px) and (max-width:1250px){.masthead-identity{flex-direction:column;align-items:flex-start;gap:4px}.photo-wordmark{font-size:70px}.brand-purpose{font-size:13px;max-width:330px}.hero-top>a.project-link{font-size:12px}}
-@media(max-width:760px){
- :root{--masthead-height:152px}
- header.sidebar{grid-template-rows:152px auto}
- .sidebar .brand-animated{height:152px;min-height:152px}
- .hero-top{height:152px;gap:7px}
- .masthead-identity{flex:none;flex-direction:column;align-items:flex-start;gap:4px}
- .photo-wordmark{font-size:47px;letter-spacing:.5px}
- .brand-purpose{font-size:11px;line-height:1.4;max-width:255px}
- html{scroll-padding-top:268px!important}.hero{padding-top:282px!important}
+@keyframes brand-tide{0%,72%{background-position:110% center,50% 48%}92%,100%{background-position:-30% center,51% 49%}}
+.hero-top.effects-paused .photo-wordmark{animation-play-state:paused}
+.hero-top>a.project-link{display:flex;align-items:center;gap:14px;flex-shrink:0;padding:11px 0;background:transparent;border:0;border-bottom:1px solid #9dbabb66;border-radius:0;font:500 14px/1.35 'DM Sans',sans-serif;text-transform:none;letter-spacing:0;color:var(--cyan);max-width:none}
+.hero-top>a.project-link:hover,.hero-top>a.project-link:focus-visible{color:#fff;border-bottom-color:var(--cyan)}
+.hero-top>a.project-link span{font-size:20px}
+.hero-content{margin:0 6%;max-width:900px}
+.hero .eyebrow{font-size:12px;letter-spacing:2.2px;margin-bottom:24px;color:#b6d2d6}
+.hero .eyebrow .line{width:32px}
+.hero .brand-purpose{font:600 clamp(62px,6.7vw,104px)/1.02 'Barlow Condensed',sans-serif;letter-spacing:-.9px;color:#f4fafb;margin:0 0 30px;max-width:900px;text-wrap:initial}
+.hero .brand-purpose em{font-style:normal;color:var(--cyan)}
+.hero .intro{font-size:17px;line-height:1.65;max-width:510px;color:#c2d4d9;margin-bottom:0}
+.hero-actions{margin-top:30px}
+.hero-shade{background:linear-gradient(90deg,#03151eeb 0%,#03151ebd 40%,#03151e26 100%),linear-gradient(0deg,#061213 0%,transparent 35%)}
+.hero-signature{max-width:190px;bottom:145px;opacity:.8}
+.hero-signature strong{font-size:26px}
+@media(min-width:761px) and (max-width:1150px){
+ :root{--rail:144px}
+ .sidebar nav a{font-size:12px}
+ .photo-wordmark{font-size:60px}
+ .hero .brand-purpose{font-size:clamp(64px,7.5vw,86px)}
 }
-@media(max-width:360px){.photo-wordmark{font-size:40px}.brand-purpose{font-size:10px;max-width:198px}}
-
-/* Living letterforms: the reef stays still while fish cross from left to right. */
-.hero-top{padding-left:3%;padding-right:3%;gap:24px}
-.masthead-identity{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:28px;min-width:0}
-.photo-wordmark{width:100%;min-width:0;background:none!important;animation:none!important;color:#032638;line-height:0}
-.brand-aquarium{display:block;width:100%;height:auto;overflow:visible}
-.brand-purpose{max-width:none;font-size:clamp(22px,2vw,34px);line-height:1.25;font-weight:500;letter-spacing:-.6px;text-wrap:balance}
-.brand-swimmer{animation:brand-swim var(--swim-time) linear var(--swim-delay) infinite;will-change:transform}
-@keyframes brand-swim{from{transform:translate(-35px,var(--swim-y))}to{transform:translate(735px,var(--swim-y))}}
-.hero-top.effects-paused .brand-swimmer{animation-play-state:paused}
-@media(min-width:761px) and (max-width:1100px){.masthead-identity{grid-template-columns:1fr;gap:5px}.photo-wordmark{max-width:490px}.brand-purpose{font-size:18px;text-wrap:initial}.hero-top{gap:16px}}
-@media(max-width:760px){.hero-top{padding:10px 14px;gap:7px}.masthead-identity{display:flex;width:100%;gap:6px}.photo-wordmark{max-width:310px}.brand-purpose{font-size:14px;line-height:1.3;letter-spacing:0;max-width:310px;text-wrap:initial}}
-@media(max-width:360px){.hero-top{padding-left:10px;padding-right:10px}.brand-purpose{font-size:12px}}
-@media(prefers-reduced-motion:reduce){.brand-swimmer{animation:none;transform:translate(calc(35px + var(--swim-y) * 5),var(--swim-y))}}
+@media(max-width:760px){
+ :root{--rail:0px;--masthead-height:92px}
+ header.sidebar{grid-template-columns:76px 1fr;grid-template-rows:92px auto;background:#061c25;border:0}
+ .sidebar .brand-animated{grid-row:1;grid-column:1;min-height:92px;height:92px;padding:14px 10px}
+ .sidebar .brand-animated .quest-mark{width:54px;height:50px}
+ .sidebar nav{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,minmax(0,1fr));padding:0;margin:0;background:#071717}
+ .sidebar nav a,.sidebar nav a:first-child,.sidebar nav a:last-child{min-height:43px;font-size:10px;padding:8px 4px;justify-content:center}
+ .hero-top{position:fixed;top:0!important;left:76px;right:0;height:92px;padding:12px 18px;flex-direction:row;align-items:center;gap:14px;z-index:21;background:#061c25}
+ .photo-wordmark{font-size:clamp(38px,6.8vw,50px);letter-spacing:1.5px}
+ .hero-top>a.project-link{font-size:12px;gap:8px;padding:8px 0}
+ .hero-top>a.project-link span{font-size:17px}
+ html{scroll-padding-top:202px!important}
+ .hero{min-height:900px;padding-top:234px!important;padding-bottom:140px;display:block}
+ .hero-content{margin:0 6%}
+ .hero .eyebrow{font-size:10px;letter-spacing:1.3px;margin-bottom:23px}
+ .hero .brand-purpose{font-size:clamp(43px,7.9vw,65px);line-height:1.04;letter-spacing:-.5px;margin-bottom:24px}
+ .hero .intro{font-size:16px;line-height:1.6;max-width:490px}
+ .hero-actions{gap:22px;margin-top:28px}
+ .hero-photo{background-position:64% center}
+ .hero-shade{background:linear-gradient(90deg,#03151ed9,#03151e80),linear-gradient(0deg,#061213,transparent 60%)}
+}
+@media(max-width:520px){
+ .hero-top{flex-direction:column;align-items:flex-start;justify-content:center;gap:3px}
+ .photo-wordmark{font-size:42px}
+ .hero-top>a.project-link{font-size:12px;padding:2px 0;border:0}
+ .hero .brand-purpose{font-size:clamp(40px,10.6vw,55px)}
+}
+@media(max-width:360px){.photo-wordmark{font-size:37px}.hero-top{padding-left:14px}.hero .brand-purpose{font-size:39px}}
+@media(prefers-reduced-motion:reduce){.photo-wordmark{animation:none!important}.hero-photo{animation:none}}
 
