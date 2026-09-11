@@ -16,6 +16,7 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `app.js`: interacciones de la página y destinos.
 - `world.js`: datos y renderizado del globo.
 - `ocean.png`: imagen principal.
+- `quest-mark.svg`: emblema vectorial Q con aleta. La variante animada está integrada en la cabecera mediante SVG y CSS; termina en un logo estático y respeta movimiento reducido.
 - `fonts/`: tipografías Barlow Condensed y DM Sans y sus licencias, servidas localmente.
 - `AGENTS.md`: reglas de trabajo para Codex.
 - `TODO.md`: lista priorizada de mejoras pendientes.

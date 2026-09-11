@@ -12,6 +12,8 @@
 
 ## Completado
 
+- [x] Integrar emblema Q con aleta y presentación animada basada en la referencia del usuario.
+
 - [x] Rediseñar la navegación lateral e inferior a partir de la referencia del usuario; adaptar a móvil.
 - [x] Alojar las tipografías localmente y comprobar destinos y acordeones en escritorio y móvil.
 

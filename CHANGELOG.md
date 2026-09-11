@@ -2,6 +2,13 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Identidad animada
+
+- Emblema vectorial original basado en la referencia de Q con aleta, con firma BLUE QUEST / EXPLORE FURTHER.
+- Introducción breve al cargar: aparece el anillo, emerge la aleta y se revela el nombre; después queda estático.
+- Destello al pasar el ratón o enfocar con teclado, sin vídeo, dependencias ni reproducción continua.
+- Adaptación al bloque de marca de escritorio y móvil; se respeta la preferencia de movimiento reducido.
+
 ## 2026-09-11 — Navegación de exploración
 
 - Rediseño inspirado en la referencia facilitada: marca turquesa, barra lateral fija numerada y accesos inferiores en portada.
