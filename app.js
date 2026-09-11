@@ -34,7 +34,7 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- camera:{image:'camera.jpg',alt:'DJI Osmo 360 II, vista frontal y posterior',title:'DJI Osmo 360 II',category:'CAPTURA INMERSIVA',caption:'Imagen oficial de la cámara 360° de DJI.',brand:'DJI',url:'https://www.dji.com/media-center/announcements/dji-release-osmo-360-2'},
+ camera:{image:'camera-in-use.jpg',alt:'Persona utilizando una DJI Osmo 360 II con empuñadura extensible',title:'DJI Osmo 360 II',category:'CAPTURA INMERSIVA',caption:'Cámara en uso con empuñadura. Fotografía: Future / Digital Camera World.',brand:'DJI',url:'https://www.dji.com/media-center/announcements/dji-release-osmo-360-2'},
  sonar:{image:'sonar.jpg',alt:'Pantalla Garmin con imagen de sonar LiveScope XR en una embarcación',title:'Garmin LiveScope XR',category:'EXPLORACIÓN ACÚSTICA',caption:'Imagen real de un sistema de sonar en funcionamiento.',brand:'Garmin',url:'https://www.garmin.com.sg/products/onthewater/livescope-xr-system/'},
  scooter:{image:'scooter.png',alt:'Dos propulsores Waydoo Subnado Plus unidos por una empuñadura doble',title:'Subnado Plus Twin Engine',category:'PROPULSIÓN DOBLE',caption:'Dos unidades Subnado Plus con el soporte de doble empuñadura.',brand:'Waydoo',url:'https://au.waydoo.com/products/waydoo-subnado-plus-underwater-scooter'},
  mask:{image:'mask.jpg',alt:'Máscara integral Ocean Reef Neptune II',title:'Neptune II + GSM G.Divers',category:'COMUNICACIÓN SUBACUÁTICA',caption:'Máscara Neptune II y comunicador GSM G.Divers, mostrados por separado.',brand:'Ocean Reef',url:'https://diving.oceanreefgroup.com/product/neptune-ii/'},
@@ -49,7 +49,6 @@ function showEquipment(key){
  document.querySelector('#equipment-caption').textContent=item.caption;
  document.querySelector('#equipment-accessory').hidden=key!=='mask';
  document.querySelector('#map-views').hidden=key!=='map';
- const source=document.querySelector('#equipment-source');source.href=item.url;source.textContent='Imagen y ficha: '+item.brand+' ↗';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
 }
 document.querySelectorAll('[data-equipment]').forEach(detail=>detail.addEventListener('toggle',()=>{if(detail.open)showEquipment(detail.dataset.equipment);}));
@@ -59,5 +58,5 @@ document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener(
  document.querySelector('#equipment-caption').textContent=mapCaptions[button.dataset.map]+' Ejemplo del fabricante, no una carta para navegar.';
  document.querySelectorAll('[data-map]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
 }));
-showEquipment('camera');
+showEquipment('map');
 

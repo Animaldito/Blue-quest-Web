@@ -70,7 +70,6 @@ h2{font-weight:600;text-transform:uppercase;font-size:clamp(40px,4.4vw,65px)}
 .tech-gallery .eyebrow{font-size:10px;margin-bottom:9px}
 .tech-gallery h3{font:600 29px/1.1 'Barlow Condensed',sans-serif;margin-bottom:12px}
 .tech-gallery figcaption>p:not(.eyebrow){color:var(--muted);font-size:12px;line-height:1.7;margin-bottom:16px}
-#equipment-source{font-size:11px;color:var(--cyan);display:inline-block}
 #map-views{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
 #map-views button{background:transparent;border:1px solid var(--line);padding:8px 10px;cursor:pointer;font-size:11px}
 #map-views button[aria-pressed="true"]{background:var(--cyan);color:#052220;border-color:var(--cyan)}

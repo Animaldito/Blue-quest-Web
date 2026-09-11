@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Orden y fotografía de equipos
+
+- Orden: mapa batimétrico, sonar, cámaras 360°, scooter y máscara de comunicación; mapa seleccionado al entrar.
+- Retirados los enlaces públicos a imágenes y fichas, conservando las fuentes en la documentación.
+- Sustituida la imagen de estudio de DJI por una fotografía de la Osmo 360 II en uso con empuñadura.
+
 ## 2026-09-11 — Fotografías de tecnología
 
 - Galería de imágenes oficiales seleccionables: DJI Osmo 360 II, Garmin LiveScope XR, Subnado Plus doble, Neptune II y GSM G.Divers.

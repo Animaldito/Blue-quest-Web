@@ -1,6 +1,8 @@
 # Fuentes de imágenes de tecnología
 
-Consultadas el 11 de septiembre de 2026. Imágenes de los fabricantes, sin generación ni retoque. Se incluyen créditos enlazados en la galería. Las marcas e imágenes pertenecen a sus titulares.
+Consultadas el 11 de septiembre de 2026. Fotografías de fabricantes y prensa, sin generación ni retoque. Se conservan aquí las fuentes; los enlaces públicos se han retirado por petición del usuario. Las marcas e imágenes pertenecen a sus titulares.
+
+- camera-in-use.jpg: DJI Osmo 360 II utilizada con empuñadura, fotografía de Future / Digital Camera World — https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review (imagen https://cdn.mos.cms.futurecdn.net/gqJF5yCRxe4viRsK2kPKsK.jpg).
 
 - camera.jpg: DJI Osmo 360 II — https://www.dji.com/media-center/announcements/dji-release-osmo-360-2
 - scooter.png: Waydoo Subnado Plus doble — https://au.waydoo.com/products/waydoo-subnado-plus-underwater-scooter
