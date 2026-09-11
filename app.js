@@ -23,7 +23,7 @@ const sectionLinks=[...document.querySelectorAll('.sidebar nav a')];
 const sectionTargets=sectionLinks.map(link=>document.querySelector(link.getAttribute('href')));
 let navigationQueued=false;
 function updateNavigation(){
-  const threshold=matchMedia('(max-width:760px)').matches?160:110;
+  const threshold=matchMedia('(max-width:760px)').matches?190:110;
   let active=null;
   sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold)active=section.id;});
   sectionLinks.forEach(link=>{if(link.hash==='#'+active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
@@ -34,9 +34,9 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- camera:{image:'camera-in-use.jpg',alt:'Persona utilizando una cámara 360° con empuñadura extensible',title:'Cámaras 360°',category:'CAPTURA INMERSIVA',caption:'Captura panorámica para documentar y compartir la exploración. Fotografía: Future / Digital Camera World.'},
+ camera:{image:'camera-underwater.jpg',alt:'Buceador utilizando un sistema de cámara 360° con carcasa subacuática',title:'Cámaras 360°',category:'CAPTURA INMERSIVA',caption:'Captura inmersiva durante una inmersión. Imagen de referencia: Mantis Sub.'},
  sonar:{image:'sonar.jpg',alt:'Pantalla de sonar en funcionamiento en una embarcación',title:'Sonar de exploración',category:'EXPLORACIÓN ACÚSTICA',caption:'Observación acústica del fondo y de posibles objetivos.'},
- scooter:{image:'scooter.png',alt:'Dos propulsores subacuáticos unidos por una empuñadura doble',title:'Scooters subacuáticos',category:'MOVILIDAD SUBACUÁTICA',caption:'Ejemplo de propulsión doble para apoyar el desplazamiento.'},
+ scooter:{image:'scooter-sidemount.jpg',alt:'Buceador con botellas laterales en sidemount y scooter subacuático',title:'Scooters subacuáticos',category:'MOVILIDAD SUBACUÁTICA',caption:'Propulsión subacuática con configuración sidemount. Imagen de referencia.'},
  mask:{image:'mask.jpg',alt:'Máscara integral de buceo',title:'Comunicación subacuática',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral y unidad de comunicación, mostradas por separado.'},
  map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',title:'Mapas batimétricos',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Imagen ilustrativa, no una carta para navegar.'}
 };
@@ -59,4 +59,34 @@ document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener(
  document.querySelectorAll('[data-map]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
 }));
 showEquipment('map');
+
+// Local draft only: no network request, storage, or direct email delivery.
+const contactForm=document.querySelector('#contact-form');
+contactForm.addEventListener('submit',event=>{
+ event.preventDefault();
+ if(!contactForm.reportValidity())return;
+ const fields=new FormData(contactForm);
+ const value=key=>String(fields.get(key)||'').trim();
+ const subject='Blue Quest — '+value('project').replace(/[\r\n]/g,' ');
+ const body=['Nombre: '+value('name'),'Email: '+value('email'),'Organización: '+(value('organization')||'No indicada'),'Proyecto: '+value('project'),'Destino: '+(value('destination')||'Por definir'),'','Consulta:',value('message')].join('\r\n');
+ document.querySelector('#email-draft').value='Para: info@bluequest.com\r\nAsunto: '+subject+'\r\n\r\n'+body;
+ document.querySelector('#open-email').href='mailto:info@bluequest.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ document.querySelector('#email-preview').hidden=false;
+ document.querySelector('#contact-status').textContent='Borrador preparado. No se ha enviado ningún mensaje. El buzón sigue pendiente de activación.';
+ document.querySelector('#email-draft').focus();
+});
+contactForm.addEventListener('input',()=>{
+ document.querySelector('#email-preview').hidden=true;
+ document.querySelector('#contact-status').textContent='';
+});
+document.querySelector('#copy-email').addEventListener('click',async()=>{
+ const draft=document.querySelector('#email-draft');
+ try{
+  await navigator.clipboard.writeText(draft.value);
+  document.querySelector('#contact-status').textContent='Consulta copiada. No se ha enviado ningún mensaje.';
+ }catch{
+  draft.focus();draft.select();
+  document.querySelector('#contact-status').textContent='Selecciona y copia el borrador con la opción Copiar de tu dispositivo.';
+ }
+});
 

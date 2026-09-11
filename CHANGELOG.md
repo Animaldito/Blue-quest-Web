@@ -2,6 +2,14 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Equipo, contacto e imágenes en inmersión
+
+- The Team: cuatro perfiles, responsabilidades por áreas y retratos de muestra identificados.
+- Navegación ampliada con Equipo y Contacto, adaptada a móvil.
+- Formulario local para preparar, copiar y abrir un borrador en el cliente de correo; no envía datos, no usa servicios externos ni almacena consultas.
+- Buzón info@bluequest.com pendiente de activación por indicación del usuario; aviso visible y sin confirmaciones falsas de envío.
+- Fotografías de scooter con buceador en sidemount y cámara 360° con buceador.
+
 ## 2026-09-11 — Tecnología centrada en aplicaciones
 
 - Eliminados los nombres de fabricantes y modelos de los textos y descripciones accesibles del apartado de tecnología.

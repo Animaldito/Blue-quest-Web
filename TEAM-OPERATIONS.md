@@ -1,0 +1,22 @@
+# Organización propuesta — pendiente de validación interna
+
+Las titulaciones publicadas son únicamente las facilitadas por el usuario. Las funciones complementarias son una propuesta organizativa, no una acreditación de aptitud ni una garantía de cobertura completa.
+
+| Área | Coordinación propuesta | Qué debe confirmarse |
+| --- | --- | --- |
+| Alcance, cliente, presupuesto y contratos | Cristina con el equipo | Viabilidad, aceptación y control de cambios; apoyo contable/jurídico cuando proceda |
+| Campo, desplazamientos y logística | Miguel | Responsable operativo designado, recursos y competencias adecuadas |
+| Seguridad y emergencias | Miguel coordina la definición | Personal cualificado, apoyo de superficie, comunicaciones y plan de respuesta antes de salir |
+| Embarcación y navegación | A designar por proyecto | Patrón y tripulación habilitados; no se atribuye esta titulación a ningún miembro |
+| Material, gases y mantenimiento | Miguel coordina; Andreu apoya el material audiovisual | Técnicos y proveedores habilitados cuando corresponda; comprobaciones y registros |
+| Permisos, seguros y administración | Cristina coordina con Miguel | Revisión competente de requisitos locales y cobertura de la actividad |
+| Metodología y medio ambiente | Aida | Alcance científico, permisos ambientales y revisión de impacto |
+| Datos y documentación | Andreu captura y edita; Aida revisa contenido científico; Cristina organiza archivo y entrega | Copias, trazabilidad, control de calidad y confidencialidad |
+
+Los mapas publicados son orientativos; no se presentan como levantamientos hidrográficos certificados. El equipo base no sustituye perfiles especializados de rescate, medicina, navegación o trabajos subacuáticos profesionales. No iniciar una operación hasta cubrir sus necesidades reales.
+
+## Contacto
+
+El formulario funciona solo en el navegador: valida los campos, prepara el texto, permite copiarlo y genera un enlace mailto. No hay backend, servicio de envío, almacenamiento local ni envío de datos del formulario por red. Abrir el correo no significa enviar ni recibir.
+
+info@bluequest.com todavía no existe, según el usuario. Mantener los avisos hasta activar el buzón y verificar su recepción.

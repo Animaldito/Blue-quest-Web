@@ -27,4 +27,10 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 
 Los archivos de texto usan UTF-8 sin BOM. Tras una modificación significativa, se revisa localmente y se sincroniza con GitHub. Vercel genera el despliegue automáticamente.
 
-La navegación lateral fija muestra los cuatro apartados; la portada ofrece tres accesos inferiores. En móvil, los cuatro apartados se presentan en una cabecera compacta. El menú resalta la sección actual durante el desplazamiento.
+La navegación lateral fija muestra seis apartados, incluidos The Team y Contacto; la portada ofrece tres accesos inferiores. En móvil, los seis apartados se presentan en una cabecera compacta. El menú resalta la sección actual durante el desplazamiento.
+
+## Equipo y contacto
+
+Los cuatro retratos de assets/team son provisionales y están identificados en la web. Las funciones ampliadas y necesidades de personal adicional se documentan en TEAM-OPERATIONS.md para validación.
+
+El formulario prepara un borrador local con destino a info@bluequest.com, permite copiarlo y abre la aplicación de correo mediante mailto. No hay backend ni envío automático. El buzón todavía no existe: mantener el aviso visible hasta activarlo y verificar recepción. No se almacenan ni transmiten los datos del formulario desde la web.
