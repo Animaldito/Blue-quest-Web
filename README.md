@@ -31,6 +31,6 @@ La navegación lateral fija muestra seis apartados, incluidos The Team y Contact
 
 ## Equipo y contacto
 
-Los cuatro retratos de assets/team son provisionales y están identificados en la web. Las funciones ampliadas y necesidades de personal adicional se documentan en TEAM-OPERATIONS.md para validación.
+Los cuatro retratos activos de assets/team son fotografías facilitadas por el usuario y retocadas con IA, optimizadas en WebP. Las funciones ampliadas y necesidades de personal adicional se documentan en TEAM-OPERATIONS.md para validación.
 
 El formulario prepara un borrador local con destino a info@bluequest.com, permite copiarlo y abre la aplicación de correo mediante mailto. No hay backend ni envío automático. El buzón todavía no existe: mantener el aviso visible hasta activarlo y verificar recepción. No se almacenan ni transmiten los datos del formulario desde la web.

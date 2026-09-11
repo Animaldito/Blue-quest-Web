@@ -1,4 +1,10 @@
-# Retratos provisionales
+# Retratos del equipo
+
+## Fotografías activas
+
+miguel.webp, cristina.webp, aida.webp y andreu.webp: fotografías facilitadas por el usuario el 11 de septiembre de 2026 y asignadas por él a cada persona. Retocadas con la herramienta integrada imagegen: iluminación, nitidez, encuadre 4:3 y limpieza del entorno. La mejora con IA puede reconstruir detalles, especialmente en originales de baja resolución; pendiente validar parecido. Se conservan los originales aportados sin modificación en su ubicación de origen.
+
+## Antiguos retratos de muestra, ya no utilizados
 
 Fotografías de muestra de Unsplash. No representan a Miguel, Cristina, Aida ni Andreu; la web lo indica tanto globalmente como en cada imagen. Sustituir por fotografías reales autorizadas.
 

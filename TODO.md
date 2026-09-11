@@ -2,7 +2,8 @@
 
 ## Próximo
 
-- [ ] Sustituir los cuatro retratos de muestra por fotografías reales autorizadas.
+- [x] Sustituir los cuatro retratos de muestra por las fotografías facilitadas por el usuario.
+- [ ] Validar el parecido de los retratos retocados, especialmente el detalle reconstruido en la fotografía de Miguel.
 - [ ] Activar info@bluequest.com, verificar recepción y actualizar el aviso del formulario.
 - [ ] Confirmar la distribución ampliada de responsabilidades de The Team.
 - [ ] Antes de cada operación, confirmar responsables cualificados de seguridad, superficie, emergencias, navegación, mantenimiento, permisos y seguros; ver TEAM-OPERATIONS.md.

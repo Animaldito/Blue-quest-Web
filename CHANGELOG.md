@@ -2,6 +2,12 @@
 
 Este archivo resume los cambios permanentes realizados en la web.
 
+## 2026-09-11 — Fotografías reales del equipo
+
+- Sustituidos los retratos de muestra por las cuatro fotografías aportadas, editadas con IA para luz, nitidez y encuadre.
+- Cristina al timón, Miguel con neopreno, Aida junto a la roca y Andreu en la ciudad.
+- Imágenes WebP locales, en color y con proporción 4:3, sin rótulos provisionales.
+
 ## 2026-09-11 — Máscara en inmersión
 
 - Sustituida la fotografía de catálogo por un submarinista utilizando una Neptune durante una inmersión.
