@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Equipo en una fila de escritorio
+
+- Cuatro columnas desde 1200 px, dos entre 761 y 1199 px y una en móvil. Conservadas las fotografías panorámicas, los textos y el orden de los perfiles.
+- Ajustados márgenes y nombres para el nuevo ancho; filas compartidas de contenido alinean nombres y biografías sin alturas fijas ni texto oculto.
+- Comprobados ambos idiomas entre 320 y 1920 px, sin desbordamiento horizontal ni texto recortado; pruebas de idiomas, newsletter e icono correctas.
+- Punto previo: `checkpoint/20260912-152936814-antes-equipo-cuatro-columnas`.
+
 ## 2026-09-12 — Icono de pestaña actualizado
 
 - Sustituido el símbolo antiguo por el anagrama Q con aleta actual, blanco sobre el turquesa de marca y sin texto para mantener legibilidad a tamaño pequeño.

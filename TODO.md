@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Mostrar los cuatro miembros del equipo en una fila de escritorio, con dos columnas intermedias y una en móvil; conservar fotos, textos y ambos idiomas.
+
 - [x] Actualizar el icono de pestaña con el anagrama actual en las seis páginas y renovar su URL para evitar la caché del logo antiguo.
 
 - [x] Aportar claridad a los fondos y fotografías sin cambiar la paleta de marca, con copia previa y comprobación de lectura en móvil y ordenador.

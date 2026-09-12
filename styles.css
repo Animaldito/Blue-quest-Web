@@ -4,13 +4,14 @@
 @media(max-width:760px){.tech-gallery .equipment-photo{width:100%;min-height:0}}
 /* Team profiles and a local-only contact draft. */
 .team{background:#091b20}.team-note{font-size:12px;color:var(--muted);border-left:2px solid var(--cyan);padding-left:14px;margin-bottom:28px}
-.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .team-card{border:1px solid var(--line);background:var(--bg);min-width:0}
-.team-photo{position:relative;width:calc(100% - 56px);aspect-ratio:3/1;margin:28px 28px 0;overflow:hidden;background:#122d30}
+.team-photo{position:relative;width:calc(100% - 40px);aspect-ratio:3/1;margin:20px 20px 0;overflow:hidden;background:#122d30}
 .team-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:1199px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.team-photo{width:calc(100% - 48px);margin:24px 24px 0}}
 .team-photo span{position:absolute;bottom:14px;left:18px;background:#061213e8;padding:5px 9px;font-size:9px;letter-spacing:1.5px;color:#cce2e4}
-.team-info{padding:28px}.team-info .eyebrow{font-size:10px;margin-bottom:14px}
+.team-info{padding:20px;overflow-wrap:break-word}.team-info .eyebrow{font-size:10px;margin-bottom:14px}
 .team-info h3{font:600 37px/1.1 'Barlow Condensed',sans-serif;margin-bottom:15px}
 .team-info p,.team-info li{font-size:14px;color:var(--muted)}.team-info .team-credentials{color:var(--cyan);font-size:12px;min-height:40px}
 .team-info ul{padding-left:18px;margin-bottom:0}.team-info li+li{margin-top:8px}
@@ -235,6 +236,15 @@ body{font-size:18px}
 .team-info h3{font-size:42px}
 .team-info .eyebrow{font-size:13px;letter-spacing:1.4px}
 .team-info .team-credentials{font-size:15px;min-height:0;margin-bottom:24px}
+@media(min-width:1200px){
+ .team-info h3{font-size:clamp(32px,2.6vw,42px)}
+ /* Shared content rows align the biographies without fixed-height text boxes. */
+ @supports(grid-template-rows:subgrid){
+  .team-grid{row-gap:0}
+  .team-card{display:grid;grid-row:span 5;grid-template-rows:subgrid}
+  .team-info{display:grid;grid-row:span 4;grid-template-rows:subgrid}
+ }
+}
 .sidebar nav a{font-size:15px}
 .sidebar .nav-cta,.hero-top>a.project-link,.button,.service a{font-size:16px}
 .hero-bottom nav a{font-size:15px}
