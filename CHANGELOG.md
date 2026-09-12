@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-09-12 — Icono de pestaña actualizado
+
+- Sustituido el símbolo antiguo por el anagrama Q con aleta actual, blanco sobre el turquesa de marca y sin texto para mantener legibilidad a tamaño pequeño.
+- Icono vectorial compartido por portada, aviso legal y privacidad en ambos idiomas. URL versionada para solicitar el nuevo icono aunque el navegador conserve el anterior en caché.
+- Punto previo: `checkpoint/20260912-144012702-antes-icono-pestana`.
+
 ## 2026-09-12 — Newsletter activa con Brevo
 
 - Conectado el formulario inglés aprobado a la lista Newsletter Blue Quest. El alta autorizada se ha comprobado en Brevo; inscripción directa sin email adicional de confirmación, sin enviar campañas.

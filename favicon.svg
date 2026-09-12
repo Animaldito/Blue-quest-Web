@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#050e16"/><g fill="none" stroke="#57d3ef" stroke-width="2"><circle cx="18" cy="18" r="12"/><path d="m21 22 13 13M6 18h24M9 24h18M9 12h18"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+ <title>Blue Quest</title>
+ <rect width="256" height="256" rx="48" fill="#2cddc3"/>
+ <g transform="translate(2 14)" fill="#fff">
+  <path d="M104 187C51 187 18 151 18 104C18 50 61 12 112 12C167 12 207 51 207 101C207 126 199 148 183 162L163 142C173 130 178 117 178 102C178 67 149 43 114 43C76 43 44 72 44 111C44 150 66 179 104 187Z"/>
+  <path d="M77 117C118 117 151 143 179 170C195 185 212 198 234 207C207 214 188 207 172 202C151 195 138 199 126 205C126 167 109 132 77 117Z"/>
+ </g>
+</svg>
