@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-09-12 — Frase de Nuestro trabajo junto al título
+
+- Reubicada la frase introductoria debajo del título, alineada a la izquierda, con mayor tamaño y contraste dentro de la paleta existente.
+- Conservados texto, traducción y demás secciones. Comprobados ambos idiomas de 320 a 1440 px, sin recortes.
+- Punto previo: `checkpoint/20260912-165537072-antes-subtitulo-nuestro-trabajo`.
+
 ## 2026-09-12 — Oportunidades en la portada
 
 - Cambiada la frase de portada a «Nuevas oportunidades para resorts y centros de buceo» y «New opportunities for resorts and dive centres»; sin cambios de diseño.

@@ -232,6 +232,9 @@ body{font-size:18px}
 .section-heading>p,.service p,.equipment details p,.steps p,.team-info p,.team-info li,.contact-intro p{font-size:18px;line-height:1.65}
 .hero .intro{font-size:20px}
 .section h2{font-size:clamp(58px,5.8vw,88px);overflow-wrap:anywhere}
+/* Keep the work-section introduction with its heading, not in a separate column. */
+.services .section-heading{display:block}
+.services .section-heading>p{max-width:60ch;margin:18px 0 0;font-size:clamp(20px,2vw,28px);font-weight:500;line-height:1.5;color:var(--text)}
 .service h3{font-size:40px}
 .team-info h3{font-size:42px}
 .team-info .eyebrow{font-size:13px;letter-spacing:1.4px}
