@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Títulos de sección diferenciados del menú
+
+- Conservados los nombres y anclas del menú lateral.
+- Nuevos encabezados: Nuestro trabajo / Our work; Sigue nuestras exploraciones / Where we explore; Así trabajamos / How we work; Conócenos / Meet the team; Pregunta sin compromiso / Let’s talk — no obligation.
+- Traducciones adaptadas al tono profesional de Blue Quest; sin cambios en las imágenes ni los demás textos.
+- Punto previo: `checkpoint/20260912-110507249-antes-titulos-secciones`.
+
 ## 2026-09-12 — Portada de exploración de arrecifes
 
 - Retirado el enlace al aviso legal del lateral, conservando el acceso del pie de página en inglés y español.

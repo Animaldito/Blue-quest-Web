@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Diferenciar los títulos de sección del menú lateral, manteniendo coherencia en inglés y español.
+
 - [x] Sustituir la imagen de portada por una escena profesional de arrecife con coral y vida marina, optimizada y con procedencia documentada.
 - [x] Retirar el aviso legal del lateral y conservarlo en el pie de página de ambos idiomas.
 

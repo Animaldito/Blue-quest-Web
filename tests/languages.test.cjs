@@ -14,6 +14,11 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
  assert(html.includes('href="/language.css"'));assert(html.includes('src="/language.js"'));
  for(const [,asset] of html.matchAll(/(?:src|href)="(\/[^"#?]+\.(?:css|js|svg|jpg|webp|png))"/g))assert(fs.existsSync(path.join(root,asset)),asset);
  if(file==='index.html'){
+  const titles=lang==='es'?['Nuestro trabajo','Sigue nuestras exploraciones','Así trabajamos','Conócenos','Pregunta sin compromiso']:['Our work','Where we explore','How we work','Meet the team','Let’s talk — no obligation'];
+  for(const title of titles)assert(html.includes(`<h2>${title}</h2>`));
+  const sidebar=html.match(/<header class="sidebar">[\s\S]*?<\/header>/)[0];
+  const menu=lang==='es'?['Qué hacemos','Expediciones','Tecnología','The Team','Contacto']:['What we do','Expeditions','Technology','The Team','Contact'];
+  for(const label of menu)assert(sidebar.includes(`>${label}</a>`),'Navigation label stays unchanged');
   assert(!html.includes('class="sidebar-legal"'));
   const footer=html.match(/<footer>[\s\S]*?<\/footer>/)[0];
   assert(footer.includes(`href="${lang==='es'?'/es':''}/aviso-legal.html"`),'Legal notice remains in footer');
