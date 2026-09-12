@@ -4,7 +4,10 @@
 
 - Mantener la web como sitio estático: HTML, CSS y JavaScript sin dependencias innecesarias.
 - Guardar siempre los archivos de texto en UTF-8 sin BOM; verificar tildes, eñes y símbolos antes de publicar.
-- Conservar la versión en español y el tono profesional, explorador y marítimo de la marca.
+- Inglés predeterminado y español mediante EN / ES. Conservar ambos idiomas y el tono profesional, explorador y marítimo de la marca.
+- Editar los textos y estructura en `content/es/*.html` y sus traducciones revisadas en `translations.js`; ejecutar `node scripts/build-languages.cjs`. No editar directamente los seis HTML generados en raíz y `es/`.
+- Mantener `window.BQ.t` en los textos de interacción, sin traducir datos escritos por visitantes. El idioma se conserva en la URL, no en cookies/almacenamiento. Las rutas y anclas existentes se mantienen compatibles.
+- Verificar con `node tests/languages.test.cjs` y comprobar ambas versiones en móvil/ordenador antes de publicar. «Tu destino» y las altas de Brevo siguen desactivados.
 - No modificar imágenes, enlaces de contacto ni el diseño global sin una petición expresa.
 
 ## Puntos de recuperación (obligatorio antes de una mejora)

@@ -1,5 +1,11 @@
 # Pendientes
 
+- [x] Inglés predeterminado, español EN / ES, páginas legales y mensajes interactivos traducidos.
+- [x] Preservar estado al cambiar de idioma y servir seis páginas estáticas accesibles sin JavaScript.
+- [x] Crear punto de recuperación previo a idiomas: `checkpoint/20260912-102734983-antes-web-bilingue`.
+- [ ] Preparar las versiones inglesa y española del formulario y de los emails de Brevo antes de activar las suscripciones; no basta traducir el marco del popup. Enlazar cada formulario con la política en su idioma.
+- [ ] Si se reactiva «Tu destino», traducir también su catálogo y motor de resultados; sigue oculto y no se carga durante este cambio.
+
 - [x] Crear Aviso legal con acceso vertical y datos del titular cuya publicación ha autorizado expresamente.
 - [x] Confirmar alcance: solo exploración y consultoría, sin venta de viajes o inmersiones.
 - [x] Revisar cookies y almacenamiento antes de decidir si hace falta consentimiento: no detectados en la navegación auditada el 11/09/2026.
@@ -11,7 +17,7 @@
 - [x] Completar identidad y contacto del responsable y crear la política de privacidad enlazada desde la web.
 - [ ] Añadir a Brevo la información básica y la casilla de consentimiento enlazada a https://www.bqexplore.com/privacidad.html. Solo después de revisarlo, cambiar `data-newsletter-ready` a `true` y actualizar el estado de la newsletter en la política.
 - [ ] Revisar en Brevo la lista receptora y la confirmación doble; estos ajustes privados no se pueden comprobar desde el enlace público.
-- [ ] Completar el formulario de Brevo con consentimiento e información de privacidad: el formulario compartido no incluye casilla ni enlace. Confirmar remitente verificado y baja antes de enviar campañas.
+- [ ] Completar el formulario de Brevo con información de privacidad: en la última revisión ya incluía casilla obligatoria desmarcada, pero faltaba enlazar la política de Blue Quest e incluir la información del responsable. Confirmar remitente verificado y baja antes de enviar campañas.
 - [ ] Probar un alta autorizada de principio a fin; nunca guardar suscriptores en el repositorio público ni en el navegador como sustituto de la lista.
 - [ ] Revisar garantías y contratos de proveedores, criterios de conservación y seguimiento de aperturas/clics antes de activar campañas. La política no certifica cumplimiento integral.
 - [ ] Revisar HTTPS y redirección del dominio raíz bqexplore.com; www.bqexplore.com sí sirve la web. No modificar registros del correo al corregirlo.

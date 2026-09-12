@@ -2,6 +2,18 @@
 
 Sitio web estático de Blue Quest, dedicado a la exploración subacuática, expediciones y asesoramiento para resorts y centros de buceo.
 
+## Idiomas — inglés por defecto
+
+La portada y las páginas legales se sirven en inglés desde `/`; sus versiones españolas están en `/es/`. El selector EN / ES cambia los textos sin recargar ni perder la selección del globo, las imágenes o el borrador de contacto. Los enlaces conservan el idioma y el fragmento; volver/avanzar del navegador también funciona. No se guardan preferencias en cookies ni almacenamiento local: una visita nueva a `/` siempre empieza en inglés.
+
+Los seis HTML están prerenderizados y se pueden leer sin JavaScript. Hay enlaces de idioma reales, etiquetas `lang`, URL canónica y alternativas `hreflang`. Los mensajes dinámicos y ayudas de accesibilidad también se traducen. No se traducen nombres propios, correos ni lo que escribe el visitante. El navegador y los servicios externos conservan su propia interfaz.
+
+Edición: `content/es/index.html`, `content/es/aviso-legal.html`, `content/es/privacidad.html`; traducciones: `translations.js`; comportamiento compartido: `language.js` y `language.css`. Generar con `node scripts/build-languages.cjs`; verificar sin escribir con `node scripts/build-languages.cjs --check` o `node tests/languages.test.cjs`. No requiere dependencias ni servicios de traducción. Los archivos generados se guardan en Git; Vercel sirve directamente estos archivos.
+
+El buscador «Tu destino» sigue oculto y no carga el catálogo. La newsletter permanece desactivada: antes de activarla hay que terminar consentimiento, probar el alta y preparar formularios/confirmaciones de Brevo en ambos idiomas. Una página no puede traducir el contenido de un formulario externo de otro dominio.
+
+Recuperación previa al cambio bilingüe: `checkpoint/20260912-102734983-antes-web-bilingue`. La mejora se guarda como un único commit para revertirla de forma controlada; ver `BACKUP.md`.
+
 ## Selector «Tu destino»
 
 Nueva sección `#tu-destino`: hasta tres intereses combinables, detalle opcional de fauna y estación del hemisferio norte. Devuelve fichas con meses coincidentes. Las experiencias de snorkel se presentan aparte del buceo con botella.
@@ -25,7 +37,7 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `index.html`: contenido y estructura de la página.
 - `styles.css`: estilos, diseño adaptable y animaciones.
 - `app.js`: interacciones de la página y destinos.
-- `privacidad.html` y `legal.css`: información de privacidad y su presentación, sin scripts ni formularios propios.
+- `privacidad.html` y `legal.css`: información de privacidad y su presentación, con selector de idioma y sin formularios propios.
 - `aviso-legal.html`: identificación del titular, uso del sitio, cookies y acceso a privacidad. Enlace vertical independiente del menú de anclas.
 - `destination-finder.js` y `destination-finder.css`: flujo por fases y fichas de rutas.
 - `data/dive-destinations.v2.json`: catálogo documentado, ventanas de viaje y temporadas de fauna independientes.

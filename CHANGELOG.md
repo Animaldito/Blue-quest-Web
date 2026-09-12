@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Inglés predeterminado y selector EN / ES
+
+- Traducción revisada de portada, secciones, textos alternativos, formularios, mensajes dinámicos y páginas legales; nombres, datos de contacto e imágenes conservados.
+- Seis páginas estáticas en inglés/español, con rutas propias y alternativas de idioma para buscadores. Cambio sin recarga, sin cookies, con conservación de estado y funcionamiento sin JavaScript.
+- Controles móviles de al menos 44 px y pruebas a 1440, 1024, 768, 760, 390 y 320 px; comprobación de navegación, globo, equipo, borradores, historial y ausencia de llamadas externas.
+- Punto de recuperación `checkpoint/20260912-102734983-antes-web-bilingue`. Newsletter y buscador de destinos permanecen desactivados.
+
 Este archivo resume los cambios permanentes realizados en la web.
 
 ## 2026-09-11 — Aviso legal y acceso vertical

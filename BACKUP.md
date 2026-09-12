@@ -10,6 +10,8 @@ Usamos el historial de Git y puntos anotados `checkpoint/*`, conservados en el P
 
 El punto anterior a esta renovación de cabecera es `checkpoint/2026-09-11-antes-cabecera-editorial`.
 
+El punto previo al cambio bilingüe del 12 de septiembre de 2026 es `checkpoint/20260912-102734983-antes-web-bilingue`, sobre la versión `661427b`. Incluye la web española, el aviso legal, los recursos y la integración de newsletter desactivada. Se publica en GitHub junto con la mejora. Para deshacer únicamente el cambio de idioma, revertir el commit `Add English-first bilingual website with Spanish switch` tras verificar su identificador y que no haya cambios posteriores incompatibles. No restaura ni modifica la configuración externa del dominio, correo o Brevo.
+
 ## Si no gusta el resultado
 
 Pedir «vuelve a la versión anterior» o indicar el cambio que se quiere deshacer. No hay que volver a generar la web.

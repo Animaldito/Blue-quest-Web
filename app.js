@@ -1,15 +1,17 @@
+const t=window.BQ.t;
 const canvas=document.querySelector('#globe'),ctx=canvas.getContext('2d');
 const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'Exploración realizada en este destino.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'Exploración realizada en este destino.'},{name:'Leyte',lat:10.9,lon:124.8,status:'Prospección programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'Prospección programada para noviembre de 2026.'}];
 let rotation=55,tilt=12,selected=0,drag=null,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,w=0,h=0,last=0,visible=true;
 const rotate=document.querySelector('#rotate');
-function setAuto(value){auto=value;rotate.textContent=auto?'Ⅱ Pausar rotación':'▷ Activar rotación';rotate.setAttribute('aria-pressed',String(auto));}setAuto(auto);
+function setAuto(value){auto=value;rotate.textContent=t(auto?'Ⅱ Pausar rotación':'▷ Activar rotación');rotate.setAttribute('aria-label',t(auto?'Pausar rotación del globo':'Activar rotación del globo'));rotate.setAttribute('aria-pressed',String(auto));}setAuto(auto);
 function resize(){const b=canvas.getBoundingClientRect();w=b.width;h=b.height;const d=Math.min(devicePixelRatio||1,2);canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);}new ResizeObserver(resize).observe(canvas);
 const rad=Math.PI/180;
 function project(lon,lat){const l=(lon-rotation)*rad,p=lat*rad,t=tilt*rad,r=Math.min(w*.43,h*.43);const x=Math.cos(p)*Math.sin(l),y=Math.sin(p)*Math.cos(t)-Math.cos(p)*Math.cos(l)*Math.sin(t),z=Math.sin(p)*Math.sin(t)+Math.cos(p)*Math.cos(l)*Math.cos(t);return [w/2+r*x,h/2-r*y,z];}
 function line(points,color,width=1){ctx.beginPath();let pen=false;for(const c of points){const p=project(c[0],c[1]);if(p[2]>0){if(pen)ctx.lineTo(p[0],p[1]);else ctx.moveTo(p[0],p[1]);pen=true;}else pen=false;}ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();}
 function draw(ts){const dt=Math.min(ts-last,50);last=ts;if(visible&&w){if(auto&&!drag)rotation+=dt*.002;ctx.clearRect(0,0,w,h);const r=Math.min(w*.43,h*.43),cx=w/2,cy=h/2;const aura=ctx.createRadialGradient(cx,cy,r*.75,cx,cy,r*1.16);aura.addColorStop(0,'#1c678518');aura.addColorStop(.8,'#23729520');aura.addColorStop(1,'#08141e00');ctx.fillStyle=aura;ctx.fillRect(0,0,w,h);const ocean=ctx.createRadialGradient(cx-r*.4,cy-r*.4,0,cx,cy,r);ocean.addColorStop(0,'#113349');ocean.addColorStop(.8,'#091f30');ocean.addColorStop(1,'#05111d');ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=ocean;ctx.fill();ctx.strokeStyle='#34758b';ctx.lineWidth=1;ctx.stroke();for(let lat=-60;lat<=60;lat+=30){const points=[];for(let lon=-180;lon<=180;lon+=3)points.push([lon,lat]);line(points,'#459bb526');}for(let lon=-180;lon<180;lon+=30){const points=[];for(let lat=-90;lat<=90;lat+=3)points.push([lon,lat]);line(points,'#459bb526');}for(const ring of window.WORLD_RINGS||[])line(ring,'#67b3c6a0',.75);places.forEach((place,i)=>{const p=project(place.lon,place.lat);if(p[2]<0)return;const col=i<2?'#62dbef':'#e2b976';ctx.beginPath();ctx.arc(p[0],p[1],i===selected?12:7,0,Math.PI*2);ctx.strokeStyle=col;ctx.lineWidth=i===selected?1.5:1;ctx.stroke();ctx.beginPath();ctx.arc(p[0],p[1],3,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();if(i===selected){ctx.font='12px "DM Sans", sans-serif';ctx.textAlign=p[0]>w*.7?'right':'left';const tx=p[0]+(p[0]>w*.7?-18:18);ctx.fillStyle='#06121de6';const tw=ctx.measureText(place.name).width;ctx.fillRect(ctx.textAlign==='right'?tx-tw-5:tx-5,p[1]-29,tw+10,22);ctx.fillStyle='#e8f6fa';ctx.fillText(place.name,tx,p[1]-14);}});}requestAnimationFrame(draw);}requestAnimationFrame(draw);
 new IntersectionObserver(entries=>visible=entries[0].isIntersecting).observe(canvas);
-function selectPlace(i){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});document.querySelector('#place-detail').textContent=places[i].name.toUpperCase()+' / '+places[i].status;}
+function updatePlaceDetail(){document.querySelector('#place-detail').textContent=places[selected].name.toUpperCase()+' / '+t(places[selected].status);}
+function selectPlace(i){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});updatePlaceDetail();}
 document.querySelectorAll('.destination').forEach((button,i)=>{button.setAttribute('aria-pressed',String(i===selected));button.addEventListener('click',()=>selectPlace(i));});
 rotate.addEventListener('click',()=>setAuto(!auto));
 canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY};canvas.setPointerCapture(e.pointerId);setAuto(false);});
@@ -43,21 +45,30 @@ const equipmentPhotos={
 const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image');
 function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
- gallery.dataset.equipment=key;equipmentImage.src='assets/technology/'+item.image;equipmentImage.alt=item.alt;
- document.querySelector('#equipment-title').textContent=item.title;
+ gallery.dataset.equipment=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);
+ document.querySelector('#equipment-title').textContent=t(item.title);
  document.querySelector('#map-views').hidden=key!=='map';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
 }
 document.querySelectorAll('[data-equipment]').forEach(detail=>detail.addEventListener('toggle',()=>{if(detail.open)showEquipment(detail.dataset.equipment);}));
 const mapCaptions={relief:'Relieve sombreado con información cartográfica.',satellite:'Imagen de satélite con información de la carta náutica.',perspective:'Vista cartográfica en sonar.'};
 document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener('click',()=>{
- equipmentImage.src='assets/technology/map-'+button.dataset.map+'.jpg';equipmentImage.alt='Ejemplo de cartografía: '+mapCaptions[button.dataset.map];
+ equipmentImage.src='/assets/technology/map-'+button.dataset.map+'.jpg';equipmentImage.alt=t('Ejemplo de cartografía: ')+t(mapCaptions[button.dataset.map]);
  document.querySelectorAll('[data-map]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
 }));
 showEquipment('map');
 
 // Local draft only: no network request, storage, or direct email delivery.
 const contactForm=document.querySelector('#contact-form');
+function localizeValidation(field){
+ field.setCustomValidity('');
+ const v=field.validity;
+ if(!v.valid)field.setCustomValidity(t(v.valueMissing?'Completa este campo.':v.typeMismatch?'Introduce una dirección de correo válida.':v.tooShort?'Escribe al menos 10 caracteres.':'Revisa el valor de este campo.'));
+}
+contactForm.querySelectorAll('input,select,textarea:not([readonly])').forEach(field=>{
+ field.addEventListener('invalid',()=>localizeValidation(field));
+ field.addEventListener('input',()=>field.setCustomValidity(''));
+});
 const brandLogo=document.querySelector('.brand-sonar');
 brandLogo.addEventListener('click',event=>{
  if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -81,9 +92,9 @@ newsletterOpen.addEventListener('click',()=>{
  const content=document.querySelector('#newsletter-content');
  content.hidden=false;content.inert=false;
  if(!newsletterFrame.hasAttribute('src')){
-  newsletterStatus.textContent='Cargando formulario…';
+  newsletterStatus.textContent=t('Cargando formulario…');
   newsletterLoadTimer=setTimeout(()=>{
-   newsletterStatus.textContent='Si el formulario no aparece, puedes abrirlo en otra pestaña.';
+   newsletterStatus.textContent=t('Si el formulario no aparece, puedes abrirlo en otra pestaña.');
   },12000);
   newsletterFrame.src=newsletterFrame.dataset.src;
  }
@@ -110,18 +121,21 @@ newsletterDialog.addEventListener('close',()=>{
  document.body.classList.remove('newsletter-open');
  newsletterOpen.focus({preventScroll:true});
 });
+function prepareDraft(focus=true){
+ const fields=new FormData(contactForm);
+ const value=key=>String(fields.get(key)||'').trim();
+ const subject='Blue Quest — '+t(value('project')).replace(/[\r\n]/g,' ');
+ const body=[t('Nombre: ')+value('name'),'Email: '+value('email'),t('Organización: ')+(value('organization')||t('No indicada')),t('Proyecto: ')+t(value('project')),t('Destino: ')+(value('destination')||t('Por definir')),'',t('Consulta:'),value('message')].join('\r\n');
+ document.querySelector('#email-draft').value=t('Para: ')+'info@bqexplore.com\r\n'+t('Asunto: ')+subject+'\r\n\r\n'+body;
+ document.querySelector('#open-email').href='mailto:info@bqexplore.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ document.querySelector('#email-preview').hidden=false;
+ document.querySelector('#contact-status').textContent=t('Borrador preparado. No se ha enviado.');
+ if(focus)document.querySelector('#email-draft').focus();
+}
 contactForm.addEventListener('submit',event=>{
  event.preventDefault();
  if(!contactForm.reportValidity())return;
- const fields=new FormData(contactForm);
- const value=key=>String(fields.get(key)||'').trim();
- const subject='Blue Quest — '+value('project').replace(/[\r\n]/g,' ');
- const body=['Nombre: '+value('name'),'Email: '+value('email'),'Organización: '+(value('organization')||'No indicada'),'Proyecto: '+value('project'),'Destino: '+(value('destination')||'Por definir'),'','Consulta:',value('message')].join('\r\n');
- document.querySelector('#email-draft').value='Para: info@bqexplore.com\r\nAsunto: '+subject+'\r\n\r\n'+body;
- document.querySelector('#open-email').href='mailto:info@bqexplore.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
- document.querySelector('#email-preview').hidden=false;
- document.querySelector('#contact-status').textContent='Borrador preparado. No se ha enviado.';
- document.querySelector('#email-draft').focus();
+ prepareDraft();
 });
 contactForm.addEventListener('input',()=>{
  document.querySelector('#email-preview').hidden=true;
@@ -131,10 +145,20 @@ document.querySelector('#copy-email').addEventListener('click',async()=>{
  const draft=document.querySelector('#email-draft');
  try{
   await navigator.clipboard.writeText(draft.value);
-  document.querySelector('#contact-status').textContent='Consulta copiada. No se ha enviado ningún mensaje.';
+  document.querySelector('#contact-status').textContent=t('Consulta copiada. No se ha enviado ningún mensaje.');
  }catch{
   draft.focus();draft.select();
-  document.querySelector('#contact-status').textContent='Selecciona y copia el borrador con la opción Copiar de tu dispositivo.';
+  document.querySelector('#contact-status').textContent=t('Selecciona y copia el borrador con la opción Copiar de tu dispositivo.');
  }
+});
+
+document.addEventListener('bq:languagechange',()=>{
+ contactForm.querySelectorAll('input,select,textarea:not([readonly])').forEach(field=>{if(field.validity.customError)localizeValidation(field);});
+ setAuto(auto);updatePlaceDetail();
+ const key=gallery.dataset.equipment;
+ document.querySelector('#equipment-title').textContent=t(equipmentPhotos[key].title);
+ const view=document.querySelector('[data-map][aria-pressed="true"]')?.dataset.map;
+ equipmentImage.alt=key==='map'&&view?t('Ejemplo de cartografía: ')+t(mapCaptions[view]):t(equipmentPhotos[key].alt);
+ if(!document.querySelector('#email-preview').hidden)prepareDraft(false);
 });
 
