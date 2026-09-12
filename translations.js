@@ -55,7 +55,7 @@
  "Escena ilustrativa generada: exploración de un arrecife con coral, peces y buceadores.":"AI-generated illustrative scene: exploring a reef with coral, fish and divers.",
  "nuevos puntos":"new dive sites",
  "de buceo recreativo.":"for recreational diving.",
- "Nuevas experiencias para resorts y centros de buceo.":"New experiences for resorts and dive centres.",
+ "Nuevas oportunidades para resorts y centros de buceo.":"New opportunities for resorts and dive centres.",
  "Explora nuestros destinos":"Explore our destinations",
  "EXPLORACIÓN":"EXPLORATION",
  "CON PROPÓSITO.":"WITH PURPOSE.",

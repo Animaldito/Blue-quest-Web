@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Sustituir «experiencias» por «oportunidades» en la frase de portada y adaptar su versión inglesa.
+
 - [x] Retirar el formulario incrustado que rechaza altas y dar acceso principal al mismo formulario externo, donde el propietario ha confirmado una suscripción correcta. Mantener consentimiento y antispam.
 - [ ] Si se quiere volver a incrustar el formulario, investigar primero el rechazo y verificar un envío real autorizado dentro de la web; no quitar protecciones para forzar el resultado.
 

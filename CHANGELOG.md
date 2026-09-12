@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-09-12 — Oportunidades en la portada
+
+- Cambiada la frase de portada a «Nuevas oportunidades para resorts y centros de buceo» y «New opportunities for resorts and dive centres»; sin cambios de diseño.
+- Punto previo: `checkpoint/20260912-165142801-antes-oportunidades-portada`.
+
 ## 2026-09-12 — Newsletter con acceso directo a Brevo
 
 - Sustituido el formulario incrustado por un botón principal que abre el mismo formulario en una pestaña externa. El propietario confirmó error en el iframe y alta correcta fuera de él; la causa interna del rechazo no está determinada.
