@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-09-12 — Frase de Nuestro trabajo en una línea
+
+- Reducido el tamaño adaptable de la frase para mantenerla en una sola línea junto al título en escritorio, con la misma alineación inferior y color.
+- En pantallas pequeñas conserva 18 px y saltos naturales bajo el título para evitar recortes. Comprobados español e inglés entre 320 y 1920 px.
+- Punto previo: `checkpoint/20260912-170804009-antes-frase-una-linea`.
+
 ## 2026-09-12 — Encabezados más compactos
 
 - Frase de Nuestro trabajo al lado del título y alineada por abajo en escritorio; debajo en pantallas pequeñas, conservando tamaño y contraste.

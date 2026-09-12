@@ -1,6 +1,6 @@
 # Pendientes
 
-- [x] Colocar la frase de Nuestro trabajo al lado del título y alineada por abajo en escritorio; mantenerla debajo en pantallas pequeñas, con más relevancia visual en ambos idiomas.
+- [x] Colocar la frase de Nuestro trabajo al lado del título, alineada por abajo y en una sola línea con letra menor en escritorio; mantenerla debajo y legible en pantallas pequeñas, en ambos idiomas.
 - [x] Acortar el título de exploraciones y sustituir su frase por «Destinos visitados y próximas prospecciones», con adaptación inglesa.
 
 - [x] Sustituir «experiencias» por «oportunidades» en la frase de portada y adaptar su versión inglesa.
