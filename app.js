@@ -45,17 +45,17 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- camera:{image:'camera-underwater.jpg',alt:'Buceador utilizando un sistema de cámara 360° con carcasa subacuática',title:'Cámaras 360°',category:'CAPTURA INMERSIVA',caption:'Captura inmersiva durante una inmersión. Imagen de referencia: Mantis Sub.'},
- sonar:{image:'sonar.jpg',alt:'Pantalla de sonar en funcionamiento en una embarcación',title:'Sonar de exploración',category:'EXPLORACIÓN ACÚSTICA',caption:'Observación acústica del fondo y de posibles objetivos.'},
- scooter:{image:'scooter-sidemount.jpg',alt:'Buceador con botellas laterales en sidemount y scooter subacuático',title:'Scooters subacuáticos',category:'MOVILIDAD SUBACUÁTICA',caption:'Propulsión subacuática con configuración sidemount. Imagen de referencia.'},
- mask:{image:'mask-underwater.jpg',alt:'Submarinista utilizando una máscara integral durante una inmersión',title:'Comunicación subacuática',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral en uso durante una exploración subacuática. Imagen de referencia.'},
- map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',title:'Mapas batimétricos',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Imagen ilustrativa, no una carta para navegar.'}
+ camera:{image:'camera-underwater.jpg',alt:'Buceador utilizando un sistema de cámara 360° con carcasa subacuática',benefit:'Cada ángulo cuenta',category:'CAPTURA INMERSIVA',caption:'Captura inmersiva durante una inmersión. Imagen de referencia: Mantis Sub.'},
+ sonar:{image:'sonar.jpg',alt:'Pantalla de sonar en funcionamiento en una embarcación',benefit:'Detectar antes de ver',category:'EXPLORACIÓN ACÚSTICA',caption:'Observación acústica del fondo y de posibles objetivos.'},
+ scooter:{image:'scooter-sidemount.jpg',alt:'Buceador con botellas laterales en sidemount y scooter subacuático',benefit:'Más alcance, menos esfuerzo',category:'MOVILIDAD SUBACUÁTICA',caption:'Propulsión subacuática con configuración sidemount. Imagen de referencia.'},
+ mask:{image:'mask-underwater.jpg',alt:'Submarinista utilizando una máscara integral durante una inmersión',benefit:'Conectados, más seguros',category:'COORDINACIÓN EN INMERSIÓN',caption:'Máscara integral en uso durante una exploración subacuática. Imagen de referencia.'},
+ map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',category:'CARTOGRAFÍA BATIMÉTRICA',caption:'Relieve sombreado con información cartográfica. Imagen ilustrativa, no una carta para navegar.'}
 };
 const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image');
 function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
  gallery.dataset.equipment=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);
- document.querySelector('#equipment-title').textContent=t(item.title);
+ document.querySelector('#equipment-title').textContent=t(item.benefit);
  document.querySelector('#map-views').hidden=key!=='map';
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map==='relief')));
 }
@@ -148,7 +148,7 @@ document.addEventListener('bq:languagechange',()=>{
  contactForm.querySelectorAll('input,select,textarea:not([readonly])').forEach(field=>{if(field.validity.customError)localizeValidation(field);});
  setAuto(auto);updatePlaceDetail();
  const key=gallery.dataset.equipment;
- document.querySelector('#equipment-title').textContent=t(equipmentPhotos[key].title);
+ document.querySelector('#equipment-title').textContent=t(equipmentPhotos[key].benefit);
  const view=document.querySelector('[data-map][aria-pressed="true"]')?.dataset.map;
  equipmentImage.alt=key==='map'&&view?t('Ejemplo de cartografía: ')+t(mapCaptions[view]):t(equipmentPhotos[key].alt);
  if(!document.querySelector('#email-preview').hidden)prepareDraft(false);

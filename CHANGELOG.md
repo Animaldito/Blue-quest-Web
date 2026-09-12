@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Pies de foto centrados en ventajas
+
+- Sustituidos los nombres duplicados bajo las imágenes por cinco mensajes breves: «Saber dónde buscar», «Detectar antes de ver», «Cada ángulo cuenta», «Más alcance, menos esfuerzo» y «Conectados, más seguros», con adaptación inglesa.
+- Conservados los nombres del selector, fotografías, encuadres y medidas. Mensaje inicial, selección de equipo y actualización de idioma usan los nuevos textos.
+- Añadida prueba ligera de las cinco ventajas en ambos idiomas. Verificados los diez textos en móvil de 320 px y escritorio de 1440 px, sin recortes ni cambios de altura de la galería.
+- Punto previo: `checkpoint/20260912-183814090-antes-pies-de-foto-ventajas`.
+
 ## 2026-09-12 — Bitácora y galería de tecnología homogénea
 
 - Sustituido «Nuestras exploraciones» por «Bitácora» / «Field log», en una línea sin repetir el vocabulario de otros títulos. Conservados el subtítulo, el menú y el ancla de expediciones.

@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Sustituir los nombres repetidos en los pies de foto por ventajas breves de cada herramienta, en español e inglés, sin alterar el selector ni las fotografías.
+
 - [x] Cambiar el encabezado de destinos a «Bitácora» / «Field log» y homogeneizar lienzo, encuadre, fondo y bordes de la galería de tecnología, conservando las fotografías originales.
 
 - [x] Actualizar la frase de Conócenos y unificar todos los encabezados y sus frases con tamaños, columnas y alineación izquierda comunes en español e inglés.
