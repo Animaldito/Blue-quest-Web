@@ -23,7 +23,12 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
   const footer=html.match(/<footer>[\s\S]*?<\/footer>/)[0];
   assert(footer.includes(`href="${lang==='es'?'/es':''}/aviso-legal.html"`),'Legal notice remains in footer');
   assert(html.includes('class="hero-photo" role="img" aria-label='));
-  assert(html.includes('data-newsletter-ready="false"'));assert(!/<iframe[^>]*\ssrc=/.test(html));
+  assert(html.includes('data-newsletter-ready="true"'));assert(!/<iframe[^>]*\ssrc=/.test(html),'No third-party iframe until explicit permission');
+  for(const id of ['newsletter-permission','newsletter-load','newsletter-decline','newsletter-unload'])assert(html.includes(`id="${id}"`));
+  assert(html.includes('id="newsletter-content" hidden inert'));
+  assert(html.includes('MUIFAEBah1zUBKm8dePcRXgScNYejR_XY_9u6QYe3xjHMKu34G8p9zDFigxt4R-oLV-EDbfMKA1bfuNQDJ45cUdRhZvR63ldt-2Y62yhZug6DsOi8j6E6f0dx-kASYue47B-uHINwH9gKrvduukLslhRRvQGNrNYk2-3x4POlo5Et6TlMj-A7ep86jc8Dtq52su4NAhcRKU1y_nLNw=='));
+  assert(!html.includes('MUIFAKdU2ASj3pvoXSJw3eF5ffqH6Btzaxua9IJbVJUhPOPzBgca2RgUk4or5PBBOWFLqbZi6bJ5WHsV63w'));
+  assert(html.includes(lang==='es'?'Formulario y emails en inglés.':'Sign-up form and emails in English.'));
   assert(html.includes('hidden inert style="display:none" id="tu-destino"'));
   assert(!html.includes('src="/destination-finder.js"'));
  }else{assert(html.includes('71153709N'));assert(html.includes('info@bqexplore.com'));assert(!/<form\b/.test(html));}
@@ -31,4 +36,4 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
 const messages=require('../translations.js');
 assert.equal(messages['Exploramos'],'We explore');
 assert.equal(messages['Mapas batimétricos'],'Bathymetric maps');
-console.log('PASS translation coverage, generated files, language metadata, assets, privacy, inactive integrations.');
+console.log('PASS translation coverage, generated files, language metadata, assets, permission-gated newsletter and inactive destination finder.');

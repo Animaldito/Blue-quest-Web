@@ -12,7 +12,7 @@
 - [x] Inglés predeterminado, español EN / ES, páginas legales y mensajes interactivos traducidos.
 - [x] Preservar estado al cambiar de idioma y servir seis páginas estáticas accesibles sin JavaScript.
 - [x] Crear punto de recuperación previo a idiomas: `checkpoint/20260912-102734983-antes-web-bilingue`.
-- [ ] Preparar las versiones inglesa y española del formulario y de los emails de Brevo antes de activar las suscripciones; no basta traducir el marco del popup. Enlazar cada formulario con la política en su idioma.
+- [x] Integrar un único formulario de Brevo en inglés y anunciar que las novedades serán en inglés, según la decisión del propietario; mantener bilingües los textos propios de la web.
 - [ ] Si se reactiva «Tu destino», traducir también su catálogo y motor de resultados; sigue oculto y no se carga durante este cambio.
 
 - [x] Crear Aviso legal con acceso vertical y datos del titular cuya publicación ha autorizado expresamente.
@@ -24,10 +24,10 @@
 - [x] Reproducir intro al pulsar el logo, limpiar cabecera y preparar popup de newsletter.
 - [x] Cuenta de Brevo creada por el propietario y formulario público integrado en el popup.
 - [x] Completar identidad y contacto del responsable y crear la política de privacidad enlazada desde la web.
-- [ ] Añadir a Brevo la información básica y la casilla de consentimiento enlazada a https://www.bqexplore.com/privacidad.html. Solo después de revisarlo, cambiar `data-newsletter-ready` a `true` y actualizar el estado de la newsletter en la política.
-- [ ] Revisar en Brevo la lista receptora y la confirmación doble; estos ajustes privados no se pueden comprobar desde el enlace público.
-- [ ] Completar el formulario de Brevo con información de privacidad: en la última revisión ya incluía casilla obligatoria desmarcada, pero faltaba enlazar la política de Blue Quest e incluir la información del responsable. Confirmar remitente verificado y baja antes de enviar campañas.
-- [ ] Probar un alta autorizada de principio a fin; nunca guardar suscriptores en el repositorio público ni en el navegador como sustituto de la lista.
+- [x] Verificar casilla obligatoria desmarcada y enlace de privacidad en Brevo; identificar al responsable en el popup y activar el formulario con permiso separado para cargar Brevo/reCAPTCHA. Actualizar las páginas legales.
+- [x] Comprobar la lista receptora Newsletter Blue Quest y el alta directa sin email de confirmación.
+- [x] Probar un alta autorizada de principio a fin y comprobar su presencia como suscriptor en Brevo; sin campañas ni datos de prueba publicados en el repositorio.
+- [ ] Antes de la primera campaña, completar la verificación telefónica solicitada por Brevo, confirmar remitente/dominio y probar la baja. No se ha verificado la entregabilidad ni enviado una campaña.
 - [ ] Revisar garantías y contratos de proveedores, criterios de conservación y seguimiento de aperturas/clics antes de activar campañas. La política no certifica cumplimiento integral.
 - [ ] Revisar HTTPS y redirección del dominio raíz bqexplore.com; www.bqexplore.com sí sirve la web. No modificar registros del correo al corregirlo.
 

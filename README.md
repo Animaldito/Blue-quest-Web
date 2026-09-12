@@ -18,7 +18,7 @@ Los seis HTML están prerenderizados y se pueden leer sin JavaScript. Hay enlace
 
 Edición: `content/es/index.html`, `content/es/aviso-legal.html`, `content/es/privacidad.html`; traducciones: `translations.js`; comportamiento compartido: `language.js` y `language.css`. Generar con `node scripts/build-languages.cjs`; verificar sin escribir con `node scripts/build-languages.cjs --check` o `node tests/languages.test.cjs`. No requiere dependencias ni servicios de traducción. Los archivos generados se guardan en Git; Vercel sirve directamente estos archivos.
 
-El buscador «Tu destino» sigue oculto y no carga el catálogo. La newsletter permanece desactivada: antes de activarla hay que terminar consentimiento, probar el alta y preparar formularios/confirmaciones de Brevo en ambos idiomas. Una página no puede traducir el contenido de un formulario externo de otro dominio.
+El buscador «Tu destino» sigue oculto y no carga el catálogo. La newsletter utiliza un único formulario externo en inglés, por decisión del propietario, y avisa de que las comunicaciones serán en inglés. Los textos propios del popup sí siguen el idioma de la web.
 
 Recuperación previa al cambio bilingüe: `checkpoint/20260912-102734983-antes-web-bilingue`. La mejora se guarda como un único commit para revertirla de forma controlada; ver `BACKUP.md`.
 
@@ -67,7 +67,7 @@ Cada mejora guardada conserva su versión en Git. Antes de cambios importantes s
 
 Los archivos de texto usan UTF-8 sin BOM. Tras una modificación significativa, se revisa localmente y se sincroniza con GitHub. Vercel genera el despliegue automáticamente.
 
-La navegación lateral fija incluye Tu destino, The Team y Contacto; la portada ofrece tres accesos inferiores. En móvil, los apartados se presentan en una cabecera compacta. El menú resalta la sección actual durante el desplazamiento.
+La navegación lateral fija incluye Qué hacemos, Expediciones, Tecnología, The Team y Contacto; la portada ofrece tres accesos inferiores. En móvil, los apartados se presentan en una cabecera compacta. El menú resalta la sección actual durante el desplazamiento.
 
 ## Equipo y contacto
 
@@ -77,8 +77,12 @@ El formulario prepara un borrador local con destino a info@bqexplore.com, permit
 
 ## Newsletter y privacidad
 
-El aviso legal está en `/aviso-legal.html` y la política en `/privacidad.html`. El titular ha autorizado expresamente publicar su identificación, NIF, domicilio y correo en el sitio y GitHub. Brevo se integra con su formulario público, sin claves privadas y cargando solo al abrir el popup. Las altas están en pausa con `data-newsletter-ready="false"` en el diálogo: no se carga el iframe ni se ofrece el enlace al formulario.
+El aviso legal está en `/aviso-legal.html` y la política en `/privacidad.html`, con versiones en `/es/`. El titular ha autorizado expresamente publicar su identificación, NIF, domicilio y correo. Las altas están activas con `data-newsletter-ready="true"`: Brevo recibe los correos en la lista **Newsletter Blue Quest**. El formulario en inglés exige email y consentimiento desmarcado inicialmente, enlaza la política y usa reCAPTCHA invisible. Se ha comprobado un alta autorizada y su llegada a la lista; no se han enviado campañas. La configuración actual guarda el alta directamente, sin email de confirmación.
 
-En la revisión del 11/09/2026 no se detectaron cookies, claves de almacenamiento local o de sesión, ni peticiones a otros orígenes en el recorrido habitual de la web pública y la vista previa. Repetir la revisión antes de incorporar integraciones, CAPTCHA o analítica; instalar bloqueo y gestión del consentimiento cuando proceda, no un aviso decorativo.
+La web no carga Brevo ni Google al navegar o abrir el popup: primero explica los servicios externos y ofrece **Permitir y cargar formulario / Ahora no**. No guarda esta elección. Cerrar o retirar el permiso descarga el iframe; no cancela una suscripción ni borra cookies ya guardadas por esos proveedores. El enlace alternativo al formulario aparece solo después del permiso. No hay claves privadas, API propia de suscriptores ni almacenamiento de correos en el repositorio o navegador.
 
-Antes de activarlo, completar en Brevo consentimiento y aviso con enlace a la política, verificar lista, confirmación y baja, y revisar los pendientes de `TODO.md`. Al activar, actualizar también el apartado Newsletter de la política. La conexión del formulario no da acceso administrativo a Brevo ni autoriza campañas automáticas.
+Antes de la primera campaña: completar la verificación telefónica que solicita Brevo, confirmar remitente/dominio, revisar seguimiento y comprobar el enlace de baja. Mantener los requisitos operativos de privacidad de `TODO.md`. La conexión del formulario no autoriza campañas automáticas ni garantiza la entregabilidad de futuros envíos.
+
+Recuperación previa a la activación: `checkpoint/20260912-141320467-antes-activar-newsletter`; procedimiento en `BACKUP.md`.
+
+Comprobaciones sin red ni altas: `node tests/languages.test.cjs` y `node tests/newsletter.test.cjs`. Revisar además el formulario externo en móvil y ordenador tras cambiar su diseño o configuración en Brevo.

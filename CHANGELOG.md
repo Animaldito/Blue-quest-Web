@@ -1,5 +1,15 @@
 # Registro de cambios
 
+## 2026-09-12 — Newsletter activa con Brevo
+
+- Conectado el formulario inglés aprobado a la lista Newsletter Blue Quest. El alta autorizada se ha comprobado en Brevo; inscripción directa sin email adicional de confirmación, sin enviar campañas.
+- Popup disponible en ambos idiomas, indicando que el formulario y las novedades estarán en inglés. Casilla de suscripción obligatoria y desmarcada gestionada por Brevo, con enlace a la política de Blue Quest y reCAPTCHA invisible.
+- Permiso separado antes de cargar servicios externos, alternativa «Ahora no» y retirada al cerrar; la web no guarda esa elección ni los correos. Abrir el popup no carga Brevo ni Google.
+- Acceso alternativo visible sobre el formulario, aviso de carga lenta, cierre accesible durante el desplazamiento y más espacio útil en móvil.
+- Actualizados privacidad y aviso legal en ambos idiomas; requisitos previos a la primera campaña conservados en TODO.
+- Pruebas de generación/idiomas y del ciclo de permiso sin red; revisión del popup y formulario en móvil y ordenador. No se ha probado aún una campaña ni su baja.
+- Punto previo: `checkpoint/20260912-141320467-antes-activar-newsletter`.
+
 ## 2026-09-12 — Más luz con la misma paleta
 
 - Aclarados los fondos marinos mediante mezclas suaves con el blanco existente y luz turquesa tenue; conservados los colores del logo, los botones y los indicadores.
