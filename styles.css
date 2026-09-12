@@ -318,10 +318,10 @@ body.newsletter-open{overflow:hidden}
  .hero{padding-top:calc(var(--mobile-header-height,188px) + 48px)!important}
 }
 .hero-photo{background-image:url('assets/hero/reef-survey.webp');background-position:center;animation:none}
-.hero-shade{background:linear-gradient(90deg,#03151ece 0%,#03151e82 38%,#03151e12 72%,#03151e0a 100%),linear-gradient(180deg,#03151e8c 0%,transparent 24%),linear-gradient(0deg,#061213 0%,#0612131a 22%,transparent 45%)}
+.hero-shade{background:linear-gradient(90deg,#03151eb8 0%,#03151e66 38%,#03151e0a 72%,transparent 100%),linear-gradient(180deg,#03151e99 0%,transparent 24%),linear-gradient(0deg,var(--bg) 0%,#0612131a 22%,transparent 45%)}
 @media(max-width:760px){
  .hero-photo{top:var(--mobile-header-height,188px);background-position:80% center}
- .hero-shade{background:linear-gradient(90deg,#03151eaa,#03151e33),linear-gradient(0deg,#061213 0%,#0612130a 35%,#03151e30 100%)}
+ .hero-shade{background:linear-gradient(90deg,#03151e99,#03151e26),linear-gradient(0deg,var(--bg) 0%,#0612130a 35%,#03151e26 100%)}
 }
 @media(max-width:760px){.hero-top{right:0;padding-inline:12px}}
 @media(max-width:760px){
@@ -331,4 +331,34 @@ body.newsletter-open{overflow:hidden}
  .newsletter-frame{height:560px}
 }
 
-
+/* Ambient light: lift existing ocean tones, not the brand colours or image files. */
+@supports (color:color-mix(in srgb,#000,#fff)){
+:root{
+ --bg:color-mix(in srgb,#061213 91%,#edf5f8);
+ --panel:color-mix(in srgb,#0a1c20 91%,#edf5f8);
+ --line:color-mix(in srgb,#233b3d 82%,#edf5f8);
+ --muted:color-mix(in srgb,#a3b9bd 88%,#edf5f8);
+ --surface-raised:color-mix(in srgb,#0a1c20 88%,#edf5f8);
+ --surface-inset:color-mix(in srgb,#071719 94%,#edf5f8);
+ --surface-selected:color-mix(in srgb,#123531 94%,#edf5f8);
+ --surface-navigation:color-mix(in srgb,#071717 94%,#edf5f8);
+ --surface-mobile-header:color-mix(in srgb,#061c25 94%,#edf5f8);
+}
+header.sidebar{background:var(--surface-navigation)}
+.sidebar nav a:hover,.sidebar nav a[aria-current="location"]{background:var(--surface-selected)}
+.section:not(.hero){background:radial-gradient(ellipse at 85% 0%,#2cddc30b,transparent 65%),var(--bg)}
+.expeditions.section,.team.section{background:radial-gradient(ellipse at 25% 10%,#2cddc30c,transparent 65%),var(--panel)}
+.service{background:linear-gradient(145deg,#edf5f809,transparent 75%),var(--panel)}
+.service:hover,.team-card,.tech-gallery{background:var(--surface-raised)}
+.service-photo img{opacity:.92}
+.service:hover .service-photo img{opacity:1}
+.destination:hover,.destination.selected{background:var(--surface-selected)}
+.contact.section{background:radial-gradient(ellipse at 5% 15%,#2cddc314,transparent 65%),var(--panel)}
+#contact-form input,#contact-form select,#contact-form textarea{background:var(--surface-inset)}
+#contact-form input::placeholder,#contact-form textarea::placeholder{color:var(--muted);opacity:1}
+.newsletter-dialog{background:var(--panel);box-shadow:0 20px 70px #0005}
+@media(max-width:760px){
+ header.sidebar,.hero-top{background:var(--surface-mobile-header)}
+ .sidebar nav{background:var(--surface-navigation)}
+}
+}

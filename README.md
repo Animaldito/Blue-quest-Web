@@ -2,6 +2,10 @@
 
 Sitio web estático de Blue Quest, dedicado a la exploración subacuática, expediciones y asesoramiento para resorts y centros de buceo.
 
+## Luz y paleta
+
+El bloque `Ambient light` al final de `styles.css` controla la luminosidad: mezcla los tonos marinos existentes con el blanco de la web, manteniendo el turquesa de marca. Las superficies y el velo de portada se ajustan por separado, sin filtros globales, cambios de imagen ni animaciones adicionales. `legal.css` aplica el mismo criterio a las páginas legales y conserva su estilo de impresión.
+
 ## Idiomas — inglés por defecto
 
 El menú móvil distribuye enlaces completos en filas según el ancho disponible, sin partir palabras ni truncar nombres. Su altura se mide para que las anclas no queden ocultas debajo. No volver a definir estilos de `.sidebar` desde `destination-finder.css`: la antigua regla de cuatro columnas causaba recortes aunque el buscador estuviera oculto.

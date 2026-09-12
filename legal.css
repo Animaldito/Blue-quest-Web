@@ -1,5 +1,5 @@
 @import url('fonts/fonts.css');
-:root{color-scheme:dark;background:#071c24;color:#eef6f6;font:400 18px/1.7 'DM Sans',sans-serif}
+:root{color-scheme:dark;background:#071c24;background:color-mix(in srgb,#071c24 91%,#edf5f8);color:#eef6f6;font:400 18px/1.7 'DM Sans',sans-serif}
 *{box-sizing:border-box}
 body{margin:0}
 a{color:#33dfcb;text-underline-offset:.2em;overflow-wrap:anywhere}

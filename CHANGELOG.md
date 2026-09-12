@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-09-12 — Más luz con la misma paleta
+
+- Aclarados los fondos marinos mediante mezclas suaves con el blanco existente y luz turquesa tenue; conservados los colores del logo, los botones y los indicadores.
+- Superficies diferenciadas para tarjetas, secciones, navegación y campos; bordes y textos secundarios más legibles. Misma estructura y tamaños.
+- Menos sombra sobre la fotografía de portada, con transición al nuevo fondo y protección de contraste en la cabecera. Fotografías de servicios menos veladas, sin modificar archivos de imagen ni añadir descargas.
+- Popup y páginas legales armonizados; impresión de las páginas legales conservada.
+- Revisión visual en móvil y ordenador, ambos idiomas, pruebas de idiomas y regresión del menú en doce anchos. Contraste de los textos de contenido muestreados superior a 4,5:1 incluso sobre la luz ambiental.
+- Punto previo: `checkpoint/20260912-120433144-antes-luz-ambiente`.
+
 ## 2026-09-12 — Menú móvil sin palabras cortadas
 
 - Eliminada una regla global antigua de `destination-finder.css` que imponía cuatro columnas con `!important`, incluso con el buscador oculto.

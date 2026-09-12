@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Aportar claridad a los fondos y fotografías sin cambiar la paleta de marca, con copia previa y comprobación de lectura en móvil y ordenador.
+
 - [x] Corregir palabras cortadas del menú móvil; eliminar la regla global del buscador oculto y comprobar etiquetas completas, orientación, ampliación de texto y anclas en ambos idiomas.
 
 - [x] Diferenciar los títulos de sección del menú lateral, manteniendo coherencia en inglés y español.
