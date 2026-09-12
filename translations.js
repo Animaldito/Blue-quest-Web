@@ -127,7 +127,7 @@
  "Relieve sombreado con información cartográfica.":"Shaded relief with chart information.",
  "Imagen de satélite con información de la carta náutica.":"Satellite imagery with nautical chart information.",
  "Vista cartográfica en sonar.":"Sonar chart view.",
- "Exploración, ciencia y documentación en un mismo equipo.":"Exploration, science and documentation in one team.",
+ "Distintas personas, distintos roles, un mismo objetivo: tu éxito.":"Different people, different roles, one shared goal: your success.",
  "Miguel Perez con traje de neopreno":"Miguel Perez wearing a wetsuit",
  "DIRECCIÓN DE EXPEDICIONES":"EXPEDITION LEADERSHIP",
  "Instructor de buceo · Submarinista técnico · Solo Diver · Agente de viajes":"Dive instructor · Technical diver · Solo Diver · Travel agent",

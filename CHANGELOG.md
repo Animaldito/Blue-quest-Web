@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Encabezados de sección unificados
+
+- Nueva frase de Conócenos: «Distintas personas, distintos roles, un mismo objetivo: tu éxito». Inglés: «Different people, different roles, one shared goal: your success».
+- Las cinco secciones comparten tipografía, tamaños, contraste y dos columnas con márgenes izquierdos comunes. Frases en una línea y alineadas por abajo en escritorio; debajo del título en pantallas pequeñas.
+- Verificadas ambas versiones entre 320 y 1920 px, sin recortes; prueba de idioma ampliada para la nueva frase.
+- Punto previo: `checkpoint/20260912-171302869-antes-encabezados-unificados`.
+
 ## 2026-09-12 — Frase de Nuestro trabajo en una línea
 
 - Reducido el tamaño adaptable de la frase para mantenerla en una sola línea junto al título en escritorio, con la misma alineación inferior y color.

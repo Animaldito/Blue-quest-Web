@@ -232,11 +232,11 @@ body{font-size:18px}
 .section-heading>p,.service p,.equipment details p,.steps p,.team-info p,.team-info li,.contact-intro p{font-size:18px;line-height:1.65}
 .hero .intro{font-size:20px}
 .section h2{font-size:clamp(58px,5.8vw,88px);overflow-wrap:anywhere}
-/* Pair the work title and introduction along their lower edge on desktop. */
-.services .section-heading{display:flex;flex-direction:row;align-items:flex-end;justify-content:flex-start;gap:clamp(24px,3vw,48px)}
-.services .section-heading>div{flex:0 0 auto}
-.services .section-heading>p{flex:1;min-width:0;max-width:none;margin:0;font-size:clamp(14px,1.2vw,22px);font-weight:500;line-height:1.5;color:var(--text);white-space:nowrap}
-@media(max-width:1199px){.services .section-heading{display:block}.services .section-heading>p{max-width:60ch;margin:18px 0 0;font-size:18px;white-space:normal}}
+/* Shared columns keep all section titles and introductions aligned. */
+.section .section-heading{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:end;gap:clamp(24px,2vw,40px);text-align:left}
+.section .section-heading>div{min-width:0}
+.section .section-heading>p{min-width:0;max-width:none;margin:0;font-size:clamp(14px,1.15vw,22px);font-weight:500;line-height:1.5;color:var(--text);white-space:nowrap;text-align:left}
+@media(max-width:1199px){.section .section-heading{display:block}.section .section-heading>p{max-width:60ch;margin:18px 0 0;font-size:18px;white-space:normal}}
 .service h3{font-size:40px}
 .team-info h3{font-size:42px}
 .team-info .eyebrow{font-size:13px;letter-spacing:1.4px}

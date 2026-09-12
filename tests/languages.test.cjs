@@ -17,6 +17,7 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
   const titles=lang==='es'?['Nuestro trabajo','Nuestras exploraciones','Así trabajamos','Conócenos','Pregunta sin compromiso']:['Our work','Our explorations','How we work','Meet the team','Let’s talk — no obligation'];
   for(const title of titles)assert(html.includes(`<h2>${title}</h2>`));
   assert(html.includes(`<p>${lang==='es'?'Destinos visitados y próximas prospecciones.':'Past destinations and upcoming surveys.'}</p>`));
+  assert(html.includes(`<p>${lang==='es'?'Distintas personas, distintos roles, un mismo objetivo: tu éxito.':'Different people, different roles, one shared goal: your success.'}</p>`));
   const sidebar=html.match(/<header class="sidebar">[\s\S]*?<\/header>/)[0];
   const menu=lang==='es'?['Qué hacemos','Expediciones','Tecnología','The Team','Contacto']:['What we do','Expeditions','Technology','The Team','Contact'];
   for(const label of menu)assert(sidebar.includes(`>${label}</a>`),'Navigation label stays unchanged');
