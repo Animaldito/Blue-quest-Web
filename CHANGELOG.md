@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-09-12 — Bitácora y galería de tecnología homogénea
+
+- Sustituido «Nuestras exploraciones» por «Bitácora» / «Field log», en una línea sin repetir el vocabulario de otros títulos. Conservados el subtítulo, el menú y el ancla de expediciones.
+- Las cinco herramientas y las tres vistas cartográficas comparten lienzo panorámico 8:5, fondo, borde y tamaño de tarjeta. Encuadres específicos conservan cámara, pantalla de sonar, scooter y máscara; retiradas las franjas blancas de los mapas y el fondo blanco exclusivo del scooter.
+- Ajustes de presentación no destructivos, sin regenerar ni distorsionar fotografías, ni alterar colores o datos de los mapas. Espacio de controles reservado para evitar saltos de altura; controles cartográficos ocultos fuera de mapas.
+- Verificados selección, imágenes cargadas, medidas idénticas y ausencia de desbordamiento en español e inglés, escritorio y móvil (320–1440 px).
+- Punto previo: `checkpoint/20260912-180542415-antes-bitacora-galeria-homogenea`.
+
 ## 2026-09-12 — Encabezados de sección unificados
 
 - Nueva frase de Conócenos: «Distintas personas, distintos roles, un mismo objetivo: tu éxito». Inglés: «Different people, different roles, one shared goal: your success».

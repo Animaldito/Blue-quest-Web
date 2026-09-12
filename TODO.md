@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Cambiar el encabezado de destinos a «Bitácora» / «Field log» y homogeneizar lienzo, encuadre, fondo y bordes de la galería de tecnología, conservando las fotografías originales.
+
 - [x] Actualizar la frase de Conócenos y unificar todos los encabezados y sus frases con tamaños, columnas y alineación izquierda comunes en español e inglés.
 
 - [x] Colocar la frase de Nuestro trabajo al lado del título, alineada por abajo y en una sola línea con letra menor en escritorio; mantenerla debajo y legible en pantallas pequeñas, en ambos idiomas.

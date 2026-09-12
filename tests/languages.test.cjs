@@ -14,7 +14,7 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
  assert(html.includes('href="/language.css"'));assert(html.includes('src="/language.js"'));
  for(const [,asset] of html.matchAll(/(?:src|href)="(\/[^"#?]+\.(?:css|js|svg|jpg|webp|png))"/g))assert(fs.existsSync(path.join(root,asset)),asset);
  if(file==='index.html'){
-  const titles=lang==='es'?['Nuestro trabajo','Nuestras exploraciones','Así trabajamos','Conócenos','Pregunta sin compromiso']:['Our work','Our explorations','How we work','Meet the team','Let’s talk — no obligation'];
+  const titles=lang==='es'?['Nuestro trabajo','Bitácora','Así trabajamos','Conócenos','Pregunta sin compromiso']:['Our work','Field log','How we work','Meet the team','Let’s talk — no obligation'];
   for(const title of titles)assert(html.includes(`<h2>${title}</h2>`));
   assert(html.includes(`<p>${lang==='es'?'Destinos visitados y próximas prospecciones.':'Past destinations and upcoming surveys.'}</p>`));
   assert(html.includes(`<p>${lang==='es'?'Distintas personas, distintos roles, un mismo objetivo: tu éxito.':'Different people, different roles, one shared goal: your success.'}</p>`));

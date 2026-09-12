@@ -45,7 +45,7 @@
  "The Team":"The Team",
  "Contacto":"Contact",
  "Nuestro trabajo":"Our work",
- "Nuestras exploraciones":"Our explorations",
+ "Bitácora":"Field log",
  "Así trabajamos":"How we work",
  "Conócenos":"Meet the team",
  "Pregunta sin compromiso":"Let’s talk — no obligation",
