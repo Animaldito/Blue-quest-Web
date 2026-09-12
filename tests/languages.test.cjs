@@ -14,6 +14,10 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
  assert(html.includes('href="/language.css"'));assert(html.includes('src="/language.js"'));
  for(const [,asset] of html.matchAll(/(?:src|href)="(\/[^"#?]+\.(?:css|js|svg|jpg|webp|png))"/g))assert(fs.existsSync(path.join(root,asset)),asset);
  if(file==='index.html'){
+  assert(!html.includes('class="sidebar-legal"'));
+  const footer=html.match(/<footer>[\s\S]*?<\/footer>/)[0];
+  assert(footer.includes(`href="${lang==='es'?'/es':''}/aviso-legal.html"`),'Legal notice remains in footer');
+  assert(html.includes('class="hero-photo" role="img" aria-label='));
   assert(html.includes('data-newsletter-ready="false"'));assert(!/<iframe[^>]*\ssrc=/.test(html));
   assert(html.includes('hidden inert style="display:none" id="tu-destino"'));
   assert(!html.includes('src="/destination-finder.js"'));

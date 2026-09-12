@@ -15,6 +15,7 @@
  "Aviso legal":"Legal notice",
  "Apúntate a la newsletter":"Join our newsletter",
  "Exploramos":"We explore",
+ "Escena ilustrativa generada: exploración de un arrecife con coral, peces y buceadores.":"AI-generated illustrative scene: exploring a reef with coral, fish and divers.",
  "nuevos puntos":"new dive sites",
  "de buceo recreativo.":"for recreational diving.",
  "Nuevas experiencias para resorts y centros de buceo.":"New experiences for resorts and dive centres.",

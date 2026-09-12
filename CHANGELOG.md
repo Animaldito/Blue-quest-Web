@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-09-12 — Portada de exploración de arrecifes
+
+- Retirado el enlace al aviso legal del lateral, conservando el acceso del pie de página en inglés y español.
+- Nueva escena fotorrealista generada para representar prospección de arrecifes recreativos con coral, peces y dos buceadores. Es ilustrativa, no un registro de una expedición real; procedencia en `assets/hero/SOURCES.md`.
+- Imagen WebP de 1672 × 940 px y aproximadamente 240 KB; encuadre móvil y capas de contraste adaptados, sin cambios en los textos de la portada.
+- La imagen anterior se conserva. Punto previo: `checkpoint/20260912-105537518-antes-portada-arrecife`.
+- Comprobados ambos idiomas, seis tamaños de pantalla, enlaces legales del pie, selector, formulario y controles existentes.
+
 ## 2026-09-12 — Inglés predeterminado y selector EN / ES
 
 - Traducción revisada de portada, secciones, textos alternativos, formularios, mensajes dinámicos y páginas legales; nombres, datos de contacto e imágenes conservados.

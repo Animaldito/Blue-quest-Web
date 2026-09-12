@@ -306,9 +306,13 @@ body.newsletter-open{overflow:hidden}
 .newsletter-privacy a,.contact-privacy a{color:var(--cyan);text-underline-offset:4px}
 .contact-privacy{font-size:16px;line-height:1.6;color:var(--muted);margin:20px 0}
 #newsletter-content[hidden]{display:none}
-.sidebar .sidebar-legal{display:block;flex-shrink:0;align-self:center;writing-mode:vertical-rl;text-orientation:mixed;font-size:14px;font-weight:500;line-height:1.2;letter-spacing:1.2px;text-transform:uppercase;color:#a8c0c1;min-width:44px;margin:auto auto 20px;padding:12px 14px;text-decoration:underline;text-decoration-color:#496968;text-underline-offset:5px}
-.sidebar .sidebar-legal:hover{color:var(--cyan);text-decoration-color:currentColor}
-@media(max-width:760px){.sidebar .sidebar-legal{grid-column:2;grid-row:1;justify-self:end;align-self:center;margin:0 12px 0 0;padding:4px 14px;font-size:12px;letter-spacing:.7px}.hero-top{right:56px;padding-inline:8px}}
+.hero-photo{background-image:url('assets/hero/reef-survey.webp');background-position:center;animation:none}
+.hero-shade{background:linear-gradient(90deg,#03151ece 0%,#03151e82 38%,#03151e12 72%,#03151e0a 100%),linear-gradient(180deg,#03151e8c 0%,transparent 24%),linear-gradient(0deg,#061213 0%,#0612131a 22%,transparent 45%)}
+@media(max-width:760px){
+ .hero-photo{top:178px;background-position:80% center}
+ .hero-shade{background:linear-gradient(90deg,#03151eaa,#03151e33),linear-gradient(0deg,#061213 0%,#0612130a 35%,#03151e30 100%)}
+}
+@media(max-width:760px){.hero-top{right:0;padding-inline:12px}}
 @media(max-width:760px){
  .hero-top{align-items:center;justify-content:center;flex-direction:row}
  .hero-top .newsletter-trigger{font-size:16px;gap:9px;max-width:100%;padding:8px 0;border-bottom:0}

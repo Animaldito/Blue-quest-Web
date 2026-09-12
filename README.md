@@ -38,11 +38,12 @@ El sitio se publica automáticamente desde la rama `main` de GitHub mediante Ver
 - `styles.css`: estilos, diseño adaptable y animaciones.
 - `app.js`: interacciones de la página y destinos.
 - `privacidad.html` y `legal.css`: información de privacidad y su presentación, con selector de idioma y sin formularios propios.
-- `aviso-legal.html`: identificación del titular, uso del sitio, cookies y acceso a privacidad. Enlace vertical independiente del menú de anclas.
+- `aviso-legal.html`: identificación del titular, uso del sitio, cookies y acceso a privacidad. Acceso desde el pie de página; retirado del lateral.
 - `destination-finder.js` y `destination-finder.css`: flujo por fases y fichas de rutas.
 - `data/dive-destinations.v2.json`: catálogo documentado, ventanas de viaje y temporadas de fauna independientes.
 - `world.js`: datos y renderizado del globo.
-- `ocean.png`: imagen principal.
+- `assets/hero/reef-survey.webp`: portada actual, escena ilustrativa generada de prospección de arrecife; procedencia en `assets/hero/SOURCES.md`. No corresponde a una expedición real documentada.
+- `ocean.png`: imagen anterior conservada para recuperación.
 - `assets/technology/`: imágenes oficiales de equipos y cartografía, con procedencia en `SOURCES.md`.
 - `quest-mark.svg`: emblema vectorial Q con aleta. La variante animada está integrada en la cabecera mediante SVG y CSS; termina en un logo estático y respeta movimiento reducido.
 - `fonts/`: tipografías Barlow Condensed y DM Sans y sus licencias, servidas localmente.

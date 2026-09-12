@@ -13,7 +13,6 @@ html[lang="en"] .hero .brand-purpose{font-size:clamp(52px,5.7vw,88px)}
  .hero-top .language-switch a{min-height:44px;padding:4px 10px}
  .hero-top .newsletter-trigger{min-height:44px;padding:2px 0;font-size:12px;line-height:1.3;gap:6px;justify-content:center;text-align:center}
  .hero-top .newsletter-trigger span{font-size:16px}
- .sidebar .sidebar-legal{font-size:10px;padding:4px 14px;letter-spacing:.4px;white-space:nowrap}
  html[lang="en"] .hero .brand-purpose{font-size:clamp(42px,8.8vw,66px)}
  .sidebar nav a{hyphens:auto}
 }

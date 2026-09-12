@@ -1,5 +1,8 @@
 # Pendientes
 
+- [x] Sustituir la imagen de portada por una escena profesional de arrecife con coral y vida marina, optimizada y con procedencia documentada.
+- [x] Retirar el aviso legal del lateral y conservarlo en el pie de página de ambos idiomas.
+
 - [x] Inglés predeterminado, español EN / ES, páginas legales y mensajes interactivos traducidos.
 - [x] Preservar estado al cambiar de idioma y servir seis páginas estáticas accesibles sin JavaScript.
 - [x] Crear punto de recuperación previo a idiomas: `checkpoint/20260912-102734983-antes-web-bilingue`.
