@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Seleccionar el idioma inicial por país en Vercel y respetar siempre EN / ES mediante la URL, sin cookies ni servicios externos, con punto de recuperación y pruebas de regresión.
+
 - [x] Sustituir los nombres repetidos en los pies de foto por ventajas breves de cada herramienta, en español e inglés, sin alterar el selector ni las fotografías.
 
 - [x] Cambiar el encabezado de destinos a «Bitácora» / «Field log» y homogeneizar lienzo, encuadre, fondo y bordes de la galería de tecnología, conservando las fotografías originales.

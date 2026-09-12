@@ -23,7 +23,7 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
   for(const label of menu)assert(sidebar.includes(`>${label}</a>`),'Navigation label stays unchanged');
   assert(!html.includes('class="sidebar-legal"'));
   const footer=html.match(/<footer>[\s\S]*?<\/footer>/)[0];
-  assert(footer.includes(`href="${lang==='es'?'/es':''}/aviso-legal.html"`),'Legal notice remains in footer');
+  assert(footer.includes(`href="${lang==='es'?'/es/aviso-legal.html':'/aviso-legal.html?lang=en'}"`),'Legal notice remains in footer and preserves language');
   assert(html.includes('class="hero-photo" role="img" aria-label='));
   assert(!/<iframe\b/.test(html),'Newsletter must not reintroduce the failing embedded form');
   const signUpLink=html.match(/<a id="newsletter-form-link"[^>]+>/)[0];

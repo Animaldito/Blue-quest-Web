@@ -4,9 +4,9 @@
 
 - Mantener la web como sitio estático: HTML, CSS y JavaScript sin dependencias innecesarias.
 - Guardar siempre los archivos de texto en UTF-8 sin BOM; verificar tildes, eñes y símbolos antes de publicar.
-- Inglés predeterminado y español mediante EN / ES. Conservar ambos idiomas y el tono profesional, explorador y marítimo de la marca.
+- Idioma inicial por país en Vercel: español para países hispanohablantes e inglés para el resto o país desconocido. La elección explícita EN / ES tiene prioridad. Conservar ambos idiomas y el tono profesional, explorador y marítimo de la marca.
 - Editar los textos y estructura en `content/es/*.html` y sus traducciones revisadas en `translations.js`; ejecutar `node scripts/build-languages.cjs`. No editar directamente los seis HTML generados en raíz y `es/`.
-- Mantener `window.BQ.t` en los textos de interacción, sin traducir datos escritos por visitantes. El idioma se conserva en la URL, no en cookies/almacenamiento. Las rutas y anclas existentes se mantienen compatibles.
+- Mantener `window.BQ.t` en los textos de interacción, sin traducir datos escritos por visitantes. El idioma se conserva en la URL (`/es/` o `?lang=en`), no en cookies/almacenamiento. Las rutas y anclas existentes se mantienen compatibles. Conservar la excepción `lang=en` en `vercel.json` y los enlaces estáticos; verificar `node tests/geo-language.test.cjs` al cambiar idiomas o rutas. No aplicar redirecciones geográficas a recursos ni rutas españolas.
 - Verificar con `node tests/languages.test.cjs` y comprobar ambas versiones en móvil/ordenador antes de publicar. «Tu destino» sigue desactivado. La newsletter está activa con un único formulario de Brevo y comunicaciones en inglés, por decisión del propietario. El formulario se abre mediante un enlace explícito en una pestaña externa; no incrustarlo ni cargar Brevo/reCAPTCHA dentro de Blue Quest. Cerrar el popup no cierra esa pestaña ni da de baja al suscriptor. No enviar campañas sin autorización.
 - No modificar imágenes, enlaces de contacto ni el diseño global sin una petición expresa.
 

@@ -1,9 +1,34 @@
-// Language lives in the URL, not cookies/storage. Works with static fallback links.
+// Vercel selects the initial language by country. Explicit choice lives in the
+// URL (/es/ or ?lang=en), never cookies/storage, and overrides that default.
 (()=>{
  const messages=window.BQ_MESSAGES;
  const reverse=new Map(Object.entries(messages).filter(([es,en])=>es!==en).map(([es,en])=>[en.trim(),es.trim()]));
  const page=location.pathname.split('/').pop()||'index.html';
  const route=lang=>`${lang==='es'?'/es':''}/${page==='index.html'?'':page}`;
+ const withChoice=(url,lang)=>{
+  if(lang==='en')url.searchParams.set('lang','en');else url.searchParams.delete('lang');
+  return url.pathname+url.search+url.hash;
+ };
+ const languageLink=lang=>{
+  const url=new URL(location.href);url.pathname=route(lang);
+  return withChoice(url,lang);
+ };
+ function updateLinks(lang){
+  document.querySelectorAll('a[href]').forEach(link=>{
+   if(link.dataset.language)return;
+   const raw=link.getAttribute('href');if(raw.startsWith('#'))return;
+   const url=new URL(link.href,location.href);
+   if(url.origin!==location.origin)return;
+   const clean=url.pathname.replace(/^\/es(?=\/)/,'');
+   if(!['/','/index.html','/privacidad.html','/aviso-legal.html'].includes(clean))return;
+   url.pathname=(lang==='es'?'/es':'')+clean;link.href=withChoice(url,lang);
+  });
+  document.querySelectorAll('[data-language]').forEach(link=>{
+   const target=link.dataset.language;
+   link.href=languageLink(target);
+   if(target===lang)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
+  });
+ }
  let language=document.documentElement.lang==='es'?'es':'en';
  function t(text){return language==='en'?(messages[text]??text):text;}
  function translate(text){
@@ -24,33 +49,20 @@
   });
   const description=document.querySelector('meta[name="description"]');
   if(description)description.content=translate(description.content);
-  document.querySelectorAll('a[href]').forEach(link=>{
-   if(link.dataset.language)return;
-   const raw=link.getAttribute('href');if(raw.startsWith('#'))return;
-   const url=new URL(link.href,location.href);
-   if(url.origin!==location.origin)return;
-   const clean=url.pathname.replace(/^\/es(?=\/)/,'');
-   if(!['/','/index.html','/privacidad.html','/aviso-legal.html'].includes(clean))return;
-   url.pathname=(lang==='es'?'/es':'')+clean;link.href=url.pathname+url.search+url.hash;
-  });
-  document.querySelectorAll('[data-language]').forEach(link=>{
-   const target=link.dataset.language;
-   link.href=route(target)+location.search+location.hash;
-   if(target===lang)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
-  });
+  updateLinks(lang);
   document.querySelector('link[rel="canonical"]').href='https://www.bqexplore.com'+route(lang);
   document.dispatchEvent(new CustomEvent('bq:languagechange',{detail:{language:lang}}));
  }
  window.BQ={t,get language(){return language}};
  // Preserve the initial deep link even when opened in a new tab with Ctrl/Cmd.
- document.querySelectorAll('[data-language]').forEach(link=>{link.href=route(link.dataset.language)+location.search+location.hash;});
+ updateLinks(language);
  document.querySelectorAll('[data-language]').forEach(link=>link.addEventListener('click',event=>{
   if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
   event.preventDefault();const lang=link.dataset.language;
-  if(language===lang)return;
-  history.pushState(null,'',route(lang)+location.search+location.hash);
+  if(language===lang){history.replaceState(null,'',languageLink(lang));updateLinks(lang);return;}
+  history.pushState(null,'',languageLink(lang));
   render(lang);
  }));
  addEventListener('popstate',()=>render(location.pathname.startsWith('/es/')?'es':'en'));
- addEventListener('hashchange',()=>document.querySelectorAll('[data-language]').forEach(link=>{link.href=route(link.dataset.language)+location.search+location.hash;}));
+ addEventListener('hashchange',()=>updateLinks(language));
 })();

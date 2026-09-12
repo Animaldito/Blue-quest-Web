@@ -6,13 +6,19 @@ Sitio web estático de Blue Quest, dedicado a la exploración subacuática, expe
 
 El bloque `Ambient light` al final de `styles.css` controla la luminosidad: mezcla los tonos marinos existentes con el blanco de la web, manteniendo el turquesa de marca. Las superficies y el velo de portada se ajustan por separado, sin filtros globales, cambios de imagen ni animaciones adicionales. `legal.css` aplica el mismo criterio a las páginas legales y conserva su estilo de impresión.
 
-## Idiomas — inglés por defecto
+## Idiomas — detección por país y selector manual
 
 El menú móvil distribuye enlaces completos en filas según el ancho disponible, sin partir palabras ni truncar nombres. Su altura se mide para que las anclas no queden ocultas debajo. No volver a definir estilos de `.sidebar` desde `destination-finder.css`: la antigua regla de cuatro columnas causaba recortes aunque el buscador estuviera oculto.
 
 Prueba de regresión con Playwright y Microsoft Edge disponibles: `node tests/mobile-navigation.browser.cjs`, con la web servida en `http://127.0.0.1:4173`. Se pueden indicar `BQ_TEST_URL`, `BQ_PLAYWRIGHT_PATH` y, opcionalmente, `BQ_SCREENSHOT_DIR`. Revisa ambos idiomas, etiquetas de una sola línea dentro de sus botones, áreas táctiles, anclas, orientación, texto ampliado y menú de ordenador.
 
-La portada y las páginas legales se sirven en inglés desde `/`; sus versiones españolas están en `/es/`. El selector EN / ES cambia los textos sin recargar ni perder la selección del globo, las imágenes o el borrador de contacto. Los enlaces conservan el idioma y el fragmento; volver/avanzar del navegador también funciona. No se guardan preferencias en cookies ni almacenamiento local: una visita nueva a `/` siempre empieza en inglés.
+La portada y las páginas legales tienen archivos ingleses desde `/` y españoles en `/es/`. Vercel selecciona español al entrar desde España, los países hispanohablantes de América (incluido Puerto Rico) y Guinea Ecuatorial; el resto, incluido Brasil, recibe inglés. Un país desconocido también conserva inglés. La IP puede reflejar una VPN o un viaje, no el idioma personal.
+
+`vercel.json` usa cuatro redirecciones temporales basadas en `x-vercel-ip-country`, sin funciones, paquetes ni llamadas a proveedores adicionales. Solo afecta a la portada y las dos páginas legales, nunca a imágenes, scripts, estilos o rutas españolas. Los enlaces ingleses llevan `?lang=en` para saltarse la detección; los españoles usan `/es/`. Se conservan las URL canónicas y los enlaces `hreflang` ingleses permiten acceder expresamente a inglés desde cualquier país.
+
+El selector EN / ES cambia los textos sin recargar ni perder la selección del globo, las imágenes o el borrador de contacto. Los enlaces conservan la elección, otros parámetros y el fragmento; recargar y volver/avanzar también funcionan. No se guardan preferencias en cookies ni almacenamiento local: una visita nueva a la raíz sin `?lang=en` vuelve a aplicar el país. Los enlaces estáticos también respetan la elección sin JavaScript.
+
+Prueba sin red: `node tests/geo-language.test.cjs` comprueba 21 países/territorios, alternativas, ausencia de bucles, enlaces y navegación. La detección real requiere Vercel; el servidor estático local no dispone de país. La prueba de reglas es una simulación, no una conexión desde cada país. Recuperación previa: `checkpoint/20260912-192158416-antes-idioma-por-pais`.
 
 Los seis HTML están prerenderizados y se pueden leer sin JavaScript. Hay enlaces de idioma reales, etiquetas `lang`, URL canónica y alternativas `hreflang`. Los mensajes dinámicos y ayudas de accesibilidad también se traducen. No se traducen nombres propios, correos ni lo que escribe el visitante. El navegador y los servicios externos conservan su propia interfaz.
 

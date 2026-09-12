@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "header", "key": "x-vercel-ip-country", "value": "(ES|MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|CL|AR|PY|UY|GQ)" }],
+      "missing": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "header", "key": "x-vercel-ip-country", "value": "(ES|MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|CL|AR|PY|UY|GQ)" }],
+      "missing": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/aviso-legal.html",
+      "has": [{ "type": "header", "key": "x-vercel-ip-country", "value": "(ES|MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|CL|AR|PY|UY|GQ)" }],
+      "missing": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/es/aviso-legal.html",
+      "permanent": false
+    },
+    {
+      "source": "/privacidad.html",
+      "has": [{ "type": "header", "key": "x-vercel-ip-country", "value": "(ES|MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|CL|AR|PY|UY|GQ)" }],
+      "missing": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/es/privacidad.html",
+      "permanent": false
+    }
+  ]
+}

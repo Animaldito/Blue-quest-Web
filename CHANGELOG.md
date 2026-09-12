@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-09-12 — Idioma inicial por país
+
+- Añadida detección de país con reglas temporales de Vercel: español para España y países/territorios hispanohablantes; inglés para el resto o país desconocido. No se añaden servicios externos, funciones ni cookies.
+- La elección manual tiene prioridad mediante `/es/` y `?lang=en`, también al recargar, seguir enlaces legales o abrir una pestaña sin JavaScript. Conservados otros parámetros, anclas y contenido introducido.
+- Actualizada la explicación técnica en privacidad y documentación, sin cambios de diseño ni del formulario externo de newsletter en inglés.
+- Pruebas locales de los 21 países/territorios y alternativas; verificados EN / ES, historial, borrador, selección de equipo y páginas legales en navegador, con pantallas de 320, 390 y 1440 px sin desbordamientos ni errores.
+- Punto previo: `checkpoint/20260912-192158416-antes-idioma-por-pais`.
+
 ## 2026-09-12 — Pies de foto centrados en ventajas
 
 - Sustituidos los nombres duplicados bajo las imágenes por cinco mensajes breves: «Saber dónde buscar», «Detectar antes de ver», «Cada ángulo cuenta», «Más alcance, menos esfuerzo» y «Conectados, más seguros», con adaptación inglesa.

@@ -2,6 +2,7 @@
 // Proper names, contact details, URLs and project IDs are never translated.
 (function(root){
  const messages={
+ "El idioma inicial se adapta al país aproximado que Vercel obtiene de la IP: español para países hispanohablantes e inglés en los demás casos. No solicitamos ubicación GPS ni añadimos un servicio externo de geolocalización. Puedes cambiar el idioma mediante EN / ES; la elección se conserva en el enlace, sin cookies ni almacenamiento local.":"The initial language is based on the approximate country Vercel derives from your IP: Spanish for Spanish-speaking countries and English otherwise. We do not request GPS location or add an external geolocation service. You can change the language using EN / ES; your choice is kept in the URL, without cookies or local storage.",
  "Abrir formulario de suscripción":"Open sign-up form",
  "Se abrirá en una nueva pestaña. Introduce tu correo y marca la casilla de suscripción.":"Opens in a new tab. Enter your email and tick the subscription checkbox.",
  "El formulario se abre en Brevo y utiliza Google reCAPTCHA. Estos proveedores pueden usar cookies y datos técnicos para prevenir abusos. Abrirlo no te suscribe.":"The form opens on Brevo and uses Google reCAPTCHA. These providers may use cookies and technical data to prevent abuse. Opening it does not subscribe you.",
