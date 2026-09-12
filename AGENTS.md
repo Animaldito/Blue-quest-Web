@@ -7,7 +7,7 @@
 - Inglés predeterminado y español mediante EN / ES. Conservar ambos idiomas y el tono profesional, explorador y marítimo de la marca.
 - Editar los textos y estructura en `content/es/*.html` y sus traducciones revisadas en `translations.js`; ejecutar `node scripts/build-languages.cjs`. No editar directamente los seis HTML generados en raíz y `es/`.
 - Mantener `window.BQ.t` en los textos de interacción, sin traducir datos escritos por visitantes. El idioma se conserva en la URL, no en cookies/almacenamiento. Las rutas y anclas existentes se mantienen compatibles.
-- Verificar con `node tests/languages.test.cjs` y comprobar ambas versiones en móvil/ordenador antes de publicar. «Tu destino» sigue desactivado. La newsletter está activa con un único formulario de Brevo y comunicaciones en inglés, por decisión del propietario. Brevo y reCAPTCHA solo se cargan tras permiso explícito; cerrar el popup retira la carga y no da de baja al suscriptor. No enviar campañas sin autorización.
+- Verificar con `node tests/languages.test.cjs` y comprobar ambas versiones en móvil/ordenador antes de publicar. «Tu destino» sigue desactivado. La newsletter está activa con un único formulario de Brevo y comunicaciones en inglés, por decisión del propietario. El formulario se abre mediante un enlace explícito en una pestaña externa; no incrustarlo ni cargar Brevo/reCAPTCHA dentro de Blue Quest. Cerrar el popup no cierra esa pestaña ni da de baja al suscriptor. No enviar campañas sin autorización.
 - No modificar imágenes, enlaces de contacto ni el diseño global sin una petición expresa.
 
 ## Puntos de recuperación (obligatorio antes de una mejora)

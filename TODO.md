@@ -1,5 +1,8 @@
 # Pendientes
 
+- [x] Retirar el formulario incrustado que rechaza altas y dar acceso principal al mismo formulario externo, donde el propietario ha confirmado una suscripción correcta. Mantener consentimiento y antispam.
+- [ ] Si se quiere volver a incrustar el formulario, investigar primero el rechazo y verificar un envío real autorizado dentro de la web; no quitar protecciones para forzar el resultado.
+
 - [x] Mostrar los cuatro miembros del equipo en una fila de escritorio, con dos columnas intermedias y una en móvil; conservar fotos, textos y ambos idiomas.
 
 - [x] Actualizar el icono de pestaña con el anagrama actual en las seis páginas y renovar su URL para evitar la caché del logo antiguo.

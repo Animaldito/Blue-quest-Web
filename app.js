@@ -87,43 +87,18 @@ brandLogo.addEventListener('click',event=>{
  }
 });
 
-// Brevo owns submissions and confirmation; load its public form only on demand.
+// Brevo owns submissions and confirmation in a separate, user-opened tab.
 const newsletterDialog=document.querySelector('#newsletter-dialog');
 const newsletterOpen=document.querySelector('#newsletter-open');
-const newsletterFrame=document.querySelector('#newsletter-frame');
-const newsletterStatus=document.querySelector('#newsletter-status');
-let newsletterLoadTimer;
 function closeNewsletter(){newsletterDialog.close();}
 newsletterOpen.addEventListener('click',()=>{
  if(!newsletterDialog.open){newsletterDialog.showModal();document.body.classList.add('newsletter-open');}
 });
-document.querySelector('#newsletter-load').addEventListener('click',()=>{
- // A separate, non-persistent choice loads third-party services, not a subscription.
- if(newsletterDialog.dataset.newsletterReady!=='true')return;
- document.querySelector('#newsletter-permission').hidden=true;
- const content=document.querySelector('#newsletter-content');
- content.hidden=false;content.inert=false;
- if(!newsletterFrame.hasAttribute('src')){
-  newsletterStatus.hidden=false;
-  newsletterStatus.textContent=t('Cargando formulario…');
-  newsletterLoadTimer=setTimeout(()=>{
-   newsletterStatus.textContent=t('Si el formulario no aparece, puedes abrirlo en otra pestaña.');
-  },12000);
-  newsletterFrame.src=newsletterFrame.dataset.src;
- }
- document.querySelector('.newsletter-fallback a').focus({preventScroll:true});
-});
-newsletterFrame.addEventListener('load',()=>{
- if(!newsletterFrame.hasAttribute('src'))return;
- clearTimeout(newsletterLoadTimer);
- newsletterStatus.hidden=true;
-});
 document.querySelector('#newsletter-close').addEventListener('click',closeNewsletter);
 document.querySelector('#newsletter-decline').addEventListener('click',closeNewsletter);
-document.querySelector('#newsletter-unload').addEventListener('click',closeNewsletter);
 newsletterDialog.addEventListener('keydown',event=>{
  if(event.key!=='Tab')return;
- const focusable=[...newsletterDialog.querySelectorAll('button:not(:disabled),iframe,a[href],[tabindex="0"]')].filter(el=>el.getClientRects().length);
+ const focusable=[...newsletterDialog.querySelectorAll('button:not(:disabled),a[href],[tabindex="0"]')].filter(el=>el.getClientRects().length);
  const first=focusable[0],last=focusable[focusable.length-1];
  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
@@ -134,12 +109,6 @@ newsletterDialog.addEventListener('click',event=>{
  if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)closeNewsletter();
 });
 newsletterDialog.addEventListener('close',()=>{
- clearTimeout(newsletterLoadTimer);
- newsletterFrame.removeAttribute('src');
- const content=document.querySelector('#newsletter-content');
- content.hidden=true;content.inert=true;
- document.querySelector('#newsletter-permission').hidden=false;
- newsletterStatus.hidden=true;
  document.body.classList.remove('newsletter-open');
  newsletterOpen.focus({preventScroll:true});
 });

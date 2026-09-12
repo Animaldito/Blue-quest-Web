@@ -296,7 +296,7 @@ footer p,footer>a{font-size:15px}
  .sidebar .brand-sonar .quest-sonar,.brand-sonar::after{display:none;animation:none}
 }
 
-/* Brevo stays isolated in its frame and loads only when the dialog opens. */
+/* The dialog explains sign-up; the user opens Brevo in a separate tab. */
 .hero-top{justify-content:flex-end}
 .hero-top .newsletter-trigger{display:inline-flex;align-items:center;gap:16px;background:transparent;color:var(--cyan);border:0;border-bottom:1px solid #9dbabb66;padding:12px 0;font:500 16px/1.4 'DM Sans',sans-serif;cursor:pointer;text-align:left}
 .newsletter-trigger span{font-size:22px}
@@ -306,25 +306,18 @@ footer p,footer>a{font-size:15px}
 .newsletter-dialog::backdrop{background:#020d16c9;backdrop-filter:blur(6px)}
 .newsletter-dialog h2{font:600 clamp(32px,5vw,46px)/1.08 'Barlow Condensed',sans-serif;margin:0 24px 18px 0;text-transform:uppercase}
 .newsletter-dialog p{font-size:17px;line-height:1.6;color:var(--muted)}
-.newsletter-dialog .newsletter-status{font-size:14px}
 .newsletter-close{position:sticky;top:0;z-index:3;margin:-40px -16px -4px auto;width:44px;height:44px;display:grid;place-items:center;background:var(--panel,#071c24);border:0;color:var(--text);font-size:30px;cursor:pointer}
-.newsletter-frame{display:block;width:100%;height:510px;border:0;background:#eff2f7;color-scheme:light}
-.newsletter-dialog .newsletter-fallback{font-size:14px;margin:16px 0}
-.newsletter-fallback a{color:var(--cyan);text-underline-offset:4px}
 body.newsletter-open{overflow:hidden}
 .newsletter-dialog .newsletter-privacy{font-size:14px;margin:16px 0 0}
 .newsletter-privacy a,.contact-privacy a{color:var(--cyan);text-underline-offset:4px}
 .contact-privacy{font-size:16px;line-height:1.6;color:var(--muted);margin:20px 0}
-#newsletter-content[hidden]{display:none}
-#newsletter-permission[hidden]{display:none}
 .newsletter-dialog .newsletter-provider-notice{font-size:14px;line-height:1.6}
 .newsletter-provider-notice a{text-decoration:underline;text-underline-offset:3px}
-.newsletter-permission-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
-.newsletter-permission-actions button,#newsletter-unload{min-height:44px;padding:11px 16px;background:transparent;border:1px solid var(--line);color:var(--text);cursor:pointer;font-size:15px}
-.newsletter-permission-actions button:hover,#newsletter-unload:hover{border-color:var(--cyan)}
-#newsletter-unload{margin-top:16px;font-size:14px}
-.newsletter-frame{height:690px}
-@media(max-width:760px){.newsletter-dialog .newsletter-frame{height:1040px;width:calc(100% + 28px);max-width:none;margin-left:-14px}}
+.newsletter-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:24px 0}
+.newsletter-actions button{min-height:44px;padding:11px 16px;background:transparent;border:1px solid var(--line);color:var(--text);cursor:pointer;font-size:15px}
+.newsletter-actions button:hover{border-color:var(--cyan)}
+#newsletter-form-link{max-width:100%;gap:14px;line-height:1.4}
+#newsletter-form-link span{flex-shrink:0;margin-left:0}
 /* Mobile labels wrap as whole links, never as split words or clipped columns. */
 @media(max-width:760px){
  header.sidebar>nav{display:flex;flex-flow:row wrap;justify-content:center;align-items:stretch;gap:0 2px;padding:4px 8px}
@@ -348,7 +341,6 @@ body.newsletter-open{overflow:hidden}
  .hero-top .newsletter-trigger{font-size:16px;gap:9px;max-width:100%;padding:8px 0;border-bottom:0}
  .newsletter-dialog{width:calc(100% - 16px);max-width:calc(100% - 16px);padding:48px 14px 20px}
  .newsletter-close{margin-right:-6px}
- .newsletter-frame{height:560px}
 }
 
 /* Ambient light: lift existing ocean tones, not the brand colours or image files. */

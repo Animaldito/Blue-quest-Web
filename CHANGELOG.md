@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-09-12 — Newsletter con acceso directo a Brevo
+
+- Sustituido el formulario incrustado por un botón principal que abre el mismo formulario en una pestaña externa. El propietario confirmó error en el iframe y alta correcta fuera de él; la causa interna del rechazo no está determinada.
+- Conservados lista, formulario, consentimiento y reCAPTCHA. Sin envíos automáticos, nuevas altas de prueba ni cambios en los contactos durante esta corrección.
+- Eliminadas cargas, temporizadores y estilos del iframe. Popup bilingüe con instrucciones, cierre accesible y aviso previo del servicio externo.
+- Actualizados privacidad, aviso legal, pruebas y documentación para describir el nuevo recorrido.
+- Verificados el enlace real a la pestaña de Brevo, el cierre y la navegación con teclado, y el popup en ambos idiomas de 320 a 1366 px. Pruebas de idiomas, newsletter e icono correctas.
+- Punto previo: `checkpoint/20260912-155144096-antes-newsletter-formulario-externo`.
+
 ## 2026-09-12 — Equipo en una fila de escritorio
 
 - Cuatro columnas desde 1200 px, dos entre 761 y 1199 px y una en móvil. Conservadas las fotografías panorámicas, los textos y el orden de los perfiles.
