@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-09-12 — Menú móvil sin palabras cortadas
+
+- Eliminada una regla global antigua de `destination-finder.css` que imponía cuatro columnas con `!important`, incluso con el buscador oculto.
+- El menú móvil utiliza filas flexibles: cada enlace conserva el nombre completo en una línea y pasa entero a la siguiente fila cuando no cabe. Sin truncar, partir palabras, reducir etiquetas ni ocultar opciones.
+- Altura de cabecera medida para ajustar el espacio de portada, el desplazamiento a secciones y el estado activo. Menú de ordenador conservado.
+- Pruebas en inglés y español a 280, 320, 360, 375, 390, 414, 480, 481, 540, 640, 740 y 760 px, cambio de orientación y texto del menú al 200 %. Enlaces con zona táctil mínima de 44 px.
+- Punto previo: `checkpoint/20260912-111233697-antes-menu-movil`.
+
 ## 2026-09-12 — Títulos de sección diferenciados del menú
 
 - Conservados los nombres y anclas del menú lateral.

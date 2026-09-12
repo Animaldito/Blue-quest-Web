@@ -4,6 +4,10 @@ Sitio web estático de Blue Quest, dedicado a la exploración subacuática, expe
 
 ## Idiomas — inglés por defecto
 
+El menú móvil distribuye enlaces completos en filas según el ancho disponible, sin partir palabras ni truncar nombres. Su altura se mide para que las anclas no queden ocultas debajo. No volver a definir estilos de `.sidebar` desde `destination-finder.css`: la antigua regla de cuatro columnas causaba recortes aunque el buscador estuviera oculto.
+
+Prueba de regresión con Playwright y Microsoft Edge disponibles: `node tests/mobile-navigation.browser.cjs`, con la web servida en `http://127.0.0.1:4173`. Se pueden indicar `BQ_TEST_URL`, `BQ_PLAYWRIGHT_PATH` y, opcionalmente, `BQ_SCREENSHOT_DIR`. Revisa ambos idiomas, etiquetas de una sola línea dentro de sus botones, áreas táctiles, anclas, orientación, texto ampliado y menú de ordenador.
+
 La portada y las páginas legales se sirven en inglés desde `/`; sus versiones españolas están en `/es/`. El selector EN / ES cambia los textos sin recargar ni perder la selección del globo, las imágenes o el borrador de contacto. Los enlaces conservan el idioma y el fragmento; volver/avanzar del navegador también funciona. No se guardan preferencias en cookies ni almacenamiento local: una visita nueva a `/` siempre empieza en inglés.
 
 Los seis HTML están prerenderizados y se pueden leer sin JavaScript. Hay enlaces de idioma reales, etiquetas `lang`, URL canónica y alternativas `hreflang`. Los mensajes dinámicos y ayudas de accesibilidad también se traducen. No se traducen nombres propios, correos ni lo que escribe el visitante. El navegador y los servicios externos conservan su propia interfaz.

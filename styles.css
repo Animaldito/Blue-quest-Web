@@ -306,10 +306,21 @@ body.newsletter-open{overflow:hidden}
 .newsletter-privacy a,.contact-privacy a{color:var(--cyan);text-underline-offset:4px}
 .contact-privacy{font-size:16px;line-height:1.6;color:var(--muted);margin:20px 0}
 #newsletter-content[hidden]{display:none}
+/* Mobile labels wrap as whole links, never as split words or clipped columns. */
+@media(max-width:760px){
+ header.sidebar>nav{display:flex;flex-flow:row wrap;justify-content:center;align-items:stretch;gap:0 2px;padding:4px 8px}
+ header.sidebar>nav>a,header.sidebar>nav>a:first-child,header.sidebar>nav>a:last-child{
+  flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  min-width:44px;min-height:44px;padding:10px 12px;font-size:13px;line-height:1.3;
+  white-space:nowrap;word-break:normal;overflow-wrap:normal;hyphens:none;letter-spacing:0;
+ }
+ html{scroll-padding-top:calc(var(--mobile-header-height,188px) + 20px)!important}
+ .hero{padding-top:calc(var(--mobile-header-height,188px) + 48px)!important}
+}
 .hero-photo{background-image:url('assets/hero/reef-survey.webp');background-position:center;animation:none}
 .hero-shade{background:linear-gradient(90deg,#03151ece 0%,#03151e82 38%,#03151e12 72%,#03151e0a 100%),linear-gradient(180deg,#03151e8c 0%,transparent 24%),linear-gradient(0deg,#061213 0%,#0612131a 22%,transparent 45%)}
 @media(max-width:760px){
- .hero-photo{top:178px;background-position:80% center}
+ .hero-photo{top:var(--mobile-header-height,188px);background-position:80% center}
  .hero-shade{background:linear-gradient(90deg,#03151eaa,#03151e33),linear-gradient(0deg,#061213 0%,#0612130a 35%,#03151e30 100%)}
 }
 @media(max-width:760px){.hero-top{right:0;padding-inline:12px}}

@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Corregir palabras cortadas del menú móvil; eliminar la regla global del buscador oculto y comprobar etiquetas completas, orientación, ampliación de texto y anclas en ambos idiomas.
+
 - [x] Diferenciar los títulos de sección del menú lateral, manteniendo coherencia en inglés y español.
 
 - [x] Sustituir la imagen de portada por una escena profesional de arrecife con coral y vida marina, optimizada y con procedencia documentada.

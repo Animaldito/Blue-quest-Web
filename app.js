@@ -23,9 +23,18 @@ document.querySelectorAll('details').forEach(detail=>detail.addEventListener('to
 // Highlight the section currently being explored in the persistent navigation.
 const sectionLinks=[...document.querySelectorAll('.sidebar nav a')];
 const sectionTargets=sectionLinks.map(link=>document.querySelector(link.getAttribute('href')));
+const mobileHeader=document.querySelector('header.sidebar');
+function syncMobileHeader(){
+ if(matchMedia('(max-width:760px)').matches){
+  document.documentElement.style.setProperty('--mobile-header-height',Math.ceil(mobileHeader.getBoundingClientRect().height)+'px');
+ }else document.documentElement.style.removeProperty('--mobile-header-height');
+}
+new ResizeObserver(syncMobileHeader).observe(mobileHeader);
+addEventListener('resize',syncMobileHeader);
+syncMobileHeader();
 let navigationQueued=false;
 function updateNavigation(){
-  const threshold=matchMedia('(max-width:760px)').matches?278:110;
+  const threshold=matchMedia('(max-width:760px)').matches?mobileHeader.getBoundingClientRect().bottom+96:110;
   let active=null;
   sectionTargets.forEach(section=>{if(section.getBoundingClientRect().top<=threshold+2)active=section.id;});
   sectionLinks.forEach(link=>{if(link.hash==='#'+active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
@@ -153,6 +162,7 @@ document.querySelector('#copy-email').addEventListener('click',async()=>{
 });
 
 document.addEventListener('bq:languagechange',()=>{
+ syncMobileHeader();updateNavigation();
  contactForm.querySelectorAll('input,select,textarea:not([readonly])').forEach(field=>{if(field.validity.customError)localizeValidation(field);});
  setAuto(auto);updatePlaceDetail();
  const key=gallery.dataset.equipment;
