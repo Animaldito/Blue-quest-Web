@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-12 — Encabezados más compactos
+
+- Frase de Nuestro trabajo al lado del título y alineada por abajo en escritorio; debajo en pantallas pequeñas, conservando tamaño y contraste.
+- Expediciones pasa a «Nuestras exploraciones» con «Destinos visitados y próximas prospecciones». Inglés: «Our explorations» y «Past destinations and upcoming surveys».
+- Comprobados ambos idiomas de 320 a 1440 px, sin desbordamiento horizontal; pruebas de traducción actualizadas.
+- Punto previo: `checkpoint/20260912-170208969-antes-alineacion-y-exploraciones`.
+
 ## 2026-09-12 — Frase de Nuestro trabajo junto al título
 
 - Reubicada la frase introductoria debajo del título, alineada a la izquierda, con mayor tamaño y contraste dentro de la paleta existente.
