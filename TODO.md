@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Incorporar las fichas HUD aprobadas de Raa Atoll, Boa Vista, Leyte y Addu Atoll, con resultados reales y objetivos futuros diferenciados, sin controles de pausa o repetición.
+
 - [x] Adaptar las secciones a una pantalla completa en escritorio, en ambos idiomas, conservando lectura sin recortes en móvil y ventanas pequeñas.
 
 - [x] Retirar el bloque de ejemplo ilustrativo y los enlaces «Ver un entregable» y «Servicios y entregables» desde la landing en EN/ES.

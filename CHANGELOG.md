@@ -1,5 +1,13 @@
 # Registro de cambios
 
+## 2026-09-13 — Fichas animadas de Bitácora
+
+- Incorporadas las cuatro fichas aprobadas, accesibles desde los puntos del globo y la lista de destinos, en español e inglés.
+- Raa Atoll y Boa Vista muestran resultados facilitados por Blue Quest. Leyte y Addu Atoll muestran encargos y objetivos previstos, sin presentar resultados futuros como realizados.
+- HUD con intro breve de sonar y aparición progresiva; después los datos permanecen visibles. Sin vídeo pesado, pausa ni botón de repetición. Adaptado a móvil y movimiento reducido.
+- Cierre por botón, Escape o fondo, con retorno al punto de navegación y conservación de la posición de lectura.
+- Punto previo: checkpoint/20260913-181959654-antes-fichas-animadas-bitacora.
+
 ## 2026-09-13 — Secciones completas en pantalla
 
 - Ajustados márgenes, fotografías, tarjetas y formulario para que los seis apartados ocupen una pantalla de escritorio, sin asomar los apartados contiguos al navegar por el menú.

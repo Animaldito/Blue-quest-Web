@@ -4,6 +4,7 @@ require('./build-languages.cjs');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'dist');
 const files=['index.html','aviso-legal.html','privacidad.html','styles.css','language.css','legal.css','language.js','translations.js','app.js','contact.js','world.js','favicon.svg','assets/hero/reef-survey.webp','assets/technology/map-relief.jpg','assets/technology/map-satellite.jpg','assets/technology/map-perspective.jpg','robots.txt','sitemap.xml'];
 for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html','privacidad.html'])files.push(lang+'/'+file);
+files.push('field-log.js','field-log.css');
 for(const image of ['resort','boat','wreck'])for(const width of [480,800])files.push('assets/services/'+image+'-'+width+'.webp');
 for(const image of ['camera','sonar','scooter','mask'])for(const width of [640,960])files.push('assets/technology/'+image+'-'+width+'.webp');
 for(const person of ['miguel','cristina','aida','andreu'])files.push('assets/team/'+person+'-profile.webp');

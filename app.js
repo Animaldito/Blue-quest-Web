@@ -13,14 +13,15 @@ function draw(ts){frame=0;const dt=Math.min(ts-last,50);last=ts;if(visible&&w){i
 new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)requestDraw();}).observe(canvas);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestDraw();});
 matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>{if(e.matches)setAuto(false);});
-function updatePlaceDetail(){document.querySelector('#place-detail').textContent=places[selected].name.toUpperCase()+' / '+t(places[selected].status);}
-function selectPlace(i){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});updatePlaceDetail();requestDraw();}
-document.querySelectorAll('.destination').forEach((button,i)=>{button.setAttribute('aria-pressed',String(i===selected));button.addEventListener('click',()=>selectPlace(i));});
+function updatePlaceDetail(){document.querySelector('#place-detail').textContent=places[selected].name.toUpperCase()+' / '+t(places[selected].status);canvas.setAttribute('aria-label',t('Globo interactivo. Arrastra o usa las flechas para girar. Pulsa un punto para abrir su ficha, o Intro para abrir el destino seleccionado.')+' '+places[selected].name);}
+function selectPlace(i,trigger=canvas){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});updatePlaceDetail();requestDraw();window.BQFieldLog.open(i,trigger);}
+document.querySelectorAll('.destination').forEach((button,i)=>{button.setAttribute('aria-pressed',String(i===selected));button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','mission-dialog');button.addEventListener('click',()=>selectPlace(i,button));});
+updatePlaceDetail();
 rotate.addEventListener('click',()=>setAuto(!auto));
 canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY};canvas.setPointerCapture(e.pointerId);setAuto(false);});
 canvas.addEventListener('pointermove',e=>{if(!drag)return;rotation-=(e.clientX-drag.x)*.35;tilt=Math.max(-65,Math.min(65,tilt+(e.clientY-drag.y)*.3));drag.x=e.clientX;drag.y=e.clientY;requestDraw();});
 canvas.addEventListener('pointerup',e=>{if(drag&&Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)<5){const b=canvas.getBoundingClientRect();let closest=-1,distance=22;places.forEach((p,i)=>{const point=project(p.lon,p.lat),d=Math.hypot(point[0]-(e.clientX-b.left),point[1]-(e.clientY-b.top));if(point[2]>0&&d<distance){closest=i;distance=d;}});if(closest>=0)selectPlace(closest);}drag=null;});canvas.addEventListener('pointercancel',()=>drag=null);
-canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();setAuto(false);if(e.key==='ArrowLeft')rotation-=10;if(e.key==='ArrowRight')rotation+=10;if(e.key==='ArrowUp')tilt=Math.min(65,tilt+10);if(e.key==='ArrowDown')tilt=Math.max(-65,tilt-10);requestDraw();});
+canvas.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPlace(selected,canvas);return;}if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();setAuto(false);if(e.key==='ArrowLeft')rotation-=10;if(e.key==='ArrowRight')rotation+=10;if(e.key==='ArrowUp')tilt=Math.min(65,tilt+10);if(e.key==='ArrowDown')tilt=Math.max(-65,tilt-10);requestDraw();});
 
 // Highlight the section currently being explored in the persistent navigation.
 const sectionLinks=[...document.querySelectorAll('.sidebar nav a')];
