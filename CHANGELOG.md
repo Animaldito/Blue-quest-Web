@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-13 — Retirar el ejemplo ilustrativo
+
+- Eliminado el bloque completo de demostración y su enlace desde la landing en español e inglés. Los dos accesos restantes ocupan el espacio disponible.
+- Retirado también el enlace «Servicios y entregables» de la portada; se conserva el botón principal de contacto.
+- Limpiados los estilos y las traducciones exclusivos del ejemplo; se mantienen servicios, método, mapas y contacto.
+- Punto previo: checkpoint/20260913-152022582-antes-quitar-ejemplo-ilustrativo.
+
 ## 2026-09-13 — Menos notas y mapas originales
 
 - Retiradas las notas auxiliares de servicios, método, tecnología y contacto en ambos idiomas. Bitácora conserva el estado de cada destino sin avisos sobre informes pendientes.

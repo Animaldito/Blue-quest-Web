@@ -1,11 +1,14 @@
-// Editorial cleanup must not remove privacy, demo identification or error guidance.
+// The removed sample must leave no dead links; privacy and error guidance remain.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),messages=require('../translations.js');
 for(const lang of ['es','en']){
  const html=fs.readFileSync(path.join(root,'dist',lang,'index.html'),'utf8');
  assert(!/class="(?:media-note|scope-note|form-note)"/.test(html));
  assert(!/El informe de resultados no está publicado|The findings report is not published/.test(html));
- assert(html.includes('class="sample-label"')&&html.includes('>DEMO<'));
+ assert(!/id="muestra"|href="[^"]*#muestra"|class="sample-|>DEMO</.test(html));
+ assert(!/Servicios y entregables|Services and deliverables|Ver un entregable|See a sample/.test(html));
+ const shortcuts=html.match(/<nav aria-label="(?:Accesos de exploración|Exploration shortcuts)">([\s\S]*?)<\/nav>/)[1];
+ assert.equal([...shortcuts.matchAll(/<a /g)].length,2,'Two remaining landing shortcuts');
  assert(html.includes('class="contact-privacy"')&&html.includes('/'+lang+'/privacidad.html'));
  assert(html.includes('id="mailbox-notice" hidden></p>'));
  assert(!html.includes('map-demo.svg'));
@@ -31,5 +34,5 @@ for(const lang of ['es','en']){
   await vm.runInContext('checkService()',context);
   assert.equal(notice.hidden,true,'Remove error notice after service recovery');
  }
- console.log('PASS auxiliary notes removed, privacy/demo retained and contact fallback visible only when needed.');
+ console.log('PASS sample and auxiliary notes removed, no dead sample links, privacy and contact fallback retained.');
 })().catch(error=>{console.error(error);process.exitCode=1;});

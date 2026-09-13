@@ -12,7 +12,7 @@ Las direcciones estables son /en/ y /es/, incluidas las páginas legales. La ra�
 El selector conserva campos, equipo seleccionado, anclas e historial. Sitemap, canonical y hreflang usan las direcciones estables; la raíz es la alternativa automática.
 ## Diseño
 styles.css contiene un único sistema de colores, espaciado, tarjetas y puntos de adaptación. Se conserva azul/turquesa, anagrama blanco e intro repetible. En móvil, el menú de 76 px se despliega con un botón. Sin JavaScript los enlaces permanecen visibles. Los controles de tecnología preceden a la imagen, y el equipo mantiene cuatro columnas grandes, dos intermedias y una en móvil.
-La portada da prioridad al contacto. Servicios, método y muestra de entregable explican el alcance sin inventar resultados. Tu destino sigue desactivado; no se carga su catálogo.
+La portada da prioridad al contacto. Servicios y método explican el alcance sin inventar resultados. El ejemplo de entregable se ha retirado. Tu destino sigue desactivado; no se carga su catálogo.
 ## Fotografías y evidencias
 Los retratos proceden de imágenes del titular previamente retocadas y ahora optimizadas. Las nuevas escenas de servicios y tecnología son ilustraciones generadas, identificadas como tales, no material de expediciones reales ni prueba de propiedad de equipos. Los originales anteriores se conservan en Git, pero los medios no utilizados no se despliegan.
 No publicar casos, clientes, certificaciones, hallazgos o permisos sin documentación y autorización. Faltan materiales propios publicables de Raa Atoll y Boa Vista.
