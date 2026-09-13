@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Adaptar las secciones a una pantalla completa en escritorio, en ambos idiomas, conservando lectura sin recortes en móvil y ventanas pequeñas.
+
 - [x] Retirar el bloque de ejemplo ilustrativo y los enlaces «Ver un entregable» y «Servicios y entregables» desde la landing en EN/ES.
 
 - [x] Limpiar las notas auxiliares de los apartados nuevos y recuperar los tres mapas originales en EN/ES, conservando privacidad y ejemplos identificados.

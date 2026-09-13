@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-13 — Secciones completas en pantalla
+
+- Ajustados márgenes, fotografías, tarjetas y formulario para que los seis apartados ocupen una pantalla de escritorio, sin asomar los apartados contiguos al navegar por el menú.
+- Altura mínima adaptable, alineación de anclas al borde superior y ajuste suave entre secciones. Sin bloquear la rueda ni recortar contenido; móvil, zoom y ventanas pequeñas conservan lectura natural.
+- Conservados todos los textos, imágenes, controles y campos. El acceso al método lleva a su sección completa.
+- Punto previo: checkpoint/20260913-154632763-antes-secciones-pantalla-completa.
+
 ## 2026-09-13 — Retirar el ejemplo ilustrativo
 
 - Eliminado el bloque completo de demostración y su enlace desde la landing en español e inglés. Los dos accesos restantes ocupan el espacio disponible.

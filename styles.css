@@ -43,4 +43,90 @@ footer{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:35px 6%;b
 @media(max-width:760px){:root{--rail:0px}html{scroll-padding-top:calc(var(--mobile-header-height) + 20px)}.sidebar{width:100%;height:76px;bottom:auto;overflow:visible;display:flex;align-items:center;padding-right:14px;border-bottom:1px solid var(--line)}.brand-sonar{min-height:76px;height:76px;width:120px;flex-shrink:0;gap:4px}.quest-mark{width:48px;height:43px}.quest-name{font-size:12px;letter-spacing:1.6px}.quest-sonar{inset:0;width:120px;height:76px}.menu-toggle{display:flex;align-items:center;gap:10px;margin-left:auto;background:transparent;border:1px solid var(--line);font-size:14px;min-height:44px;padding:8px 12px}.sidebar nav{display:none;position:absolute;top:76px;left:0;right:0;margin:0;background:#193235;border-bottom:1px solid var(--line);box-shadow:0 15px 30px #07191c66}.sidebar.menu-open nav{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:10px}.sidebar nav a{min-height:52px;font-size:14px;padding:14px 12px}.hero{height:auto;max-height:none;min-height:780px;padding-top:165px;padding-bottom:125px;align-items:flex-start}.hero-top{top:96px;left:6%;right:6%;gap:10px}.hero-top .newsletter-trigger{font-size:12px;padding:8px 10px;min-height:44px;max-width:175px}.hero-content{margin:25px 6% 0}.hero .brand-purpose,html[lang="en"] .hero .brand-purpose{font-size:clamp(44px,9.5vw,70px)}.hero-photo{background-position:65% center}.hero-shade{background:linear-gradient(90deg,#0b2739db,#173b5066),linear-gradient(0deg,#152728,transparent 55%)}.hero .intro{font-size:19px}.hero-actions{gap:20px}.hero-bottom{bottom:25px}.hero-bottom nav{gap:14px}.hero-bottom nav a{font-size:11px;line-height:1.5}.hero-bottom i{display:none}.section{padding:60px 6%}.section-heading{margin-bottom:30px;gap:15px}h2{font-size:clamp(39px,8vw,58px)}.section-heading>p{font-size:17px;line-height:1.6}.service-grid{grid-template-columns:1fr}.service:last-child{grid-column:auto;display:flex}.service:last-child .service-photo,.service-photo{aspect-ratio:2.4/1;height:auto;margin-bottom:25px}.service{padding:22px}.method-block{padding-top:48px;scroll-margin-top:100px}.method-block>h3{font-size:32px}.method-grid{gap:24px 18px}.method-grid p{font-size:15px}.atlas{grid-template-columns:1fr}.destinations{padding:28px 0 0;border-left:0}.map-top{padding-right:0}#globe{height:350px}.globe-tools{margin-right:0}.tech-layout{display:flex;flex-direction:column;gap:18px}.equipment{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}.equipment button{font-size:14px;min-height:52px;padding:10px 12px}.equipment button:last-child{grid-column:1/-1}.tech-gallery{width:100%}.tech-gallery figcaption{padding:20px}.tech-gallery h3{font-size:29px}.team-grid{grid-template-columns:1fr}.team-card{display:grid;grid-template-columns:105px 1fr}.team-photo{aspect-ratio:1/1;margin:18px 0 0 14px}.team-info{padding:20px 16px}.team-info h3{font-size:29px}.team-info .team-credentials{min-height:0}.contact-layout{grid-template-columns:1fr;gap:25px}.contact-intro h3{font-size:32px}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.newsletter-dialog{padding:30px 24px}.newsletter-dialog h2{font-size:35px}footer{gap:20px}footer p{width:100%;order:3}}
 @media(max-width:360px){.hero-top{left:5%;right:5%}.hero-top .newsletter-trigger{max-width:160px}.hero .brand-purpose,html[lang="en"] .hero .brand-purpose{font-size:42px}.method-grid{grid-template-columns:1fr}.team-card{grid-template-columns:85px 1fr}.team-info{padding:18px 12px}.team-info h3{font-size:27px}.team-photo{margin-left:12px}}
 @media(max-width:760px){.sidebar:not(.menu-ready){height:auto;display:grid;grid-template-columns:120px 1fr;align-items:start;padding:0}.sidebar:not(.menu-ready) nav{display:grid;grid-template-columns:1fr 1fr;position:static;box-shadow:none}.sidebar:not(.menu-ready) .menu-toggle{display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.quest-sonar{display:none}}
+/* Screen-sized desktop sections. Natural growth remains available for zoom,
+   shorter windows, expanded form feedback and mobile reading. */
+@media(min-width:1024px) and (min-height:640px){
+ html:has(.hero){scroll-padding-top:0;scroll-snap-type:y proximity}
+ .hero,.section{min-height:100dvh;scroll-snap-align:start;scroll-margin-top:0}
+ footer{scroll-snap-align:end}
+ .hero{height:auto;max-height:none}
+ .hero-content{margin:100px 5% 110px}
+ .hero .brand-purpose,html[lang="en"] body .hero .brand-purpose{font-size:clamp(48px,min(5.7vw,10dvh),90px);margin-bottom:22px}
+ .hero .intro{font-size:clamp(18px,2.5dvh,24px)}
+ .hero-actions{margin-top:24px}
+ .section{display:flex;flex-direction:column;justify-content:center;padding:clamp(22px,4dvh,52px) 4%}
+ .section-heading{grid-template-columns:1fr 1.1fr;gap:24px;margin-bottom:clamp(18px,3dvh,32px)}
+ .section-heading h2{font-size:clamp(40px,6.5dvh,64px);white-space:normal}
+ .section-heading>p{font-size:clamp(15px,1.2vw,19px);line-height:1.5;white-space:normal}
+ .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ .service,.service:last-child{display:flex;grid-column:auto;gap:0;padding:14px}
+ .service-photo,.service:last-child .service-photo{aspect-ratio:auto;height:clamp(56px,10dvh,110px);margin:0 0 10px;flex-shrink:0}
+ .service h3{font-size:28px;margin-bottom:8px}
+ .service p,.service li{font-size:14px;line-height:1.45}
+ .service p{margin-bottom:10px}
+ .service ul,.service:last-child ul{margin-bottom:12px;padding-left:17px}
+ .service li+li{margin-top:4px}
+ .service a{font-size:14px;line-height:1.4;min-height:36px;padding-top:10px}
+ .method-block{padding-top:clamp(18px,3dvh,32px);scroll-margin-top:0}
+ .method-block>h3{font-size:27px;margin-bottom:12px}
+ .method-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+ .method-grid article{padding-top:10px}
+ .method-grid h4{font-size:17px;margin-bottom:6px}
+ .method-grid p{font-size:14px;line-height:1.45}
+ .atlas{grid-template-columns:1.15fr 1fr;align-items:center}
+ .map-top{padding-top:14px}
+ #globe{height:clamp(260px,52dvh,560px)}
+ .destinations{padding:16px 0 0 24px}
+ .destination{padding:10px 12px}
+ .destination strong{font-size:24px;line-height:1.25}
+ #place-detail{font-size:13px;padding:14px 12px}
+ .tech-layout{grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);align-items:center;gap:28px}
+ .tech-gallery{width:100%;max-width:min(100%,calc((100dvh - 300px)*1.6));justify-self:center}
+ .tech-gallery figcaption{padding:16px 20px}
+ .tech-gallery h3{font-size:28px;margin-bottom:6px}
+ .tech-gallery p{font-size:15px;line-height:1.5}
+ .equipment button{min-height:48px;padding:12px 16px;font-size:16px}
+ #map-views:not([hidden]){margin-top:12px}
+ .team-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+ .team-photo{height:clamp(95px,17dvh,200px);aspect-ratio:auto;margin:14px 14px 0}
+ .team-info{padding:16px 14px}
+ .team-info .eyebrow{font-size:10px;min-height:32px;margin-bottom:8px;line-height:1.5}
+ .team-info h3{font-size:29px;margin-bottom:10px}
+ .team-info p:not(.eyebrow){font-size:14px;line-height:1.5;margin-bottom:12px}
+ .team-info .team-credentials{min-height:54px}
+ .team-info p:last-child{margin-bottom:0}
+ .contact-layout{grid-template-columns:.7fr 1.3fr;gap:40px;align-items:start}
+ .contact-intro h3{font-size:30px;margin-bottom:16px}
+ .contact-intro>p{font-size:15px;line-height:1.6;margin-bottom:16px}
+ .form-grid{gap:12px 18px}
+ #contact-form label{font-size:13px;line-height:1.5}
+ #contact-form input,#contact-form select,#contact-form textarea{min-height:44px;padding:9px 12px;margin-top:5px;font-size:15px;line-height:1.4}
+ #contact-form textarea[name="message"]{height:88px;min-height:72px}
+ #contact-submit{margin-top:14px;min-height:46px;padding:12px 22px}
+ .contact-privacy{margin:12px 0 0;line-height:1.5}
+ #contact-status{margin-top:12px}
+ #contact-status:empty{margin:0}
+}
+@media(min-width:1024px) and (max-width:1199px) and (min-height:640px){
+ .team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .team-card{display:grid;grid-template-columns:76px minmax(0,1fr)}
+ .team-photo{height:68px;margin:14px 0 0 10px}
+ .team-info{padding:14px 12px}
+ .team-info .eyebrow{min-height:0;margin-bottom:6px}
+ .team-info h3{font-size:26px;margin-bottom:6px}
+ .team-info .team-credentials{min-height:0;margin-bottom:6px}
+}
+@media(min-width:1024px) and (max-width:1199px) and (min-height:640px) and (max-height:700px){
+ .section{padding:18px 3%}
+ .section-heading{gap:16px;margin-bottom:16px}
+ .service,.service:last-child{padding:12px}
+ .service-photo,.service:last-child .service-photo{height:46px}
+ .service h3{font-size:26px}
+ .service p,.service li{line-height:1.4}
+ .method-block{padding-top:16px}
+ .method-block>h3{font-size:24px;margin-bottom:10px}
+ .method-grid{gap:12px}
+ .method-grid p{font-size:13.5px;line-height:1.4}
+ .destination{padding:9px 12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none!important}*,*::before,*::after{animation:none!important;transition:none!important}.quest-sonar{display:none}}
