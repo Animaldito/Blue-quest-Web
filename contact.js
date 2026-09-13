@@ -2,17 +2,21 @@
 // No visitor information is stored in browser storage or sent before submission.
 (()=>{
  const t=window.BQ.t,form=document.querySelector('#contact-form'),button=document.querySelector('#contact-submit'),status=document.querySelector('#contact-status');
- let challenge=null,checking=null,sending=false,submitted=false;
+ let challenge=null,checking=null,sending=false,submitted=false,serviceChecked=false;
  const value=(fields,key)=>String(fields.get(key)||'').trim();
  function showStatus(text){status.textContent=t(text);}
- function refreshButton(){button.textContent=t(sending?'Enviando…':challenge?'Enviar consulta':'Preparar consulta');}
+ function refreshButton(){
+  button.textContent=t(sending?'Enviando…':challenge?'Enviar consulta':'Preparar consulta');
+  const notice=document.querySelector('#mailbox-notice');
+  notice.hidden=!serviceChecked||Boolean(challenge);
+  notice.textContent=notice.hidden?'':t('El envío directo no está disponible ahora. Puedes preparar un borrador o escribirnos por correo.');
+ }
  function checkService(){
   if(checking)return checking;
   checking=(async()=>{
    try{const response=await fetch('/api/contact',{credentials:'same-origin',cache:'no-store',signal:AbortSignal.timeout(8000)});const data=await response.json();challenge=response.ok&&data.ready?data.token:null;}
    catch{challenge=null;}
-   refreshButton();
-   document.querySelector('#mailbox-notice').textContent=t(challenge?'Envía tu consulta a nuestro equipo. No te suscribe a la newsletter.':'El envío directo no está disponible ahora. Puedes preparar un borrador o escribirnos por correo.');
+   serviceChecked=true;refreshButton();
   })().finally(()=>checking=null);return checking;
  }
  // Load readiness only near the contact section, not on the landing screen.

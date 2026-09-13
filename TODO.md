@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Limpiar las notas auxiliares de los apartados nuevos y recuperar los tres mapas originales en EN/ES, conservando privacidad y ejemplos identificados.
+
 ## Revisión integral del 13 de septiembre de 2026
 
 - [x] Oferta con entregables y método; demostración identificada sin resultados inventados.

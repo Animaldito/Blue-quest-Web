@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-13 — Menos notas y mapas originales
+
+- Retiradas las notas auxiliares de servicios, método, tecnología y contacto en ambos idiomas. Bitácora conserva el estado de cada destino sin avisos sobre informes pendientes.
+- La ficha mantiene su identificación como ejemplo y el formulario conserva la privacidad y los mensajes necesarios ante errores.
+- Recuperados los mapas anteriores de relieve, satélite y sonar, con selector accesible y encuadre uniforme. La vista elegida se conserva al cambiar de herramienta o idioma.
+- Punto previo: checkpoint/20260913-142441117-antes-limpiar-notas-y-recuperar-mapas.
+
 ## 2026-09-13 — Oferta, experiencia y contacto profesional
 
 - Contacto verificado en producción, con alternativa por correo cuando el servicio no esté disponible. Notas técnicas y de pruebas conservadas fuera del repositorio público.

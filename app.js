@@ -1,6 +1,6 @@
 const t=window.BQ.t;
 const canvas=document.querySelector('#globe'),ctx=canvas.getContext('2d');
-const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'Destino visitado. El informe de resultados no está publicado.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'Destino visitado. El informe de resultados no está publicado.'},{name:'Leyte',lat:10.9,lon:124.8,status:'Prospección programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'Prospección programada para noviembre de 2026.'}];
+const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'Destino visitado.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'Destino visitado.'},{name:'Leyte',lat:10.9,lon:124.8,status:'Prospección programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'Prospección programada para noviembre de 2026.'}];
 let rotation=55,tilt=12,selected=0,drag=null,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,w=0,h=0,last=0,visible=true,frame=0;
 function requestDraw(){if(!frame&&visible&&!document.hidden)frame=requestAnimationFrame(draw);}
 const rotate=document.querySelector('#rotate');
@@ -47,23 +47,37 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- map:{image:'map-demo.svg',alt:'Esquema ilustrativo del relieve del fondo; no apto para navegar',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
+ map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
  sonar:{image:'sonar-960.webp',alt:'Ilustración de un sonar en una embarcación',benefit:'Detectar antes de ver',description:'Detectamos estructuras y objetivos, incluso con poca visibilidad.'},
  camera:{image:'camera-960.webp',alt:'Ilustración de un submarinista con cámara 360°',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
  scooter:{image:'scooter-960.webp',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'},
  mask:{image:'mask-960.webp',alt:'Ilustración de una máscara integral con comunicación en uso',benefit:'Conectados, más seguros',description:'Coordinamos al equipo mediante comunicación bajo el agua.'}
 };
-const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image');
+const mapPhotos={
+ relief:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo'},
+ satellite:{image:'map-satellite.jpg',alt:'Imagen de satélite con información de la carta náutica.'},
+ perspective:{image:'map-perspective.jpg',alt:'Vista cartográfica en sonar.'}
+};
+let selectedMapView='relief';
+const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image'),mapViews=document.querySelector('#map-views');
+function showMapView(key){
+ const item=mapPhotos[key];if(!item)return;
+ selectedMapView=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);equipmentImage.srcset='';
+ document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map===key)));
+}
 function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
  gallery.dataset.equipment=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);
  equipmentImage.srcset=key==='map'?'':'/assets/technology/'+key+'-640.webp 640w, /assets/technology/'+key+'-960.webp 960w';
  equipmentImage.sizes='(max-width:760px) 88vw, 54vw';
+ mapViews.hidden=key!=='map';
+ if(key==='map')showMapView(selectedMapView);
  document.querySelector('#equipment-title').textContent=t(item.benefit);
  document.querySelector('#equipment-description').textContent=t(item.description);
  document.querySelectorAll('[data-equipment]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.equipment===key)));
 }
 document.querySelectorAll('[data-equipment]').forEach(button=>button.addEventListener('click',()=>showEquipment(button.dataset.equipment)));
+document.querySelectorAll('[data-map]').forEach(button=>button.addEventListener('click',()=>showMapView(button.dataset.map)));
 showEquipment('map');
 const menuToggle=document.querySelector('.menu-toggle');
 mobileHeader.classList.add('menu-ready');
