@@ -1,3 +1,4 @@
 User-agent: *
-# Translation templates are source files, not additional public language pages.
-Disallow: /content/
+Allow: /
+Disallow: /api/
+Sitemap: https://www.bqexplore.com/sitemap.xml

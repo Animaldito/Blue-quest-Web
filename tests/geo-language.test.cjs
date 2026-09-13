@@ -26,7 +26,7 @@ for(const country of countries)for(const [source,destination] of pages){
  assert.equal(redirect(destination,country),null,'No Spanish redirect loops');
 }
 for(const country of ['US','GB','FR','DE','BR','PT','BZ','HT','CA','PH','JP','XX','',undefined])for(const source of pages.keys())assert.equal(redirect(source,country),null);
-for(const source of ['/assets/technology/map-relief.jpg','/language.js','/styles.css','/favicon.svg','/es/','/es/index.html','/es/privacidad.html','/unknown'])assert.equal(redirect(source,'ES'),null);
+for(const source of ['/en/','/en/privacidad.html','/assets/technology/map-demo.svg','/language.js','/styles.css','/favicon.svg','/es/','/es/index.html','/es/privacidad.html','/unknown'])assert.equal(redirect(source,'ES'),null);
 
 const languageSource=fs.readFileSync(path.join(root,'language.js'),'utf8');
 assert(!/localStorage|sessionStorage|document\.cookie|\bfetch\(|navigator\.geolocation/.test(languageSource),'No browser storage, extra network call or GPS');
@@ -53,34 +53,34 @@ function browser(input,initialLanguage){
  return {location,window,document,links,en,es,privacy,home,anchor,external,email,texts,canonical,events,emitted,historyCalls,click};
 }
 const b=browser('/es/?interest=corales&interest=pecios&utm_source=test#tecnologia','es');
-assert.equal(new URL(b.en.href).searchParams.get('lang'),'en');
+assert.equal(new URL(b.en.href).searchParams.get('lang'),null);
 assert.equal(new URL(b.en.href).hash,'#tecnologia');
 assert.equal(b.click(b.en,{ctrlKey:true}),false,'Native new-tab opening stays available');
 assert.equal(b.click(b.en),true);
 assert.equal(b.window.BQ.language,'en');assert.equal(b.document.documentElement.lang,'en');assert.equal(b.texts[0].textContent,'Our work');
-assert.equal(b.location.pathname,'/');assert.equal(b.location.searchParams.get('lang'),'en');
+assert.equal(b.location.pathname,'/en/');assert.equal(b.location.searchParams.get('lang'),null);
 assert.deepEqual(b.location.searchParams.getAll('interest'),['corales','pecios']);assert.equal(b.location.hash,'#tecnologia');
-assert.equal(new URL(b.privacy.href).searchParams.get('lang'),'en');assert.equal(new URL(b.home.href).searchParams.get('lang'),'en');
+assert.equal(new URL(b.privacy.href).searchParams.get('lang'),null);assert.equal(new URL(b.home.href).searchParams.get('lang'),null);
 assert.equal(b.anchor.getAttribute('href'),'#tecnologia');assert.equal(b.external.href,'https://example.com/?lang=other');assert.equal(b.email.href,'mailto:info@bqexplore.com');
-assert.equal(b.canonical.href,'https://www.bqexplore.com/');assert.equal(b.emitted.at(-1).detail.language,'en');
+assert.equal(b.canonical.href,'https://www.bqexplore.com/en/');assert.equal(b.emitted.at(-1).detail.language,'en');
 assert.equal(redirect(b.location.href,'ES'),null,'Reloading manual English cannot redirect');
 b.click(b.es);assert.equal(b.location.pathname,'/es/');assert.equal(b.location.searchParams.has('lang'),false);assert.equal(b.texts[0].textContent,'Nuestro trabajo');
 assert.equal(new URL(b.privacy.href).pathname,'/es/privacidad.html');assert.equal(new URL(b.privacy.href).searchParams.has('lang'),false);
 b.location.hash='#contacto';b.events.hashchange();assert.equal(new URL(b.en.href).hash,'#contacto');
 b.location.href='https://www.bqexplore.com/?lang=en#equipo';b.events.popstate();assert.equal(b.window.BQ.language,'en');assert.equal(new URL(b.en.href).hash,'#equipo');
-const same=browser('/#inicio','en');same.click(same.en);assert.equal(same.location.searchParams.get('lang'),'en');assert.equal(same.historyCalls.at(-1).kind,'replace');
-const legal=browser('/es/privacidad.html#derechos','es');legal.click(legal.en);assert.equal(legal.location.pathname,'/privacidad.html');assert.equal(legal.location.hash,'#derechos');assert.equal(redirect(legal.location.href,'ES'),null);
+const same=browser('/#inicio','en');same.click(same.en);assert.equal(same.location.searchParams.get('lang'),null);assert.equal(same.historyCalls.at(-1).kind,'replace');
+const legal=browser('/es/privacidad.html#derechos','es');legal.click(legal.en);assert.equal(legal.location.pathname,'/en/privacidad.html');assert.equal(legal.location.hash,'#derechos');assert.equal(redirect(legal.location.href,'ES'),null);
 
 for(const lang of ['en','es'])for(const page of ['index.html','aviso-legal.html','privacidad.html']){
- const html=fs.readFileSync(path.join(root,lang==='es'?'es':'',page),'utf8');
+ const html=fs.readFileSync(path.join(root,lang,page),'utf8');
  const english=html.match(/<a href="([^"]+)" data-language="en"/)[1];
- assert.equal(new URL(english,'https://www.bqexplore.com').searchParams.get('lang'),'en','No-JS English selector must bypass detection');
+ assert.equal(new URL(english,'https://www.bqexplore.com').searchParams.get('lang'),null,'No-JS English selector must bypass detection');
  assert.equal(redirect(english,'ES'),null);
- assert(html.includes(`hreflang="en" href="https://www.bqexplore.com/${page==='index.html'?'':page}?lang=en"`));
+ assert(html.includes(`hreflang="en" href="https://www.bqexplore.com/en/${page==='index.html'?'':page}"`));
  if(lang==='en')for(const [,href] of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)){
   if(href.startsWith('#'))continue;
   const url=new URL(href,'https://www.bqexplore.com');
-  if(url.origin==='https://www.bqexplore.com'&&pages.has(url.pathname))assert.equal(url.searchParams.get('lang'),'en','No-JS internal links must preserve English: '+href);
+  if(url.origin==='https://www.bqexplore.com'&&pages.has(url.pathname))assert.equal(url.searchParams.get('lang'),null,'No-JS internal links must preserve English: '+href);
  }
 }
 console.log('PASS 21 Spanish-speaking countries/territories, English fallback, explicit choice, no loops, query/hash preservation, browser history, legal pages and no-JS links.');

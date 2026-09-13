@@ -1,5 +1,18 @@
 # Pendientes
 
+## Revisión integral del 13 de septiembre de 2026
+
+- [x] Oferta con entregables y método; demostración identificada sin resultados inventados.
+- [x] CTA de contacto, menú móvil compacto, imágenes optimizadas y galería con controles cercanos.
+- [x] Implementar contacto transaccional y alternativa ante error; credencial guardada por el titular en Production.
+- [x] Direcciones /en/ y /es/, sitemap, metadatos sociales, cabeceras y exclusión de notas del despliegue.
+- [ ] Confirmar entrega real del formulario en el buzón, además de aceptación del proveedor.
+- [ ] Resolver el uso comercial del alojamiento: Vercel Hobby se limita al uso personal no comercial.
+- [ ] Aportar y autorizar casos reales publicables; no sustituirlos por ficción.
+- [ ] Validar y ejecutar el modelo operativo propuesto: permisos, profesionales habilitados, seguros, contratos y trazabilidad.
+- [ ] Complementar el límite por instancia del formulario con protección distribuida si el uso lo requiere.
+- [ ] Obtener línea base comercial antes de definir metas o invertir en captación masiva.
+
 - [x] Seleccionar el idioma inicial por país en Vercel y respetar siempre EN / ES mediante la URL, sin cookies ni servicios externos, con punto de recuperación y pruebas de regresión.
 
 - [x] Sustituir los nombres repetidos en los pies de foto por ventajas breves de cada herramienta, en español e inglés, sin alterar el selector ni las fotografías.

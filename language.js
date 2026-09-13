@@ -4,9 +4,9 @@
  const messages=window.BQ_MESSAGES;
  const reverse=new Map(Object.entries(messages).filter(([es,en])=>es!==en).map(([es,en])=>[en.trim(),es.trim()]));
  const page=location.pathname.split('/').pop()||'index.html';
- const route=lang=>`${lang==='es'?'/es':''}/${page==='index.html'?'':page}`;
+ const route=lang=>`/${lang}/${page==='index.html'?'':page}`;
  const withChoice=(url,lang)=>{
-  if(lang==='en')url.searchParams.set('lang','en');else url.searchParams.delete('lang');
+  url.searchParams.delete('lang');
   return url.pathname+url.search+url.hash;
  };
  const languageLink=lang=>{
@@ -19,9 +19,9 @@
    const raw=link.getAttribute('href');if(raw.startsWith('#'))return;
    const url=new URL(link.href,location.href);
    if(url.origin!==location.origin)return;
-   const clean=url.pathname.replace(/^\/es(?=\/)/,'');
+   const clean=url.pathname.replace(/^\/(es|en)(?=\/)/,'');
    if(!['/','/index.html','/privacidad.html','/aviso-legal.html'].includes(clean))return;
-   url.pathname=(lang==='es'?'/es':'')+clean;link.href=withChoice(url,lang);
+   url.pathname='/'+lang+clean;link.href=withChoice(url,lang);
   });
   document.querySelectorAll('[data-language]').forEach(link=>{
    const target=link.dataset.language;

@@ -1,7 +1,7 @@
 // Lightweight behavior checks: no browser, network, third-party code or subscribers.
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const source=fs.readFileSync(require('node:path').join(__dirname,'../app.js'),'utf8');
-const code=source.slice(source.indexOf('// Brevo owns submissions'),source.indexOf('function prepareDraft'));
+const code=source.slice(source.indexOf('// Brevo owns submissions'),source.indexOf("document.addEventListener('bq:languagechange'"));
 const nodes=new Map();
 class Element{
  constructor(id){this.id=id;this.listeners={};this.open=false;this.openCount=0;}

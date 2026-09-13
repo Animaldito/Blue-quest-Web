@@ -19,6 +19,6 @@ Los mapas publicados son orientativos; no se presentan como levantamientos hidro
 
 La distribución publicada integra estas responsabilidades en los cuatro perfiles. Los cargos de coordinación no acreditan por sí mismos la habilitación para ejecutar funciones reguladas.
 
-El formulario funciona solo en el navegador: valida los campos, prepara el texto, permite copiarlo y genera un enlace mailto. No hay backend, servicio de envío, almacenamiento local ni envío de datos del formulario por red. Abrir el correo no significa enviar ni recibir.
+El formulario valida los campos y, cuando el servicio está configurado, envía la consulta al buzón mediante Vercel y el correo transaccional de Brevo. Mantiene la alternativa de copiar o abrir un borrador ante indisponibilidad. Consultar CONTACT.md para estados y límites.
 
-info@bluequest.com todavía no existe, según el usuario. Mantener los avisos hasta activar el buzón y verificar su recepción.
+info@bqexplore.com está activo según el titular. El correo de contacto no da de alta en la newsletter. Confirmar recepción en el buzón, no solo aceptación del servicio.

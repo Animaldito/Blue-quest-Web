@@ -1,5 +1,16 @@
 # Registro de cambios
 
+## 2026-09-13 — Oferta, experiencia y contacto profesional
+
+- Reorganizada la oferta con servicios, entregables, método y una ficha explícitamente demostrativa. CTA principal hacia consulta de proyectos. No se inventan casos ni certificaciones.
+- Conservada la identidad visual y consolidada la hoja de estilos. Menú móvil desplegable de 76 px, controles de tecnología antes de su imagen y retratos más legibles.
+- Sustituidas las escenas de servicios y tecnología por ilustraciones generadas identificadas; imágenes responsivas y medios anteriores excluidos del despliegue. El globo deja de redibujarse continuamente cuando está pausado.
+- Contacto servidor a servidor con Brevo, remitente/destinatario fijos, validación, token de sesión, control básico de intentos y alternativa por correo. Sin listas de marketing ni campañas.
+- Direcciones /en/ y /es/, compatibilidad con raíz y enlaces anteriores, sitemap, metadatos sociales y Organization. Publicación mediante lista de archivos; notas y fuentes de trabajo fuera del dominio.
+- Actualizada privacidad para el envío directo. Pruebas de idiomas, galería, newsletter, endpoint y publicación; revisión visual en 320, 390, 768, 1024 y 1440 px.
+- Punto previo: checkpoint/20260913-113342721-antes-mejora-integral-empresa-web (8bb6527).
+- El dosier de empresa se conserva fuera del repositorio público. El alojamiento comercial y los casos reales requieren acciones del titular.
+
 ## 2026-09-12 — Idioma inicial por país
 
 - Añadida detección de país con reglas temporales de Vercel: español para España y países/territorios hispanohablantes; inglés para el resto o país desconocido. No se añaden servicios externos, funciones ni cookies.
