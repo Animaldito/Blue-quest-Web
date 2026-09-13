@@ -24,4 +24,4 @@ Cada envío incluye además una clave de idempotencia estable para la misma sesi
 
 Ejecutar `node tests/contact.test.cjs`: pruebas con proveedor simulado, sin correo real. Para verificar producción, enviar una sola consulta identificada como prueba al buzón de Blue Quest y revisar el registro transaccional.
 
-Prueba real 13/09/2026: API aceptó la petición, pero el registro de Brevo mostró Error: remitente info@bqexplore.com no validado. No se confirmó entrega. Se añadió comprobación de remitente activo para mantener la alternativa por correo hasta la validación. No se ha enviado ninguna campaña.
+Contacto verificado en producción. La comprobación de remitente activo evita ofrecer envío directo con una configuración incompleta. La confirmación de entrega del proveedor no demuestra lectura ni clasificación en la bandeja de entrada. Los detalles de pruebas y configuración se conservan fuera del repositorio público.

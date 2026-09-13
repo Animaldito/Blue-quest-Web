@@ -6,7 +6,7 @@
 - [x] CTA de contacto, menú móvil compacto, imágenes optimizadas y galería con controles cercanos.
 - [x] Implementar contacto transaccional y alternativa ante error; credencial guardada por el titular en Production.
 - [x] Direcciones /en/ y /es/, sitemap, metadatos sociales, cabeceras y exclusión de notas del despliegue.
-- [ ] Validar info@bqexplore.com en Brevo y confirmar entrega real. La prueba del 13/09 fue aceptada por la API, pero Brevo la rechazó después por remitente no validado. Se mantiene la alternativa por correo mientras el remitente no esté activo.
+- [x] Verificar contacto en producción y mantener la alternativa por correo ante indisponibilidad del servicio.
 - [ ] Resolver el uso comercial del alojamiento: Vercel Hobby se limita al uso personal no comercial.
 - [ ] Aportar y autorizar casos reales publicables; no sustituirlos por ficción.
 - [ ] Validar y ejecutar el modelo operativo propuesto: permisos, profesionales habilitados, seguros, contratos y trazabilidad.

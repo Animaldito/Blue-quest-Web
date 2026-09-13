@@ -2,6 +2,7 @@
 
 ## 2026-09-13 — Oferta, experiencia y contacto profesional
 
+- Contacto verificado en producción, con alternativa por correo cuando el servicio no esté disponible. Notas técnicas y de pruebas conservadas fuera del repositorio público.
 - Verificación publicada: páginas EN/ES y privacidad accesibles, notas internas fuera del despliegue. Una única prueba transaccional detectó remitente no validado en Brevo; el formulario comprueba ahora ese estado y ofrece borrador en vez de envío directo cuando no está activo.
 - Newsletter de Brevo guardada con identidad Blue Quest, política EN, consentimiento desmarcado y mensajes más útiles, sin cambiar lista ni reCAPTCHA. Copia de textos/aspecto anterior conservada localmente fuera del repositorio.
 - Reorganizada la oferta con servicios, entregables, método y una ficha explícitamente demostrativa. CTA principal hacia consulta de proyectos. No se inventan casos ni certificaciones.
