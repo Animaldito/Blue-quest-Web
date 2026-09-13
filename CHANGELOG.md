@@ -2,6 +2,8 @@
 
 ## 2026-09-13 — Oferta, experiencia y contacto profesional
 
+- Verificación publicada: páginas EN/ES y privacidad accesibles, notas internas fuera del despliegue. Una única prueba transaccional detectó remitente no validado en Brevo; el formulario comprueba ahora ese estado y ofrece borrador en vez de envío directo cuando no está activo.
+- Newsletter de Brevo guardada con identidad Blue Quest, política EN, consentimiento desmarcado y mensajes más útiles, sin cambiar lista ni reCAPTCHA. Copia de textos/aspecto anterior conservada localmente fuera del repositorio.
 - Reorganizada la oferta con servicios, entregables, método y una ficha explícitamente demostrativa. CTA principal hacia consulta de proyectos. No se inventan casos ni certificaciones.
 - Conservada la identidad visual y consolidada la hoja de estilos. Menú móvil desplegable de 76 px, controles de tecnología antes de su imagen y retratos más legibles.
 - Sustituidas las escenas de servicios y tecnología por ilustraciones generadas identificadas; imágenes responsivas y medios anteriores excluidos del despliegue. El globo deja de redibujarse continuamente cuando está pausado.

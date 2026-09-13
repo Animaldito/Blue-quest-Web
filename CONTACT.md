@@ -9,7 +9,7 @@ El sitio es estático salvo `api/contact.js`, una función de Vercel.
 
 ## Estados
 
-- GET /api/contact: disponibilidad y token firmado; nunca devuelve la clave.
+- GET /api/contact: comprueba que info@bqexplore.com figura activo en Brevo antes de devolver disponibilidad y token firmado; nunca devuelve la clave ni la lista de remitentes. Resultado guardado por instancia durante 5 minutos (1 minuto si no está disponible).
 - POST /api/contact: valida campos, origen, tamaño y sesión antes de enviar texto plano.
 - Sin conexión: conserva la consulta y permite copiarla o abrir el correo.
 - Aceptado por Brevo no equivale a entrega al buzón. No se hace reintento automático de una petición cuyo resultado es incierto.
@@ -23,3 +23,5 @@ Cada envío incluye además una clave de idempotencia estable para la misma sesi
 ## Verificación
 
 Ejecutar `node tests/contact.test.cjs`: pruebas con proveedor simulado, sin correo real. Para verificar producción, enviar una sola consulta identificada como prueba al buzón de Blue Quest y revisar el registro transaccional.
+
+Prueba real 13/09/2026: API aceptó la petición, pero el registro de Brevo mostró Error: remitente info@bqexplore.com no validado. No se confirmó entrega. Se añadió comprobación de remitente activo para mantener la alternativa por correo hasta la validación. No se ha enviado ninguna campaña.

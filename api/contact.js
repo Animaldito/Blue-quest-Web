@@ -25,10 +25,24 @@ function validate(body){
  data.language=body.language==='es'?'es':'en';return data;
 }
 function createHandler({env=process.env,fetcher=globalThis.fetch,now=Date.now}={}){
+ let senderState={ready:false,until:0},senderCheck=null;
+ async function senderReady(){
+  if(!env.BREVO_API_KEY)return false;
+  if(senderState.until>now())return senderState.ready;
+  if(senderCheck)return senderCheck;
+  senderCheck=(async()=>{
+   let ready=false;
+   try{
+    const response=await fetcher('https://api.brevo.com/v3/senders?domain=bqexplore.com',{headers:{'api-key':env.BREVO_API_KEY,'Accept':'application/json'},signal:AbortSignal.timeout(4000)});
+    if(response.ok){const data=await response.json();ready=Array.isArray(data.senders)&&data.senders.some(sender=>sender.email?.toLowerCase()==='info@bqexplore.com'&&sender.active===true);}
+   }catch{/* A missing or unverifiable sender must not enable direct delivery. */}
+   senderState={ready,until:now()+(ready?300000:60000)};return ready;
+  })().finally(()=>senderCheck=null);return senderCheck;
+ }
  return async(req,res)=>{
   const send=(status,body)=>{res.statusCode=status;res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.end(JSON.stringify(body));};
   const key=env.BREVO_API_KEY;
-  if(req.method==='GET')return send(200,key?{ready:true,token:tokenFor(key,now())}:{ready:false});
+  if(req.method==='GET')return send(200,await senderReady()?{ready:true,token:tokenFor(key,now())}:{ready:false});
   if(req.method!=='POST'){res.setHeader('Allow','GET, POST');return send(405,{code:'METHOD'});}
   const allowed=new Set(ORIGINS);
   // Preview host is supplied by Vercel, never taken from a visitor header.
@@ -47,6 +61,7 @@ function createHandler({env=process.env,fetcher=globalThis.fetch,now=Date.now}={
   cleanCaches(time);
   const previous=usedTokens.get(body.token);
   if(previous)return previous.accepted?send(200,{accepted:true}):send(409,{code:'PENDING'});
+  if(!await senderReady())return send(503,{code:'UNAVAILABLE'});
   // Hash only Vercel's trusted IP header. No contact content or raw IP is logged.
   const ip=String(req.headers['x-vercel-forwarded-for']||'unknown').split(',')[0];
   const bucket=signature(ip,key);

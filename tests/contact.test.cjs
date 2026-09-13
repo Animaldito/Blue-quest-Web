@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),{createHandler}=require('../api/contact.js');
-let callCount=0,posted=null,mode='ok',ip=1;
+let callCount=0,posted=null,mode='ok',ip=1,senderChecks=0;
 const now=()=>1789290000000;
-const fetcher=async(url,options)=>{callCount++;posted=JSON.parse(options.body);assert.equal(url,'https://api.brevo.com/v3/smtp/email');if(mode==='timeout')throw Error('timeout');return {ok:mode==='ok'};};
+const fetcher=async(url,options)=>{if(url==='https://api.brevo.com/v3/senders?domain=bqexplore.com'){senderChecks++;return {ok:true,json:async()=>({senders:[{email:'info@bqexplore.com',active:true}]})};}callCount++;posted=JSON.parse(options.body);assert.equal(url,'https://api.brevo.com/v3/smtp/email');if(mode==='timeout')throw Error('timeout');return {ok:mode==='ok',status:mode==='ok'?201:500};};
 const handler=createHandler({env:{BREVO_API_KEY:'test-placeholder-not-a-credential'},fetcher,now});
 async function request(h,method='GET',body,extra={}){
  let result;const headers={};
@@ -13,6 +13,14 @@ const fields={name:'Test enquiry',email:'test@example.invalid',organization:'Tes
  assert.deepEqual((await request(createHandler({env:{}}))).data,{ready:false});
  assert.equal((await request(handler,'PUT')).status,405);
  const first=await request(handler);assert(first.data.ready);assert.equal(first.headers['Cache-Control'],'no-store');
+ await request(handler);assert.equal(senderChecks,1,'Reuse sender readiness within the cache window');
+ for(const senders of [[],[{email:'info@bqexplore.com',active:false}],[{email:'different@bqexplore.com',active:true}],null]){
+  const inactive=createHandler({env:{BREVO_API_KEY:'test-placeholder-not-a-credential'},fetcher:async()=>({ok:true,json:async()=>({senders})}),now});
+  assert.deepEqual((await request(inactive)).data,{ready:false});
+  assert.equal((await request(inactive,'POST',{...fields,token:first.data.token})).data.code,'UNAVAILABLE');
+ }
+ const unavailable=createHandler({env:{BREVO_API_KEY:'test-placeholder-not-a-credential'},fetcher:async()=>{throw Error('No connection');},now});
+ assert.deepEqual((await request(unavailable)).data,{ready:false});
  let payload={...fields,token:first.data.token};
  assert.equal((await request(handler,'POST',payload,{origin:'https://other.invalid'})).status,403);
  assert.equal((await request(handler,'POST',payload,{'content-type':'text/plain'})).status,415);
