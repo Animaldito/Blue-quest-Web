@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Quitar la línea redundante de destino/estado bajo la bitácora en EN/ES.
+
 - [x] Corregir los recortes de los retratos y de la embarcación, protegiendo los rostros también en ventanas anchas y bajas.
 
 - [x] Optimizar las 14 fotografías visibles: versiones adaptativas, AVIF con alternativa, originales conservados, prioridad de portada y caché de recursos.

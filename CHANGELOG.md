@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-09-14 — Bitácora sin la nota de estado repetida
+
+- Eliminada la línea inferior de destino y estado en ambos idiomas, junto con su actualización y estilos. Se conservan los estados de la lista y de las fichas, la selección de destinos y la descripción accesible del globo.
+- Punto previo: checkpoint/20260914-135257157-antes-quitar-nota-bitacora.
+
 ## 2026-09-14 — Encuadres que conservan los rostros
 
 - Reencuadrados Miguel, Cristina y el equipo de la embarcación mediante posiciones individuales, sin modificar los archivos de imagen ni perder la optimización.

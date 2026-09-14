@@ -1,6 +1,6 @@
 const t=window.BQ.t;
 const canvas=document.querySelector('#globe'),ctx=canvas.getContext('2d');
-const places=[{name:'Raa Atoll',lat:5.67,lon:72.93,status:'Destino visitado.'},{name:'Boa Vista',lat:16.1,lon:-22.8,status:'Destino visitado.'},{name:'Leyte',lat:10.9,lon:124.8,status:'Prospección programada para octubre de 2026.'},{name:'Addu Atoll',lat:-.63,lon:73.16,status:'Prospección programada para noviembre de 2026.'}];
+const places=[{name:'Raa Atoll',lat:5.67,lon:72.93},{name:'Boa Vista',lat:16.1,lon:-22.8},{name:'Leyte',lat:10.9,lon:124.8},{name:'Addu Atoll',lat:-.63,lon:73.16}];
 let rotation=55,tilt=12,selected=0,drag=null,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,w=0,h=0,last=0,visible=true,frame=0;
 function requestDraw(){if(!frame&&visible&&!document.hidden)frame=requestAnimationFrame(draw);}
 const rotate=document.querySelector('#rotate');
@@ -13,10 +13,10 @@ function draw(ts){frame=0;const dt=Math.min(ts-last,50);last=ts;if(visible&&w){i
 new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)requestDraw();}).observe(canvas);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestDraw();});
 matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>{if(e.matches)setAuto(false);});
-function updatePlaceDetail(){document.querySelector('#place-detail').textContent=places[selected].name.toUpperCase()+' / '+t(places[selected].status);canvas.setAttribute('aria-label',t('Globo interactivo. Arrastra o usa las flechas para girar. Pulsa un punto para abrir su ficha, o Intro para abrir el destino seleccionado.')+' '+places[selected].name);}
-function selectPlace(i,trigger=canvas){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});updatePlaceDetail();requestDraw();window.BQFieldLog.open(i,trigger);}
+function updateGlobeLabel(){canvas.setAttribute('aria-label',t('Globo interactivo. Arrastra o usa las flechas para girar. Pulsa un punto para abrir su ficha, o Intro para abrir el destino seleccionado.')+' '+places[selected].name);}
+function selectPlace(i,trigger=canvas){selected=i;rotation=places[i].lon;tilt=places[i].lat;setAuto(false);document.querySelectorAll('.destination').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});updateGlobeLabel();requestDraw();window.BQFieldLog.open(i,trigger);}
 document.querySelectorAll('.destination').forEach((button,i)=>{button.setAttribute('aria-pressed',String(i===selected));button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','mission-dialog');button.addEventListener('click',()=>selectPlace(i,button));});
-updatePlaceDetail();
+updateGlobeLabel();
 rotate.addEventListener('click',()=>setAuto(!auto));
 canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY};canvas.setPointerCapture(e.pointerId);setAuto(false);});
 canvas.addEventListener('pointermove',e=>{if(!drag)return;rotation-=(e.clientX-drag.x)*.35;tilt=Math.max(-65,Math.min(65,tilt+(e.clientY-drag.y)*.3));drag.x=e.clientX;drag.y=e.clientY;requestDraw();});
@@ -129,6 +129,6 @@ newsletterDialog.addEventListener('close',()=>{
  newsletterOpen.focus({preventScroll:true});
 });
 document.addEventListener('bq:languagechange',()=>{
- syncMobileHeader();updateNavigation();setAuto(auto);updatePlaceDetail();showEquipment(gallery.dataset.equipment);requestDraw();
+ syncMobileHeader();updateNavigation();setAuto(auto);updateGlobeLabel();showEquipment(gallery.dataset.equipment);requestDraw();
 });
 

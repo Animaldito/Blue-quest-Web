@@ -16,6 +16,10 @@ assert(!/Raggy|Carcharias|taurus/i.test(JSON.stringify(records)),'Do not invent 
 assert.equal(records[2].metrics[0][1],'3');assert.equal(records[3].metrics[0][1],'15');
 for(const r of records.slice(2))assert(r.metrics.some(m=>m[0]==='Estancia prevista'));
 const js=read('field-log.js'),css=read('field-log.css'),app=read('app.js');
+assert(!app.includes('place-detail'));
+assert(!app.includes('updatePlaceDetail'));
+assert(!read('styles.css').includes('#place-detail'));
+assert(app.includes('function updateGlobeLabel()'));
 new vm.Script(js);
 assert(!/innerHTML|fetch\(|localStorage|setInterval|\.mp4|\.webm/.test(js),'Records are local, lightweight DOM text');
 assert(js.includes("record.status==='completed'?'Resultados de campo':'Objetivos previstos'"));
@@ -26,6 +30,8 @@ assert(css.includes('overflow:auto'));assert(css.includes('max-height:calc(100dv
 assert(app.includes('window.BQFieldLog.open(i,trigger)'));assert(app.includes('selectPlace(closest)'));assert(app.includes('selectPlace(i,button)'));assert(app.includes("e.key==='Enter'"));
 for(const lang of ['es','en']){
  const html=read(lang+'/index.html');
+ assert(!html.includes('id="place-detail"'),'No redundant destination/status note below the list');
+ assert.equal([...html.matchAll(/class="destination(?: selected)?"/g)].length,4);
  assert(html.includes('href="/field-log.css"'));assert(html.includes('src="/field-log.js" defer'));
  assert(html.indexOf('src="/field-log.js"')<html.indexOf('src="/app.js"'));
  const dialog=html.match(/<dialog id="mission-dialog"[\s\S]*?<\/dialog>/)[0];
