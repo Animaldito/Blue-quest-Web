@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-09-14 — Apellido de Andreu
+
+- Corregido a Andreu Ferreres en español e inglés, incluido el texto alternativo de su fotografía.
+- Punto previo: checkpoint/20260914-085049553-antes-corregir-apellido-andreu.
+
 ## 2026-09-14 — Fotografías del equipo y desarrollo de negocio
 
 - Sustituidas las fotos de Aida y Andreu por las nuevas fotografías originales aportadas por el propietario, con encuadres adaptados al diseño existente.

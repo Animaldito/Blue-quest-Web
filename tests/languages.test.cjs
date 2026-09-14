@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..');
 const run=(...args)=>execFileSync(process.execPath,[path.join(root,'scripts/build-languages.cjs'),...args],{encoding:'utf8'});
-const unchanged=new Set(['BLUE QUEST','↗','Resorts','Raa Atoll','Boa Vista','Leyte','Addu Atoll','+','Sonar','Miguel Perez','Cristina Garcés','Aida Marin','Andreu Ferrer','info@bqexplore.com','Email','.','×','OCEAN EXPLORATION','Cookies','Miguel Ángel Pérez Blanco','Blue Quest','71153709N','www.bqexplore.com','Newsletter']);
+const unchanged=new Set(['BLUE QUEST','↗','Resorts','Raa Atoll','Boa Vista','Leyte','Addu Atoll','+','Sonar','Miguel Perez','Cristina Garcés','Aida Marin','Andreu Ferreres','info@bqexplore.com','Email','.','×','OCEAN EXPLORATION','Cookies','Miguel Ángel Pérez Blanco','Blue Quest','71153709N','www.bqexplore.com','Newsletter']);
 assert.deepEqual(JSON.parse(run('--list')).filter(s=>!unchanged.has(s)),[],'Untranslated source text: add a reviewed English translation.');
 console.log(run('--check').trim());
 for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html','privacidad.html']){
