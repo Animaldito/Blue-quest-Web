@@ -7,7 +7,8 @@ for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html'
 files.push('field-log.js','field-log.css');
 for(const image of ['resort','boat','wreck'])for(const width of [480,800])files.push('assets/services/'+image+'-'+width+'.webp');
 for(const image of ['camera','sonar','scooter','mask'])for(const width of [640,960])files.push('assets/technology/'+image+'-'+width+'.webp');
-for(const person of ['miguel','cristina','aida','andreu'])files.push('assets/team/'+person+'-profile.webp');
+for(const person of ['miguel','cristina'])files.push('assets/team/'+person+'-profile.webp');
+for(const person of ['aida','andreu'])files.push('assets/team/'+person+'-20260914.jpg');
 for(const font of fs.readdirSync(path.join(root,'fonts')))if(/\.(css|ttf|woff2)$/.test(font)||/LICENSE\.txt$/.test(font))files.push('fonts/'+font);
 // Refuse unexpected stale files; do not silently publish or delete them.
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}

@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-14 — Fotografías del equipo y desarrollo de negocio
+
+- Sustituidas las fotos de Aida y Andreu por las nuevas fotografías originales aportadas por el propietario, con encuadres adaptados al diseño existente.
+- Actualizados el rol, las credenciales y la biografía de Cristina en español e inglés: Desarrollo de negocio / Business Development.
+- Conservadas las fotografías anteriores en el historial y fuera del despliegue activo.
+- Punto previo: checkpoint/20260914-082609356-antes-actualizar-equipo-fotos-cristina.
+
 ## 2026-09-13 — Fichas animadas de Bitácora
 
 - Incorporadas las cuatro fichas aprobadas, accesibles desde los puntos del globo y la lista de destinos, en español e inglés.

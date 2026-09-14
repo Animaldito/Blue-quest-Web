@@ -1,4 +1,7 @@
 @import url('fonts/fonts.css');
+/* Original team photos; responsive framing without altering the photographs. */
+.team-photo img.team-image-aida{object-position:50% 10%}
+.team-photo img.team-image-andreu{object-position:50% 18%}
 /* Blue Quest: one shared system for services, evidence and contact. */
 /* Restore the three original map views within the shared photo frame. */
 .tech-gallery[data-equipment="map"] .equipment-photo img{transform:scale(1.18)}

@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Sustituir las fotos de Aida y Andreu y actualizar el perfil de Cristina a Desarrollo de negocio en EN/ES.
+
 - [x] Incorporar las fichas HUD aprobadas de Raa Atoll, Boa Vista, Leyte y Addu Atoll, con resultados reales y objetivos futuros diferenciados, sin controles de pausa o repetición.
 
 - [x] Adaptar las secciones a una pantalla completa en escritorio, en ambos idiomas, conservando lectura sin recortes en móvil y ventanas pequeñas.
