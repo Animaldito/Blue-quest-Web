@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-14 — Fotografía real de cámara 360°
+
+- Sustituida la ilustración por la fotografía facilitada de una cámara sobre trípode en el fondo marino, en EN/ES.
+- Recorte 8:5 y versiones WebP de 640 × 400 y 960 × 600; misma medida y marco que el resto de herramientas. Corrección suave de luz y contraste mediante CSS, sin reconstruir ni añadir elementos a la fotografía.
+- Descartados los retoques generativos por alterar detalles. Conservada la imagen anterior en el historial y fuera del despliegue.
+- Punto previo: checkpoint/20260914-090316943-antes-foto-camara-360.
+
 ## 2026-09-14 — Apellido de Andreu
 
 - Corregido a Andreu Ferreres en español e inglés, incluido el texto alternativo de su fotografía.

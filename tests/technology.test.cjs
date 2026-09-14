@@ -22,6 +22,12 @@ for(const lang of ['es','en']){
   assert(description.textContent);assert.equal(buttons.find(b=>b.dataset.equipment===key)['aria-pressed'],'true');
   assert.equal(views.hidden,key!=='map');
   assert(image.alt&&fs.existsSync(path.join(root,image.src)),'Retain an existing photo and descriptive alt text');
+  if(key==='camera'){
+   assert.equal(image.src,'/assets/technology/camera-tripod-20260914-960.webp');
+   assert.equal(image.alt,lang==='es'?'Cámara 360° sobre un trípode en el fondo marino':'360° camera mounted on a tripod on the seabed');
+   assert.equal(image.srcset,'/assets/technology/camera-tripod-20260914-640.webp 640w, /assets/technology/camera-tripod-20260914-960.webp 960w');
+  }
+  for(const candidate of image.srcset.split(',').filter(Boolean))assert(fs.existsSync(path.join(root,'dist',candidate.trim().split(' ')[0])),'Responsive gallery image must be published');
  }
  vm.runInContext("showEquipment('map')",context);
  for(const view of ['relief','satellite','perspective']){
@@ -39,4 +45,5 @@ for(const lang of ['es','en']){
  assert(html.includes(`<h3 id="equipment-title">${expected.map[lang==='en'?1:0]}</h3>`),'Initial static caption matches the dynamic gallery');
 }
 assert(source.includes('showEquipment(gallery.dataset.equipment)'),'Language refresh must use the selected tool');
+for(const width of [640,960])assert(!fs.existsSync(path.join(root,`dist/assets/technology/camera-${width}.webp`)),'Replaced illustration stays out of the deployment');
 console.log('PASS five benefit captions and three original map views, EN/ES, published images and selection persistence.');

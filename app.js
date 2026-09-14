@@ -50,7 +50,7 @@ updateNavigation();
 const equipmentPhotos={
  map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
  sonar:{image:'sonar-960.webp',alt:'Ilustración de un sonar en una embarcación',benefit:'Detectar antes de ver',description:'Detectamos estructuras y objetivos, incluso con poca visibilidad.'},
- camera:{image:'camera-960.webp',alt:'Ilustración de un submarinista con cámara 360°',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
+ camera:{image:'camera-tripod-20260914-960.webp',alt:'Cámara 360° sobre un trípode en el fondo marino',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
  scooter:{image:'scooter-960.webp',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'},
  mask:{image:'mask-960.webp',alt:'Ilustración de una máscara integral con comunicación en uso',benefit:'Conectados, más seguros',description:'Coordinamos al equipo mediante comunicación bajo el agua.'}
 };
@@ -69,7 +69,7 @@ function showMapView(key){
 function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
  gallery.dataset.equipment=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);
- equipmentImage.srcset=key==='map'?'':'/assets/technology/'+key+'-640.webp 640w, /assets/technology/'+key+'-960.webp 960w';
+ equipmentImage.srcset=key==='map'?'':'/assets/technology/'+item.image.replace('-960.webp','-640.webp')+' 640w, /assets/technology/'+item.image+' 960w';
  equipmentImage.sizes='(max-width:760px) 88vw, 54vw';
  mapViews.hidden=key!=='map';
  if(key==='map')showMapView(selectedMapView);

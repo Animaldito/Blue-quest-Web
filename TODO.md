@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Incorporar la fotografía original de la cámara 360° sobre trípode con encuadre homogéneo, sin añadir elementos.
+
 - [x] Corregir el apellido de Andreu a Ferreres en EN/ES y en el texto alternativo de su fotografía.
 
 - [x] Sustituir las fotos de Aida y Andreu y actualizar el perfil de Cristina a Desarrollo de negocio en EN/ES.

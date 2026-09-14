@@ -115,7 +115,7 @@
  "RAA ATOLL / Destino visitado.":"RAA ATOLL / Visited destination.",
  "Selecciona una herramienta":"Choose a tool",
  "Ilustración de un sonar en una embarcación":"Illustration of sonar on a boat",
- "Ilustración de un submarinista con cámara 360°":"Illustration of a diver with a 360° camera",
+ "Cámara 360° sobre un trípode en el fondo marino":"360° camera mounted on a tripod on the seabed",
  "Ilustración de un submarinista en sidemount con propulsor":"Illustration of a sidemount diver using an underwater scooter",
  "Ilustración de una máscara integral con comunicación en uso":"Illustration of a full-face communications mask in use",
  "Dirige las operaciones de campo, la planificación de inmersiones y la coordinación de seguridad y apoyo de superficie.":"Leads field operations, dive planning and the coordination of safety and surface support.",

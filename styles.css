@@ -5,6 +5,8 @@
 /* Blue Quest: one shared system for services, evidence and contact. */
 /* Restore the three original map views within the shared photo frame. */
 .tech-gallery[data-equipment="map"] .equipment-photo img{transform:scale(1.18)}
+/* Gentle display-only correction; no reconstruction of the original scene. */
+.tech-gallery[data-equipment="camera"] .equipment-photo img{filter:brightness(1.08) contrast(1.08) saturate(1.02)}
 #map-views:not([hidden]){display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 #map-views button{min-height:44px;padding:9px 15px;font-size:14px;background:transparent;border:1px solid var(--line)}
 #map-views button[aria-pressed="true"]{border-color:var(--cyan);color:var(--cyan);background:var(--surface)}
