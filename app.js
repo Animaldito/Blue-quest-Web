@@ -51,8 +51,7 @@ const equipmentPhotos={
  map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
  sonar:{image:'sonar-960.webp',alt:'Ilustración de un sonar en una embarcación',benefit:'Detectar antes de ver',description:'Detectamos estructuras y objetivos, incluso con poca visibilidad.'},
  camera:{image:'camera-tripod-20260914-960.webp',alt:'Cámara 360° sobre un trípode en el fondo marino',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
- scooter:{image:'scooter-960.webp',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'},
- mask:{image:'mask-960.webp',alt:'Ilustración de una máscara integral con comunicación en uso',benefit:'Conectados, más seguros',description:'Coordinamos al equipo mediante comunicación bajo el agua.'}
+ scooter:{image:'scooter-960.webp',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'}
 };
 const mapPhotos={
  relief:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo'},

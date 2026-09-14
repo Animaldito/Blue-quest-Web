@@ -12,7 +12,8 @@ for(const lang of ['en','es']){
  const html=fs.readFileSync(path.join(root,'dist',lang,'index.html'),'utf8');
  assert.equal([...html.matchAll(/class="service"/g)].length,3);
  assert.equal([...html.matchAll(/class="team-card"/g)].length,4);
- assert.equal([...html.matchAll(/data-equipment="(map|sonar|camera|scooter|mask)" aria-pressed=/g)].length,5);
+ assert.equal([...html.matchAll(/data-equipment="(map|sonar|camera|scooter)" aria-pressed=/g)].length,4);
+ assert(!html.includes('data-equipment="mask"'));
  assert(html.includes('id="metodo"')&&html.includes('id="contact-form"'));
  const shortcuts=html.match(/<nav aria-label="(?:Accesos de exploración|Exploration shortcuts)">([\s\S]*?)<\/nav>/)[1];
  assert(!shortcuts.includes('#metodo'),'The method shortcut opens its complete parent section');

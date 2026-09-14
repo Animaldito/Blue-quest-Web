@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Ocultar la máscara integral en Tecnología y dejar cuatro herramientas en EN/ES.
+
 - [x] Incorporar la fotografía original de la cámara 360° sobre trípode con encuadre homogéneo, sin añadir elementos.
 
 - [x] Corregir el apellido de Andreu a Ferreres en EN/ES y en el texto alternativo de su fotografía.

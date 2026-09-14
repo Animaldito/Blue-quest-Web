@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-09-14 — Tecnología con cuatro herramientas
+
+- Ocultada la máscara con comunicación en español e inglés. Se mantienen batimetría, sonar, cámaras 360° y scooters.
+- Menú móvil equilibrado en dos filas de dos botones. Las fotos de la máscara permanecen en el repositorio, fuera del despliegue, para poder recuperarlas.
+- Punto previo: checkpoint/20260914-093039700-antes-ocultar-mascara.
+
 ## 2026-09-14 — Fotografía real de cámara 360°
 
 - Sustituida la ilustración por la fotografía facilitada de una cámara sobre trípode en el fondo marino, en EN/ES.

@@ -6,8 +6,7 @@ const expected={
  map:['Saber dónde buscar','Know where to look'],
  sonar:['Detectar antes de ver','Detect before you see'],
  camera:['Cada ángulo cuenta','Every angle matters'],
- scooter:['Más alcance, menos esfuerzo','Go further with less effort'],
- mask:['Conectados, más seguros','Stay connected. Dive safer.']
+ scooter:['Más alcance, menos esfuerzo','Go further with less effort']
 };
 for(const lang of ['es','en']){
  const gallery={dataset:{}},image={},caption={},description={},views={},buttons=Object.keys(expected).map(equipment=>({dataset:{equipment},setAttribute(name,value){this[name]=value;}}));
@@ -42,8 +41,13 @@ for(const lang of ['es','en']){
   assert.equal(image.src,selectedImage,'Keep the selected map across tool/language refresh');
  }
  const html=fs.readFileSync(path.join(root,lang==='es'?'es/index.html':'index.html'),'utf8');
+ assert.equal([...html.matchAll(/<button[^>]*data-equipment=/g)].length,4,'Exactly four selectable tools');
+ assert(!html.includes('data-equipment="mask"'),'Communication mask is not selectable');
  assert(html.includes(`<h3 id="equipment-title">${expected.map[lang==='en'?1:0]}</h3>`),'Initial static caption matches the dynamic gallery');
 }
 assert(source.includes('showEquipment(gallery.dataset.equipment)'),'Language refresh must use the selected tool');
 for(const width of [640,960])assert(!fs.existsSync(path.join(root,`dist/assets/technology/camera-${width}.webp`)),'Replaced illustration stays out of the deployment');
-console.log('PASS five benefit captions and three original map views, EN/ES, published images and selection persistence.');
+for(const width of [640,960])assert(!fs.existsSync(path.join(root,`dist/assets/technology/mask-${width}.webp`)),'Hidden mask images stay out of the deployment');
+assert(!source.includes("mask-960.webp"));
+assert(fs.readFileSync(path.join(root,'styles.css'),'utf8').includes('.equipment button:last-child:nth-child(odd){grid-column:1/-1}'),'Four tools form an even 2-by-2 mobile grid');
+console.log('PASS four tools, hidden communication mask, three original map views, EN/ES and responsive assets.');
