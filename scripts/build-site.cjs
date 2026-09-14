@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'dist');
 const {manifest,publicImages}=require('./images.cjs');
 const galleryImages=Object.fromEntries(Object.entries(publicImages).filter(([id])=>id.startsWith('map-')||['camera','sonar','scooter'].includes(id)));
 fs.writeFileSync(path.join(root,'image-assets.js'),'window.BQImages='+JSON.stringify(galleryImages)+';\n');
-const files=['index.html','aviso-legal.html','privacidad.html','styles.css','language.css','legal.css','language.js','translations.js','app.js','image-assets.js','contact.js','world.js','favicon.svg','robots.txt','sitemap.xml'];
+const files=['index.html','aviso-legal.html','privacidad.html','styles.css','language.css','legal.css','language.js','translations.js','app.js','image-assets.js','contact.js','world.js','favicon.svg','bqlogo.png','robots.txt','sitemap.xml'];
 for(const lang of ['en','es'])for(const file of ['index.html','aviso-legal.html','privacidad.html'])files.push(lang+'/'+file);
 files.push('field-log.js','field-log.css');
 for(const item of Object.values(manifest))for(const variant of item.variants)files.push(variant.avif.file,variant.fallback.file);

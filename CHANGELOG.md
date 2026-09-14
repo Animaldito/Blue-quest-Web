@@ -1,5 +1,9 @@
 # Registro de cambios
 
+## 2026-09-14 — Logo público para firmas de correo
+
+- Añadido bqlogo.png a la lista explícita de archivos publicados para poder enlazar el logo desde las firmas de correo, sin incorporarlo como adjunto. Diseño y contenido de la web conservados.
+
 ## 2026-09-14 — Bitácora sin la nota de estado repetida
 
 - Eliminada la línea inferior de destino y estado en ambos idiomas, junto con su actualización y estilos. Se conservan los estados de la lista y de las fichas, la selección de destinos y la descripción accesible del globo.

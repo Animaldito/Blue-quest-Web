@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Publicar bqlogo.png como recurso independiente para las firmas de correo.
+
 - [x] Quitar la línea redundante de destino/estado bajo la bitácora en EN/ES.
 
 - [x] Corregir los recortes de los retratos y de la embarcación, protegiendo los rostros también en ventanas anchas y bajas.
