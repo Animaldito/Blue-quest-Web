@@ -23,6 +23,11 @@ for(const lang of ['es','en']){
  for(const person of ['miguel','cristina'])assert(section.includes(publicImages[person].src));
 }
 const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
+assert(css.includes('picture[data-photo="miguel"] img{object-position:50% 0%}'),'Protect the top of Miguel’s head');
+assert(css.includes('picture[data-photo="cristina"] img{object-position:50% 8%}'),'Keep headroom above Cristina');
 assert(css.includes('img.team-image-aida{object-position:50% 10%}'));
 assert(css.includes('img.team-image-andreu{object-position:50% 18%}'));
+assert(css.includes('.team-photo{height:auto;min-height:clamp(95px,17dvh,200px);aspect-ratio:2/1}'),'Wide desktop frames must not crop the portraits into strips');
+assert(css.includes('picture[data-photo="boat"] img{object-position:50% 18%}'),'Keep the crew’s heads in the boat photograph');
+assert(css.includes('min-height:clamp(56px,10dvh,110px);aspect-ratio:4/1}'),'Keep sufficient height for the boat crew');
 console.log('PASS original replacement photos, preserved team layout and Cristina’s updated bilingual profile.');

@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-14 — Encuadres que conservan los rostros
+
+- Reencuadrados Miguel, Cristina y el equipo de la embarcación mediante posiciones individuales, sin modificar los archivos de imagen ni perder la optimización.
+- Limitado el formato panorámico en escritorio a 2:1 para retratos y 4:1 para servicios cuando la ventana es ancha y baja. Las columnas y tamaños móviles se conservan; los marcos de cada grupo siguen siendo iguales.
+- Comparación con la versión previa a la compresión y revisión en escritorio, portátil, tableta y móvil. Añadidas comprobaciones para proteger estos encuadres.
+- Punto previo: checkpoint/20260914-104911207-antes-corregir-encuadres.
+
 ## 2026-09-14 — Optimización de todas las fotografías
 
 - Preparadas versiones adaptativas de las 14 fotos visibles, con AVIF de alta calidad y alternativas WebP/JPEG para navegadores antiguos. Originales, proporciones, encuadres y resolución máxima conservados.

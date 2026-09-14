@@ -1,7 +1,10 @@
 @import url('fonts/fonts.css');
 /* Original team photos; responsive framing without altering the photographs. */
+.team-photo picture[data-photo="miguel"] img{object-position:50% 0%}
+.team-photo picture[data-photo="cristina"] img{object-position:50% 8%}
 .team-photo img.team-image-aida{object-position:50% 10%}
 .team-photo img.team-image-andreu{object-position:50% 18%}
+.service-photo picture[data-photo="boat"] img{object-position:50% 18%}
 /* Blue Quest: one shared system for services, evidence and contact. */
 /* Restore the three original map views within the shared photo frame. */
 .tech-gallery[data-equipment="map"] .equipment-photo img{transform:scale(1.18)}
@@ -125,7 +128,7 @@ footer{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:35px 6%;b
  .section{padding:18px 3%}
  .section-heading{gap:16px;margin-bottom:16px}
  .service,.service:last-child{padding:12px}
- .service-photo,.service:last-child .service-photo{height:46px}
+ .service-photo,.service:last-child .service-photo{height:52px}
  .service h3{font-size:26px}
  .service p,.service li{line-height:1.4}
  .method-block{padding-top:16px}
@@ -133,5 +136,10 @@ footer{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:35px 6%;b
  .method-grid{gap:12px}
  .method-grid p{font-size:13.5px;line-height:1.4}
  .destination{padding:9px 12px}
+}
+/* Keep faces inside wide desktop frames instead of squeezing photos into strips. */
+@media(min-width:1200px) and (min-height:640px){
+ .team-photo{height:auto;min-height:clamp(95px,17dvh,200px);aspect-ratio:2/1}
+ .service-photo,.service:last-child .service-photo{height:auto;min-height:clamp(56px,10dvh,110px);aspect-ratio:4/1}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none!important}*,*::before,*::after{animation:none!important;transition:none!important}.quest-sonar{display:none}}
