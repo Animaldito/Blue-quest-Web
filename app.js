@@ -48,28 +48,34 @@ addEventListener('resize',updateNavigation);
 updateNavigation();
 
 const equipmentPhotos={
- map:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
- sonar:{image:'sonar-960.webp',alt:'Ilustración de un sonar en una embarcación',benefit:'Detectar antes de ver',description:'Detectamos estructuras y objetivos, incluso con poca visibilidad.'},
- camera:{image:'camera-tripod-20260914-960.webp',alt:'Cámara 360° sobre un trípode en el fondo marino',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
- scooter:{image:'scooter-960.webp',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'}
+ map:{photo:'map-relief',alt:'Relieve sombreado con sondas, referencias y detalles del fondo',benefit:'Saber dónde buscar',description:'Estudiamos el relieve y la profundidad para localizar zonas de interés.'},
+ sonar:{photo:'sonar',alt:'Ilustración de un sonar en una embarcación',benefit:'Detectar antes de ver',description:'Detectamos estructuras y objetivos, incluso con poca visibilidad.'},
+ camera:{photo:'camera',alt:'Cámara 360° sobre un trípode en el fondo marino',benefit:'Cada ángulo cuenta',description:'Documentamos las inmersiones con imágenes y recorridos de 360°.'},
+ scooter:{photo:'scooter',alt:'Ilustración de un submarinista en sidemount con propulsor',benefit:'Más alcance, menos esfuerzo',description:'Ampliamos el alcance de las exploraciones con propulsión subacuática.'}
 };
 const mapPhotos={
- relief:{image:'map-relief.jpg',alt:'Relieve sombreado con sondas, referencias y detalles del fondo'},
- satellite:{image:'map-satellite.jpg',alt:'Imagen de satélite con información de la carta náutica.'},
- perspective:{image:'map-perspective.jpg',alt:'Vista cartográfica en sonar.'}
+ relief:{photo:'map-relief',alt:'Relieve sombreado con sondas, referencias y detalles del fondo'},
+ satellite:{photo:'map-satellite',alt:'Imagen de satélite con información de la carta náutica.'},
+ perspective:{photo:'map-perspective',alt:'Vista cartográfica en sonar.'}
 };
 let selectedMapView='relief';
-const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image'),mapViews=document.querySelector('#map-views');
+const gallery=document.querySelector('.tech-gallery'),equipmentImage=document.querySelector('#equipment-image'),equipmentAvif=document.querySelector('#equipment-avif'),mapViews=document.querySelector('#map-views');
+function showPhoto(item){
+ const photo=window.BQImages[item.photo];if(!photo)return;
+ equipmentAvif.sizes=photo.sizes;equipmentAvif.srcset=photo.avif;
+ equipmentImage.sizes=photo.sizes;equipmentImage.srcset=photo.srcset;
+ equipmentImage.src=photo.src;equipmentImage.alt=t(item.alt);
+ equipmentImage.width=photo.width;equipmentImage.height=photo.height;
+}
 function showMapView(key){
  const item=mapPhotos[key];if(!item)return;
- selectedMapView=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);equipmentImage.srcset='';
+ selectedMapView=key;showPhoto(item);
  document.querySelectorAll('[data-map]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.map===key)));
 }
 function showEquipment(key){
  const item=equipmentPhotos[key];if(!item)return;
- gallery.dataset.equipment=key;equipmentImage.src='/assets/technology/'+item.image;equipmentImage.alt=t(item.alt);
- equipmentImage.srcset=key==='map'?'':'/assets/technology/'+item.image.replace('-960.webp','-640.webp')+' 640w, /assets/technology/'+item.image+' 960w';
- equipmentImage.sizes='(max-width:760px) 88vw, 54vw';
+ gallery.dataset.equipment=key;
+ if(key!=='map')showPhoto(item);
  mapViews.hidden=key!=='map';
  if(key==='map')showMapView(selectedMapView);
  document.querySelector('#equipment-title').textContent=t(item.benefit);

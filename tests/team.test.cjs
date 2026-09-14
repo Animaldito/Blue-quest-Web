@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
+const {publicImages}=require('../scripts/images.cjs');
 for(const lang of ['es','en']){
  const html=fs.readFileSync(path.join(root,lang,'index.html'),'utf8');
  const section=html.match(/<section id="equipo"[\s\S]*?<\/section>/)[0];
@@ -13,14 +14,13 @@ for(const lang of ['es','en']){
  assert(cristina.includes(lang==='es'?'Convierte la necesidad del cliente en un proyecto viable. Define alcance, presupuesto y plazos, coordina proveedores y conecta cada misión con el equipo adecuado.':'Turns client needs into viable projects. Defines scope, budgets and timelines, coordinates suppliers and connects each mission with the right team.'));
  assert(!/GESTIÓN DE PROYECTOS|PROJECT MANAGEMENT|IT specialist|Relaciones públicas/.test(cristina));
  for(const person of ['aida','andreu']){
-  assert(section.includes(`/assets/team/${person}-20260914.jpg`));
+  assert(section.includes(publicImages[person].src));
   assert(!section.includes(`${person}-profile.webp`));
-  const original=fs.readFileSync(path.join(root,`assets/team/${person}-20260914.jpg`));
-  const published=fs.readFileSync(path.join(root,`dist/assets/team/${person}-20260914.jpg`));
-  assert.deepEqual(published,original,'Publish the original photo without image alterations');
+  assert(fs.existsSync(path.join(root,`assets/team/${person}-20260914.jpg`)),'Keep the original master');
+  assert(fs.existsSync(path.join(root,'dist',publicImages[person].src)),'Publish the responsive photo');
   assert(!fs.existsSync(path.join(root,`dist/assets/team/${person}-profile.webp`)));
  }
- for(const person of ['miguel','cristina'])assert(section.includes(`/assets/team/${person}-profile.webp`));
+ for(const person of ['miguel','cristina'])assert(section.includes(publicImages[person].src));
 }
 const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
 assert(css.includes('img.team-image-aida{object-position:50% 10%}'));

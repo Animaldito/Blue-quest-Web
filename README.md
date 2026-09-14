@@ -6,7 +6,7 @@ Sitio de exploración y consultoría subacuática para resorts y centros de buce
 3. Editar content/es/*.html y translations.js. No editar los HTML generados.
 4. Ejecutar node scripts/build-site.cjs y las pruebas de tests/.
 5. Revisar móvil y escritorio en ambos idiomas. Guardar un commit y sincronizar con git push --follow-tags origin main.
-Vercel publica únicamente dist/ (50 archivos previstos, incluidas las licencias tipográficas). El script rechaza archivos inesperados en esa carpeta: no colocar notas ni fuentes internas dentro. Las funciones de api/ se despliegan aparte, no como archivos estáticos. El repositorio de GitHub sigue siendo público: los expedientes, investigación y datos privados deben conservarse fuera de él.
+Vercel publica únicamente dist/, mediante una lista de archivos permitidos que incluye las variantes de imagen y licencias tipográficas. El script rechaza archivos inesperados en esa carpeta: no colocar notas ni fuentes internas dentro. Las funciones de api/ se despliegan aparte, no como archivos estáticos. El repositorio de GitHub sigue siendo público: los expedientes, investigación y datos privados deben conservarse fuera de él.
 ## Idiomas
 Las direcciones estables son /en/ y /es/, incluidas las páginas legales. La raíz sigue seleccionando español para los 21 países/territorios hispanohablantes configurados y entrega inglés en el resto. Las antiguas direcciones y ?lang=en siguen siendo compatibles. Los enlaces manuales llevan a /en/ o /es/ sin guardar cookies ni preferencias en el navegador.
 El selector conserva campos, equipo seleccionado, anclas e historial. Sitemap, canonical y hreflang usan las direcciones estables; la raíz es la alternativa automática.
@@ -15,6 +15,12 @@ En escritorio (desde 1024 × 640 px), cada sección tiene una altura mínima de 
 styles.css contiene un único sistema de colores, espaciado, tarjetas y puntos de adaptación. Se conserva azul/turquesa, anagrama blanco e intro repetible. En móvil, el menú de 76 px se despliega con un botón. Sin JavaScript los enlaces permanecen visibles. Los controles de tecnología preceden a la imagen, y el equipo mantiene cuatro columnas grandes, dos intermedias y una en móvil.
 La portada da prioridad al contacto. Servicios y método explican el alcance sin inventar resultados. El ejemplo de entregable se ha retirado. Tu destino sigue desactivado; no se carga su catálogo.
 ## Fotografías y evidencias
+Las 14 fotografías visibles usan versiones adaptativas AVIF y alternativas WebP/JPEG. Cada navegador descarga una sola variante por imagen, según el espacio y la densidad de píxeles. La portada tiene prioridad de carga; las imágenes inferiores conservan carga diferida. Los nombres incluyen una huella del contenido para usar caché prolongada sin mostrar versiones antiguas tras un cambio.
+
+Los originales no se sobrescriben. `scripts/optimize-images.cjs` prepara las variantes localmente con sharp; no requiere API ni se ejecuta en Vercel. Mantiene las proporciones y la resolución máxima, sin retoques generativos, y comprueba fidelidad de luminancia antes de escribir `scripts/image-manifest.json`. Se debe completar con revisión visual, especialmente en mapas y retratos: la compresión AVIF es con pérdida, aunque se persigue que no sea apreciable en pantalla.
+
+En `content/es/index.html`, cada fotografía lleva `data-photo` con su identificador. `scripts/images.cjs` construye los elementos picture y `scripts/build-site.cjs` genera `image-assets.js` para la galería. No editar a mano estos resultados ni publicar masters y pruebas descartadas. Para una foto nueva, actualizar el catálogo del optimizador, preparar variantes, reconstruir y ejecutar `tests/images.test.cjs` además de las pruebas habituales.
+
 Los retratos proceden de imágenes del titular previamente retocadas y ahora optimizadas. Las nuevas escenas de servicios y tecnología son ilustraciones generadas, identificadas como tales, no material de expediciones reales ni prueba de propiedad de equipos. Los originales anteriores se conservan en Git, pero los medios no utilizados no se despliegan.
 No publicar casos, clientes, certificaciones, hallazgos o permisos sin documentación y autorización. Faltan materiales propios publicables de Raa Atoll y Boa Vista.
 ## Contacto
@@ -27,6 +33,7 @@ Aviso legal y privacidad siguen enlazados al pie. No se añade analítica ni pub
 - node tests/languages.test.cjs
 - node tests/geo-language.test.cjs
 - node tests/technology.test.cjs
+- node tests/images.test.cjs
 - node tests/newsletter.test.cjs
 - node tests/contact.test.cjs
 - node tests/publication.test.cjs

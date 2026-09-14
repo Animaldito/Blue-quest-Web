@@ -9,6 +9,7 @@
 - Mantener window.BQ.t sin traducir datos del visitante. La elección vive en /en/ o /es/, sin almacenamiento. La raíz y la excepción histórica ?lang=en conservan compatibilidad. No aplicar redirecciones geográficas a recursos ni rutas de idioma. Verificar tests/geo-language.test.cjs al cambiar rutas.
 - Verificar con `node tests/languages.test.cjs` y comprobar ambas versiones en móvil/ordenador antes de publicar. «Tu destino» sigue desactivado. La newsletter está activa con un único formulario de Brevo y comunicaciones en inglés, por decisión del propietario. El formulario se abre mediante un enlace explícito en una pestaña externa; no incrustarlo ni cargar Brevo/reCAPTCHA dentro de Blue Quest. Cerrar el popup no cierra esa pestaña ni da de baja al suscriptor. No enviar campañas sin autorización.
 - No modificar imágenes, enlaces de contacto ni el diseño global sin una petición expresa.
+- Para fotografías, conservar masters y proporciones. Preparar variantes con scripts/optimize-images.cjs (sharp local, sin API), revisar calidad y usar data-photo en las fuentes HTML. scripts/image-manifest.json, image-assets.js y assets/optimized son resultados generados; no regenerar escenas para tareas de compresión. Ejecutar tests/images.test.cjs y comprobar AVIF y su alternativa. No publicar imágenes ocultas ni variantes descartadas.
 
 ## Puntos de recuperación (obligatorio antes de una mejora)
 

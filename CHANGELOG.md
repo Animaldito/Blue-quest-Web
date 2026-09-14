@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-09-14 — Optimización de todas las fotografías
+
+- Preparadas versiones adaptativas de las 14 fotos visibles, con AVIF de alta calidad y alternativas WebP/JPEG para navegadores antiguos. Originales, proporciones, encuadres y resolución máxima conservados.
+- Portada con prioridad de carga, decodificación asíncrona y carga diferida en fotos inferiores. La galería descarga solo la herramienta o vista de mapa seleccionada.
+- Caché prolongada para imágenes con nombre vinculado a su contenido; sin claves, API de imágenes ni procesamiento en el servidor.
+- Prueba móvil de 390 px y densidad 1: las nueve fotos habituales (portada, servicios, mapa inicial y equipo) pasan de 859.550 a 331.595 bytes, un 61,4 % menos. No incluye fuentes, código, transferencias HTTP ni las otras cinco vistas de tecnología, que se cargan al seleccionarlas. El ahorro varía con la pantalla, densidad de píxeles y navegador.
+- A resolución máxima, las 14 fotos pasan de 1.621.618 a 1.336.268 bytes en AVIF (17,6 % menos), sin contar las variantes alternativas que no se descargan simultáneamente.
+- Punto previo: checkpoint/20260914-100023298-antes-optimizar-fotografias.
+
 ## 2026-09-14 — Tecnología con cuatro herramientas
 
 - Ocultada la máscara con comunicación en español e inglés. Se mantienen batimetría, sonar, cámaras 360° y scooters.

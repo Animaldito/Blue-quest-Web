@@ -1,0 +1,674 @@
+{
+  "hero": {
+    "width": 1672,
+    "height": 940,
+    "sizes": "(max-width:760px) max(100vw, 1400px), max(calc(100vw - 146px), 178vh)",
+    "variants": [
+      {
+        "width": 960,
+        "height": 540,
+        "avif": {
+          "file": "assets/optimized/hero-960-6f176cd00974.avif",
+          "bytes": 87266
+        },
+        "fallback": {
+          "file": "assets/optimized/hero-960-7acb99d28927.webp",
+          "bytes": 105406
+        },
+        "ssim": 0.986956,
+        "quality": 76
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "avif": {
+          "file": "assets/optimized/hero-1280-71eafbc9fdbd.avif",
+          "bytes": 104712
+        },
+        "fallback": {
+          "file": "assets/optimized/hero-1280-fcc787c5bb68.webp",
+          "bytes": 153664
+        },
+        "ssim": 0.98634,
+        "quality": 68
+      },
+      {
+        "width": 1672,
+        "height": 940,
+        "avif": {
+          "file": "assets/optimized/hero-1672-eefc1fd2dcb7.avif",
+          "bytes": 173891
+        },
+        "fallback": {
+          "file": "assets/optimized/hero-1672-f8fa18a04713.webp",
+          "bytes": 242428
+        },
+        "ssim": 0.988885,
+        "quality": 68
+      }
+    ]
+  },
+  "resort": {
+    "width": 800,
+    "height": 533,
+    "sizes": "(max-width:760px) calc(88vw - 44px), (max-width:1023px) 40vw, 28vw",
+    "variants": [
+      {
+        "width": 320,
+        "height": 213,
+        "avif": {
+          "file": "assets/optimized/resort-320-e51bc2dbb875.avif",
+          "bytes": 20869
+        },
+        "fallback": {
+          "file": "assets/optimized/resort-320-200b3626d75f.webp",
+          "bytes": 30852
+        },
+        "ssim": 0.986155,
+        "quality": 68
+      },
+      {
+        "width": 480,
+        "height": 320,
+        "avif": {
+          "file": "assets/optimized/resort-480-9d1049c4d354.avif",
+          "bytes": 40412
+        },
+        "fallback": {
+          "file": "assets/optimized/resort-480-75f1a0bf70c6.webp",
+          "bytes": 50644
+        },
+        "ssim": 0.986309,
+        "quality": 68
+      },
+      {
+        "width": 800,
+        "height": 533,
+        "avif": {
+          "file": "assets/optimized/resort-800-c6dc17738775.avif",
+          "bytes": 107287
+        },
+        "fallback": {
+          "file": "assets/optimized/resort-800-d128d4b002dd.webp",
+          "bytes": 121922
+        },
+        "ssim": 0.989046,
+        "quality": 68
+      }
+    ]
+  },
+  "boat": {
+    "width": 800,
+    "height": 533,
+    "sizes": "(max-width:760px) calc(88vw - 44px), (max-width:1023px) 40vw, 28vw",
+    "variants": [
+      {
+        "width": 320,
+        "height": 213,
+        "avif": {
+          "file": "assets/optimized/boat-320-917a6b4d270f.avif",
+          "bytes": 16613
+        },
+        "fallback": {
+          "file": "assets/optimized/boat-320-625b125fe34e.webp",
+          "bytes": 23324
+        },
+        "ssim": 0.986378,
+        "quality": 72
+      },
+      {
+        "width": 480,
+        "height": 320,
+        "avif": {
+          "file": "assets/optimized/boat-480-a3276adbacc1.avif",
+          "bytes": 30516
+        },
+        "fallback": {
+          "file": "assets/optimized/boat-480-f7eb699f1eb9.webp",
+          "bytes": 33876
+        },
+        "ssim": 0.987059,
+        "quality": 72
+      },
+      {
+        "width": 800,
+        "height": 533,
+        "avif": {
+          "file": "assets/optimized/boat-800-aa9eccb7649f.avif",
+          "bytes": 61920
+        },
+        "fallback": {
+          "file": "assets/optimized/boat-800-f554dbbc05b0.webp",
+          "bytes": 66182
+        },
+        "ssim": 0.989131,
+        "quality": 68
+      }
+    ]
+  },
+  "wreck": {
+    "width": 800,
+    "height": 533,
+    "sizes": "(max-width:760px) calc(88vw - 44px), (max-width:1023px) 40vw, 28vw",
+    "variants": [
+      {
+        "width": 320,
+        "height": 213,
+        "avif": {
+          "file": "assets/optimized/wreck-320-a0bfa8729d66.avif",
+          "bytes": 19244
+        },
+        "fallback": {
+          "file": "assets/optimized/wreck-320-995de3615535.webp",
+          "bytes": 23282
+        },
+        "ssim": 0.986132,
+        "quality": 76
+      },
+      {
+        "width": 480,
+        "height": 320,
+        "avif": {
+          "file": "assets/optimized/wreck-480-910bb68385dd.avif",
+          "bytes": 37900
+        },
+        "fallback": {
+          "file": "assets/optimized/wreck-480-606f993a7574.webp",
+          "bytes": 36566
+        },
+        "ssim": 0.985879,
+        "quality": 76
+      },
+      {
+        "width": 800,
+        "height": 533,
+        "avif": {
+          "file": "assets/optimized/wreck-800-2bf0ef63445b.avif",
+          "bytes": 84351
+        },
+        "fallback": {
+          "file": "assets/optimized/wreck-800-9ab25acb548a.webp",
+          "bytes": 90444
+        },
+        "ssim": 0.987125,
+        "quality": 68
+      }
+    ]
+  },
+  "miguel": {
+    "width": 640,
+    "height": 480,
+    "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 24vw",
+    "variants": [
+      {
+        "width": 160,
+        "height": 120,
+        "avif": {
+          "file": "assets/optimized/miguel-160-32231860bad8.avif",
+          "bytes": 3902
+        },
+        "fallback": {
+          "file": "assets/optimized/miguel-160-4b03ba16d91e.webp",
+          "bytes": 5722
+        },
+        "ssim": 0.9912,
+        "quality": 68
+      },
+      {
+        "width": 320,
+        "height": 240,
+        "avif": {
+          "file": "assets/optimized/miguel-320-5d4aa9947d18.avif",
+          "bytes": 9182
+        },
+        "fallback": {
+          "file": "assets/optimized/miguel-320-59644041678f.webp",
+          "bytes": 12992
+        },
+        "ssim": 0.989423,
+        "quality": 68
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "avif": {
+          "file": "assets/optimized/miguel-640-1175182fe66a.avif",
+          "bytes": 21574
+        },
+        "fallback": {
+          "file": "assets/optimized/miguel-640-ea7fed8de45d.webp",
+          "bytes": 22568
+        },
+        "ssim": 0.991,
+        "quality": 68
+      }
+    ]
+  },
+  "cristina": {
+    "width": 640,
+    "height": 480,
+    "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 24vw",
+    "variants": [
+      {
+        "width": 160,
+        "height": 120,
+        "avif": {
+          "file": "assets/optimized/cristina-160-1f9d550606dc.avif",
+          "bytes": 5825
+        },
+        "fallback": {
+          "file": "assets/optimized/cristina-160-da626f9d2ff5.webp",
+          "bytes": 8038
+        },
+        "ssim": 0.987023,
+        "quality": 72
+      },
+      {
+        "width": 320,
+        "height": 240,
+        "avif": {
+          "file": "assets/optimized/cristina-320-b1807b247c72.avif",
+          "bytes": 15140
+        },
+        "fallback": {
+          "file": "assets/optimized/cristina-320-ef28eac02fc1.webp",
+          "bytes": 22698
+        },
+        "ssim": 0.985388,
+        "quality": 68
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "avif": {
+          "file": "assets/optimized/cristina-640-be4205e9bc4a.avif",
+          "bytes": 39317
+        },
+        "fallback": {
+          "file": "assets/optimized/cristina-640-b494392a9c91.webp",
+          "bytes": 44440
+        },
+        "ssim": 0.990232,
+        "quality": 68
+      }
+    ]
+  },
+  "aida": {
+    "width": 1196,
+    "height": 1593,
+    "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 24vw",
+    "variants": [
+      {
+        "width": 160,
+        "height": 213,
+        "avif": {
+          "file": "assets/optimized/aida-160-bdb6af3a07ab.avif",
+          "bytes": 8037
+        },
+        "fallback": {
+          "file": "assets/optimized/aida-160-0a59ba2ed4ba.webp",
+          "bytes": 11848
+        },
+        "ssim": 0.985413,
+        "quality": 68
+      },
+      {
+        "width": 320,
+        "height": 426,
+        "avif": {
+          "file": "assets/optimized/aida-320-91fda16dedfc.avif",
+          "bytes": 22527
+        },
+        "fallback": {
+          "file": "assets/optimized/aida-320-29761082fbe5.webp",
+          "bytes": 33026
+        },
+        "ssim": 0.986575,
+        "quality": 68
+      },
+      {
+        "width": 640,
+        "height": 852,
+        "avif": {
+          "file": "assets/optimized/aida-640-14688cee7fff.avif",
+          "bytes": 58340
+        },
+        "fallback": {
+          "file": "assets/optimized/aida-640-99f5d3c82180.webp",
+          "bytes": 88482
+        },
+        "ssim": 0.988207,
+        "quality": 68
+      },
+      {
+        "width": 1196,
+        "height": 1593,
+        "avif": {
+          "file": "assets/optimized/aida-1196-ff5b7c944b6a.avif",
+          "bytes": 129697
+        },
+        "fallback": {
+          "file": "assets/optimized/aida-1196-cde4c1112831.jpg",
+          "bytes": 178660
+        },
+        "ssim": 0.992749,
+        "quality": 68
+      }
+    ]
+  },
+  "andreu": {
+    "width": 1199,
+    "height": 1191,
+    "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 24vw",
+    "variants": [
+      {
+        "width": 160,
+        "height": 159,
+        "avif": {
+          "file": "assets/optimized/andreu-160-0e4491a9cee1.avif",
+          "bytes": 4105
+        },
+        "fallback": {
+          "file": "assets/optimized/andreu-160-2fd49f7fe0e5.webp",
+          "bytes": 5888
+        },
+        "ssim": 0.986602,
+        "quality": 68
+      },
+      {
+        "width": 320,
+        "height": 318,
+        "avif": {
+          "file": "assets/optimized/andreu-320-aed978a1963a.avif",
+          "bytes": 11127
+        },
+        "fallback": {
+          "file": "assets/optimized/andreu-320-9371046da8dc.webp",
+          "bytes": 16084
+        },
+        "ssim": 0.986875,
+        "quality": 68
+      },
+      {
+        "width": 640,
+        "height": 636,
+        "avif": {
+          "file": "assets/optimized/andreu-640-d5b2834cf0f7.avif",
+          "bytes": 33482
+        },
+        "fallback": {
+          "file": "assets/optimized/andreu-640-83d22195be90.webp",
+          "bytes": 49330
+        },
+        "ssim": 0.986972,
+        "quality": 68
+      },
+      {
+        "width": 1199,
+        "height": 1191,
+        "avif": {
+          "file": "assets/optimized/andreu-1199-a5ea3d98076b.avif",
+          "bytes": 83277
+        },
+        "fallback": {
+          "file": "assets/optimized/andreu-1199-cb1f2b6b40fe.jpg",
+          "bytes": 110821
+        },
+        "ssim": 0.993737,
+        "quality": 68
+      }
+    ]
+  },
+  "map-relief": {
+    "width": 800,
+    "height": 530,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 318,
+        "avif": {
+          "file": "assets/optimized/map-relief-480-b7284f2d1ee2.avif",
+          "bytes": 79109
+        },
+        "fallback": {
+          "file": "assets/optimized/map-relief-480-1b94dc6bb2cb.webp",
+          "bytes": 66042
+        },
+        "ssim": 0.99433,
+        "quality": 90
+      },
+      {
+        "width": 800,
+        "height": 530,
+        "avif": {
+          "file": "assets/optimized/map-relief-800-26e97197f753.avif",
+          "bytes": 118044
+        },
+        "fallback": {
+          "file": "assets/optimized/map-relief-800-c3dbd2504832.jpg",
+          "bytes": 139547
+        },
+        "ssim": 0.99334,
+        "quality": 74
+      }
+    ]
+  },
+  "map-satellite": {
+    "width": 800,
+    "height": 530,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 318,
+        "avif": {
+          "file": "assets/optimized/map-satellite-480-39052142bab1.avif",
+          "bytes": 76627
+        },
+        "fallback": {
+          "file": "assets/optimized/map-satellite-480-54b4b47dfdf8.webp",
+          "bytes": 86022
+        },
+        "ssim": 0.994055,
+        "quality": 82
+      },
+      {
+        "width": 800,
+        "height": 530,
+        "avif": {
+          "file": "assets/optimized/map-satellite-800-3665bd603757.avif",
+          "bytes": 152565
+        },
+        "fallback": {
+          "file": "assets/optimized/map-satellite-800-20ec452078a9.jpg",
+          "bytes": 184892
+        },
+        "ssim": 0.996048,
+        "quality": 74
+      }
+    ]
+  },
+  "map-perspective": {
+    "width": 800,
+    "height": 530,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 318,
+        "avif": {
+          "file": "assets/optimized/map-perspective-480-3c77530a5fde.avif",
+          "bytes": 69718
+        },
+        "fallback": {
+          "file": "assets/optimized/map-perspective-480-a1ec9535aad1.webp",
+          "bytes": 78664
+        },
+        "ssim": 0.993052,
+        "quality": 82
+      },
+      {
+        "width": 800,
+        "height": 530,
+        "avif": {
+          "file": "assets/optimized/map-perspective-800-272f42de974b.avif",
+          "bytes": 131230
+        },
+        "fallback": {
+          "file": "assets/optimized/map-perspective-800-71a26c1a1ad1.jpg",
+          "bytes": 160056
+        },
+        "ssim": 0.995935,
+        "quality": 74
+      }
+    ]
+  },
+  "camera": {
+    "width": 960,
+    "height": 600,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 300,
+        "avif": {
+          "file": "assets/optimized/camera-480-a833311056a2.avif",
+          "bytes": 31992
+        },
+        "fallback": {
+          "file": "assets/optimized/camera-480-be3f847aeeac.webp",
+          "bytes": 33270
+        },
+        "ssim": 0.986422,
+        "quality": 80
+      },
+      {
+        "width": 640,
+        "height": 400,
+        "avif": {
+          "file": "assets/optimized/camera-640-ac0de5d085ce.avif",
+          "bytes": 41011
+        },
+        "fallback": {
+          "file": "assets/optimized/camera-640-53c837b9ab29.webp",
+          "bytes": 48252
+        },
+        "ssim": 0.986119,
+        "quality": 76
+      },
+      {
+        "width": 960,
+        "height": 600,
+        "avif": {
+          "file": "assets/optimized/camera-960-0c30fec82fcb.avif",
+          "bytes": 79173
+        },
+        "fallback": {
+          "file": "assets/optimized/camera-960-e1c4a3115d49.webp",
+          "bytes": 93742
+        },
+        "ssim": 0.987514,
+        "quality": 72
+      }
+    ]
+  },
+  "sonar": {
+    "width": 960,
+    "height": 640,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 320,
+        "avif": {
+          "file": "assets/optimized/sonar-480-7cac9aa2b4f1.avif",
+          "bytes": 27513
+        },
+        "fallback": {
+          "file": "assets/optimized/sonar-480-c0de6f2a277e.webp",
+          "bytes": 40474
+        },
+        "ssim": 0.986929,
+        "quality": 68
+      },
+      {
+        "width": 640,
+        "height": 427,
+        "avif": {
+          "file": "assets/optimized/sonar-640-79e5013a9995.avif",
+          "bytes": 39157
+        },
+        "fallback": {
+          "file": "assets/optimized/sonar-640-1f39413a1a5e.webp",
+          "bytes": 45278
+        },
+        "ssim": 0.987747,
+        "quality": 68
+      },
+      {
+        "width": 960,
+        "height": 640,
+        "avif": {
+          "file": "assets/optimized/sonar-960-f99576f1486d.avif",
+          "bytes": 72798
+        },
+        "fallback": {
+          "file": "assets/optimized/sonar-960-18af4af03a0d.webp",
+          "bytes": 80808
+        },
+        "ssim": 0.990814,
+        "quality": 68
+      }
+    ]
+  },
+  "scooter": {
+    "width": 960,
+    "height": 640,
+    "sizes": "(max-width:760px) 88vw, (min-width:1024px) and (min-height:640px) min(54vw, calc((100dvh - 300px)*1.6)), 54vw",
+    "variants": [
+      {
+        "width": 480,
+        "height": 320,
+        "avif": {
+          "file": "assets/optimized/scooter-480-170c230658c8.avif",
+          "bytes": 33641
+        },
+        "fallback": {
+          "file": "assets/optimized/scooter-480-1ce7258e0481.webp",
+          "bytes": 37898
+        },
+        "ssim": 0.985655,
+        "quality": 76
+      },
+      {
+        "width": 640,
+        "height": 427,
+        "avif": {
+          "file": "assets/optimized/scooter-640-0cba78faef2b.avif",
+          "bytes": 48690
+        },
+        "fallback": {
+          "file": "assets/optimized/scooter-640-40418a462dea.webp",
+          "bytes": 44068
+        },
+        "ssim": 0.987159,
+        "quality": 76
+      },
+      {
+        "width": 960,
+        "height": 640,
+        "avif": {
+          "file": "assets/optimized/scooter-960-14b57e6b8a08.avif",
+          "bytes": 81144
+        },
+        "fallback": {
+          "file": "assets/optimized/scooter-960-ace170cdb05e.webp",
+          "bytes": 85108
+        },
+        "ssim": 0.988733,
+        "quality": 68
+      }
+    ]
+  }
+}
