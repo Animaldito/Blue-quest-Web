@@ -14,6 +14,8 @@ El punto previo al cambio bilingüe del 12 de septiembre de 2026 es `checkpoint/
 
 ## Si no gusta el resultado
 
+Antes de incorporar a Natalia Zhu el 30 de septiembre de 2026 se guardó el punto local `checkpoint/20260930-152003783-antes-natalia-zhu`. La rama remota `backup/2026-09-30-before-natalia-zhu` conserva la misma versión completa, sobre `7c535c23617727793270b2a9049213254cf5f9cc`, y hay una copia ZIP local del repositorio anterior al cambio.
+
 Pedir «vuelve a la versión anterior» o indicar el cambio que se quiere deshacer. No hay que volver a generar la web.
 
 - Consultar los puntos: `node scripts/checkpoint.cjs --list`.

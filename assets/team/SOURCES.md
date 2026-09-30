@@ -1,5 +1,9 @@
 # Retratos del equipo
 
+## Natalia Zhu — 30 de septiembre de 2026
+
+Fotografía aportada por el titular para su incorporación a The Team. Original conservado en natalia-20260930.jpg; variantes AVIF/WebP adaptativas para publicación, sin retoques ni reconstrucción generativa. Se conserva la proporción original y el marco común del equipo se aplica mediante CSS.
+
 ## Fotografías activas
 
 Las versiones activas son miguel-panorama.webp, cristina-panorama.webp, aida-panorama.webp y andreu-panorama.webp: formato 3:1 (1536 × 512 px), derivado de los retratos anteriores con la herramienta integrada imagegen. Los escenarios se han ampliado mediante IA para adaptarlos a las franjas horizontales; no constituyen documentación de una localización o actividad real. Se ha solicitado preservar identidad, expresión, ropa y postura. Pendiente validación humana del parecido. Las versiones 4:3 anteriores permanecen en esta carpeta.

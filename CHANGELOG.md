@@ -1,5 +1,14 @@
 # Registro de cambios
 
+## 2026-09-30 — Natalia Zhu en The Team
+
+- Incorporada Natalia Zhu como operadora de ROV y apoyo a la prospección, con preparación del equipo, reconocimiento remoto y registro de imágenes y observaciones para la planificación de inmersiones y los informes. Perfil y descripción de la foto en español e inglés.
+- Cinco columnas en la misma fila de escritorio, conservando los marcos de fotografía y la adaptación de dos columnas intermedias y una en móvil.
+- Fotografía aportada por el titular, original conservado y variantes AVIF/WebP preparadas localmente sin retoques. El optimizador permite preparar una sola foto sin regenerar las existentes.
+- Conservadas la selección inicial por país y la prioridad del selector EN/ES.
+- Verificadas las traducciones, las imágenes, la publicación y las reglas geográficas. Revisión de los cinco perfiles en ocho tamaños de pantalla, en ambos idiomas, con marcos iguales, fotos cargadas y sin desbordamientos ni errores de JavaScript; alternativa WebP comprobada.
+- Punto previo local: checkpoint/20260930-152003783-antes-natalia-zhu. Copia remota: backup/2026-09-30-before-natalia-zhu, sobre 7c535c23617727793270b2a9049213254cf5f9cc.
+
 ## 2026-09-14 — Logo público para firmas de correo
 
 - Añadido bqlogo.png a la lista explícita de archivos publicados para poder enlazar el logo desde las firmas de correo, sin incorporarlo como adjunto. Diseño y contenido de la web conservados.

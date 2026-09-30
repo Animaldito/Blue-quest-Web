@@ -1,8 +1,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const {manifest,publicImages}=require('../scripts/images.cjs'),root=path.resolve(__dirname,'..');
-assert.equal(Object.keys(manifest).length,14,'All fourteen visible photographs have responsive variants');
+assert.equal(Object.keys(manifest).length,15,'All fifteen visible photographs have responsive variants');
 for(const [id,image] of Object.entries(manifest)){
- assert(image.variants.at(-1).avif.bytes<=image.variants.at(-1).fallback.bytes,'Full-resolution modern image must be no heavier than its fallback');
+ const largest=image.variants.at(-1);
+ if(largest.width===image.width)assert(largest.avif.bytes<=largest.fallback.bytes,'Full-resolution modern image must be no heavier than its fallback');
+ if(id==='natalia')for(const encoding of ['avif','fallback'])assert(largest[encoding].bytes<fs.statSync(path.join(root,'assets/team/natalia-20260930.jpg')).size,'Responsive portrait is smaller than its preserved master');
  let previous=0;
  for(const variant of image.variants){
   assert(variant.width>previous&&variant.width<=image.width,'Ascending sizes without artificial upscaling');previous=variant.width;
@@ -18,10 +20,10 @@ for(const [id,image] of Object.entries(manifest)){
 }
 for(const lang of ['en','es']){
  const html=fs.readFileSync(path.join(root,'dist',lang,'index.html'),'utf8');
- assert.equal([...html.matchAll(/<picture class="responsive-photo"/g)].length,9);
- assert.equal([...html.matchAll(/type="image\/avif"/g)].length,9);
- assert.equal([...html.matchAll(/decoding="async"/g)].length,9);
- assert.equal([...html.matchAll(/loading="lazy"/g)].length,8);
+ assert.equal([...html.matchAll(/<picture class="responsive-photo"/g)].length,10);
+ assert.equal([...html.matchAll(/type="image\/avif"/g)].length,10);
+ assert.equal([...html.matchAll(/decoding="async"/g)].length,10);
+ assert.equal([...html.matchAll(/loading="lazy"/g)].length,9);
  assert(html.includes('fetchpriority="high"'));
  assert(html.indexOf('src="/image-assets.js"')<html.indexOf('src="/app.js"'));
  for(const [,srcset] of html.matchAll(/srcset="([^"]*)"/g))for(const candidate of srcset.split(','))assert(fs.existsSync(path.join(root,'dist',candidate.trim().split(' ')[0])));

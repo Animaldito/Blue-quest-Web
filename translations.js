@@ -2,6 +2,11 @@
 // Proper names, contact details, URLs and project IDs are never translated.
 (function(root){
  const messages={
+ "Natalia Zhu":"Natalia Zhu",
+ "PROSPECCIÓN REMOTA Y APOYO TÉCNICO":"REMOTE SURVEYS AND TECHNICAL SUPPORT",
+ "Operadora de ROV · Apoyo a la prospección":"ROV operator · Survey support",
+ "Natalia Zhu preparando un ROV para la exploración subacuática":"Natalia Zhu preparing an ROV for underwater exploration",
+ "Prepara y opera el ROV para reconocer zonas de interés. Registra imágenes y observaciones del fondo y organiza la información que apoya la planificación de inmersiones y los informes de exploración.":"Prepares and operates the ROV to survey areas of interest. Records seabed imagery and observations, and organises information to support dive planning and exploration reports.",
  "+10":"10+",
  "/":"/",
  "Globo interactivo. Arrastra o usa las flechas para girar. Pulsa un punto para abrir su ficha, o Intro para abrir el destino seleccionado.":"Interactive globe. Drag or use the arrow keys to rotate. Select a point to open its field record, or press Enter to open the selected destination.",

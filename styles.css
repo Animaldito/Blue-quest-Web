@@ -4,6 +4,7 @@
 .team-photo picture[data-photo="cristina"] img{object-position:50% 8%}
 .team-photo img.team-image-aida{object-position:50% 10%}
 .team-photo img.team-image-andreu{object-position:50% 18%}
+.team-photo picture[data-photo="natalia"] img{object-position:50% 15%}
 .service-photo picture[data-photo="boat"] img{object-position:50% 18%}
 /* Blue Quest: one shared system for services, evidence and contact. */
 /* Restore the three original map views within the shared photo frame. */
@@ -141,4 +142,6 @@ footer{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:35px 6%;b
  .team-photo{height:auto;min-height:clamp(95px,17dvh,200px);aspect-ratio:2/1}
  .service-photo,.service:last-child .service-photo{height:auto;min-height:clamp(56px,10dvh,110px);aspect-ratio:4/1}
 }
+@media(min-width:1200px){.team-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(min-width:1200px) and (min-height:640px){.team-photo{width:calc(100% - 28px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none!important}*,*::before,*::after{animation:none!important;transition:none!important}.quest-sonar{display:none}}

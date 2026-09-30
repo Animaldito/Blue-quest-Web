@@ -12,6 +12,7 @@ const specs={
  cristina:{source:'team/cristina-profile.webp',widths:[160,320,640]},
  aida:{source:'team/aida-20260914.jpg',widths:[160,320,640,1196]},
  andreu:{source:'team/andreu-20260914.jpg',widths:[160,320,640,1199]},
+ natalia:{source:'team/natalia-20260930.jpg',widths:[160,320,640],sizes:'(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw'},
  'map-relief':{source:'technology/map-relief.jpg',widths:[480,800],map:true},
  'map-satellite':{source:'technology/map-satellite.jpg',widths:[480,800],map:true},
  'map-perspective':{source:'technology/map-perspective.jpg',widths:[480,800],map:true},
@@ -40,8 +41,10 @@ function save(id,width,ext,buffer){
  fs.writeFileSync(path.join(root,relative),buffer);return {file:relative,bytes:buffer.length};
 }
 (async()=>{
- fs.mkdirSync(out,{recursive:true});const manifest={},report=[];
- for(const [id,spec] of Object.entries(specs)){
+ const selected=process.argv.slice(2);
+ for(const id of selected)if(!specs[id])throw Error('Unknown photograph: '+id);
+ fs.mkdirSync(out,{recursive:true});const manifest=selected.length?JSON.parse(fs.readFileSync(path.join(__dirname,'image-manifest.json'),'utf8')):{},report=[];
+ for(const [id,spec] of Object.entries(specs).filter(([id])=>!selected.length||selected.includes(id))){
   const source=path.join(root,'assets',spec.source),meta=await sharp(source).metadata();
   const variants=[];
   for(const width of spec.widths){
