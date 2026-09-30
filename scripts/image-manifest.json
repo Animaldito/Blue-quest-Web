@@ -672,50 +672,50 @@
     ]
   },
   "natalia": {
-    "width": 1254,
-    "height": 1254,
+    "width": 1774,
+    "height": 887,
     "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw",
     "variants": [
       {
         "width": 160,
-        "height": 160,
+        "height": 80,
         "avif": {
-          "file": "assets/optimized/natalia-160-164522b03fe8.avif",
-          "bytes": 5554
+          "file": "assets/optimized/natalia-160-92ad3e9aaae9.avif",
+          "bytes": 2732
         },
         "fallback": {
-          "file": "assets/optimized/natalia-160-fef96e856d32.webp",
-          "bytes": 6392
+          "file": "assets/optimized/natalia-160-426f35426aef.webp",
+          "bytes": 3094
         },
         "ssim": 0.986799,
         "quality": 76
       },
       {
         "width": 320,
-        "height": 320,
+        "height": 160,
         "avif": {
-          "file": "assets/optimized/natalia-320-433b5d03689f.avif",
-          "bytes": 19614
+          "file": "assets/optimized/natalia-320-77c441ab2f5e.avif",
+          "bytes": 10400
         },
         "fallback": {
-          "file": "assets/optimized/natalia-320-1a1c43e949b4.webp",
-          "bytes": 18582
+          "file": "assets/optimized/natalia-320-c083151bf83c.webp",
+          "bytes": 9286
         },
-        "ssim": 0.987408,
+        "ssim": 0.986429,
         "quality": 84
       },
       {
         "width": 640,
-        "height": 640,
+        "height": 320,
         "avif": {
-          "file": "assets/optimized/natalia-640-f780018cd670.avif",
-          "bytes": 90810
+          "file": "assets/optimized/natalia-640-ec371470dc84.avif",
+          "bytes": 51064
         },
         "fallback": {
-          "file": "assets/optimized/natalia-640-6b001112a1fa.webp",
-          "bytes": 61286
+          "file": "assets/optimized/natalia-640-1f9629581d4a.webp",
+          "bytes": 32644
         },
-        "ssim": 0.988748,
+        "ssim": 0.986681,
         "quality": 88
       }
     ]

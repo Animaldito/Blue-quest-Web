@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-30 — Panorama aprobado y descripción de Natalia más breve
+
+- Sustituida la foto cuadrada por la panorámica 2:1 (1774 × 887 px) aprobada mediante captura del diseño real. Llena el marco común sin bandas, conservando rostro, ROV e inscripción. No se genera de nuevo la imagen aprobada.
+- Acortada su descripción en ES/EN, conservando preparación y operación del ROV, registro de imágenes y datos, y apoyo a la planificación de inmersiones e informes. Cinco columnas y selección de idioma por país sin cambios.
+- Punto previo local: checkpoint/20260930-185004222-antes-panorama-y-texto-natalia. Copia remota: backup/2026-09-30-before-natalia-panorama-and-short-bio, sobre 807e455416618f097d984fb8789dc86e93cc32c1.
+- Variantes de imagen idénticas a la propuesta aprobada. Verificadas traducciones, imágenes, equipo, reglas geográficas y lista de publicación; revisión de ocho tamaños en EN/ES con marcos iguales, rostro y ROV visibles, sin bandas, desbordamientos ni errores de JavaScript, y alternativa WebP comprobada.
+
 ## 2026-09-30 — Fotografía de Natalia aprobada en espejo
 
 - Publicada la versión aprobada en el chat, con Natalia a la izquierda, el ROV a la derecha y la inscripción CHASING M2 S corregida. Sustituye a la ampliación de pared anterior, que se conserva junto al original.

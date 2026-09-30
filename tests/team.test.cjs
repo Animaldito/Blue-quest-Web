@@ -7,6 +7,7 @@ for(const lang of ['es','en']){
  assert.equal([...section.matchAll(/class="team-card"/g)].length,5);
  assert(section.includes('<h3>Natalia Zhu</h3>'));
  assert(section.includes(publicImages.natalia.src));
+ assert(section.includes(lang==='es'?'Prepara y opera el ROV. Registra imágenes y datos del fondo para apoyar la planificación de inmersiones y los informes de exploración.':'Prepares and operates the ROV. Records seabed imagery and data to support dive planning and exploration reports.'));
  assert(section.includes(lang==='es'?'Operadora de ROV · Apoyo a la prospección':'ROV operator · Survey support'));
  assert(section.includes(lang==='es'?'Natalia Zhu preparando un ROV para la exploración subacuática':'Natalia Zhu preparing an ROV for underwater exploration'));
  assert(section.includes('<h3>Andreu Ferreres</h3>'));
@@ -27,8 +28,9 @@ for(const lang of ['es','en']){
  for(const person of ['miguel','cristina'])assert(section.includes(publicImages[person].src));
 }
 const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
-assert(css.includes('picture[data-photo="natalia"] img{object-fit:contain;object-position:50% 50%}'),'Preserve the approved square photo without cropping the face or ROV');
-assert(fs.existsSync(path.join(root,'assets/team/natalia-approved-20260930.jpg')),'Keep the approved portrait master');
+assert(css.includes('picture[data-photo="natalia"] img{object-fit:cover;object-position:50% 50%}'),'Fill the same team frame with the approved panorama, without side bands');
+assert(fs.existsSync(path.join(root,'assets/team/natalia-panorama-approved-20260930.jpg')),'Keep the approved panoramic master');
+assert.equal(publicImages.natalia.width/publicImages.natalia.height,2,'Keep the approved 2:1 panorama');
 assert(css.includes('picture[data-photo="miguel"] img{object-position:50% 0%}'),'Protect the top of Miguel’s head');
 assert(css.includes('picture[data-photo="cristina"] img{object-position:50% 8%}'),'Keep headroom above Cristina');
 assert(css.includes('img.team-image-aida{object-position:50% 10%}'));

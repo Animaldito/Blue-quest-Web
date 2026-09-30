@@ -6,7 +6,7 @@
  "PROSPECCIÓN REMOTA Y APOYO TÉCNICO":"REMOTE SURVEYS AND TECHNICAL SUPPORT",
  "Operadora de ROV · Apoyo a la prospección":"ROV operator · Survey support",
  "Natalia Zhu preparando un ROV para la exploración subacuática":"Natalia Zhu preparing an ROV for underwater exploration",
- "Prepara y opera el ROV para reconocer zonas de interés. Registra imágenes y observaciones del fondo y organiza la información que apoya la planificación de inmersiones y los informes de exploración.":"Prepares and operates the ROV to survey areas of interest. Records seabed imagery and observations, and organises information to support dive planning and exploration reports.",
+ "Prepara y opera el ROV. Registra imágenes y datos del fondo para apoyar la planificación de inmersiones y los informes de exploración.":"Prepares and operates the ROV. Records seabed imagery and data to support dive planning and exploration reports.",
  "+10":"10+",
  "/":"/",
  "Globo interactivo. Arrastra o usa las flechas para girar. Pulsa un punto para abrir su ficha, o Intro para abrir el destino seleccionado.":"Interactive globe. Drag or use the arrow keys to rotate. Select a point to open its field record, or press Enter to open the selected destination.",

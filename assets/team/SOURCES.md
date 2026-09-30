@@ -2,7 +2,7 @@
 
 ## Natalia Zhu — 30 de septiembre de 2026
 
-Versión activa: natalia-approved-20260930.jpg, aprobada expresamente por el titular en el chat antes de publicarla. Derivada del original con imagegen: composición en espejo con Natalia a la izquierda y el ROV a la derecha, seguida de corrección localizada de la inscripción CHASING M2 S para evitar letras invertidas. No se vuelve a generar la escena durante la preparación de JPEG, AVIF o WebP. Se muestra completa dentro del marco existente para conservar el rostro y el equipo. El original y la ampliación panorámica anterior se conservan como fuentes históricas, fuera del despliegue.
+Versión activa: natalia-panorama-approved-20260930.jpg, panorámica 2:1 (1774 × 887 px) aprobada expresamente por el titular tras ver una captura dentro del diseño real de la web. Derivada de la composición en espejo anterior con imagegen, ampliando los laterales con continuidad de la pared texturada, la silla, la mesa y la planta existentes. Natalia queda a la izquierda y el ROV a la derecha, con inscripción CHASING M2 S legible. El marco común se llena sin bandas y el recorte conserva rostro y ROV. No se vuelve a generar la escena durante la preparación de JPEG, AVIF o WebP. Original, panorámica previa y versión cuadrada natalia-approved-20260930.jpg conservados como fuentes históricas, fuera del despliegue.
 
 La versión natalia-centered-20260930.jpg amplía el fondo con la herramienta integrada imagegen por petición expresa del titular, para centrar conjuntamente a Natalia y el ROV. La ampliación se limita a pared neutra y continuidad de la mesa, sin atribuirle una nueva actividad o localización. El original natalia-20260930.jpg se conserva. Se revisan el rostro, las manos, el equipo y su inscripción antes de publicar.
 

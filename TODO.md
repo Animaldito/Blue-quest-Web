@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Publicar la panorámica de Natalia aprobada en la captura real, sin bandas y con marcos iguales al resto; abreviar su descripción en español e inglés.
+
 - [x] Publicar la foto en espejo de Natalia aprobada en el chat, con inscripción CHASING M2 S legible, rostro y ROV visibles en EN/ES y copia previa guardada.
 
 - [x] Centrar horizontalmente a Natalia y el ROV con una ampliación sencilla de la pared, conservando rostro, inscripción y marco del equipo en EN/ES.
