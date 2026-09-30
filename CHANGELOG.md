@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## 2026-09-30 — Fondo ampliado y foto de Natalia centrada
+
+- Ampliada la pared neutra por petición del titular para centrar conjuntamente a Natalia y el ROV, conservando el rostro y la inscripción del equipo. Sin añadir elementos decorativos ni equipamiento.
+- Sustituido el ajuste desplazado de CSS por una fotografía panorámica y un encuadre centrado común al marco del equipo. Versiones EN/ES y fotografía original conservadas.
+- Original anterior recuperable en checkpoint/20260930-154551676-antes-centrar-foto-natalia y en la rama remota backup/2026-09-30-before-natalia-centered-photo, sobre 899621f7ca0a46e68a7a26f3333e0da75daaaa2b.
+
 ## 2026-09-30 — Encuadre de Natalia con rostro y ROV
 
 - Ajustado el encuadre de su fotografía para mostrar el rostro, el ROV y su inscripción CHASING M2 S en el mismo marco del equipo, en ambos idiomas y en pantallas grandes y pequeñas. Fotografía original y archivos de imagen conservados.

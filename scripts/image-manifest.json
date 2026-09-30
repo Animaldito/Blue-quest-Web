@@ -672,50 +672,50 @@
     ]
   },
   "natalia": {
-    "width": 2048,
-    "height": 2048,
+    "width": 1774,
+    "height": 887,
     "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw",
     "variants": [
       {
         "width": 160,
-        "height": 160,
+        "height": 80,
         "avif": {
-          "file": "assets/optimized/natalia-160-8ef3a34ad088.avif",
-          "bytes": 5614
+          "file": "assets/optimized/natalia-160-c8706e4c46f1.avif",
+          "bytes": 3403
         },
         "fallback": {
-          "file": "assets/optimized/natalia-160-506ad360a002.webp",
-          "bytes": 6356
+          "file": "assets/optimized/natalia-160-56f7a36ffb23.webp",
+          "bytes": 2334
         },
-        "ssim": 0.985501,
-        "quality": 80
+        "ssim": 0.98787,
+        "quality": 88
       },
       {
         "width": 320,
-        "height": 320,
+        "height": 160,
         "avif": {
-          "file": "assets/optimized/natalia-320-d4b3ba58c1c9.avif",
-          "bytes": 28804
+          "file": "assets/optimized/natalia-320-778f43a0bf8b.avif",
+          "bytes": 12942
         },
         "fallback": {
-          "file": "assets/optimized/natalia-320-005a3e4e200e.webp",
-          "bytes": 20908
+          "file": "assets/optimized/natalia-320-318d0a7e2102.webp",
+          "bytes": 7898
         },
-        "ssim": 0.988977,
+        "ssim": 0.985473,
         "quality": 88
       },
       {
         "width": 640,
-        "height": 640,
+        "height": 320,
         "avif": {
-          "file": "assets/optimized/natalia-640-188278602998.avif",
-          "bytes": 114682
+          "file": "assets/optimized/natalia-640-33378d504fc1.avif",
+          "bytes": 60943
         },
         "fallback": {
-          "file": "assets/optimized/natalia-640-6c5e686159ec.webp",
-          "bytes": 87992
+          "file": "assets/optimized/natalia-640-149237413935.webp",
+          "bytes": 41090
         },
-        "ssim": 0.98999,
+        "ssim": 0.985702,
         "quality": 88
       }
     ]

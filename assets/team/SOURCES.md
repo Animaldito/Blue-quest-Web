@@ -2,7 +2,9 @@
 
 ## Natalia Zhu — 30 de septiembre de 2026
 
-Fotografía aportada por el titular para su incorporación a The Team. Original conservado en natalia-20260930.jpg; variantes AVIF/WebP adaptativas para publicación, sin retoques ni reconstrucción generativa. Se conserva la proporción original y el marco común del equipo se aplica mediante CSS.
+La versión natalia-centered-20260930.jpg amplía el fondo con la herramienta integrada imagegen por petición expresa del titular, para centrar conjuntamente a Natalia y el ROV. La ampliación se limita a pared neutra y continuidad de la mesa, sin atribuirle una nueva actividad o localización. El original natalia-20260930.jpg se conserva. Se revisan el rostro, las manos, el equipo y su inscripción antes de publicar.
+
+Fotografía originalmente aportada por el titular para su incorporación a The Team. Original conservado en natalia-20260930.jpg; sus primeras variantes AVIF/WebP se prepararon sin retoques ni reconstrucción generativa. La versión panorámica posterior se describe arriba; el marco común del equipo se conserva.
 
 ## Fotografías activas
 

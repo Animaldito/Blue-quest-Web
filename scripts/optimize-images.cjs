@@ -12,7 +12,7 @@ const specs={
  cristina:{source:'team/cristina-profile.webp',widths:[160,320,640]},
  aida:{source:'team/aida-20260914.jpg',widths:[160,320,640,1196]},
  andreu:{source:'team/andreu-20260914.jpg',widths:[160,320,640,1199]},
- natalia:{source:'team/natalia-20260930.jpg',widths:[160,320,640],sizes:'(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw'},
+ natalia:{source:'team/natalia-centered-20260930.jpg',widths:[160,320,640],sizes:'(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw'},
  'map-relief':{source:'technology/map-relief.jpg',widths:[480,800],map:true},
  'map-satellite':{source:'technology/map-satellite.jpg',widths:[480,800],map:true},
  'map-perspective':{source:'technology/map-perspective.jpg',widths:[480,800],map:true},
