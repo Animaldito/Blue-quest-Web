@@ -27,6 +27,8 @@ for(const lang of ['es','en']){
  for(const person of ['miguel','cristina'])assert(section.includes(publicImages[person].src));
 }
 const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
+assert(css.includes('picture[data-photo="natalia"] img{object-fit:contain;object-position:50% 50%}'),'Preserve the approved square photo without cropping the face or ROV');
+assert(fs.existsSync(path.join(root,'assets/team/natalia-approved-20260930.jpg')),'Keep the approved portrait master');
 assert(css.includes('picture[data-photo="miguel"] img{object-position:50% 0%}'),'Protect the top of Miguel’s head');
 assert(css.includes('picture[data-photo="cristina"] img{object-position:50% 8%}'),'Keep headroom above Cristina');
 assert(css.includes('img.team-image-aida{object-position:50% 10%}'));

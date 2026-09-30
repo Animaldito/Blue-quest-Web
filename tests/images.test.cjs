@@ -4,7 +4,7 @@ assert.equal(Object.keys(manifest).length,15,'All fifteen visible photographs ha
 for(const [id,image] of Object.entries(manifest)){
  const largest=image.variants.at(-1);
  if(largest.width===image.width)assert(largest.avif.bytes<=largest.fallback.bytes,'Full-resolution modern image must be no heavier than its fallback');
- if(id==='natalia')for(const encoding of ['avif','fallback'])assert(largest[encoding].bytes<fs.statSync(path.join(root,'assets/team/natalia-centered-20260930.jpg')).size,'Responsive portrait is smaller than its preserved master');
+ if(id==='natalia')for(const encoding of ['avif','fallback'])assert(largest[encoding].bytes<fs.statSync(path.join(root,'assets/team/natalia-approved-20260930.jpg')).size,'Responsive portrait is smaller than its preserved master');
  let previous=0;
  for(const variant of image.variants){
   assert(variant.width>previous&&variant.width<=image.width,'Ascending sizes without artificial upscaling');previous=variant.width;

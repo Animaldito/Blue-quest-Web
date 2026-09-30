@@ -672,50 +672,50 @@
     ]
   },
   "natalia": {
-    "width": 1774,
-    "height": 887,
+    "width": 1254,
+    "height": 1254,
     "sizes": "(max-width:760px) 140px, (max-width:1199px) 40vw, 18vw",
     "variants": [
       {
         "width": 160,
-        "height": 80,
+        "height": 160,
         "avif": {
-          "file": "assets/optimized/natalia-160-c8706e4c46f1.avif",
-          "bytes": 3403
+          "file": "assets/optimized/natalia-160-164522b03fe8.avif",
+          "bytes": 5554
         },
         "fallback": {
-          "file": "assets/optimized/natalia-160-56f7a36ffb23.webp",
-          "bytes": 2334
+          "file": "assets/optimized/natalia-160-fef96e856d32.webp",
+          "bytes": 6392
         },
-        "ssim": 0.98787,
-        "quality": 88
+        "ssim": 0.986799,
+        "quality": 76
       },
       {
         "width": 320,
-        "height": 160,
+        "height": 320,
         "avif": {
-          "file": "assets/optimized/natalia-320-778f43a0bf8b.avif",
-          "bytes": 12942
+          "file": "assets/optimized/natalia-320-433b5d03689f.avif",
+          "bytes": 19614
         },
         "fallback": {
-          "file": "assets/optimized/natalia-320-318d0a7e2102.webp",
-          "bytes": 7898
+          "file": "assets/optimized/natalia-320-1a1c43e949b4.webp",
+          "bytes": 18582
         },
-        "ssim": 0.985473,
-        "quality": 88
+        "ssim": 0.987408,
+        "quality": 84
       },
       {
         "width": 640,
-        "height": 320,
+        "height": 640,
         "avif": {
-          "file": "assets/optimized/natalia-640-33378d504fc1.avif",
-          "bytes": 60943
+          "file": "assets/optimized/natalia-640-f780018cd670.avif",
+          "bytes": 90810
         },
         "fallback": {
-          "file": "assets/optimized/natalia-640-149237413935.webp",
-          "bytes": 41090
+          "file": "assets/optimized/natalia-640-6b001112a1fa.webp",
+          "bytes": 61286
         },
-        "ssim": 0.985702,
+        "ssim": 0.988748,
         "quality": 88
       }
     ]

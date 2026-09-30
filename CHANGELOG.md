@@ -1,5 +1,12 @@
 # Registro de cambios
 
+## 2026-09-30 — Fotografía de Natalia aprobada en espejo
+
+- Publicada la versión aprobada en el chat, con Natalia a la izquierda, el ROV a la derecha y la inscripción CHASING M2 S corregida. Sustituye a la ampliación de pared anterior, que se conserva junto al original.
+- Fotografía completa en el mismo marco del equipo, sin recortar el rostro ni el ROV; nuevas variantes AVIF/WebP para EN/ES. Textos, cinco columnas e idioma por país sin cambios.
+- Punto previo local: checkpoint/20260930-183821149-antes-foto-aprobada-natalia. Copia remota: backup/2026-09-30-before-natalia-approved-photo, sobre b30205150cb4081c32199dd2d254507b16ee3ff1.
+- Verificadas traducciones, reglas geográficas, imágenes, equipo y lista de publicación. Revisión visual de ocho tamaños en ambos idiomas, sin desbordamientos y con alternativa WebP comprobada.
+
 ## 2026-09-30 — Fondo ampliado y foto de Natalia centrada
 
 - Ampliada la pared neutra por petición del titular para centrar conjuntamente a Natalia y el ROV, conservando el rostro y la inscripción del equipo. Sin añadir elementos decorativos ni equipamiento.
