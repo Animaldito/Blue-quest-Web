@@ -1,5 +1,7 @@
 # Pendientes
 
+- [x] Ampliar la parte visible del ROV en la foto de Natalia conservando su rostro y el marco del equipo, en EN/ES.
+
 - [x] Añadir Natalia Zhu a The Team en EN/ES, con fotografía aportada y quinta columna de escritorio; conservar el cambio de idioma por país.
 
 - [x] Publicar bqlogo.png como recurso independiente para las firmas de correo.

@@ -1,5 +1,10 @@
 # Registro de cambios
 
+## 2026-09-30 — Encuadre de Natalia con rostro y ROV
+
+- Ajustado el encuadre de su fotografía para mostrar el rostro, el ROV y su inscripción CHASING M2 S en el mismo marco del equipo, en ambos idiomas y en pantallas grandes y pequeñas. Fotografía original y archivos de imagen conservados.
+- Punto previo local: checkpoint/20260930-153453702-antes-encuadre-rov-natalia. Copia remota: backup/2026-09-30-before-natalia-framing, sobre 266cd33306b54aad4a66cb55c0e8e5995f526a16.
+
 ## 2026-09-30 — Natalia Zhu en The Team
 
 - Incorporada Natalia Zhu como operadora de ROV y apoyo a la prospección, con preparación del equipo, reconocimiento remoto y registro de imágenes y observaciones para la planificación de inmersiones y los informes. Perfil y descripción de la foto en español e inglés.

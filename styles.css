@@ -4,7 +4,8 @@
 .team-photo picture[data-photo="cristina"] img{object-position:50% 8%}
 .team-photo img.team-image-aida{object-position:50% 10%}
 .team-photo img.team-image-andreu{object-position:50% 18%}
-.team-photo picture[data-photo="natalia"] img{object-position:50% 15%}
+.team-photo picture[data-photo="natalia"]{background:#d9d9d7}
+.team-photo picture[data-photo="natalia"] img{width:136%;height:136%;object-fit:contain;object-position:50% 50%;transform:translate(-13.235294%,-6%)}
 .service-photo picture[data-photo="boat"] img{object-position:50% 18%}
 /* Blue Quest: one shared system for services, evidence and contact. */
 /* Restore the three original map views within the shared photo frame. */
